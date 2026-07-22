@@ -1,7 +1,5 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32">
-  <defs><linearGradient id="sky" x1="0" y1="0" x2="0" y2="1">
-    <stop offset="0" stop-color="#0F2036"/><stop offset="1" stop-color="#070F16"/></linearGradient></defs>
-  <rect width="32" height="32" rx="7" fill="url(#sky)"/>
-  <path d="M2 25 L11 11 L16.5 19 L21 12.5 L30 25 Z" fill="#16283A"/>
-  <path d="M2 25 L11 11 L16.5 19 L21 12.5 L30 25" fill="none" stroke="#FEB84D" stroke-width="1.7" stroke-linejoin="round"/>
+  <rect width="32" height="32" rx="6" fill="#0B1A2E"/>
+  <path d="M3 27 L16 6.5 L29 27 Z" fill="#43ACFB"/>
+  <path d="M11 18.5 L16 6.5 L21 18.5 Z" fill="#FEB84D"/>
 </svg>
