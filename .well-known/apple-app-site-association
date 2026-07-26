@@ -1,0 +1,14 @@
+{
+  "applinks": {
+    "details": [
+      {
+        "appIDs": ["Y7QWS8SQSV.com.peakwait.app"],
+        "components": [
+          { "/": "/add*", "comment": "friend invites open the app to add-by-handle" },
+          { "/": "/r/*", "comment": "referral links (future)" },
+          { "/": "/day/*", "comment": "shared day links (future)" }
+        ]
+      }
+    ]
+  }
+}
