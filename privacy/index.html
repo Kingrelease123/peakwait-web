@@ -40,60 +40,165 @@
 </div></header>
 
 <main class="wrap">
-  <h1>Privacy Policy</h1>
-  <p class="meta">Last updated: July 26, 2026 · Effective: July 26, 2026</p>
-<p>PeakWait ("PeakWait," "we," "us") is operated by <strong>PeakWait LLC</strong>. This policy explains what we collect, why, how long we keep it, who we share it with, and the choices you have. It applies to the PeakWait iOS app and related services (the "Service"). The Service is <strong>intended for users in the United States</strong>.</p>
+<h1>PeakWait Privacy Policy</h1>
+<p class="meta"><strong>Last updated:</strong> August 7, 2026 · <strong>Effective:</strong> August 7, 2026</p>
+<p>PeakWait (&quot;PeakWait,&quot; &quot;we,&quot; &quot;us&quot;) is operated by <strong>PeakWait LLC</strong>. This policy explains
+what we collect, why, how long we keep it, who we share it with, and the choices you have. It applies
+to the PeakWait iOS app and related services (the &quot;Service&quot;). The Service is <strong>intended for users in
+the United States</strong>.</p>
 <h2>1. Information we collect</h2>
 <ul>
-<li><strong>Precise location — only during an active ski session.</strong> When a session is active, we use your device location to show nearby lifts, let you report waits near a lift, calculate your day, and (anonymously) improve estimates. Outside a session we do <strong>not</strong> collect precise location.</li>
-<li><strong>Approximate location — to show mountains near you.</strong> When you use "Where to ski today" or sort by nearest, we take a single, <strong>coarse</strong> (region-level) reading to rank nearby mountains. It is used on your device to sort the list and is <strong>not stored or sent</strong> with your reports.</li>
-<li><strong>Live location with buddies (optional, off by default).</strong> If you enable it, your live position is shared with your <strong>accepted</strong> buddies <strong>while you are in a session</strong>, so you can find each other. You choose who can see you (per-buddy mute), it <strong>stops automatically when your session ends</strong>, and positions are transient (they expire within minutes and are not kept as history). Turning it off deletes your shared position immediately. Note: once a buddy has seen your position in their app, that view is on their device and outside our control until it expires.</li>
-<li><strong>Powder alerts (optional).</strong> If you enable Powder Alerts, the <strong>names of the resorts you've favorited</strong> are sent to our backend to look up snow conditions so we can notify you. <strong>No precise location is used or sent</strong> for this.</li>
-<li><strong>On-mountain and notification data.</strong> If you enable notifications, alerts are computed on your device and delivered through Apple's push service; we handle a device push token to deliver them.</li>
-<li><strong>Your ski day.</strong> During a session we compute your day — vertical, runs, top speed, distance, and an elevation profile over time — for your recap and season history. Your detailed route/elevation trace is kept <strong>on your device</strong>.</li>
-<li><strong>Queue reports you submit</strong> — a band like "Short" or "Busy," with the approximate location and time needed to validate the report.</li>
-<li><strong>An anonymous device identifier</strong> — kept separate from any account, used to rate-limit, detect abusive or coordinated reports, and attribute product analytics. You can reset it in Settings.</li>
-<li><strong>Product analytics (first-party, anonymous).</strong> To understand how features are used and improve PeakWait — for example how often the app is opened, which upgrade screens are viewed, and whether a purchase completed — we log a small set of <strong>non-identifying interaction events</strong> on our own backend, tied to the anonymous device identifier above. These events <strong>do not</strong> include your name, contacts, or precise location, and we use <strong>no third-party advertising or analytics SDKs</strong>.</li>
-<li><strong>Purchase status.</strong> When you subscribe or buy a Day Pass through Apple, we receive your entitlement status (whether you have an active subscription) from Apple to unlock features. Apple processes the payment; we do not receive your full card details.</li>
-<li><strong>Account info, if you sign in.</strong> Sign in with Apple provides an account identifier and, if you choose to share it, a display name. We keep account identity separate from analytics identifiers.</li>
+<li><strong>Precise location — only during an active ski session.</strong> When a session is active, we use your
+device location to show nearby lifts, let you report waits near a lift, calculate your day, and
+(anonymously) improve estimates. To keep tracking accurate while your phone is in your pocket or
+locked, location may be collected <strong>in the background during an active session</strong>; iOS displays its
+location indicator while this happens. Tracking runs only during a session and <strong>stops automatically
+when your day ends</strong>. Outside a session we do <strong>not</strong> collect precise location.</li>
+<li><strong>Approximate location — to show mountains near you.</strong> When you sort by nearest, we take a single,
+<strong>coarse</strong> (region-level) reading and use it <strong>on your device</strong> to order the list. When you use
+<strong>&quot;Where to ski today,&quot;</strong> we send that coarse reading to our backend <strong>only at the moment of your
+request</strong>, solely to rank mountains near you and return the result. We do <strong>not</strong> store it with your
+reports, keep it as part of your profile, or use it to build advertising profiles or infer
+characteristics about you.</li>
+<li><strong>Live location with buddies (optional, off by default).</strong> If you enable it, your live position is
+shared with your <strong>accepted</strong> buddies <strong>while you are in a session</strong>, so you can find each other.
+You choose who can see you (per-buddy mute), it <strong>stops automatically when your session ends</strong>, and
+positions are transient (they expire within minutes and are not kept as history). Turning it off
+deletes your shared position immediately. Note: once a buddy has seen your position in their app,
+that view is on their device and outside our control until it expires.</li>
+<li><strong>Powder alerts (optional).</strong> If you enable Powder Alerts, the <strong>names of the resorts you&#39;ve
+favorited</strong> are sent to our backend to look up snow conditions so we can notify you. <strong>No precise
+location is used or sent</strong> for this.</li>
+<li><strong>On-mountain and notification data.</strong> If you enable notifications, alerts are currently <strong>computed
+and shown on your device</strong> (local notifications) — we do not send them from our servers. If we later
+add server-sent (push) notifications, we would receive a device push token from Apple solely to
+deliver those notifications to your device.</li>
+<li><strong>Your ski day.</strong> During a session we compute your day — vertical, runs, top speed, distance, and an
+elevation profile over time — for your recap and season history. Your detailed route/elevation trace
+is kept <strong>on your device</strong> and is not uploaded. <strong>Season totals</strong> (such as vertical feet, runs,
+chairlift rides, and ski days) are <strong>synced to our backend</strong> so they persist and can be shown on
+<strong>public leaderboards</strong> and shared with friends you accept. If you set a <strong>public handle</strong>, these
+totals are visible to other users under that handle; if you do not, they remain tied only to your
+anonymous device identifier.</li>
+<li><strong>Profile and social features (optional).</strong> If you opt in, we store a <strong>public handle</strong> and a
+<strong>preset (non-photo) avatar</strong>, your <strong>friend connections, requests, and mute settings</strong>, a <strong>reporter
+reputation/trust score</strong> derived from how your reports compare with other users&#39; reports, and your
+<strong>self-declared ski ability level</strong>. Your handle and avatar are public (shown on leaderboards and
+used for add-by-handle); friend connections are shared only with the users involved. You remain
+anonymous until you choose to set a handle.</li>
+<li><strong>Queue reports you submit</strong> — a band like &quot;Short&quot; or &quot;Busy,&quot; with the approximate location and time
+needed to validate the report.</li>
+<li><strong>An anonymous device identifier</strong> — kept separate from any account, used to rate-limit, detect
+abusive or coordinated reports, and attribute product analytics. You can reset it in Settings.</li>
+<li><strong>Device attestation.</strong> To confirm that reports come from a genuine, unmodified copy of the app on a
+real Apple device (which helps us prevent fake and coordinated reports), we use Apple&#39;s <strong>App
+Attest</strong>. A key identifier, a public key, and a counter are stored on our backend; the corresponding
+private key never leaves your device&#39;s secure hardware and we never receive it.</li>
+<li><strong>Product analytics (first-party, anonymous).</strong> To understand how features are used and improve
+PeakWait — for example how often the app is opened, which upgrade screens are viewed, and whether a
+purchase completed — we log a small set of <strong>non-identifying interaction events</strong> on our own
+backend, tied to the anonymous device identifier above. These events <strong>do not</strong> include your name,
+contacts, or precise location, and we use <strong>no third-party advertising or analytics SDKs</strong>.</li>
+<li><strong>Network information.</strong> Our servers automatically receive your device&#39;s <strong>IP address</strong> with each
+request. We use it transiently to rate-limit requests and to protect the Service against abuse and
+unauthorized access; we do not use it to build an advertising or interest profile about you and do
+not retain it as part of a user profile.</li>
+<li><strong>Purchase status.</strong> When you subscribe or buy a Day Pass through Apple, we receive your entitlement
+status (whether you have an active subscription) from Apple to unlock features. Apple processes the
+payment; we do not receive your full card details.</li>
+<li><strong>Account info, if you sign in.</strong> Sign in with Apple provides an account identifier and, if you
+choose to share it, a display name. We keep account identity separate from analytics identifiers.</li>
 </ul>
 <p>We do <strong>not</strong> access your contacts or address book.</p>
 <h2>2. Why we use your information</h2>
-<p>We use the information above to: provide and operate the Service (lift status, waits, routing, your day, buddies, alerts); validate and improve crowd-sourced estimates; keep the Service secure and prevent abuse; process and unlock purchases; understand and improve how features are used; and comply with law. Precise location is used only for the purposes described here — <strong>not</strong> to build advertising profiles or infer characteristics about you.</p>
+<p>We use the information above to: provide and operate the Service (lift status, waits, routing, your
+day, buddies, alerts); validate and improve crowd-sourced estimates; keep the Service secure and
+prevent abuse; process and unlock purchases; understand and improve how features are used; and comply
+with law. Precise location is used only for the purposes described here — <strong>not</strong> to build advertising
+profiles or infer characteristics about you.</p>
 <h2>3. How we share information</h2>
-<p>We do <strong>not sell</strong> your personal information and do <strong>not share</strong> it for cross-context behavioral advertising, as those terms are defined under the California Consumer Privacy Act (CCPA/CPRA). We have not done so in the preceding 12 months. We share information only with service providers that help us run PeakWait, by category:</p>
+<p>We do <strong>not sell</strong> your personal information and do <strong>not share</strong> it for cross-context behavioral
+advertising, as those terms are defined under the California Consumer Privacy Act (CCPA/CPRA). We have
+not done so in the preceding 12 months. We share information only with service providers that help us
+run PeakWait, by category:</p>
 <ul>
-<li><strong>Cloud hosting &amp; infrastructure</strong> (application, database, and cache hosting) — to run the backend and store data.</li>
-<li><strong>Apple</strong> — for App Store purchases and subscription status, Sign in with Apple, and push notification delivery.</li>
-<li><strong>Weather and mapping providers</strong> — to show conditions and maps. These providers may process data only to provide services to us. We may also disclose information if required by law, to protect rights and safety, or in connection with a merger or acquisition (in which case this policy governs the transferred data).</li>
+<li><strong>Cloud hosting &amp; infrastructure</strong> (application, database, and cache hosting) — to run the backend
+and store data.</li>
+<li><strong>Apple</strong> — for App Store purchases and subscription status, Sign in with Apple, App Attest, and
+push notification delivery.</li>
+<li><strong>Weather and mapping providers</strong> — to show conditions and maps.
+These providers may process data only to provide services to us. We may also disclose information if
+required by law, to protect rights and safety, or in connection with a merger or acquisition (in which
+case this policy governs the transferred data). Note that if you opt into a <strong>public handle</strong> and
+public leaderboards, your handle, preset avatar, and season totals are visible to <strong>other users</strong> of
+the Service — this is a feature you choose to enable, not a sale or sharing for advertising.</li>
 </ul>
 <h2>4. How long we keep it</h2>
 <ul>
-<li><strong>Precise location coordinates</strong> submitted with reports are converted into lift/queue events and the precise points are <strong>removed from stored reports on a rolling basis (generally within 30 days)</strong>.</li>
-<li><strong>Aggregated, de-identified</strong> queue/lift history may be retained indefinitely to improve estimates and predictions (it no longer identifies a device).</li>
-<li><strong>Anonymous analytics events</strong> are retained for a limited period (currently up to <strong>24 months</strong>) to analyze trends, then deleted or aggregated.</li>
+<li><strong>Precise location coordinates</strong> submitted with reports are converted into lift/queue events and the
+precise points are <strong>removed from stored reports on a rolling basis (generally within 30 days)</strong>.</li>
+<li><strong>Aggregated, de-identified</strong> queue/lift history may be retained indefinitely to improve estimates
+and predictions (it no longer identifies a device).</li>
+<li><strong>Anonymous analytics events</strong> are retained no longer than needed for these purposes and generally
+for up to <strong>24 months</strong>, after which we delete or aggregate them.</li>
+<li><strong>Profile, season stats, friend connections, and reporter reputation</strong> are retained while your device
+or account remains active, and until you delete them in the app or request deletion at
+<a href="mailto:contact@peakwait.net">contact@peakwait.net</a>. After deletion, residual <strong>de-identified aggregates</strong> (which no longer identify
+a device) may remain as described above.</li>
 <li><strong>Account information</strong> is retained until you delete your account or request deletion.</li>
-<li><strong>Live buddy positions</strong> are transient and expire within minutes; they are not retained as history. We keep information only as long as needed for the purposes above or as required by law.</li>
+<li><strong>Live buddy positions</strong> are transient and expire within minutes; they are not retained as history.
+We keep information only as long as needed for the purposes above or as required by law.</li>
 </ul>
 <h2>5. Security</h2>
-<p>We use reasonable administrative and technical measures designed to protect your information (for example, transport encryption and access controls). No method of transmission or storage is perfectly secure, so we cannot guarantee absolute security.</p>
+<p>We use reasonable administrative and technical measures designed to protect your information (for
+example, transport encryption and access controls). No method of transmission or storage is perfectly
+secure, so we cannot guarantee absolute security.</p>
 <h2>6. Your choices and rights</h2>
 <ul>
-<li><strong>Delete my history</strong> and <strong>Export my history</strong> are available in the app (Settings → Your data).</li>
+<li><strong>Delete my history</strong> and <strong>Export my history</strong> are available in the app (Settings → Your data).
+<strong>Delete my history</strong> permanently deletes your <strong>full footprint</strong> associated with your device — your
+submitted queue reports and lift observations, your ski-session and season activity data, your public
+profile (handle and preset avatar), your friend connections, requests, and mute settings, your
+reporter reputation, your analytics events, and your device state — except information we must retain
+for legal, security, tax, or anti-abuse purposes and de-identified aggregates that no longer identify
+a device. <strong>Export my history</strong> provides a copy of your data. We honor verified deletion requests,
+including from California and other U.S. state residents, to the extent required by law. You may also
+email <strong><a href="mailto:contact@peakwait.net">contact@peakwait.net</a></strong> to access, correct, or delete your information.</li>
 <li><strong>Reset anonymous device ID</strong> unlinks future reports from past ones.</li>
-<li>Turn off location, notifications, or live-sharing any time in iOS Settings or in the app; PeakWait still shows official status.</li>
-<li><strong>California residents (CCPA/CPRA)</strong> have the right to: know/access the personal information we collect, delete it, correct it, and opt out of "sale"/"sharing" (we do neither). Because we collect precise location (a category of <strong>sensitive personal information</strong>), we use it <strong>only</strong> for the purposes disclosed here, which means we are <strong>not required to offer</strong> a "Limit the Use of My Sensitive Personal Information" option. We will <strong>not discriminate</strong> against you for exercising these rights. To exercise any right, email <strong>contact@peakwait.net</strong>; we may need to verify your request using your device identifier or account. You may appeal a decision by replying to our response. Some of these rights may also be available to residents of other U.S. states with similar laws.</li>
+<li>Turn off location, notifications, or live-sharing any time in iOS Settings or in the app; PeakWait
+still shows official status.</li>
+<li><strong>California residents (CCPA/CPRA)</strong> have the right to: know/access the personal information we
+collect, delete it, correct it, and opt out of &quot;sale&quot;/&quot;sharing&quot; (we do neither). Because we collect
+precise location (a category of <strong>sensitive personal information</strong>), we use it <strong>only</strong> for the
+purposes disclosed here, which means we are <strong>not required to offer</strong> a &quot;Limit the Use of My
+Sensitive Personal Information&quot; option. We will <strong>not discriminate</strong> against you for exercising these
+rights. To exercise any right, email <strong><a href="mailto:contact@peakwait.net">contact@peakwait.net</a></strong>; we may need to verify your request
+using your device identifier or account. You may appeal a decision by replying to our response.
+Some of these rights may also be available to residents of other U.S. states with similar laws.</li>
 </ul>
 <h2>7. Children</h2>
-<p>PeakWait is intended for users <strong>13 and older</strong>. We do not knowingly collect personal information from children under 13. If you believe a child under 13 has provided us information, contact us and we will delete it. Live location-sharing is off by default and requires mutual, per-buddy consent.</p>
+<p>PeakWait is intended for users <strong>13 and older</strong>. We do not knowingly collect personal information from
+children under 13. If you believe a child under 13 has provided us information, contact us and we will
+delete it. Live location-sharing is off by default and requires mutual, per-buddy consent. If you are
+under 18, you should use PeakWait only with a parent or guardian&#39;s permission, and you should not
+publish a public handle or turn on live location-sharing without their consent. Public profiles never
+require and never display your real name, a photo, or contact information — only a handle you choose and
+a preset avatar. Parents or guardians may email <strong><a href="mailto:contact@peakwait.net">contact@peakwait.net</a></strong> to review, restrict, or delete
+a minor&#39;s information, including removing a handle from public leaderboards.</p>
 <h2>8. Third-party feeds</h2>
-<p>PeakWait shows lift/resort status and weather sourced from licensed and public feeds through our own backend; that data belongs to its providers and is provided "as is." No third-party advertising or analytics SDKs collect your information.</p>
+<p>PeakWait shows lift/resort status and weather sourced from licensed and public feeds through our own
+backend; that data belongs to its providers and is provided &quot;as is.&quot; No third-party advertising or
+analytics SDKs collect your information.</p>
 <h2>9. International users</h2>
-<p>The Service is intended for users in the United States and is hosted in the United States. If you access it from elsewhere, you do so on your own initiative and are responsible for compliance with local law.</p>
+<p>The Service is intended for users in the United States and is hosted in the United States. If you
+access it from elsewhere, you do so on your own initiative and are responsible for compliance with
+local law.</p>
 <h2>10. Changes to this policy</h2>
-<p>We may update this policy. Material changes will be reflected by the "Last updated" date above and, where appropriate, by in-app notice. Continued use after changes take effect means you accept the updated policy.</p>
+<p>We may update this policy. Material changes will be reflected by the &quot;Last updated&quot; date above and,
+where appropriate, by in-app notice. Continued use after changes take effect means you accept the
+updated policy.</p>
 <h2>11. Contact</h2>
-<p>Questions or requests: <strong>contact@peakwait.net</strong> · PeakWait LLC.</p>
+<p>Questions or requests: <strong><a href="mailto:contact@peakwait.net">contact@peakwait.net</a></strong> · PeakWait LLC.</p>
 </main>
 
 <footer><div class="wrap">© 2026 PeakWait LLC · <a href="/terms/">Terms of Service</a></div></footer>
