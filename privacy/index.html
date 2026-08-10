@@ -41,7 +41,7 @@
 
 <main class="wrap">
 <h1>PeakWait Privacy Policy</h1>
-<p class="meta"><strong>Last updated:</strong> August 7, 2026 · <strong>Effective:</strong> August 7, 2026</p>
+<p class="meta"><strong>Last updated:</strong> August 10, 2026 · <strong>Effective:</strong> August 10, 2026</p>
 <p>PeakWait (&quot;PeakWait,&quot; &quot;we,&quot; &quot;us&quot;) is operated by <strong>PeakWait LLC</strong>. This policy explains
 what we collect, why, how long we keep it, who we share it with, and the choices you have. It applies
 to the PeakWait iOS app and related services (the &quot;Service&quot;). The Service is <strong>intended for users in
@@ -53,7 +53,11 @@ device location to show nearby lifts, let you report waits near a lift, calculat
 (anonymously) improve estimates. To keep tracking accurate while your phone is in your pocket or
 locked, location may be collected <strong>in the background during an active session</strong>; iOS displays its
 location indicator while this happens. Tracking runs only during a session and <strong>stops automatically
-when your day ends</strong>. Outside a session we do <strong>not</strong> collect precise location.</li>
+when your day ends</strong>. To start and stop your session automatically when you arrive at or leave a ski
+area, PeakWait may use location-based <strong>geofencing</strong> (region monitoring); if you grant &quot;Always&quot;
+location access, this lets iOS wake the app at a ski area so a session can begin on its own. Apart
+from this automatic start/stop, we do <strong>not</strong> collect precise location outside an active session, and
+you can turn off auto-start or use the app without granting &quot;Always&quot; access.</li>
 <li><strong>Approximate location — to show mountains near you.</strong> When you sort by nearest, we take a single,
 <strong>coarse</strong> (region-level) reading and use it <strong>on your device</strong> to order the list. When you use
 <strong>&quot;Where to ski today,&quot;</strong> we send that coarse reading to our backend <strong>only at the moment of your
@@ -69,10 +73,13 @@ that view is on their device and outside our control until it expires.</li>
 <li><strong>Powder alerts (optional).</strong> If you enable Powder Alerts, the <strong>names of the resorts you&#39;ve
 favorited</strong> are sent to our backend to look up snow conditions so we can notify you. <strong>No precise
 location is used or sent</strong> for this.</li>
-<li><strong>On-mountain and notification data.</strong> If you enable notifications, alerts are currently <strong>computed
-and shown on your device</strong> (local notifications) — we do not send them from our servers. If we later
-add server-sent (push) notifications, we would receive a device push token from Apple solely to
-deliver those notifications to your device.</li>
+<li><strong>On-mountain and notification data.</strong> Notifications require your one-time iOS permission, and
+nothing is delivered unless you grant it. Once you allow notifications, some on-mountain alerts (such
+as an arrival or shorter-wait nudge) are <strong>on by default</strong> and can be turned off in the app, while
+others (such as Powder Alerts) stay off until you enable them. These alerts are currently <strong>computed
+and shown on your device</strong> (local notifications) — we do not send them from our servers. You can turn
+any of them off at any time in the app or in iOS Settings. If we later add server-sent (push)
+notifications, we would receive a device push token from Apple solely to deliver them to your device.</li>
 <li><strong>Your ski day.</strong> During a session we compute your day — vertical, runs, top speed, distance, and an
 elevation profile over time — for your recap and season history. Your detailed route/elevation trace
 is kept <strong>on your device</strong> and is not uploaded. <strong>Season totals</strong> (such as vertical feet, runs,
@@ -94,15 +101,25 @@ abusive or coordinated reports, and attribute product analytics. You can reset i
 real Apple device (which helps us prevent fake and coordinated reports), we use Apple&#39;s <strong>App
 Attest</strong>. A key identifier, a public key, and a counter are stored on our backend; the corresponding
 private key never leaves your device&#39;s secure hardware and we never receive it.</li>
-<li><strong>Product analytics (first-party, anonymous).</strong> To understand how features are used and improve
-PeakWait — for example how often the app is opened, which upgrade screens are viewed, and whether a
-purchase completed — we log a small set of <strong>non-identifying interaction events</strong> on our own
-backend, tied to the anonymous device identifier above. These events <strong>do not</strong> include your name,
-contacts, or precise location, and we use <strong>no third-party advertising or analytics SDKs</strong>.</li>
+<li><strong>Product analytics (first-party).</strong> To understand how features are used and improve PeakWait — for
+example how often the app is opened, which upgrade screens are viewed, and whether a purchase
+completed — we log a small set of <strong>interaction events</strong> on our own backend, keyed only to the
+anonymous device identifier above. These events <strong>do not</strong> include your name, contacts, or precise
+location, and we use <strong>no third-party advertising or analytics SDKs</strong> — but because they are tied to
+your device identifier they are treated as personal information and are covered by your data-rights
+choices below.</li>
 <li><strong>Network information.</strong> Our servers automatically receive your device&#39;s <strong>IP address</strong> with each
 request. We use it transiently to rate-limit requests and to protect the Service against abuse and
-unauthorized access; we do not use it to build an advertising or interest profile about you and do
-not retain it as part of a user profile.</li>
+unauthorized access, and we do not use it to build an advertising or interest profile about you. We
+do <strong>not</strong> retain your IP address as part of a general usage or advertising profile, <strong>except</strong> as
+described in &quot;Proof of your agreement&quot; below and where reasonably necessary to comply with law or to
+establish, exercise, or defend legal claims.</li>
+<li><strong>Proof of your agreement.</strong> When you affirmatively accept our Terms and this Privacy Policy, we keep
+a record of that acceptance so we can show that you agreed — the <strong>version you accepted</strong>, the <strong>time
+you accepted it</strong> (as reported by your device and as received by our server), and the <strong>IP address</strong>
+from which you accepted — tied to your anonymous device identifier. We keep this limited record as
+evidence of your agreement, including your consent to the arbitration agreement, class-action waiver,
+and the assumption-of-risk release in our Terms.</li>
 <li><strong>Purchase status.</strong> When you subscribe or buy a Day Pass through Apple, we receive your entitlement
 status (whether you have an active subscription) from Apple to unlock features. Apple processes the
 payment; we do not receive your full card details.</li>
@@ -119,26 +136,41 @@ profiles or infer characteristics about you.</p>
 <h2>3. How we share information</h2>
 <p>We do <strong>not sell</strong> your personal information and do <strong>not share</strong> it for cross-context behavioral
 advertising, as those terms are defined under the California Consumer Privacy Act (CCPA/CPRA). We have
-not done so in the preceding 12 months. We share information only with service providers that help us
-run PeakWait, by category:</p>
+not done so in the preceding 12 months. We share information that identifies you or your device only
+with service providers that help us run PeakWait, by category:</p>
 <ul>
 <li><strong>Cloud hosting &amp; infrastructure</strong> (application, database, and cache hosting) — to run the backend
 and store data.</li>
 <li><strong>Apple</strong> — for App Store purchases and subscription status, Sign in with Apple, App Attest, and
-push notification delivery.</li>
+Universal Links (for invite and share links). Today all notifications are generated on your device;
+only if we later add server-sent push notifications would Apple also handle push delivery.</li>
 <li><strong>Weather and mapping providers</strong> — to show conditions and maps.
 These providers may process data only to provide services to us. We may also disclose information if
 required by law, to protect rights and safety, or in connection with a merger or acquisition (in which
-case this policy governs the transferred data). Note that if you opt into a <strong>public handle</strong> and
-public leaderboards, your handle, preset avatar, and season totals are visible to <strong>other users</strong> of
-the Service — this is a feature you choose to enable, not a sale or sharing for advertising.</li>
+case this policy governs the transferred data).</li>
 </ul>
+<p><strong>Aggregated and de-identified data.</strong> We create aggregated and de-identified insights from queue,
+lift, and activity data (for example, resort-level crowding, wait, and demand trends) that do <strong>not</strong>
+identify you or your device and cannot reasonably be used to identify you. We may use, retain, and
+disclose this aggregated, de-identified data indefinitely and for any lawful business purpose,
+including sharing or licensing it to resorts, operators, and other business partners. This is <strong>not</strong> a
+sale or sharing of personal information; we do not attempt to re-identify this data and we require
+recipients not to do so.</p>
+<p><strong>Content you choose to share.</strong> If you opt into a <strong>public handle</strong> and public leaderboards, your
+handle, preset avatar, and season totals are visible to <strong>other users</strong> of the Service. If you share a
+<strong>day, season, rank, or invite link</strong>, the information in that card is served at a public web address
+and can be viewed by anyone who has the link. These are features you choose to use — not a sale or
+sharing for advertising.</p>
 <h2>4. How long we keep it</h2>
 <ul>
 <li><strong>Precise location coordinates</strong> submitted with reports are converted into lift/queue events and the
 precise points are <strong>removed from stored reports on a rolling basis (generally within 30 days)</strong>.</li>
 <li><strong>Aggregated, de-identified</strong> queue/lift history may be retained indefinitely to improve estimates
-and predictions (it no longer identifies a device).</li>
+and predictions and to create aggregated, de-identified insights and data products (for example,
+resort-level crowding and activity trends); it no longer identifies you or your device.</li>
+<li><strong>Legal-acceptance records</strong> (the Terms/Policy version you accepted, the acceptance timestamps, and
+the IP address used) are retained for as long as needed to establish, exercise, or defend that
+agreement or as required by law — even after other data associated with your device is deleted.</li>
 <li><strong>Anonymous analytics events</strong> are retained no longer than needed for these purposes and generally
 for up to <strong>24 months</strong>, after which we delete or aggregate them.</li>
 <li><strong>Profile, season stats, friend connections, and reporter reputation</strong> are retained while your device
@@ -161,7 +193,10 @@ submitted queue reports and lift observations, your ski-session and season activ
 profile (handle and preset avatar), your friend connections, requests, and mute settings, your
 reporter reputation, your analytics events, and your device state — except information we must retain
 for legal, security, tax, or anti-abuse purposes and de-identified aggregates that no longer identify
-a device. <strong>Export my history</strong> provides a copy of your data. We honor verified deletion requests,
+a device. Some queue and lift reports are stored <strong>without any link to your device identifier</strong>;
+because these cannot be traced back to you, we cannot single them out to export or delete
+individually, and they remain only in de-identified form. <strong>Export my history</strong> provides a copy of the
+data we can associate with your device. We honor verified deletion requests,
 including from California and other U.S. state residents, to the extent required by law. You may also
 email <strong><a href="mailto:contact@peakwait.net">contact@peakwait.net</a></strong> to access, correct, or delete your information.</li>
 <li><strong>Reset anonymous device ID</strong> unlinks future reports from past ones.</li>
