@@ -430,11 +430,11 @@
     const g=ctx.createLinearGradient(0,0,0,H);g.addColorStop(0,V('--skyTop'));g.addColorStop(1,V('--skyBot'));
     ctx.fillStyle=g;ctx.fillRect(0,0,W,H);
     // far ridge (no rim)
-    const far=ridge(23,H*0.74,H*0.13,20);
+    const far=ridge(23,H*0.92,H*0.08,16);
     ctx.beginPath();ctx.moveTo(0,H);far.forEach(p=>ctx.lineTo(p[0],p[1]));ctx.lineTo(W,H);ctx.closePath();
     ctx.fillStyle=V('--ridgeFar');ctx.fill();
     // near ridge + gold rim (drawn to `prog`)
-    const near=ridge(7,H*0.66,H*0.18,26), n=Math.max(1,Math.floor(near.length*prog));
+    const near=ridge(7,H*0.87,H*0.11,22), n=Math.max(1,Math.floor(near.length*prog));
     ctx.beginPath();ctx.moveTo(0,H);for(let k=0;k<n;k++)ctx.lineTo(near[k][0],near[k][1]);
     ctx.lineTo(near[n-1][0],H);ctx.lineTo(0,H);ctx.closePath();
     ctx.fillStyle=V('--ridgeNear');ctx.fill();
