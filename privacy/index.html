@@ -41,7 +41,7 @@
 
 <main class="wrap">
 <h1>PeakWait Privacy Policy</h1>
-<p class="meta"><strong>Last updated:</strong> August 10, 2026 · <strong>Effective:</strong> August 10, 2026</p>
+<p class="meta"><strong>Last updated:</strong> August 17, 2026 · <strong>Effective:</strong> August 17, 2026</p>
 <p>PeakWait (&quot;PeakWait,&quot; &quot;we,&quot; &quot;us&quot;) is operated by <strong>PeakWait LLC</strong>. This policy explains
 what we collect, why, how long we keep it, who we share it with, and the choices you have. It applies
 to the PeakWait iOS app and related services (the &quot;Service&quot;). The Service is <strong>intended for users in
@@ -93,8 +93,10 @@ reputation/trust score</strong> derived from how your reports compare with other
 <strong>self-declared ski ability level</strong>. Your handle and avatar are public (shown on leaderboards and
 used for add-by-handle); friend connections are shared only with the users involved. You remain
 anonymous until you choose to set a handle.</li>
-<li><strong>Queue reports you submit</strong> — a band like &quot;Short&quot; or &quot;Busy,&quot; with the approximate location and time
-needed to validate the report.</li>
+<li><strong>Queue reports you submit</strong> — a band like &quot;Short&quot; or &quot;Busy,&quot; together with the <strong>precise location</strong>
+where you made the report and the time, which we use to attribute the report to the correct lift and
+to validate it. As described in Section 4, we strip the precise coordinates from stored reports on a
+short rolling basis; some reports are stored with <strong>no link to your device identifier</strong> at all.</li>
 <li><strong>An anonymous device identifier</strong> — kept separate from any account, used to rate-limit, detect
 abusive or coordinated reports, and attribute product analytics. You can reset it in Settings.</li>
 <li><strong>Device attestation.</strong> To confirm that reports come from a genuine, unmodified copy of the app on a
@@ -123,8 +125,13 @@ and the assumption-of-risk release in our Terms.</li>
 <li><strong>Purchase status.</strong> When you subscribe or buy a Day Pass through Apple, we receive your entitlement
 status (whether you have an active subscription) from Apple to unlock features. Apple processes the
 payment; we do not receive your full card details.</li>
-<li><strong>Account info, if you sign in.</strong> Sign in with Apple provides an account identifier and, if you
-choose to share it, a display name. We keep account identity separate from analytics identifiers.</li>
+<li><strong>Sign in with Apple (optional, on-device).</strong> Sign in with Apple is optional and is handled
+<strong>entirely on your device</strong>. If you use it, your Apple account identifier — and a display name only if
+you choose to share one — is stored <strong>only on your device</strong> (in the iOS Keychain) to link your
+anonymous session to your Apple account so your history stays with you across reinstalls. We do
+<strong>not</strong> receive, transmit to our servers, or store your name, email address, or Apple account
+identifier, and it is never tied to your reports, analytics, or leaderboard profile. It is removed
+when you sign out or delete the app.</li>
 </ul>
 <p>We do <strong>not</strong> access your contacts or address book.</p>
 <h2>2. Why we use your information</h2>
@@ -153,9 +160,14 @@ case this policy governs the transferred data).</li>
 lift, and activity data (for example, resort-level crowding, wait, and demand trends) that do <strong>not</strong>
 identify you or your device and cannot reasonably be used to identify you. We may use, retain, and
 disclose this aggregated, de-identified data indefinitely and for any lawful business purpose,
-including sharing or licensing it to resorts, operators, and other business partners. This is <strong>not</strong> a
-sale or sharing of personal information; we do not attempt to re-identify this data and we require
-recipients not to do so.</p>
+including sharing or licensing it to resorts, operators, and other business partners.
+We create these insights only at the <strong>resort-day level or higher</strong> and suppress any figure derived
+from fewer than <strong>five distinct devices</strong>, so no individual person or device can be singled out. We
+<strong>maintain this information in de-identified form, take reasonable measures to ensure it cannot be
+associated with you, publicly commit not to attempt to re-identify it (except limited testing to
+confirm de-identification), and contractually require every recipient not to re-identify it.</strong> Because
+it is de-identified and aggregated, this is <strong>not</strong> a sale or sharing of personal information under the
+CCPA/CPRA.</p>
 <p><strong>Content you choose to share.</strong> If you opt into a <strong>public handle</strong> and public leaderboards, your
 handle, preset avatar, and season totals are visible to <strong>other users</strong> of the Service. If you share a
 <strong>day, season, rank, or invite link</strong>, the information in that card is served at a public web address
@@ -163,8 +175,10 @@ and can be viewed by anyone who has the link. These are features you choose to u
 sharing for advertising.</p>
 <h2>4. How long we keep it</h2>
 <ul>
-<li><strong>Precise location coordinates</strong> submitted with reports are converted into lift/queue events and the
-precise points are <strong>removed from stored reports on a rolling basis (generally within 30 days)</strong>.</li>
+<li><strong>Precise location coordinates</strong> submitted with reports are used to attribute the report to the
+correct lift and to validate it, then converted into de-identified lift/queue events. The precise
+points are <strong>stripped from stored reports on a short rolling basis — typically within hours, and in no
+event longer than 30 days</strong>.</li>
 <li><strong>Aggregated, de-identified</strong> queue/lift history may be retained indefinitely to improve estimates
 and predictions and to create aggregated, de-identified insights and data products (for example,
 resort-level crowding and activity trends); it no longer identifies you or your device.</li>
@@ -177,7 +191,9 @@ for up to <strong>24 months</strong>, after which we delete or aggregate them.</
 or account remains active, and until you delete them in the app or request deletion at
 <a href="mailto:contact@peakwait.net">contact@peakwait.net</a>. After deletion, residual <strong>de-identified aggregates</strong> (which no longer identify
 a device) may remain as described above.</li>
-<li><strong>Account information</strong> is retained until you delete your account or request deletion.</li>
+<li><strong>Sign in with Apple details</strong> (the account identifier, and any display name you choose to share) are
+stored <strong>only on your device</strong> (in the iOS Keychain) and are never sent to or stored on our servers.
+They are removed when you sign out or delete the app; we hold no server-side copy to retain or delete.</li>
 <li><strong>Live buddy positions</strong> are transient and expire within minutes; they are not retained as history.
 We keep information only as long as needed for the purposes above or as required by law.</li>
 </ul>
@@ -215,11 +231,14 @@ Some of these rights may also be available to residents of other U.S. states wit
 <p>PeakWait is intended for users <strong>13 and older</strong>. We do not knowingly collect personal information from
 children under 13. If you believe a child under 13 has provided us information, contact us and we will
 delete it. Live location-sharing is off by default and requires mutual, per-buddy consent. If you are
-under 18, you should use PeakWait only with a parent or guardian&#39;s permission, and you should not
-publish a public handle or turn on live location-sharing without their consent. Public profiles never
-require and never display your real name, a photo, or contact information — only a handle you choose and
-a preset avatar. Parents or guardians may email <strong><a href="mailto:contact@peakwait.net">contact@peakwait.net</a></strong> to review, restrict, or delete
-a minor&#39;s information, including removing a handle from public leaderboards.</p>
+under 18, you may use PeakWait only with the permission and supervision of a parent or legal guardian,
+and you <strong>must not set a public handle, appear on public leaderboards, or turn on live
+location-sharing without their consent</strong> — these features are off by default and require you to turn
+them on. We do not knowingly enable live location-sharing or public-profile display for a user we know
+to be under 18 without a parent or guardian&#39;s consent. Public profiles never require and never display
+your real name, a photo, age, or contact information — only a handle you choose and a preset avatar. A
+parent or legal guardian may email <strong><a href="mailto:contact@peakwait.net">contact@peakwait.net</a></strong> to review, restrict, or delete a minor&#39;s
+information, including removing a handle from public leaderboards and disabling location features.</p>
 <h2>8. Third-party feeds</h2>
 <p>PeakWait shows lift/resort status and weather sourced from licensed and public feeds through our own
 backend; that data belongs to its providers and is provided &quot;as is.&quot; No third-party advertising or
