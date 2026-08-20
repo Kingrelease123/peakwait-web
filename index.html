@@ -441,11 +441,11 @@
     // far ridge (no rim). On wide screens the ridge rises into the gap between the subline and the
     // stat numbers and calms down; on narrow (stacked) screens it stays low so it clears the content.
     const wide = W > 900;
-    const far=ridge(23, wide?H*0.80:H*0.92, wide?H*0.030:H*0.08, wide?12:16);
+    const far=ridge(23, wide?H*0.85:H*0.92, wide?H*0.028:H*0.08, wide?10:16);
     ctx.beginPath();ctx.moveTo(0,H);far.forEach(p=>ctx.lineTo(p[0],p[1]));ctx.lineTo(W,H);ctx.closePath();
     ctx.fillStyle=V('--ridgeFar');ctx.fill();
     // near ridge + gold rim (drawn to `prog`)
-    const near=ridge(7, wide?H*0.77:H*0.87, wide?H*0.040:H*0.11, wide?14:22), n=Math.max(1,Math.floor(near.length*prog));
+    const near=ridge(7, wide?H*0.83:H*0.87, wide?H*0.036:H*0.11, wide?12:22), n=Math.max(1,Math.floor(near.length*prog));
     ctx.beginPath();ctx.moveTo(0,H);for(let k=0;k<n;k++)ctx.lineTo(near[k][0],near[k][1]);
     ctx.lineTo(near[n-1][0],H);ctx.lineTo(0,H);ctx.closePath();
     ctx.fillStyle=V('--ridgeNear');ctx.fill();
