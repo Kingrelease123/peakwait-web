@@ -16,6 +16,47 @@ const ROOT = path.resolve(path.dirname(new URL(import.meta.url).pathname), "..")
 // ---- content ---------------------------------------------------------------
 const ARTICLES = [
   {
+    slug: "ski-resort-lift-lines",
+    title: "Why Ski Resort Lift Lines Feel So Brutal Now (and How to Get Your Day Back)",
+    description:
+      "Two-hour waits, $200 to stand in line, six runs all day. Here's why lift lines got so bad, what skiers actually say about it, and how to claw back the parts you can control.",
+    h1: "Why lift lines feel so brutal now — and how to get your ski day back",
+    readTime: "8 min",
+    published: "2026-08-23",
+    updated: "2026-08-23",
+    keywords: "ski resort lift lines, are ski resorts too crowded, lift line wait times, ski resort crowds, longest lift line, how to avoid lift lines",
+    dek: `Skiers don't describe lift lines like a minor annoyance. They describe them like a personal betrayal: <em>"I found hell today." "Spent more time in line than skiing." "$200 to stand in a line." "That's a no from me, dawg."</em> The pain is real, it lands hardest on exactly the best days — and for the parts you can control, it's very fixable.`,
+    sections: [
+      { h2: "The math that quietly ruins the day", html: `
+<p>The core wound isn't the wait itself — it's the ratio. An hour in line for a two-minute run. A full powder day reduced to six runs. People do the arithmetic mid-shiver and it breaks something: "I spent more time in various lift lines than actually skiing." At that point you're not skiing, you're queueing with a hobby attached.</p>` },
+      { h2: "The powder-day paradox", html: `
+<p>Here's the cruelest part: the best conditions summon the worst waits. The exact days you'd trade a paycheck to ski are the days everyone else feels the same way. Fresh snow drops, terrain opens slowly for avalanche control, and the whole mountain funnels onto three lifts. Best snow, longest waits, every time. The irony is so reliable you could set a watch to it.</p>` },
+      { h2: `"$200 to stand in a line"`, html: `
+<p>Then there's the money. Nothing turns a fun day sour like doing the value math: a couple hundred bucks for a ticket, and you got seven runs. Skiers have literally filmed themselves <em>walking up the mountain</em> because it was faster than the wait. When people would rather hike in ski boots than use the lift they paid for, the product has a problem.</p>` },
+      { h2: `The "this isn't even skiing anymore" feeling`, html: `
+<p>The megapass era packed the mountains, and it shows. Tens of thousands of people threading through a handful of lifts starts to feel less like a mountain and more like a theme park with worse food. "It's no longer even skiing at some of these resorts," goes the refrain. That's not gatekeeping — it's grief for a thing people love.</p>` },
+      { h2: "The part that's actually infuriating (and fixable)", html: `
+<p>Here's the detail buried in every crowd thread, and it's the important one: <strong>the waits are wildly uneven.</strong> There's a 15-minute line at one lift while a chair on the far side of the mountain runs half-empty. Lifties aren't filling chairs. One "hero" lift eats all the traffic while its neighbor sits idle.</p>
+<p>Which means the short wait almost always <em>exists</em> — somewhere on the mountain, right now. The problem was never that there's no good option. The problem is you can't see it from where you're standing, so everyone piles onto the same obvious lift and makes it worse.</p>` },
+      { h2: "What you can actually control", html: `
+<p>You can't fix the megapass, the parking, or the powder-day math. But you can stop donating your day to the longest line on the hill:</p>
+<ul>
+  <li><strong>Point the car at the right mountain.</strong> On any given morning one nearby resort has the snow <em>and</em> the short waits. PeakWait's <strong>"Where to ski today"</strong> ranks them so you skip the blown-out flagship for the sleeper that's quietly crushing it.</li>
+  <li><strong>Chase the short wait that already exists.</strong> PeakWait shows <strong>live waits reported by skiers on the hill right now</strong> (Moving · Short · Busy · Long) and points you to the <strong>best next chair</strong> — so you ride to the empty lift instead of guessing.</li>
+  <li><strong>Ski like a local:</strong> mid-mountain lifts over base lifts, the singles line always, first chair then bounce by 1 — or roll in at 1pm as everyone leaves.</li>
+</ul>
+<p>None of it makes a powder Saturday feel like a Tuesday. But it's the difference between six runs and sixteen.</p>` },
+    ],
+    faqs: [
+      { q: "Why are ski resort lift lines so long now?", a: "Megapasses (Epic, Ikon) packed more skiers onto the same mountains, powder days concentrate everyone onto limited open terrain, and waits are unevenly distributed — one popular lift absorbs traffic while others run under capacity." },
+      { q: "Are ski resorts too crowded?", a: "On weekends, holidays, and powder days at big-pass resorts, often yes. But smaller and independent resorts stay far quieter, and on any given day the short waits still exist somewhere — the trick is finding them." },
+      { q: "What's the longest you should wait for a lift?", a: "Most experienced skiers draw the line around 10–15 minutes; 30+ minutes is widely considered extreme, and many will leave the mountain rather than wait 45 minutes for a short run." },
+      { q: "How do I find the shortest lift line?", a: "Check live, crowd-sourced waits (like PeakWait's) instead of guessing from the base. The shortest wait usually exists on a nearby lift you can't see — an app that reads it in real time points you there." },
+      { q: "Does PeakWait help with crowds?", a: "Yes — it shows live waits from skiers on the hill, ranks which mountain to ski today by snow and waits, and points you to the best next chair, so you spend the day skiing instead of standing." },
+    ],
+    cta: { h: "Spend the day skiing, not standing", p: `See which mountain has the snow and the short waits today — and the best next chair once you're there.` },
+  },
+  {
     slug: "whistler-lift-wait-times",
     title: "The Most Accurate Whistler Lift Wait Times (2026)",
     description:
