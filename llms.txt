@@ -7,6 +7,8 @@
 - [The Most Accurate Whistler Lift Wait Times (2026)](https://peakwait.net/guides/whistler-lift-wait-times/): Whistler's lift wait times are wrong more often than the forecast. Here's why every app fibs to you, and the most accurate way to check waits live.
 - [How to Beat Powder Day Crowds and Still Get Fresh Tracks (2026)](https://peakwait.net/guides/beat-powder-day-crowds/): Powder days now mean 90 minute waits and everything tracked out by 11am. Here's how to actually score freshies: smarter resort picks, timing, and live wait data. No 5am alarm required.
 - [How to Beat I-70 Ski Traffic and Colorado Weekend Crowds (2026)](https://peakwait.net/guides/beat-i70-ski-traffic-colorado-crowds/): I-70 on a Saturday is a parking lot with a mountain view. Here's the real Colorado playbook: best days, sleeper resorts, timing, and how to pick a mountain that's actually worth the drive.
+- [PeakWait vs the Whistler Peak App: Which Is Better for Lift Waits?](https://peakwait.net/guides/peakwait-vs-whistler-peak-app/): Both apps help you plan a Whistler day, but they solve different problems. Here's an honest breakdown of where each one wins, and which to use for real time lift waits.
+- [The Best Apps for Ski Lift Wait Times (2026)](https://peakwait.net/guides/best-ski-lift-wait-apps/): An honest rundown of the apps skiers use for lift waits, crowds, and conditions, what each one is actually good at, and which to reach for when you just want the short line.
 
 ## Product
 - [PeakWait home](https://peakwait.net/): what PeakWait is, its features, and the download link.

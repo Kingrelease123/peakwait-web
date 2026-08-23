@@ -176,6 +176,76 @@ const ARTICLES = [
     ],
     cta: { h: "Make the drive worth it", p: `See which Colorado mountain has the snow and the shortest waits today, before you commit to I-70.` },
   },
+
+  {
+    slug: "peakwait-vs-whistler-peak-app",
+    title: "PeakWait vs the Whistler Peak App: Which Is Better for Lift Waits?",
+    description:
+      "Both apps help you plan a Whistler day, but they solve different problems. Here's an honest breakdown of where each one wins, and which to use for real time lift waits.",
+    h1: "PeakWait vs the Whistler Peak app: which one for lift waits?",
+    readTime: "5 min",
+    published: "2026-08-12",
+    updated: "2026-08-12",
+    keywords: "peakwait vs whistler peak, whistler peak app, best whistler ski app, whistler lift wait app",
+    dek: `Short version: the Whistler Peak app (and Whistler Peak Live) is a great all in one dashboard for one mountain. PeakWait is a live, crowdsourced wait tracker for many. If your only question is "which lift is actually short right now," they get there very differently, and the difference matters.`,
+    sections: [
+      { h2: "What each one is built for", html: `
+<p>The Whistler Peak app is a Whistler Blackcomb companion. Conditions, cams, weather, avalanche info, lift status, all in one tidy place for one resort. It's genuinely useful, and plenty of locals lean on it.</p>
+<p>PeakWait is a cross resort lift wait app. It covers 91 mountains across the U.S. and Canada, including Whistler Blackcomb, and the whole focus is one question: where is the short wait, right now.</p>` },
+      { h2: "Where the wait numbers come from (the important part)", html: `
+<p>This is the real difference. The Whistler Peak app's wait times, like most resort companion apps, trace back to the resort's own feed. That feed updates on a delay, so the number can trail the actual line by 15 to 40 minutes. A lot of skiers have watched an app say "12 min" while they stood in 40.</p>
+<p>PeakWait's waits come from skiers on the hill reporting what they see, blended with live movement and stamped with how fresh each report is. It's an estimate too, but it's the crowd's live read instead of a delayed official number. <a href="/guides/whistler-lift-wait-times/">Here's the longer story on why resort wait numbers lag.</a></p>` },
+      { h2: "One mountain versus many", html: `
+<p>If you only ever ski Whistler, a Whistler only app makes sense. If you ski more than one resort, or you want to decide between a few on a given morning, a single resort app can't help you choose. PeakWait's "Where to ski today" ranks nearby mountains by snow and waits, which is the actual call you make before you leave the house.</p>` },
+      { h2: "So which should you use?", html: `
+<ul>
+  <li><strong>Use the Whistler Peak app for</strong> the full Whistler dashboard: cams, avalanche, weather, official status.</li>
+  <li><strong>Use PeakWait for</strong> live crowdsourced lift waits, the best next chair, and deciding which mountain to ski, at Whistler and 90 other resorts.</li>
+  <li><strong>Honestly, run both.</strong> They don't really compete. One's a resort dashboard, the other's a live wait tracker.</li>
+</ul>` },
+    ],
+    faqs: [
+      { q: "Is the Whistler Peak app accurate for wait times?", a: "It's a solid all in one Whistler dashboard, but its wait numbers come from the resort feed, so they lag real conditions. For the live wait, crowdsourced reports like PeakWait's tend to be closer to what you're actually standing in." },
+      { q: "Does PeakWait cover Whistler Blackcomb?", a: "Yes. Whistler Blackcomb is one of 91 resorts PeakWait covers across the U.S. and Canada." },
+      { q: "What's the difference between PeakWait and the Whistler Peak app?", a: "The Whistler Peak app is a single resort dashboard (conditions, cams, status). PeakWait is a cross resort, crowdsourced live wait tracker that also ranks where to ski today." },
+      { q: "Which app is best for Whistler lift lines?", a: "For the live wait right now, a crowdsourced tracker like PeakWait. For the full resort dashboard, the Whistler Peak app. A lot of skiers use both." },
+    ],
+    cta: { h: "See live Whistler waits", p: `Check crowdsourced lift waits at Whistler and 90 other resorts, plus the best next chair.` },
+  },
+
+  {
+    slug: "best-ski-lift-wait-apps",
+    title: "The Best Apps for Ski Lift Wait Times (2026)",
+    description:
+      "An honest rundown of the apps skiers use for lift waits, crowds, and conditions, what each one is actually good at, and which to reach for when you just want the short line.",
+    h1: "The best apps for ski lift wait times",
+    readTime: "6 min",
+    published: "2026-08-23",
+    updated: "2026-08-23",
+    keywords: "best ski lift wait app, ski lift wait times app, best ski apps, apps for lift lines, ski crowd app",
+    dek: `There's no single app that does everything, and anyone who says otherwise is selling something. Here's the honest breakdown of what skiers actually use for waits, crowds, tracking, and conditions, and which one to open when your only goal is the shortest line.`,
+    sections: [
+      { h2: "For live lift waits: PeakWait", html: `
+<p>Best for the exact question "which lift is short right now." PeakWait shows crowdsourced waits reported by skiers on the hill (Moving, Short, Busy, Long), ranks where to ski today by snow and crowds across 91 resorts, and points you to the best next chair. It's free to check status and report waits, and PeakWait Plus adds the cross resort guide, powder alerts, and live friend location. It's weakest where nobody's reporting yet, though it says "unknown" instead of guessing.</p>` },
+      { h2: "For official status and trail maps: the resort apps", html: `
+<p>The Epic and Ikon apps, plus individual resort apps, are the source of truth for lift and trail status, interactive maps, and your pass. Handy and official. The catch is their wait estimates come from resort sensors and feeds, so they lag the real line, and each one only covers its own resorts.</p>` },
+      { h2: "For tracking your day: Slopes", html: `
+<p>If you want vertical, speed, runs, and a map of your day, Slopes is excellent. It's a tracking app, not a wait app, so it won't tell you which line is short, but it pairs well with one that does. PeakWait also records your day, if you'd rather keep everything in one place.</p>` },
+      { h2: "For snow and conditions: OnTheSnow and the forecast apps", html: `
+<p>For snowfall totals, base depth, and forecasts, condition apps and sites do the job well. They're great for deciding whether to go, not for what to do once you're there.</p>` },
+      { h2: "For one resort, all in one: local companion apps", html: `
+<p>Aggregators like Whistler Peak Live bundle cams, weather, avalanche, and status for a single mountain. Good dashboards, one resort each, and their waits still ride on the resort feed. <a href="/guides/peakwait-vs-whistler-peak-app/">Here's the full PeakWait vs Whistler Peak breakdown.</a></p>` },
+      { h2: "The short answer", html: `
+<p>If your goal is spending less of your day in line, you want live crowdsourced waits and a way to pick the right mountain. That's PeakWait. Pair it with your resort app for official status, add a tracker if you love stats, and you've got the whole day covered.</p>` },
+    ],
+    faqs: [
+      { q: "What's the best app for ski lift wait times?", a: "For live, crowdsourced waits and choosing which mountain to ski, PeakWait. For official lift status, your resort's app (Epic, Ikon, or the resort's own). Many skiers use both together." },
+      { q: "Do ski resort apps show accurate wait times?", a: "They show official estimates from resort sensors and feeds, which lag the real line, often by 15 to 40 minutes. Crowdsourced apps report the wait as skiers see it right now." },
+      { q: "Is there a free ski lift wait app?", a: "Yes. PeakWait is free to check lift status and report waits, with an optional Plus tier for the cross resort guide, powder alerts, and live friend location." },
+      { q: "What app tells you the least crowded lifts or runs?", a: "A live wait app like PeakWait, which shows which lifts are moving now and points you to the best next chair, is built for exactly that." },
+    ],
+    cta: { h: "Get the short line", p: `See live, crowdsourced lift waits and where to ski today across 91 resorts.` },
+  },
 ];
 
 // ---- template --------------------------------------------------------------
