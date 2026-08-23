@@ -23,8 +23,8 @@ const ARTICLES = [
       "Two hour waits, $200 to stand in line, six runs all day. Here's why lift lines got so bad, what skiers actually say about it, and how to claw back the parts you can control.",
     h1: "Why lift lines feel so brutal now, and how to get your ski day back",
     readTime: "8 min",
-    published: "2026-08-23",
-    updated: "2026-08-23",
+    published: "2026-07-19",
+    updated: "2026-08-21",
     keywords: "ski resort lift lines, are ski resorts too crowded, lift line wait times, ski resort crowds, longest lift line, how to avoid lift lines",
     dek: `Skiers don't talk about lift lines like a small annoyance. They talk about them like a betrayal. "I found hell today." "Spent more time in line than skiing." "$200 to stand in a line." "That's a no from me, dawg." The pain is real, it hits hardest on the best days, and the parts you can actually control are very fixable.`,
     sections: [
@@ -65,8 +65,8 @@ const ARTICLES = [
       "Whistler's lift wait times are wrong more often than the forecast. Here's why every app fibs to you, and the most accurate way to check waits live.",
     h1: "The most accurate way to check Whistler lift wait times",
     readTime: "6 min",
-    published: "2026-08-23",
-    updated: "2026-08-23",
+    published: "2026-07-31",
+    updated: "2026-07-31",
     keywords: "whistler lift wait times, most accurate lift wait times, whistler chairlift wait times, 7th heaven wait, whistler peak app",
     dek: `No source is perfect, but the truest signal isn't a number scraped off Whistler Blackcomb's website. It's what the skiers standing in the wait right now are actually seeing. The official app, the Epic app, and Whistler Peak Live mostly recycle the same resort feed, or a light board somebody updates by hand, and it trails reality by 15 to 40 minutes. That's how your phone says "12 min" while your toes go numb in a 40 minute wait at 7th Heaven.`,
     sections: [
@@ -109,8 +109,8 @@ const ARTICLES = [
       "Powder days now mean 90 minute waits and everything tracked out by 11am. Here's how to actually score freshies: smarter resort picks, timing, and live wait data. No 5am alarm required.",
     h1: "How to beat powder day crowds (and still get fresh tracks)",
     readTime: "5 min",
-    published: "2026-08-23",
-    updated: "2026-08-23",
+    published: "2026-08-08",
+    updated: "2026-08-08",
     keywords: "how to avoid lift lines, powder day crowds, least crowded ski resorts, best time to arrive powder day, beat the crowds skiing",
     dek: `There's no powder day anymore. There's a powder hour. The fix isn't setting a 5am alarm to fight a 90 minute wait at the biggest resort on the pass. It's riding where the herd isn't, and chasing live waits instead of stampeding to the same "empty" lift as everyone else.`,
     sections: [
@@ -143,8 +143,8 @@ const ARTICLES = [
       "I-70 on a Saturday is a parking lot with a mountain view. Here's the real Colorado playbook: best days, sleeper resorts, timing, and how to pick a mountain that's actually worth the drive.",
     h1: "How to beat I-70 traffic and Colorado weekend crowds",
     readTime: "7 min",
-    published: "2026-08-23",
-    updated: "2026-08-23",
+    published: "2026-08-16",
+    updated: "2026-08-16",
     keywords: "i-70 ski traffic, least crowded colorado ski resort, best day to ski colorado, avoid ski crowds colorado, when to leave denver skiing",
     dek: `The honest conclusion every r/COsnow thread reaches: on a Saturday, you're not stuck in I-70 traffic, you ARE I-70 traffic. You can't delete the crowds, but you can dodge most of them. Pick the right day, the right mountain, and the right hours, and figure out whether a mountain's even worth the drive before you commit to the Eisenhower Tunnel crawl.`,
     sections: [
@@ -180,6 +180,9 @@ const ARTICLES = [
 
 // ---- template --------------------------------------------------------------
 const esc = (s) => String(s).replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;").replace(/"/g, "&quot;");
+const MONTHS = ["January","February","March","April","May","June","July","August","September","October","November","December"];
+const fmtDate = (iso) => { const [y, m, d] = iso.split("-").map(Number); return `${MONTHS[m - 1]} ${d}, ${y}`; };
+const stripTags = (s) => String(s).replace(/<[^>]+>/g, " ").replace(/\s+/g, " ").trim();
 const CSS = `
 :root{--bg:#070F16;--surface:#101D28;--raised:#1B2936;--hair:#2C3B48;--ink:#EFF4F9;--ink2:#ADB9C4;--ink3:#76828D;--brand:#43ACFB;--gold:#FEB84D;--good:#4AE299;
 --display:-apple-system,BlinkMacSystemFont,"Segoe UI",system-ui,Roboto,Helvetica,sans-serif;--body:-apple-system,BlinkMacSystemFont,"Segoe UI",system-ui,Roboto,sans-serif}
@@ -298,7 +301,7 @@ ${header()}
 <main><div class="wrap">
   <nav class="crumbs"><a href="/">Home</a> › <a href="/guides/">Guides</a> › ${esc(a.title)}</nav>
   <h1>${esc(a.h1)}</h1>
-  <p class="byline">By <b>${AUTHOR}</b> · ${esc(a.readTime)} read · Updated ${esc(a.updated)}</p>
+  <p class="byline">By <b>${AUTHOR}</b> · ${esc(a.readTime)} read · ${a.updated !== a.published ? "Updated " : ""}${fmtDate(a.updated)}</p>
   <p class="dek">${a.dek}</p>
   ${body}
   ${faq}
@@ -369,6 +372,69 @@ ${urls.map((u) => `  <url><loc>${u.loc}</loc>${u.lastmod ? `<lastmod>${u.lastmod
 </urlset>`;
 }
 
+// ---- llms.txt / llms-full.txt (for AI answer engines) ----------------------
+const SUMMARY = "PeakWait is a real-time ski-lift wait app for iPhone. Skiers on the mountain report live lift waits (Moving, Short, Busy, Long), and PeakWait shows which lifts are moving right now, ranks where to ski today by snow and crowds, and points you to the best next chair. It covers 91 resorts across the U.S. and Canada. Free to check status and report waits; PeakWait Plus adds the cross-resort \"where to ski today\" guide, powder alerts, and live friend location. Made by PeakWait LLC.";
+
+function llmsTxt(arts) {
+  return `# PeakWait
+
+> ${SUMMARY}
+
+## Guides
+${arts.map((a) => `- [${a.title}](${SITE}/guides/${a.slug}/): ${a.description}`).join("\n")}
+
+## Product
+- [PeakWait home](${SITE}/): what PeakWait is, its features, and the download link.
+- [Download PeakWait](${DOWNLOAD_URL}): get the free iOS app.
+
+## Legal
+- [Terms of Use](${SITE}/terms/): the terms of service.
+- [Privacy Policy](${SITE}/privacy/): what data PeakWait collects and your choices.
+`;
+}
+
+function articleText(a) {
+  let out = `# ${a.title}\nBy ${AUTHOR} · ${fmtDate(a.published)} · ${SITE}/guides/${a.slug}/\n\n${stripTags(a.dek)}\n\n`;
+  for (const s of a.sections) out += `## ${s.h2}\n${stripTags(s.html)}\n\n`;
+  out += `## FAQ\n` + a.faqs.map((f) => `Q: ${f.q}\nA: ${f.a}`).join("\n\n") + "\n";
+  return out;
+}
+
+function llmsFull(arts) {
+  return `# PeakWait — Full Guide Content\n\n> ${SUMMARY}\n\n` + arts.map(articleText).join("\n\n---\n\n");
+}
+
+const ROBOTS = `# PeakWait robots.txt
+User-agent: *
+Allow: /
+
+# AI crawlers and answer engines are welcome to read and cite us.
+User-agent: GPTBot
+Allow: /
+User-agent: OAI-SearchBot
+Allow: /
+User-agent: ChatGPT-User
+Allow: /
+User-agent: ClaudeBot
+Allow: /
+User-agent: anthropic-ai
+Allow: /
+User-agent: Claude-Web
+Allow: /
+User-agent: PerplexityBot
+Allow: /
+User-agent: Perplexity-User
+Allow: /
+User-agent: Google-Extended
+Allow: /
+User-agent: Applebot-Extended
+Allow: /
+User-agent: CCBot
+Allow: /
+
+Sitemap: ${SITE}/sitemap.xml
+`;
+
 // ---- build -----------------------------------------------------------------
 let n = 0;
 for (const a of ARTICLES) {
@@ -380,6 +446,8 @@ for (const a of ARTICLES) {
 }
 fs.writeFileSync(path.join(ROOT, "guides", "index.html"), indexHtml(ARTICLES));
 fs.writeFileSync(path.join(ROOT, "sitemap.xml"), sitemap(ARTICLES));
-fs.writeFileSync(path.join(ROOT, "robots.txt"), `User-agent: *\nAllow: /\nSitemap: ${SITE}/sitemap.xml\n`);
-console.log(`Built ${n} guides + index + sitemap.xml + robots.txt`);
+fs.writeFileSync(path.join(ROOT, "robots.txt"), ROBOTS);
+fs.writeFileSync(path.join(ROOT, "llms.txt"), llmsTxt(ARTICLES));
+fs.writeFileSync(path.join(ROOT, "llms-full.txt"), llmsFull(ARTICLES));
+console.log(`Built ${n} guides + index + sitemap.xml + robots.txt + llms.txt + llms-full.txt`);
 console.log(ARTICLES.map((a) => `  ${SITE}/guides/${a.slug}/`).join("\n"));

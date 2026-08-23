@@ -1,0 +1,17 @@
+# PeakWait
+
+> PeakWait is a real-time ski-lift wait app for iPhone. Skiers on the mountain report live lift waits (Moving, Short, Busy, Long), and PeakWait shows which lifts are moving right now, ranks where to ski today by snow and crowds, and points you to the best next chair. It covers 91 resorts across the U.S. and Canada. Free to check status and report waits; PeakWait Plus adds the cross-resort "where to ski today" guide, powder alerts, and live friend location. Made by PeakWait LLC.
+
+## Guides
+- [Why Ski Resort Lift Lines Feel So Brutal Now (and How to Get Your Day Back)](https://peakwait.net/guides/ski-resort-lift-lines/): Two hour waits, $200 to stand in line, six runs all day. Here's why lift lines got so bad, what skiers actually say about it, and how to claw back the parts you can control.
+- [The Most Accurate Whistler Lift Wait Times (2026)](https://peakwait.net/guides/whistler-lift-wait-times/): Whistler's lift wait times are wrong more often than the forecast. Here's why every app fibs to you, and the most accurate way to check waits live.
+- [How to Beat Powder Day Crowds and Still Get Fresh Tracks (2026)](https://peakwait.net/guides/beat-powder-day-crowds/): Powder days now mean 90 minute waits and everything tracked out by 11am. Here's how to actually score freshies: smarter resort picks, timing, and live wait data. No 5am alarm required.
+- [How to Beat I-70 Ski Traffic and Colorado Weekend Crowds (2026)](https://peakwait.net/guides/beat-i70-ski-traffic-colorado-crowds/): I-70 on a Saturday is a parking lot with a mountain view. Here's the real Colorado playbook: best days, sleeper resorts, timing, and how to pick a mountain that's actually worth the drive.
+
+## Product
+- [PeakWait home](https://peakwait.net/): what PeakWait is, its features, and the download link.
+- [Download PeakWait](https://peakwait.net): get the free iOS app.
+
+## Legal
+- [Terms of Use](https://peakwait.net/terms/): the terms of service.
+- [Privacy Policy](https://peakwait.net/privacy/): what data PeakWait collects and your choices.
