@@ -4,12 +4,13 @@
  * Add an entry to ARTICLES, run `node tools/build-guides.mjs`, commit the output.
  * Emits: /guides/<slug>/index.html, /guides/index.html, /sitemap.xml, /robots.txt
  * Author byline is always "Herb Sendit" (never the founder's real name).
+ * Voice: human, funny, no em-dashes, minimal hyphens.
  */
 import fs from "node:fs";
 import path from "node:path";
 
 const SITE = "https://peakwait.net";
-const DOWNLOAD_URL = "https://peakwait.net"; // TODO: swap to the App Store URL once live
+const DOWNLOAD_URL = "https://peakwait.net"; // swap to the App Store URL once live
 const AUTHOR = "Herb Sendit";
 const ROOT = path.resolve(path.dirname(new URL(import.meta.url).pathname), "..");
 
@@ -19,160 +20,161 @@ const ARTICLES = [
     slug: "ski-resort-lift-lines",
     title: "Why Ski Resort Lift Lines Feel So Brutal Now (and How to Get Your Day Back)",
     description:
-      "Two-hour waits, $200 to stand in line, six runs all day. Here's why lift lines got so bad, what skiers actually say about it, and how to claw back the parts you can control.",
-    h1: "Why lift lines feel so brutal now — and how to get your ski day back",
+      "Two hour waits, $200 to stand in line, six runs all day. Here's why lift lines got so bad, what skiers actually say about it, and how to claw back the parts you can control.",
+    h1: "Why lift lines feel so brutal now, and how to get your ski day back",
     readTime: "8 min",
     published: "2026-08-23",
     updated: "2026-08-23",
     keywords: "ski resort lift lines, are ski resorts too crowded, lift line wait times, ski resort crowds, longest lift line, how to avoid lift lines",
-    dek: `Skiers don't describe lift lines like a minor annoyance. They describe them like a personal betrayal: <em>"I found hell today." "Spent more time in line than skiing." "$200 to stand in a line." "That's a no from me, dawg."</em> The pain is real, it lands hardest on exactly the best days — and for the parts you can control, it's very fixable.`,
+    dek: `Skiers don't talk about lift lines like a small annoyance. They talk about them like a betrayal. "I found hell today." "Spent more time in line than skiing." "$200 to stand in a line." "That's a no from me, dawg." The pain is real, it hits hardest on the best days, and the parts you can actually control are very fixable.`,
     sections: [
       { h2: "The math that quietly ruins the day", html: `
-<p>The core wound isn't the wait itself — it's the ratio. An hour in line for a two-minute run. A full powder day reduced to six runs. People do the arithmetic mid-shiver and it breaks something: "I spent more time in various lift lines than actually skiing." At that point you're not skiing, you're queueing with a hobby attached.</p>` },
-      { h2: "The powder-day paradox", html: `
-<p>Here's the cruelest part: the best conditions summon the worst waits. The exact days you'd trade a paycheck to ski are the days everyone else feels the same way. Fresh snow drops, terrain opens slowly for avalanche control, and the whole mountain funnels onto three lifts. Best snow, longest waits, every time. The irony is so reliable you could set a watch to it.</p>` },
+<p>The real wound isn't the wait. It's the ratio. An hour in line for a two minute run. A whole powder day boiled down to six runs. People do that math while their toes go numb, and something snaps. "I spent more time in various lift lines than actually skiing." At that point you're not skiing. You're queueing with a hobby attached.</p>` },
+      { h2: "The powder day paradox", html: `
+<p>Here's the cruel part. The best snow brings the worst waits. The exact days you'd skip work to ski are the days everyone else has the same idea. Fresh snow falls, terrain opens slowly while patrol does avalanche work, and the whole mountain funnels onto three lifts. Best conditions, longest lines, every single time. You could set your watch by it.</p>` },
       { h2: `"$200 to stand in a line"`, html: `
-<p>Then there's the money. Nothing turns a fun day sour like doing the value math: a couple hundred bucks for a ticket, and you got seven runs. Skiers have literally filmed themselves <em>walking up the mountain</em> because it was faster than the wait. When people would rather hike in ski boots than use the lift they paid for, the product has a problem.</p>` },
+<p>Then there's the money. Nothing sours a day faster than the value math: a couple hundred bucks for a ticket, and you got seven runs. People have filmed themselves hiking up the mountain because it was faster than the wait. When paying customers would rather walk than ride the lift, something is broken.</p>` },
       { h2: `The "this isn't even skiing anymore" feeling`, html: `
-<p>The megapass era packed the mountains, and it shows. Tens of thousands of people threading through a handful of lifts starts to feel less like a mountain and more like a theme park with worse food. "It's no longer even skiing at some of these resorts," goes the refrain. That's not gatekeeping — it's grief for a thing people love.</p>` },
+<p>The megapass era crammed the mountains full, and you can feel it. Tens of thousands of people squeezing through a handful of lifts stops feeling like a mountain and starts feeling like a theme park with worse food. "It's not even skiing anymore at some of these resorts," people say. That's not gatekeeping. It's grief for something they love.</p>` },
       { h2: "The part that's actually infuriating (and fixable)", html: `
-<p>Here's the detail buried in every crowd thread, and it's the important one: <strong>the waits are wildly uneven.</strong> There's a 15-minute line at one lift while a chair on the far side of the mountain runs half-empty. Lifties aren't filling chairs. One "hero" lift eats all the traffic while its neighbor sits idle.</p>
-<p>Which means the short wait almost always <em>exists</em> — somewhere on the mountain, right now. The problem was never that there's no good option. The problem is you can't see it from where you're standing, so everyone piles onto the same obvious lift and makes it worse.</p>` },
+<p>Here's the detail buried in every crowd thread, and it's the one that matters. The waits are wildly uneven. There's a 20 minute line at one lift while a chair on the far side of the mountain runs half empty. Lifties aren't filling chairs. One lift absorbs the whole crowd while its twin spins with room to spare.</p>
+<p>So the short wait almost always exists. Somewhere on the mountain, right now, there's a good option. The problem was never that every lift is slammed. The problem is you can't see the empty one from where you're standing, so everybody piles onto the same obvious lift and makes it worse.</p>` },
       { h2: "What you can actually control", html: `
-<p>You can't fix the megapass, the parking, or the powder-day math. But you can stop donating your day to the longest line on the hill:</p>
+<p>You can't fix the megapass, the parking, or the powder day math. But you can stop handing your whole day to the longest line on the hill.</p>
 <ul>
-  <li><strong>Point the car at the right mountain.</strong> On any given morning one nearby resort has the snow <em>and</em> the short waits. PeakWait's <strong>"Where to ski today"</strong> ranks them so you skip the blown-out flagship for the sleeper that's quietly crushing it.</li>
-  <li><strong>Chase the short wait that already exists.</strong> PeakWait shows <strong>live waits reported by skiers on the hill right now</strong> (Moving · Short · Busy · Long) and points you to the <strong>best next chair</strong> — so you ride to the empty lift instead of guessing.</li>
-  <li><strong>Ski like a local:</strong> mid-mountain lifts over base lifts, the singles line always, first chair then bounce by 1 — or roll in at 1pm as everyone leaves.</li>
+  <li><strong>Point the car at the right mountain.</strong> On any given morning, one nearby resort has the snow and the short waits. PeakWait's <strong>"Where to ski today"</strong> ranks them, so you skip the blown out flagship for the sleeper that's quietly having the best day around.</li>
+  <li><strong>Go find the short wait that already exists.</strong> PeakWait shows <strong>live waits reported by skiers on the hill right now</strong> (Moving, Short, Busy, Long) and points you to the <strong>best next chair</strong>, so you ride to the empty lift instead of guessing.</li>
+  <li><strong>Ski like a local.</strong> Take the mid mountain lifts over the base lifts, use the singles line every time, and either grab first chair and bounce by 1, or roll in at 1pm as everyone leaves.</li>
 </ul>
-<p>None of it makes a powder Saturday feel like a Tuesday. But it's the difference between six runs and sixteen.</p>` },
+<p>None of this turns a powder Saturday into a quiet Tuesday. But it's the difference between six runs and sixteen.</p>` },
     ],
     faqs: [
-      { q: "Why are ski resort lift lines so long now?", a: "Megapasses (Epic, Ikon) packed more skiers onto the same mountains, powder days concentrate everyone onto limited open terrain, and waits are unevenly distributed — one popular lift absorbs traffic while others run under capacity." },
-      { q: "Are ski resorts too crowded?", a: "On weekends, holidays, and powder days at big-pass resorts, often yes. But smaller and independent resorts stay far quieter, and on any given day the short waits still exist somewhere — the trick is finding them." },
-      { q: "What's the longest you should wait for a lift?", a: "Most experienced skiers draw the line around 10–15 minutes; 30+ minutes is widely considered extreme, and many will leave the mountain rather than wait 45 minutes for a short run." },
-      { q: "How do I find the shortest lift line?", a: "Check live, crowd-sourced waits (like PeakWait's) instead of guessing from the base. The shortest wait usually exists on a nearby lift you can't see — an app that reads it in real time points you there." },
-      { q: "Does PeakWait help with crowds?", a: "Yes — it shows live waits from skiers on the hill, ranks which mountain to ski today by snow and waits, and points you to the best next chair, so you spend the day skiing instead of standing." },
+      { q: "Why are ski resort lift lines so long now?", a: "Megapasses like Epic and Ikon put more skiers on the same mountains, powder days pack everyone onto whatever terrain is open, and the waits are uneven, so one popular lift soaks up the traffic while others run under capacity." },
+      { q: "Are ski resorts too crowded?", a: "On weekends, holidays, and powder days at the big pass resorts, often yes. Smaller and independent resorts stay much quieter, and on any given day the short waits still exist somewhere. The trick is finding them." },
+      { q: "What's the longest you should wait for a lift?", a: "Most experienced skiers cap it around 10 to 15 minutes. Anything past 30 is considered extreme, and plenty of people will just leave rather than wait 45 minutes for a short run." },
+      { q: "How do I find the shortest lift line?", a: "Check live waits from other skiers (like PeakWait's) instead of guessing from the base. The shortest wait is usually on a lift you can't see, and an app that reads it live sends you straight there." },
+      { q: "Does PeakWait help with crowds?", a: "Yes. It shows live waits from skiers on the hill, ranks which mountain to ski today by snow and waits, and points you to the best next chair, so you spend the day skiing instead of standing." },
     ],
-    cta: { h: "Spend the day skiing, not standing", p: `See which mountain has the snow and the short waits today — and the best next chair once you're there.` },
+    cta: { h: "Spend the day skiing, not standing", p: `See which mountain has the snow and the short waits today, plus the best next chair once you're there.` },
   },
+
   {
     slug: "whistler-lift-wait-times",
     title: "The Most Accurate Whistler Lift Wait Times (2026)",
     description:
-      "Whistler's lift wait times are wrong more often than the forecast. Here's why every app fibs to you — and the most accurate way to actually check waits in real time.",
+      "Whistler's lift wait times are wrong more often than the forecast. Here's why every app fibs to you, and the most accurate way to check waits live.",
     h1: "The most accurate way to check Whistler lift wait times",
     readTime: "6 min",
     published: "2026-08-23",
     updated: "2026-08-23",
     keywords: "whistler lift wait times, most accurate lift wait times, whistler chairlift wait times, 7th heaven wait, whistler peak app",
-    dek: `No source is perfect — but the truest signal isn't a number scraped off Whistler Blackcomb's website. It's what skiers standing in the wait <em>right now</em> are actually seeing. The official app, the Epic app, and Whistler Peak Live mostly recycle the same resort feed (or a hand-updated light board), which trails reality by 15–40 minutes. That's how your phone says "12 min" while your toes go numb in a 40-minute wait at 7th Heaven.`,
+    dek: `No source is perfect, but the truest signal isn't a number scraped off Whistler Blackcomb's website. It's what the skiers standing in the wait right now are actually seeing. The official app, the Epic app, and Whistler Peak Live mostly recycle the same resort feed, or a light board somebody updates by hand, and it trails reality by 15 to 40 minutes. That's how your phone says "12 min" while your toes go numb in a 40 minute wait at 7th Heaven.`,
     sections: [
       { h2: "Why every Whistler wait time is basically fan fiction", html: `
-<p>If three different apps show you the exact same number, it's because they're all sipping from one straw: Whistler Blackcomb's own feed. And that number drifts from reality for gloriously low-tech reasons:</p>
+<p>If three different apps show you the same number, it's because they're all drinking from one straw: Whistler Blackcomb's own feed. And that number drifts from reality for gloriously low tech reasons.</p>
 <ul>
-  <li><strong>The light boards are manual.</strong> Someone has to literally phone the mountain office and say "hey, it's slammed, change the board." That happens <em>after</em> the wait balloons, not before.</li>
-  <li><strong>Sensor estimates lag.</strong> Gate and Bluetooth counters guess flow the way a mall food court does — great for "is it busy-ish," useless for a lift that just plugged up on a pow lap.</li>
-  <li><strong>GPS is only partial.</strong> Phone-based estimates only work if enough riders have that app open with tracking on. Most don't. Shocking, we know.</li>
+  <li><strong>The light boards are manual.</strong> Someone has to literally phone the mountain office and say "hey, it's slammed, change the board." That happens after the wait balloons, not before.</li>
+  <li><strong>Sensor estimates lag.</strong> Gate and Bluetooth counters guess the flow the way a mall food court does. Fine for "is it kind of busy," useless for a lift that just plugged up on a pow lap.</li>
+  <li><strong>GPS is only partial.</strong> Phone based estimates only work if enough riders have that app open with tracking on, and most people don't.</li>
 </ul>
-<p>By the time any of these updates, the wait has already changed and everyone's migrated somewhere new. It's less "live data" and more "a postcard from 25 minutes ago."</p>` },
+<p>By the time any of it updates, the wait has already changed and everyone's moved on. It's less "live data" and more "a postcard from 25 minutes ago."</p>` },
       { h2: "The one genuinely accurate source: the people already standing there", html: `
-<p>The r/Whistler hive mind landed on the truth years ago: <em>"the only accurate thing is standing in the line itself."</em> That's the whole idea behind PeakWait — instead of a stale scraped number, it shows what riders <strong>on the hill this minute</strong> are reporting.</p>
+<p>The r/Whistler crowd figured this out years ago. The only accurate thing is standing in the line yourself. That's the whole idea behind PeakWait. Instead of a stale scraped number, it shows what riders on the hill this minute are reporting.</p>
 <ul>
-  <li>Skiers tag each lift <strong>Moving · Short · Busy · Long</strong> as they see it, blended with live movement on the mountain.</li>
-  <li>Every wait is <strong>freshness-stamped</strong>, so you know if it's 2 minutes old or 2 hours old — and when there's no signal, it says "unknown" instead of confidently making something up.</li>
-  <li>Then it points you to the <strong>best next chair</strong> across the whole mountain, so you're skiing toward the short wait instead of into the stampede.</li>
+  <li>Skiers tag each lift Moving, Short, Busy, or Long as they see it, blended with live movement on the mountain.</li>
+  <li>Every wait comes with a timestamp, so you know if it's two minutes old or two hours old. And when there's no signal, it says "unknown" instead of confidently making something up.</li>
+  <li>Then it points you to the best next chair across the whole mountain, so you're skiing toward the short wait instead of into the stampede.</li>
 </ul>
-<p>Still an estimate — but it's the crowd's live read from people who are literally there. Roughly as honest as "just go look," minus the part where you post-hole across the base to go look.</p>` },
+<p>Still an estimate, sure. But it's the crowd's live read from people who are actually there. About as honest as "just go look," without the part where you trudge across the base in ski boots to find out.</p>` },
       { h2: "7th Heaven, Harmony, Symphony: the usual suspects", html: `
 <ul>
-  <li><strong>The alpine trio</strong> can hit 45 minutes on a weekend or powder day — spectacular terrain, not-so-spectacular lift capacity. Lap it early or late, not at high noon with everyone else.</li>
-  <li><strong>When the lower mountain is socked in or unskiable</strong>, everybody funnels up top and the alpine waits spike. That's exactly when live data earns its keep.</li>
-  <li><strong>Pow mornings:</strong> the "empty" lift you spotted 20 minutes ago is now the longest wait on the hill. Chase live, not lagged.</li>
+  <li><strong>The alpine trio</strong> can hit 45 minutes on a weekend or powder day. Amazing terrain, not so amazing lift capacity. Lap it early or late, not at noon with everyone else.</li>
+  <li><strong>When the lower mountain is socked in or unskiable,</strong> everybody funnels up top and the alpine waits spike. That's exactly when live data earns its keep.</li>
+  <li><strong>Pow mornings:</strong> the empty lift you spotted 20 minutes ago is now the longest wait on the hill. Chase live, not lagged.</li>
 </ul>` },
     ],
     faqs: [
-      { q: "What's the most accurate source for Whistler lift wait times?", a: "Real-time reports from skiers currently on the hill. Official and app numbers are largely resort-fed and lag by 15–40 minutes; crowd-sourced live reports (like PeakWait's) reflect the wait as it actually is right now." },
-      { q: "Is the Whistler Peak app or Epic app accurate for wait times?", a: "They're handy for lift status, but their wait numbers mostly come from Whistler Blackcomb's feed, so they lag real conditions and often disagree with the actual wait you're standing in." },
-      { q: "Why is 7th Heaven always so busy?", a: "Big, popular alpine terrain served by limited chair capacity — so it fills fast, especially on powder and weekend days. Lap it first thing or late afternoon." },
-      { q: "How does PeakWait get its wait times?", a: "From skiers on the mountain reporting live waits, blended with movement data, shown as freshness-stamped bands (Moving/Short/Busy/Long) — not a single scraped official figure." },
+      { q: "What's the most accurate source for Whistler lift wait times?", a: "Live reports from skiers who are on the hill right now. Official and app numbers mostly come from the resort feed and lag by 15 to 40 minutes, while crowdsourced live reports (like PeakWait's) show the wait as it actually is." },
+      { q: "Is the Whistler Peak app or Epic app accurate for wait times?", a: "They're handy for lift status, but their wait numbers mostly come from Whistler Blackcomb's feed, so they lag the real conditions and often disagree with the wait you're actually standing in." },
+      { q: "Why is 7th Heaven always so busy?", a: "Big, popular alpine terrain served by limited chair capacity, so it fills up fast, especially on powder and weekend days. Lap it first thing or late afternoon." },
+      { q: "How does PeakWait get its wait times?", a: "From skiers on the mountain reporting live waits, blended with movement data, shown as timestamped bands (Moving, Short, Busy, Long) instead of one scraped official number." },
     ],
-    cta: { h: "Skip the guesswork", p: `See Whistler waits from the people actually on the hill — plus the best next chair to ski.` },
+    cta: { h: "Skip the guesswork", p: `See Whistler waits from the people actually on the hill, plus the best next chair to ski.` },
   },
 
   {
     slug: "beat-powder-day-crowds",
-    title: "How to Beat Powder-Day Crowds and Still Get Fresh Tracks (2026)",
+    title: "How to Beat Powder Day Crowds and Still Get Fresh Tracks (2026)",
     description:
-      "Powder days now mean 90-minute waits and everything tracked out by 11am. Here's how to actually score freshies — smarter resort picks, timing, and live wait data. No 5am alarm required.",
-    h1: "How to beat powder-day crowds (and still get fresh tracks)",
+      "Powder days now mean 90 minute waits and everything tracked out by 11am. Here's how to actually score freshies: smarter resort picks, timing, and live wait data. No 5am alarm required.",
+    h1: "How to beat powder day crowds (and still get fresh tracks)",
     readTime: "5 min",
     published: "2026-08-23",
     updated: "2026-08-23",
     keywords: "how to avoid lift lines, powder day crowds, least crowded ski resorts, best time to arrive powder day, beat the crowds skiing",
-    dek: `There's no powder day anymore — there's a powder <em>hour</em>. The fix isn't setting a 5am alarm to fight a 90-minute wait at the biggest resort on the pass. It's riding where the herd isn't and chasing live waits instead of stampeding to the same "empty" lift as everyone else.`,
+    dek: `There's no powder day anymore. There's a powder hour. The fix isn't setting a 5am alarm to fight a 90 minute wait at the biggest resort on the pass. It's riding where the herd isn't, and chasing live waits instead of stampeding to the same "empty" lift as everyone else.`,
     sections: [
       { h2: "Why powder days turned into a demolition derby", html: `
-<p>It's not just you. As r/snowboarding so poetically put it: <em>"there's no powder day, there's a powder hour."</em> Social media ratted out every secret stash, the megapasses funnel entire metro areas onto the same few hills, and one closed upper-mountain lift dumps everyone onto a single chair. Baker's blown out by 10. Palisades gives you two or three glorious laps and then an hour-long wait for the privilege of riding your own tracks.</p>` },
-      { h2: "Lever #1: ride where the crowd isn't", html: `
-<p>The biggest difference-maker isn't your alarm clock — it's <strong>which mountain you point the car at.</strong> Every crowd thread lands on the same fix: smaller hills farther from the city hold fresh snow for days. The hard part is <em>deciding</em> on the morning of — which nearby mountain actually has the snow <strong>and</strong> the short waits?</p>
-<p>That's exactly what PeakWait's <strong>"Where to ski today"</strong> does: it ranks the mountains near you by fresh snow × short waits × how much is open. Skip the blown-out flagship, hit the sleeper that's quietly having the best day of anyone — before the group chat figures it out.</p>` },
-      { h2: "Lever #2: time it (you don't have to suffer for this)", html: `
+<p>It's not just you. As one r/snowboarding regular put it, there's no powder day, there's a powder hour. Social media ratted out every secret stash, the megapasses funnel whole cities onto the same few hills, and one closed upper mountain lift dumps everybody onto a single chair. Baker's blown out by 10. Palisades gives you two or three glorious laps and then an hour long wait for the privilege of riding your own tracks.</p>` },
+      { h2: "Lever 1: ride where the crowd isn't", html: `
+<p>The biggest difference maker isn't your alarm clock. It's which mountain you point the car at. Every crowd thread lands on the same answer: smaller hills farther from the city hold fresh snow for days. The hard part is deciding on the morning of. Which nearby mountain actually has the snow and the short waits?</p>
+<p>That's exactly what PeakWait's <strong>"Where to ski today"</strong> does. It ranks the mountains near you by fresh snow, short waits, and how much terrain is open. Skip the blown out flagship, hit the sleeper that's quietly having the best day of anyone, and beat the group chat to it.</p>` },
+      { h2: "Lever 2: time it (you don't have to suffer for this)", html: `
 <ul>
-  <li><strong>Be booted up before first chair</strong> on a true pow day. The gap between rolling in at 7:45 and 8:20 can be a full extra hour stuck in the base-area conga line.</li>
-  <li><strong>Weekdays are a different sport</strong> — first ten chairs with a 15-minute buffer and elbow room to spare.</li>
-  <li><strong>Watch the storm clock:</strong> snow that starts <em>after</em> the lifts open quietly refills your lines while the early crowd fades to the lodge for a $19 burger.</li>
+  <li><strong>Be booted up before first chair</strong> on a real pow day. The gap between rolling in at 7:45 and 8:20 can be a full extra hour stuck in the base area conga line.</li>
+  <li><strong>Weekdays are a different sport.</strong> First ten chairs with a 15 minute buffer and room to breathe.</li>
+  <li><strong>Watch the storm clock.</strong> Snow that starts after the lifts open quietly refills your lines while the early crowd wanders off to the lodge for a $19 burger.</li>
 </ul>` },
-      { h2: "Lever #3: once you're there, chase live waits — not the herd", html: `
-<p>The classic pow-day trap: that "empty" lift you eyeballed 20 minutes ago is now the longest wait on the mountain, because 400 other people had the identical genius idea. PeakWait shows <strong>live waits reported by riders on the mountain right now</strong> (Moving · Short · Busy · Long, freshness-stamped) and points you to the <strong>best next chair</strong> — so you're always drifting toward the short wait, not into the migration.</p>` },
+      { h2: "Lever 3: once you're there, chase live waits, not the herd", html: `
+<p>The classic pow day trap: that "empty" lift you eyeballed 20 minutes ago is now the longest wait on the mountain, because 400 other people had the identical genius idea. PeakWait shows live waits reported by riders on the mountain right now (Moving, Short, Busy, Long, all timestamped) and points you to the best next chair, so you're always drifting toward the short wait instead of into the migration.</p>` },
     ],
     faqs: [
       { q: "How do I avoid lift lines on a powder day?", a: "Pick a smaller resort farther from the city, be booted up before first chair, and use live wait data to chase the moving lifts instead of following the crowd to the same one." },
-      { q: "What time should I arrive on a powder day?", a: "Booted and in line before the first chair — often an hour of lead time at big resorts on a storm day. Weekdays need far less." },
-      { q: "Which resorts have the shortest powder-day waits?", a: "Smaller hills away from major cities hold fresh snow and stay quieter. PeakWait's \"Where to ski today\" ranks the ones near you by snow and wait, live." },
+      { q: "What time should I arrive on a powder day?", a: "Booted and in line before first chair, which can mean an hour of lead time at big resorts on a storm day. Weekdays need far less." },
+      { q: "Which resorts have the shortest powder day waits?", a: "Smaller hills away from the big cities hold fresh snow and stay quieter. PeakWait's 'Where to ski today' ranks the ones near you by snow and wait, live." },
     ],
-    cta: { h: "Stop guessing on the best days", p: `See which mountain has the snow and the shortest waits — and the best next chair once you're there.` },
+    cta: { h: "Stop guessing on the best days", p: `See which mountain has the snow and the shortest waits, plus the best next chair once you're there.` },
   },
 
   {
     slug: "beat-i70-ski-traffic-colorado-crowds",
     title: "How to Beat I-70 Ski Traffic and Colorado Weekend Crowds (2026)",
     description:
-      "I-70 on a Saturday is a parking lot with a mountain view. Here's the real Colorado playbook — best days, sleeper resorts, timing, and how to pick a mountain that's actually worth the drive.",
+      "I-70 on a Saturday is a parking lot with a mountain view. Here's the real Colorado playbook: best days, sleeper resorts, timing, and how to pick a mountain that's actually worth the drive.",
     h1: "How to beat I-70 traffic and Colorado weekend crowds",
     readTime: "7 min",
     published: "2026-08-23",
     updated: "2026-08-23",
     keywords: "i-70 ski traffic, least crowded colorado ski resort, best day to ski colorado, avoid ski crowds colorado, when to leave denver skiing",
-    dek: `The honest conclusion every r/COsnow thread arrives at: on a Saturday, you're not stuck in I-70 traffic — you <em>are</em> I-70 traffic. You can't delete the crowds, but you can dodge most of them. Pick the right day, the right mountain, and the right hours, and — critically — know whether a mountain's even worth the drive before you commit to the Eisenhower Tunnel crawl.`,
+    dek: `The honest conclusion every r/COsnow thread reaches: on a Saturday, you're not stuck in I-70 traffic, you ARE I-70 traffic. You can't delete the crowds, but you can dodge most of them. Pick the right day, the right mountain, and the right hours, and figure out whether a mountain's even worth the drive before you commit to the Eisenhower Tunnel crawl.`,
     sections: [
       { h2: "The I-70 reality check", html: `
-<p>There are basically two departure windows that work, and a vast dead zone of despair in between. Leave Denver by <strong>5–6am</strong> to beat the wave, or wait until <strong>~10:30am</strong> to ride the gap after the early crowd has already wedged itself into the tunnel. Everything in the middle is bumper-to-bumper with a side of ski-rack anxiety.</p>
-<p>PeakWait can't part the traffic (we're an app, not Moses). But most of the I-70 pain isn't the drive — it's burning a Saturday to drive two hours to a blown-out resort with 45-minute waits. Fix <em>that</em> and the drive suddenly feels worth it.</p>` },
+<p>There are basically two departure windows that work, and a long dead zone of despair in between. Leave Denver by 5 or 6am to beat the wave, or wait until around 10:30am to ride the gap after the early crowd has already wedged itself into the tunnel. Everything in the middle is bumper to bumper with a side of ski rack anxiety.</p>
+<p>PeakWait can't do anything about the traffic itself. But most of the I-70 pain isn't really the drive. It's burning a whole Saturday to sit in it for two hours and arrive at a blown out resort with 45 minute waits. Fix that, and the drive starts to feel worth it.</p>` },
       { h2: "Pick the day (this is 80% of it)", html: `
 <ul>
-  <li><strong>Sunday > Saturday.</strong> Half of Denver skied Saturday and is nursing its regrets. Sundays run noticeably quieter.</li>
-  <li><strong>Avoid the black-diamond dates:</strong> MLK weekend, Presidents weekend, and Dec 26–Jan 2 are a full-contact sport. If you must, expect to make friends in the singles line.</li>
-  <li><strong>Weekdays are cheating (in a good way).</strong> A single PTO day can be worth ten Saturdays. Regulars aren't taking Tuesdays off to post on Reddit — they're already on the hill.</li>
+  <li><strong>Sunday beats Saturday.</strong> Half of Denver skied Saturday and is nursing its regrets. Sundays run noticeably quieter.</li>
+  <li><strong>Avoid the black diamond dates.</strong> MLK weekend, Presidents weekend, and December 26 through January 2 are a full contact sport. If you have to go, expect to make friends in the singles line.</li>
+  <li><strong>Weekdays are cheating, in a good way.</strong> A single PTO day can be worth ten Saturdays. The regulars aren't taking Tuesdays off to post on Reddit. They're already on the hill.</li>
 </ul>` },
       { h2: "Pick the mountain that's actually worth the drive", html: `
-<p>The Front Range flagships — Vail, Breck, Keystone, Copper, Winter Park — absorb the entire Denver metro every weekend. The move the locals quietly make is going <strong>independent or farther out:</strong> Loveland, Eldora, Monarch, Ski Cooper, Wolf Creek, Crested Butte. Less pass hype, more actual skiing.</p>
-<p>The catch is picking the right one on the morning of. PeakWait's <strong>"Where to ski today"</strong> ranks the mountains near you by fresh snow × short waits × how much is open — so you point the car at the hill that's genuinely good today, not the one with the loudest marketing.</p>` },
-      { h2: "Once you're there: don't ski like a tourist", html: `
+<p>The Front Range flagships (Vail, Breck, Keystone, Copper, Winter Park) soak up the entire Denver metro every weekend. The quiet move the locals make is going independent or farther out: Loveland, Eldora, Monarch, Ski Cooper, Wolf Creek, Crested Butte. Less pass hype, more actual skiing.</p>
+<p>The catch is picking the right one on the morning of. PeakWait's <strong>"Where to ski today"</strong> ranks the mountains near you by fresh snow, short waits, and how much is open, so you point the car at the hill that's genuinely good today, not the one with the loudest marketing.</p>` },
+      { h2: "Once you're there, don't ski like a tourist", html: `
 <ul>
-  <li><strong>Base lifts are the trap.</strong> Everyone piles onto the first chair they see. Ride a mid-mountain lift and the wait can drop from 20 minutes to two.</li>
-  <li><strong>Use the singles line.</strong> Skating beats standing. You'll cut the wait dramatically and probably meet a legend.</li>
-  <li><strong>First chair, then bounce by 1.</strong> Or flip it — roll in at 1pm as the morning crew heads home and cruise empty groomers till close.</li>
-  <li><strong>Chase live waits.</strong> PeakWait shows which lifts are actually moving right now and the best next chair, so you're not committing to a wait you can't see from the base.</li>
+  <li><strong>Base lifts are the trap.</strong> Everyone piles onto the first chair they see. Ride a mid mountain lift and the wait can drop from 20 minutes to two.</li>
+  <li><strong>Use the singles line.</strong> Skating beats standing, and it usually cuts the wait down to a fraction.</li>
+  <li><strong>First chair, then bounce by 1.</strong> Or flip it and roll in at 1pm as the morning crew heads home, then cruise empty groomers till close.</li>
+  <li><strong>Chase live waits.</strong> PeakWait shows which lifts are actually moving right now and the best next chair, so you're not committing to a wait you can't even see from the base.</li>
 </ul>` },
     ],
     faqs: [
-      { q: "What's the least crowded ski resort near Denver?", a: "Independents and farther-out mountains — Loveland, Eldora, Monarch, Ski Cooper, Wolf Creek, Crested Butte — stay far quieter than the megapass flagships. Use PeakWait's \"Where to ski today\" to see which one has snow and short waits on a given day." },
-      { q: "What's the best day to ski in Colorado to avoid crowds?", a: "A weekday, hands down. If you're stuck with weekends, Sunday beats Saturday, and avoid MLK, Presidents, and the Dec 26–Jan 2 holiday stretch." },
-      { q: "When should I leave Denver to beat I-70 ski traffic?", a: "Either early (5–6am) to beat the wave, or around 10:30am to catch the gap after it. The late-morning middle is the worst of both worlds." },
-      { q: "Does PeakWait show I-70 traffic?", a: "No — it's a lift-wait and where-to-ski app, not a traffic router. But it helps with the real problem: picking a mountain that actually has snow and short waits, so you don't waste a Saturday driving to a blown-out resort." },
+      { q: "What's the least crowded ski resort near Denver?", a: "Independents and farther out mountains like Loveland, Eldora, Monarch, Ski Cooper, Wolf Creek, and Crested Butte stay far quieter than the megapass flagships. Use PeakWait's 'Where to ski today' to see which one has snow and short waits on a given day." },
+      { q: "What's the best day to ski in Colorado to avoid crowds?", a: "A weekday, hands down. If you're stuck with weekends, Sunday beats Saturday, and steer clear of MLK, Presidents, and the December 26 through January 2 stretch." },
+      { q: "When should I leave Denver to beat I-70 ski traffic?", a: "Either early, around 5 or 6am, to beat the wave, or around 10:30am to catch the gap after it. The late morning middle is the worst of both worlds." },
+      { q: "Does PeakWait show I-70 traffic?", a: "No. It's a lift wait and where to ski app, not a traffic router. But it helps with the real problem: picking a mountain that actually has snow and short waits, so you don't waste a Saturday driving to a blown out resort." },
     ],
-    cta: { h: "Make the drive worth it", p: `See which Colorado mountain has the snow and the shortest waits today — before you commit to I-70.` },
+    cta: { h: "Make the drive worth it", p: `See which Colorado mountain has the snow and the shortest waits today, before you commit to I-70.` },
   },
 ];
 
@@ -236,7 +238,7 @@ const ctaBlock = (c) => `
 <div class="cta">
   <h3>${esc(c.h)}</h3>
   <p>${esc(c.p)}</p>
-  <a href="${DOWNLOAD_URL}">Download PeakWait — free</a>
+  <a href="${DOWNLOAD_URL}">Download PeakWait, free</a>
   <div class="tagline">Ski the mountain, skip the wait.</div>
 </div>`;
 
@@ -325,10 +327,10 @@ function indexHtml(arts) {
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Ski Guides — Beat the Wait | PeakWait</title>
-<meta name="description" content="Straight-talking guides to skiing smarter: how to beat lift waits, dodge crowds, and find where to actually ski today. By Herb Sendit.">
+<title>Ski Guides, Beat the Wait | PeakWait</title>
+<meta name="description" content="No nonsense guides to skiing smarter: how to beat lift waits, dodge crowds, and find where to actually ski today. By Herb Sendit.">
 <link rel="canonical" href="${SITE}/guides/">
-<meta property="og:title" content="PeakWait Ski Guides — Beat the Wait">
+<meta property="og:title" content="PeakWait Ski Guides, Beat the Wait">
 <meta property="og:description" content="How to beat lift waits, dodge crowds, and find where to actually ski today.">
 <meta property="og:url" content="${SITE}/guides/">
 <meta property="og:image" content="${SITE}/og.png">
@@ -345,7 +347,7 @@ ${header()}
 <main><div class="wrap">
   <nav class="crumbs"><a href="/">Home</a> › Guides</nav>
   <h1>Ski smarter. Skip the wait.</h1>
-  <p class="lead">Straight-talking guides to beating lift waits, dodging crowds, and finding where to actually ski today — from someone who's spent too much of his life in a singles line. By Herb Sendit.</p>
+  <p class="lead">No nonsense guides to beating lift waits, dodging crowds, and finding where to actually ski today, from someone who has spent way too much of his life in a singles line. By Herb Sendit.</p>
   ${cards}
 </div></main>
 ${footer()}
