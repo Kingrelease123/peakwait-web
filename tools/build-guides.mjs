@@ -246,6 +246,121 @@ const ARTICLES = [
     ],
     cta: { h: "Get the short line", p: `See live, crowdsourced lift waits and where to ski today across 91 resorts.` },
   },
+
+  {
+    slug: "least-crowded-colorado-ski-resorts",
+    title: "The Least Crowded Colorado Ski Resorts (and How to Find the Quiet One Today)",
+    description:
+      "The big I-70 resorts soak up all of Denver. Here are the Colorado mountains that stay quiet, and how to tell which one is actually empty on any given day.",
+    h1: "The least crowded Colorado ski resorts",
+    readTime: "6 min",
+    published: "2026-08-19",
+    updated: "2026-08-19",
+    keywords: "least crowded colorado ski resort, quietest ski resort colorado, less crowded ski resorts denver, colorado ski resorts no lines",
+    dek: `The honest answer to "which Colorado resort is least crowded" is "the one Denver didn't drive to today." The trophy mountains on I-70 soak up the whole Front Range every weekend. The quiet turns are at the independents and the farther out hills, and on any given morning one of them is having a better day than Vail.`,
+    sections: [
+      { h2: "Why the famous ones are always the busy ones", html: `
+<p>Vail, Breckenridge, Keystone, Copper, and Winter Park are the closest big mountains to three million people, and they're on the passes everyone already bought. That combination is a crowd magnet. Great terrain, but on a Saturday you're sharing it with the entire metro area.</p>` },
+      { h2: "The Colorado mountains that stay quieter", html: `
+<p>The move locals make is going independent or farther from I-70. None of these are exactly secrets, but they see a fraction of the traffic.</p>
+<ul>
+  <li><strong>Loveland</strong> and <strong>Arapahoe Basin</strong>: high, snowy, no frills, right off I-70 but far less mobbed than the resort towns.</li>
+  <li><strong>Eldora</strong>: Boulder's home hill, close and low key on the right day.</li>
+  <li><strong>Monarch</strong> and <strong>Ski Cooper</strong>: smaller, independent, genuinely quiet.</li>
+  <li><strong>Wolf Creek</strong>: a long drive south, and the payoff is some of the most snow in Colorado with short waits.</li>
+  <li><strong>Crested Butte, Sunlight, Powderhorn</strong>: farther out and harder to reach, which is exactly why the lines are short.</li>
+</ul>
+<p>Distance is the filter. The harder a mountain is to reach from Denver, the shorter the wait once you're there.</p>` },
+      { h2: "But 'least crowded' changes every single day", html: `
+<p>Here's the catch. There's no permanent answer. A quiet hill gets slammed the day it snows and everyone reroutes to it. A trophy resort can be dead midweek. Least crowded is a live question, not a fixed list.</p>
+<p>That's what PeakWait's "Where to ski today" is for. It ranks nearby Colorado mountains by fresh snow, short waits, and how much terrain is open, so you point the car at the one that's actually quiet this morning, not the one that was quiet last time.</p>` },
+      { h2: "Quick rules that always help", html: `
+<ul>
+  <li>Sunday beats Saturday, and weekdays beat both.</li>
+  <li>Skip MLK, Presidents, and the holiday week if you can.</li>
+  <li>The farther from Denver, the shorter the wait.</li>
+  <li>Once you're there, ride mid mountain lifts and the singles line, and check live waits before you commit to a pod.</li>
+</ul>` },
+    ],
+    faqs: [
+      { q: "What is the least crowded ski resort in Colorado?", a: "It changes daily, but the independents and farther out hills (Loveland, Arapahoe Basin, Monarch, Ski Cooper, Wolf Creek, Crested Butte, Eldora) stay far quieter than the I-70 flagships. PeakWait's 'Where to ski today' shows which one is actually least crowded on a given day." },
+      { q: "Which Colorado ski resorts have the shortest lift lines?", a: "The smaller, independent, and more distant resorts, especially midweek. The big pass mountains near I-70 have the longest lines on weekends and powder days." },
+      { q: "Is A-Basin or Loveland less crowded than Breck or Vail?", a: "Usually yes, especially on weekends. They're higher, simpler, and draw fewer destination visitors, though a powder day can pack anywhere." },
+      { q: "How do I know which resort is least crowded today?", a: "Check live, crowdsourced waits. PeakWait ranks nearby resorts by snow and crowds in real time, so you can pick the quiet one before you leave." },
+    ],
+    cta: { h: "Find the quiet one today", p: `See which Colorado mountain has the snow and the shortest waits right now, before you hit I-70.` },
+  },
+
+  {
+    slug: "epic-vs-ikon-crowds",
+    title: "Epic vs Ikon: Which Pass Has Worse Lift Lines? (2026)",
+    description:
+      "The question every skier debates before buying. Here's the honest answer on crowds, why it's not really about the pass, and how to avoid the lines either way.",
+    h1: "Epic vs Ikon: which pass has worse lift lines?",
+    readTime: "6 min",
+    published: "2026-08-22",
+    updated: "2026-08-22",
+    keywords: "epic vs ikon, epic vs ikon crowds, which pass is less crowded, ikon pass lift lines, epic pass lift lines",
+    dek: `Every fall, skiers switch passes over crowds, and every spring they swear the other one was worse. Here's the honest take: on a weekend, Epic and Ikon are about the same. The crowd is a function of which mountain and which day, far more than which pass is in your pocket.`,
+    sections: [
+      { h2: "The debate that never ends", html: `
+<p>Open any ski forum in September and you'll find the same thread: "thinking of switching to Ikon, are the lines really that bad?" The answers flip every year. One season everyone flees Ikon for Epic, the next it reverses. That alone tells you something. The pass isn't the variable that matters.</p>` },
+      { h2: "Why it's not really about the pass", html: `
+<p>Both passes concentrate demand the same way. They sell a whole season at a steep discount, so everyone buys one and everyone goes on the good days. The result is identical: weekends and powder days are packed, weekdays are calm. As the r/COsnow regulars put it, they're the same on the weekends.</p>
+<p>What actually drives your wait is the mountain and the timing. Vail on a powder Saturday (Epic) and Winter Park on a powder Saturday (Ikon) are both a maze. Keystone on a Tuesday (Epic) and Arapahoe Basin on a Tuesday (Ikon) are both wide open.</p>` },
+      { h2: "Colorado, pass by pass", html: `
+<p>If you're picking for the Front Range, here's the rough lay of the land. Lineups shift a little season to season, so confirm before you buy.</p>
+<ul>
+  <li><strong>Epic:</strong> Vail, Beaver Creek, Breckenridge, Keystone, Crested Butte.</li>
+  <li><strong>Ikon:</strong> Winter Park, Copper, Steamboat, Arapahoe Basin, Aspen Snowmass, Eldora.</li>
+</ul>
+<p>Both have crowd magnets and both have quieter escape hatches. The pass call should come down to which specific mountains you'll actually ski, not a blanket "one is less crowded."</p>` },
+      { h2: "The move that beats both", html: `
+<p>Whichever pass you carry, the way to dodge the lines is the same: go on the right day, pick the right mountain that morning, and chase the short wait once you're there. PeakWait covers resorts on both passes and shows live waits plus where to ski today, so you're optimizing the variable that actually matters instead of relitigating the pass every September.</p>` },
+    ],
+    faqs: [
+      { q: "Is Epic or Ikon less crowded?", a: "Neither, really. On weekends and powder days they're about the same, because both passes concentrate demand the same way. Crowds depend on the specific mountain and day, not the pass." },
+      { q: "Why does everyone say the other pass is more crowded?", a: "The perception flips year to year as skiers switch back and forth. It's mostly recency bias. The data doesn't support one pass being reliably busier than the other." },
+      { q: "Which pass should I buy to avoid lines?", a: "Pick based on which specific mountains you'll ski and how close they are, then avoid weekends and holidays. The pass brand matters far less than the mountain and the timing." },
+      { q: "How do I avoid lift lines on Epic or Ikon?", a: "Ski weekdays, favor the quieter mountains on your pass, and use live waits (like PeakWait's) to pick the least crowded option each day. PeakWait covers resorts on both passes." },
+    ],
+    cta: { h: "Beat the lines on any pass", p: `See live waits and where to ski today across resorts on both Epic and Ikon.` },
+  },
+
+  {
+    slug: "how-long-reasonable-lift-wait",
+    title: "How Long Is a Reasonable Lift Wait? (What 400+ Skiers Say)",
+    description:
+      "We dug into what skiers actually consider an acceptable lift line. The consensus is shorter than you'd think, and it explains why a bad day feels like a betrayal.",
+    h1: "How long is a reasonable lift wait?",
+    readTime: "4 min",
+    published: "2026-08-05",
+    updated: "2026-08-05",
+    keywords: "reasonable lift wait time, how long should you wait for a ski lift, acceptable lift line, average ski lift wait, how long too long lift line",
+    dek: `We went looking for the number: the point where a lift line stops being "fine" and starts ruining the day. It turns out skiers are remarkably united on it, and the answer is a lot shorter than what the big resorts serve up on a Saturday.`,
+    sections: [
+      { h2: "The number, according to skiers", html: `
+<p>In one r/SkiPA poll of more than 400 skiers, the results were lopsided. Almost everyone drew the line at 15 minutes. Roughly half voted that "0 to 5 minutes" is reasonable, roughly half said "5 to 15," and only a tiny handful would accept 15 to 25 or 30 plus. Put simply: about 19 in 20 skiers consider anything past 15 minutes unreasonable.</p>` },
+      { h2: "Why the threshold is so low", html: `
+<p>It's simple math the r/skiing crowd runs constantly. A run at most resorts lasts a few minutes. Wait 15 minutes for a 5 minute run and you've spent three times as long in line as on snow. As one skier put it, "I wouldn't ski at all if I had to wait 45 minutes per run." Another: "anything longer than 10 minutes is unacceptable, I'll find another lift, leave, or take a break."</p>` },
+      { h2: "So why do resorts blow past it?", html: `
+<p>Because on weekends and powder days, demand overwhelms lift capacity, and the number you see on the resort app lags the real one. That gap between reasonable (under 15 minutes) and reality (30, 45, 90) is the whole reason a great snow day can still feel like a wasted one.</p>` },
+      { h2: "How to stay under the line", html: `
+<p>You can keep your own waits close to that reasonable number without setting a 5am alarm.</p>
+<ul>
+  <li>Ride mid mountain lifts and the singles line, not the base bottlenecks.</li>
+  <li>Go on the right day and the right mountain. Weekdays and quieter hills stay in single digits.</li>
+  <li>Check live waits before you commit. PeakWait shows which lifts are actually short right now and points you to the best next chair, so you're not gambling a run on a 40 minute surprise.</li>
+</ul>` },
+    ],
+    faqs: [
+      { q: "What is a reasonable lift wait time?", a: "Most skiers consider anything under 15 minutes reasonable, and ideally under 5. In a poll of more than 400 skiers, about 96% capped it at 15 minutes, and almost nobody accepted 30 or more." },
+      { q: "How long is the average ski lift wait?", a: "It varies wildly by day. Weekday and quieter-resort waits are often under 10 minutes, while weekend and powder-day waits at big resorts routinely hit 30 to 90. On a busy day the real average is far longer than skiers consider acceptable." },
+      { q: "How long is too long to wait for a ski lift?", a: "For most skiers, past 15 minutes, and many switch lifts or bail at 10. A 45 minute wait for a short run is widely considered not worth it." },
+      { q: "How do I keep my lift waits short?", a: "Ski weekdays or quieter mountains, use mid mountain lifts and the singles line, and check live waits (like PeakWait's) to chase the short lines instead of guessing." },
+    ],
+    cta: { h: "Keep your waits in single digits", p: `See which lifts are actually short right now and where to ski today.` },
+  },
 ];
 
 // ---- template --------------------------------------------------------------
