@@ -361,6 +361,116 @@ const ARTICLES = [
     ],
     cta: { h: "Keep your waits in single digits", p: `See which lifts are actually short right now and where to ski today.` },
   },
+
+  {
+    slug: "alta-snowbird-powder-day-lines",
+    title: "Alta and Snowbird on a Powder Day: The Little Cottonwood Playbook (2026)",
+    description:
+      "Little Cottonwood on a powder day is glorious and brutal in equal measure. Here's how to handle the canyon, the parking, and the lift lines at Alta and Snowbird.",
+    h1: "Alta and Snowbird on a powder day: the Little Cottonwood playbook",
+    readTime: "6 min",
+    published: "2026-08-14",
+    updated: "2026-08-14",
+    keywords: "alta snowbird powder day, little cottonwood canyon traffic, snowbird lift lines, alta lift lines, LCC powder day",
+    dek: `Little Cottonwood serves some of the best snow in North America, and on a powder day it also serves some of the most punishing logistics: one narrow road, closures for avalanche control, a parking scramble, and tram and lift lines to match. Here's how the locals actually play it.`,
+    sections: [
+      { h2: "The canyon is the first lift line", html: `
+<p>Before you wait for a chair, you wait for the road. Little Cottonwood is a single narrow canyon feeding two world class resorts, and on a storm morning it backs up for miles. Avalanche mitigation can close it entirely with no set reopening time. The move is to be at the mouth of the canyon early, or take the UTA ski bus and skip the parking fight altogether.</p>` },
+      { h2: "Parking and the early-or-late rule", html: `
+<p>Both resorts use parking reservations on peak days, and the lots fill fast. If you didn't reserve, you're gambling. The reliable windows are the same as everywhere: be there before it opens, or roll in late morning once the first wave has parked and the canyon has cleared. The miserable middle is a canyon crawl.</p>` },
+      { h2: "The lifts: tram envy and the bottlenecks", html: `
+<p>At Snowbird, the tram is the icon and the wait to match, and it doesn't take a Fast Tracks pass, so the line there can be long on a powder morning. Plenty of locals skip it early and lap the chairs for fresh laps while the tram line builds, then ride it once things thin. At Alta, the Collins and Wildcat lines swell right at open. Both settle down by early afternoon.</p>` },
+      { h2: "The plays that work", html: `
+<ul>
+  <li>Reserve parking, or take the bus. That's half the battle in LCC.</li>
+  <li>Get above the crowd early on the chairs, and save the marquee tram or bowl laps for when the lines thin.</li>
+  <li>A Fast Tracks pass a couple times a season is a sanity purchase on the worst days. Note it isn't valid on Snowbird's tram.</li>
+  <li>Check live waits before you commit to a lift, and know when to bail to a quieter pod.</li>
+</ul>` },
+      { h2: "Where PeakWait fits", html: `
+<p>PeakWait covers Alta and Snowbird along with 90 other resorts. On a Little Cottonwood morning it shows which lifts are actually moving and points you to the best next chair, so the powder goes to your legs instead of the tram maze. And if the canyon is a disaster, "where to ski today" can tell you whether Big Cottonwood or a Park City mountain is the smarter call.</p>` },
+    ],
+    faqs: [
+      { q: "How bad are the lines at Alta and Snowbird on a powder day?", a: "On a storm weekend, rough. The canyon backs up for miles, parking fills, and the tram and base lifts see long waits at open. It settles by early afternoon, and weekdays are much calmer." },
+      { q: "Do you need a parking reservation for Alta or Snowbird?", a: "On peak days, generally yes. Both use paid or reserved parking that fills fast. Taking the UTA ski bus up Little Cottonwood avoids the parking fight entirely." },
+      { q: "Is the Snowbird tram worth the wait on a powder day?", a: "The terrain is, but the tram line can be brutal and a Fast Tracks pass does not skip it. Many locals lap the chairs first and ride the tram once the line thins." },
+      { q: "Which is less crowded, Alta or Snowbird?", a: "It varies by day and by lift. Both get packed on powder weekends. Live waits are the only reliable way to tell which pod is moving right now." },
+    ],
+    cta: { h: "Play Little Cottonwood right", p: `See live waits at Alta, Snowbird, and 90 other resorts, plus where to ski when the canyon is a mess.` },
+  },
+
+  {
+    slug: "palisades-tahoe-crowds",
+    title: "How to Beat the Crowds at Palisades Tahoe (2026)",
+    description:
+      "Palisades Tahoe on a powder Saturday can mean two great laps and then hour-long lines. Here's how to get more out of it, and when to bail to a quieter Tahoe hill.",
+    h1: "How to beat the crowds at Palisades Tahoe",
+    readTime: "5 min",
+    published: "2026-08-11",
+    updated: "2026-08-11",
+    keywords: "palisades tahoe crowds, palisades tahoe lift lines, least crowded tahoe ski resort, tahoe powder day crowds",
+    dek: `Palisades Tahoe is a legendary mountain with a legendary crowd. On a powder Saturday, regulars say you get two or three great laps before the lines and the Bay Area day-trip wave turn it into a parking lot with a view. Here's how to squeeze the good out of it.`,
+    sections: [
+      { h2: "The Palisades powder pattern", html: `
+<p>The story repeats every storm. Get there early, catch a few untracked laps, and by mid-morning the upper mountain access backs up while the terrain gets tracked. If the upper mountain is on wind hold or delayed for avalanche work, everyone funnels onto fewer lifts and it compounds fast.</p>` },
+      { h2: "Timing beats everything here", html: `
+<ul>
+  <li>Be booted and in line before first chair on a storm day. The difference between 7:45 and 8:20 is an hour of your life.</li>
+  <li>Weekdays are a completely different mountain. If you can swing a Tuesday, do it.</li>
+  <li>Late arrivals sometimes win. Show up around 1pm as the Bay Area crowd fades and cruise.</li>
+</ul>` },
+      { h2: "Ski where the day-trippers don't", html: `
+<p>The base and marquee lifts absorb the crowd. Working the less obvious pods and riding the singles line keeps you moving. And on the busiest days, a smaller Tahoe hill like Homewood or Sugar Bowl can hold fresh snow for days with a fraction of the wait.</p>` },
+      { h2: "When to bail to a quieter Tahoe mountain", html: `
+<p>The Tahoe basin has a dozen resorts, and on a Palisades zoo day one of them is quietly having the best day around. PeakWait's "where to ski today" ranks nearby mountains by snow and waits, so you can call the audible before you commit to the Palisades lot. Once you're on the hill, live waits show which lift is actually moving.</p>` },
+    ],
+    faqs: [
+      { q: "How crowded is Palisades Tahoe?", a: "Very, on weekends and powder days, especially with Bay Area day-trippers. Regulars often get a few good laps early, then face long waits. Weekdays are far quieter." },
+      { q: "What's the least crowded ski resort in Tahoe?", a: "It changes by day, but smaller hills like Homewood and Sugar Bowl hold snow and stay quieter than Palisades and Heavenly. PeakWait's 'where to ski today' shows which is least crowded now." },
+      { q: "What time should I get to Palisades on a powder day?", a: "Before first chair, ideally booted up by 8. Or flip it and arrive around 1pm as the crowd thins. The mid-morning arrival is the worst of both." },
+      { q: "How do I avoid lift lines at Palisades Tahoe?", a: "Go early or late, ski the less obvious pods and the singles line, and check live waits to chase the moving lifts. On the busiest days, consider a quieter Tahoe mountain." },
+    ],
+    cta: { h: "Get more Tahoe laps", p: `See live waits across Tahoe and where to ski today, before you commit to the Palisades lot.` },
+  },
+
+  {
+    slug: "copper-mountain-lift-lines",
+    title: "Copper Mountain Lift Lines: Where to Ski and What to Skip (2026)",
+    description:
+      "Copper's lines are all about which lift and when. Here's the honest lift by lift on Super Bee, American Flyer, and the pods that stay quiet.",
+    h1: "Copper Mountain lift lines: where to ski, what to skip",
+    readTime: "5 min",
+    published: "2026-08-17",
+    updated: "2026-08-17",
+    keywords: "copper mountain lift lines, copper super bee line, copper mountain crowds, copper mountain wait times",
+    dek: `Copper is a local favorite that gets slammed on weekends, but the crowd is wildly concentrated. A few base lifts eat the whole line while the rest of the mountain runs short. Knowing which is which is the entire game.`,
+    sections: [
+      { h2: "The Super Bee trap (and the fix)", html: `
+<p>Super Bee is Copper's high speed workhorse and its biggest morning bottleneck. On a Saturday it can be a 15 to 30 minute wait at open while the rest of the mountain is quiet. The regulars' consensus is that it's ugly early and then thins out by late morning. Lap something else first, or take the singles line, and come back when it settles.</p>` },
+      { h2: "Where the lines actually are", html: `
+<ul>
+  <li><strong>Morning bottlenecks:</strong> Super Bee and American Flyer at the base absorb the crowd right at open.</li>
+  <li><strong>Quieter options:</strong> the fixed grip lifts and the back side see a fraction of the traffic. Locals lap those while everyone queues at the base.</li>
+  <li><strong>The pattern:</strong> base lifts are brutal from about 9 to 10:30, then the mountain spreads out and the waits drop off.</li>
+</ul>` },
+      { h2: "The Copper playbook", html: `
+<ul>
+  <li>Get first chair, or arrive after 10:30 once the base thins.</li>
+  <li>Don't default to Super Bee. Ride the quieter pods and let the crowd sort itself out.</li>
+  <li>Singles line, always.</li>
+  <li>Parking fills early even without new snow, so come early or take the shuttle.</li>
+</ul>` },
+      { h2: "Check before you commit", html: `
+<p>Which base lift is moving changes hour to hour. PeakWait shows live, crowdsourced waits at Copper and points you to the best next chair, so you're not walking across the base to discover a 25 minute line. And on a big Front Range Saturday, "where to ski today" can tell you whether Copper is even the right call versus a quieter I-70 option.</p>` },
+    ],
+    faqs: [
+      { q: "How long are the lift lines at Copper Mountain?", a: "On weekend mornings the base lifts (Super Bee, American Flyer) can run 15 to 30 minutes while the rest of the mountain stays short. Lines thin by late morning, and weekdays are quiet." },
+      { q: "Is Super Bee always busy at Copper?", a: "It's the biggest morning bottleneck, busy right at open on weekends, then it thins by late morning. Ride other pods first or use the singles line." },
+      { q: "What time should I get to Copper Mountain?", a: "First chair, or after about 10:30 once the base crowd spreads out. The 9 to 10:30 window at the base lifts is the worst." },
+      { q: "How do I avoid lines at Copper?", a: "Skip the base bottlenecks early, ride the quieter pods and the singles line, and check live waits to see which lift is actually moving." },
+    ],
+    cta: { h: "Skip the Super Bee line", p: `See live Copper waits and the best next chair, and check where to ski today before you drive up.` },
+  },
 ];
 
 // ---- template --------------------------------------------------------------

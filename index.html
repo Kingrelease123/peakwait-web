@@ -92,8 +92,15 @@
   .nav .spacer{flex:1}
   .nav a.link{font-size:.92rem;color:var(--ink2);font-weight:600}
   .nav a.link:hover{color:var(--ink)}
+  .nav .navlinks{display:contents}
   .nav .btn{padding:10px 17px;font-size:.9rem}
-  @media(max-width:760px){.nav a.link{display:none}}
+  @media(max-width:760px){
+    .nav .wrap{flex-wrap:wrap;height:auto;padding:10px 24px 12px;row-gap:10px}
+    .nav .spacer{display:none}
+    .nav .btn{margin-left:auto}
+    .nav .navlinks{display:flex;flex-basis:100%;order:3;gap:18px;flex-wrap:wrap}
+    .nav a.link{display:inline-block;font-size:.9rem}
+  }
 
   /* HERO */
   .hero{position:relative;overflow:hidden;padding:78px 0 52px}
@@ -244,10 +251,12 @@
   <div class="wrap">
     <span class="brand"><svg><use href="#firstlight"/></svg>PeakWait</span>
     <span class="spacer"></span>
+    <span class="navlinks">
     <a class="link" href="#how">How it works</a>
     <a class="link" href="#features">Features</a>
     <a class="link" href="#mountains">Mountains</a>
     <a class="link" href="/guides/">Guides</a>
+    </span>
     <a class="btn" href="#get">Download</a>
   </div>
 </nav>
