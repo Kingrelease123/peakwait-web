@@ -10,7 +10,7 @@ import fs from "node:fs";
 import path from "node:path";
 
 const SITE = "https://peakwait.net";
-const DOWNLOAD_URL = "https://peakwait.net"; // swap to the App Store URL once live
+const DOWNLOAD_URL = "https://apps.apple.com/us/app/id6793253589"; // live App Store listing
 const AUTHOR = "Herb Sendit";
 const ROOT = path.resolve(path.dirname(new URL(import.meta.url).pathname), "..");
 
@@ -590,6 +590,28 @@ const ARTICLES = [
   },
 ];
 
+// ---- product updates (changelog / release blog) ----------------------------
+const UPDATES = [
+  {
+    slug: "sort-by-pass",
+    version: "1.0.1",
+    date: "2026-08-24",
+    title: "Sort Your Mountains by Pass",
+    summary: "The 1.0.1 update groups every resort by Epic, Ikon, Power, or Independent, explains the daily where-to-ski score, and sharpens pass badges.",
+    sections: [
+      { h2: "Sort by pass", html: `
+<p>You bought a pass. Your mountains should sit together. The new <strong>By pass</strong> sort does exactly that. Open the sort menu and group every resort by <strong>Epic, Ikon, Power, or Independent</strong>, so the mountains you can actually ski are in one place instead of scattered through the whole list.</p>
+<p>It's a small change that turns out to matter a lot when you're deciding where to go on a pass day.</p>` },
+      { h2: "A clearer where to ski today", html: `
+<p>The daily picks were always ranked, but the score sat there as a mystery number. Now it tells you what it means: each pick is scored <strong>0 to 100 on fresh snow, short waits, and how much of the mountain is open</strong>. Higher is a better day. Same ranking, a lot less guessing.</p>` },
+      { h2: "Better pass badges", html: `
+<p>Every mountain now wears the right badge, including <strong>Power Pass</strong> resorts like Purgatory and Powderhorn that used to show up with none. We're also working through a full verification of pass affiliations across all 91 resorts, so these keep getting sharper.</p>` },
+      { h2: "Under the hood", html: `
+<p>Plus the usual round of fixes and polish to keep things fast, honest, and out of your way on a powder morning.</p>` },
+    ],
+  },
+];
+
 // ---- template --------------------------------------------------------------
 const esc = (s) => String(s).replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;").replace(/"/g, "&quot;");
 const MONTHS = ["January","February","March","April","May","June","July","August","September","October","November","December"];
@@ -646,7 +668,7 @@ const header = () => `
 
 const footer = () => `
 <footer><div class="wrap">
-  © 2026 PeakWait LLC · <a href="/">Home</a> · <a href="/guides/">Guides</a> · <a href="/terms/">Terms</a> · <a href="/privacy/">Privacy</a>
+  © 2026 PeakWait LLC · <a href="/">Home</a> · <a href="/guides/">Guides</a> · <a href="/updates/">Updates</a> · <a href="/terms/">Terms</a> · <a href="/privacy/">Privacy</a>
 </div></footer>`;
 
 const ctaBlock = (c) => `
@@ -770,11 +792,116 @@ ${footer()}
 </html>`;
 }
 
+function updateHtml(u, others) {
+  const url = `${SITE}/updates/${u.slug}/`;
+  const artLd = {
+    "@context": "https://schema.org", "@type": "Article", headline: `PeakWait ${u.version}: ${u.title}`,
+    description: u.summary, author: { "@type": "Organization", name: "PeakWait" },
+    publisher: { "@type": "Organization", name: "PeakWait", logo: { "@type": "ImageObject", url: `${SITE}/icon-512.png` } },
+    datePublished: u.date, dateModified: u.date, mainEntityOfPage: url, image: `${SITE}/og.png`,
+  };
+  const body = u.sections.map((s) => `<h2>${esc(s.h2)}</h2>${s.html.trim()}`).join("\n");
+  const other = others.length ? `<div class="related"><h2>More updates</h2>` +
+    others.map((o) => `<a href="/updates/${o.slug}/">v${esc(o.version)} · ${esc(o.title)}</a>`).join("") + `</div>` : "";
+  const cta = `
+<div class="cta">
+  <h3>Get PeakWait</h3>
+  <p>Live lift waits, where to ski today, and the best next chair. Free on the App Store.</p>
+  <a href="${DOWNLOAD_URL}">Download PeakWait, free</a>
+  <div class="tagline">Ski the mountain, skip the wait.</div>
+</div>`;
+  return `<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>PeakWait ${esc(u.version)}: ${esc(u.title)}</title>
+<meta name="description" content="${esc(u.summary)}">
+<meta name="author" content="PeakWait">
+<link rel="canonical" href="${url}">
+<meta property="og:type" content="article">
+<meta property="og:title" content="PeakWait ${esc(u.version)}: ${esc(u.title)}">
+<meta property="og:description" content="${esc(u.summary)}">
+<meta property="og:url" content="${url}">
+<meta property="og:image" content="${SITE}/og.png">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" href="/favicon.ico" sizes="any">
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+<meta name="theme-color" content="#070F16">
+<script type="application/ld+json">${JSON.stringify(artLd)}</script>
+<style>${CSS}
+.verpill{display:inline-block;background:var(--gold);color:#04121f;font-weight:800;font-size:.72rem;padding:3px 9px;border-radius:6px;letter-spacing:.03em}</style>
+</head>
+<body>
+${header()}
+<main><div class="wrap">
+  <nav class="crumbs"><a href="/">Home</a> › <a href="/updates/">Updates</a> › v${esc(u.version)}</nav>
+  <p class="byline"><span class="verpill">v${esc(u.version)}</span>&nbsp;&nbsp;${fmtDate(u.date)}</p>
+  <h1>${esc(u.title)}</h1>
+  ${body}
+  ${cta}
+  ${other}
+</div></main>
+${footer()}
+</body>
+</html>`;
+}
+
+function updatesIndexHtml(updates) {
+  const cards = updates.map((u) => `
+  <a class="card" href="/updates/${u.slug}/">
+    <h2><span class="verpill">v${esc(u.version)}</span> ${esc(u.title)}</h2>
+    <p>${esc(u.summary)}</p>
+    <span class="meta">${fmtDate(u.date)}</span>
+  </a>`).join("\n");
+  const listCss = `.lead{font-size:1.12rem;color:var(--ink2);margin:6px 0 30px}
+.verpill{display:inline-block;background:var(--gold);color:#04121f;font-weight:800;font-size:.7rem;padding:2px 8px;border-radius:6px;letter-spacing:.03em;vertical-align:middle;margin-right:6px}
+.card{display:block;background:var(--surface);border:1px solid var(--hair);border-radius:14px;padding:22px 22px;margin:0 0 16px}
+.card:hover{border-color:var(--brand);text-decoration:none}
+.card h2{font-size:1.25rem;margin:0 0 8px;color:var(--ink)}
+.card p{margin:0 0 10px}
+.card .meta{font-size:.8rem;color:var(--ink3)}`;
+  return `<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Product Updates | PeakWait</title>
+<meta name="description" content="What's new in PeakWait: release notes and the story behind each update.">
+<link rel="canonical" href="${SITE}/updates/">
+<meta property="og:title" content="PeakWait Product Updates">
+<meta property="og:description" content="What's new in PeakWait: release notes and the story behind each update.">
+<meta property="og:url" content="${SITE}/updates/">
+<meta property="og:image" content="${SITE}/og.png">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" href="/favicon.ico" sizes="any">
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+<meta name="theme-color" content="#070F16">
+<style>${CSS}
+${listCss}</style>
+</head>
+<body>
+${header()}
+<main><div class="wrap">
+  <nav class="crumbs"><a href="/">Home</a> › Updates</nav>
+  <h1>Product updates</h1>
+  <p class="lead">What's new in PeakWait, and the story behind each release.</p>
+  ${cards}
+</div></main>
+${footer()}
+</body>
+</html>`;
+}
+
 function sitemap(arts) {
   const urls = [
     { loc: SITE + "/", pri: "1.0" },
     { loc: SITE + "/guides/", pri: "0.8" },
     ...arts.map((a) => ({ loc: `${SITE}/guides/${a.slug}/`, pri: "0.7", lastmod: a.updated })),
+    { loc: SITE + "/updates/", pri: "0.5" },
+    ...UPDATES.map((u) => ({ loc: `${SITE}/updates/${u.slug}/`, pri: "0.5", lastmod: u.date })),
     { loc: SITE + "/terms/", pri: "0.3" },
     { loc: SITE + "/privacy/", pri: "0.3" },
   ];
@@ -857,6 +984,14 @@ for (const a of ARTICLES) {
   n++;
 }
 fs.writeFileSync(path.join(ROOT, "guides", "index.html"), indexHtml(ARTICLES));
+fs.mkdirSync(path.join(ROOT, "updates"), { recursive: true });
+for (const u of UPDATES) {
+  const dir = path.join(ROOT, "updates", u.slug);
+  fs.mkdirSync(dir, { recursive: true });
+  const others = UPDATES.filter((o) => o.slug !== u.slug).slice(0, 3);
+  fs.writeFileSync(path.join(dir, "index.html"), updateHtml(u, others));
+}
+fs.writeFileSync(path.join(ROOT, "updates", "index.html"), updatesIndexHtml(UPDATES));
 fs.writeFileSync(path.join(ROOT, "sitemap.xml"), sitemap(ARTICLES));
 fs.writeFileSync(path.join(ROOT, "robots.txt"), ROBOTS);
 fs.writeFileSync(path.join(ROOT, "llms.txt"), llmsTxt(ARTICLES));

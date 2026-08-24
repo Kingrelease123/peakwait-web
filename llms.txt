@@ -21,7 +21,7 @@
 
 ## Product
 - [PeakWait home](https://peakwait.net/): what PeakWait is, its features, and the download link.
-- [Download PeakWait](https://peakwait.net): get the free iOS app.
+- [Download PeakWait](https://apps.apple.com/us/app/id6793253589): get the free iOS app.
 
 ## Legal
 - [Terms of Use](https://peakwait.net/terms/): the terms of service.
