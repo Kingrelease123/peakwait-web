@@ -471,6 +471,123 @@ const ARTICLES = [
     ],
     cta: { h: "Skip the Super Bee line", p: `See live Copper waits and the best next chair, and check where to ski today before you drive up.` },
   },
+
+  {
+    slug: "best-time-to-ski-avoid-crowds",
+    title: "The Best Time to Ski to Avoid Crowds (2026)",
+    description:
+      "The day, the hour, and the dates that decide whether you ski powder or stand in a maze. Here's when to go, when to arrive, and when to just stay home.",
+    h1: "The best time to ski to avoid crowds",
+    readTime: "5 min",
+    published: "2026-08-03",
+    updated: "2026-08-03",
+    keywords: "best time to ski to avoid crowds, best day to ski, least busy time to ski, when to ski no lines, avoid ski crowds",
+    dek: `Crowds at a ski resort aren't random. They run on a schedule you can game. Pick the right day, show up at the right hour, and dodge a handful of dates, and the same mountain that's a two hour maze on Saturday is a ghost town with your name on it.`,
+    sections: [
+      { h2: "The best day: weekday, then Sunday, then Saturday", html: `
+<p>This is the single biggest lever. A weekday is a different sport: first ten chairs with a buffer, empty groomers, no parking fight. If you're stuck with weekends, Sunday beats Saturday almost everywhere, because half the crowd skied Saturday and is nursing sore legs. Saturday, especially a sunny one after a storm, is the worst day of the week.</p>` },
+      { h2: "The best hour: early or late, never mid-morning", html: `
+<p>Within a day, the crowd has a shape. First chair through about 10am is calm if you beat the rush, then the mountain fills and stays packed through early afternoon, then it empties as people leave for lunch, traffic, or the couch. The two sweet spots are booted before first chair, or rolling in around 1pm to cruise while everyone drives home. The 9 to 11am arrival is the worst of both.</p>` },
+      { h2: "The dates to avoid entirely", html: `
+<ul>
+  <li>The holiday week, December 26 through January 2.</li>
+  <li>MLK weekend and Presidents weekend.</li>
+  <li>Spring break weeks, which vary by region, roughly late February through March.</li>
+  <li>The first sunny Saturday after a big storm. Snow plus weekend plus sun is peak chaos.</li>
+</ul>
+<p>If those are the only windows you've got, lower your expectations and lean hard on the other tricks.</p>` },
+      { h2: "The wildcard: powder days", html: `
+<p>Powder breaks the schedule. A big storm pulls a crowd on any day, even a Tuesday, and terrain opens slowly while patrol works, so everyone funnels onto fewer lifts. On a powder day the timing rules matter even more, and which mountain you pick matters most of all.</p>` },
+      { h2: "Put it together", html: `
+<p>The move is simple: go midweek if you can, Sunday if you can't, arrive early or late, skip the holiday dates, and on powder days pick the right mountain. PeakWait handles the last two in real time. It shows live waits so you can time your laps, and ranks where to ski today so you point the car at the quiet one.</p>` },
+    ],
+    faqs: [
+      { q: "What is the best day of the week to ski to avoid crowds?", a: "A weekday, by far. If you're limited to weekends, Sunday is usually quieter than Saturday. Saturdays, especially sunny post-storm ones, are the busiest." },
+      { q: "What time of day is least crowded at a ski resort?", a: "Right at first chair before the rush, or after about 1pm once the morning crowd leaves. Mid-morning, roughly 9 to 11, is the most crowded." },
+      { q: "What are the most crowded days to ski?", a: "The December 26 to January 2 holiday week, MLK and Presidents weekends, spring break, and the first sunny Saturday after a storm." },
+      { q: "How do I know when a specific resort will be busy?", a: "Use live, crowdsourced waits like PeakWait's to see the crowd in real time, and check where to ski today to pick the least busy mountain near you." },
+    ],
+    cta: { h: "Time it right", p: `See live waits and where to ski today, so you show up when the lines are short.` },
+  },
+
+  {
+    slug: "steamboat-crowds-morningside",
+    title: "Steamboat Crowds and the Morningside Line: How to Ski Around Them (2026)",
+    description:
+      "Steamboat's gondola and the infamous Morningside lift can eat your morning. Here's where the lines actually are and how the regulars route around them.",
+    h1: "Steamboat crowds and the Morningside line",
+    readTime: "5 min",
+    published: "2026-08-06",
+    updated: "2026-08-06",
+    keywords: "steamboat lift lines, morningside steamboat, steamboat crowds, steamboat gondola line, steamboat wait times",
+    dek: `Steamboat has legendary tree skiing and a couple of legendary bottlenecks to match. The base gondola on a powder morning and the slow Morningside lift out back are where days go to die. Here's how to route around both.`,
+    sections: [
+      { h2: "The two chokepoints", html: `
+<ul>
+  <li><strong>The base gondola:</strong> on a powder or holiday morning the line can stretch back toward the base area, sometimes past the buildings. It's the price of admission to the upper mountain, and everyone pays it at the same time.</li>
+  <li><strong>Morningside:</strong> the fixed grip triple serving the good stuff out back is beloved and slow. Regulars call it a necessary evil, "10 million people in line for a low speed triple." Great terrain, painful throughput.</li>
+</ul>` },
+      { h2: "How to beat the gondola", html: `
+<p>Be booted and in the maze before it opens, or wait it out. The gondola line thins by late morning once the first wave is up. On a storm day, a lot of locals ride an alternate base lift to get up rather than default to the gondola with everyone else.</p>` },
+      { h2: "How to handle Morningside", html: `
+<p>Morningside is worth it, but time it. Hit it early before the crowd migrates out back, or later once the herd has moved on. In between, it's a long wait for a slow ride. If the line is a horror, there's plenty of tree skiing off the faster lifts that stays quieter.</p>` },
+      { h2: "The Steamboat playbook", html: `
+<ul>
+  <li>First gondola or bust, otherwise wait for the late-morning lull.</li>
+  <li>Ski Morningside at the edges of the day, not the middle.</li>
+  <li>Weekdays and non-holidays are dramatically calmer.</li>
+  <li>Check live waits before committing to the gondola or the trek out back.</li>
+</ul>` },
+      { h2: "Check before you commit", html: `
+<p>Which lift is worth it changes by the hour. PeakWait shows live, crowdsourced waits at Steamboat and points you to the best next chair, so you don't hike out to Morningside to find a 30 minute line. Steamboat is one of 91 resorts it covers.</p>` },
+    ],
+    faqs: [
+      { q: "How bad are the lift lines at Steamboat?", a: "On powder and holiday mornings, the base gondola and the Morningside lift can run 30 minutes or more. The rest of the mountain and the tree skiing stay more manageable, and weekdays are much quieter." },
+      { q: "Why is the Morningside lift at Steamboat so slow?", a: "It's a fixed grip triple serving popular terrain, so it's low throughput for high demand. Locals treat it as a necessary evil and time their laps to the start or end of the day." },
+      { q: "What's the best way to beat the Steamboat gondola line?", a: "Be in the maze before it opens, or wait for the late-morning lull. On storm days, use an alternate base lift instead of defaulting to the gondola." },
+      { q: "When is Steamboat least crowded?", a: "Weekdays and non-holiday periods. Avoid holiday weeks and the first sunny days after a storm. Live waits show the real picture on any given day." },
+    ],
+    cta: { h: "Route around the Steamboat lines", p: `See live Steamboat waits and the best next chair before you commit to the gondola or Morningside.` },
+  },
+
+  {
+    slug: "northeast-ski-crowds",
+    title: "Beating Lift Lines on the Ice Coast: A Northeast Crowds Guide (2026)",
+    description:
+      "Short vert makes a 20 minute Northeast lift line feel worse than an hour out West. Here's how to beat the crowds at Killington, Stowe, and the rest of the ice coast.",
+    h1: "Beating lift lines on the ice coast",
+    readTime: "6 min",
+    published: "2026-08-09",
+    updated: "2026-08-09",
+    keywords: "northeast ski crowds, killington lift lines, stowe crowds, ice coast lift lines, least crowded northeast ski resort",
+    dek: `Out West, a long wait ruins a long run. In the Northeast, the runs are shorter, so the wait to ski ratio is even more brutal. A 20 minute line for a two minute trail is its own special heartbreak. Here's how to ski around it on the ice coast.`,
+    sections: [
+      { h2: "Why Northeast lines hurt more", html: `
+<p>It's math. A trail that takes two or three minutes top to bottom, followed by a 20 minute wait, means you're standing around ten times longer than you're skiing. Add cold, wind, and a weekend crowd of day-trippers from Boston and New York, and a modest line feels catastrophic. The pain is real even when the number is smaller than a Vail Saturday.</p>` },
+      { h2: "The usual suspects", html: `
+<ul>
+  <li><strong>Killington:</strong> the big one, and the busy one. The base lifts back up early on weekends. Get first chair out of the popular pods, or ride something less obvious.</li>
+  <li><strong>Stowe, Sugarbush, Sunday River, and the other Epic and Ikon anchors</strong> pull heavy weekend traffic from the metros.</li>
+  <li><strong>The quieter play:</strong> smaller independent New England hills see a fraction of the crowd and are often a short drive from the famous ones.</li>
+</ul>` },
+      { h2: "The ice coast playbook", html: `
+<ul>
+  <li>Weekday if you possibly can. The Northeast weekend surge is intense and concentrated.</li>
+  <li>First chair then bounce, or arrive after 1. Same early-or-late rule as everywhere.</li>
+  <li>Ride mid mountain and the less famous lifts. The marquee pods take the brunt.</li>
+  <li>On a storm or holiday, a smaller nearby hill often beats fighting the flagship.</li>
+</ul>` },
+      { h2: "Check before you drive", html: `
+<p>The Northeast is dense with resorts, so the "is it worth it" call is really "which one." PeakWait shows live waits across Northeast mountains and ranks where to ski today, so you can pick the short line before you commit to the drive. It covers Killington, Stowe, and the rest of the region among its 91 resorts.</p>` },
+    ],
+    faqs: [
+      { q: "Which Northeast ski resort has the worst lift lines?", a: "The big Epic and Ikon anchors like Killington draw the heaviest weekend crowds. Lines feel especially bad because Northeast runs are short, so the wait to ski ratio is high." },
+      { q: "What's the least crowded ski resort in the Northeast?", a: "Smaller independent New England hills stay far quieter than the flagships, often a short drive away. PeakWait's where to ski today shows which is least crowded on a given day." },
+      { q: "Why do Northeast lift lines feel worse than out West?", a: "Shorter vertical means shorter runs, so even a 15 to 20 minute wait buys only a couple minutes of skiing. The ratio, plus cold and wind, makes modest lines feel brutal." },
+      { q: "How do I avoid lift lines at Killington?", a: "Ski weekdays, get first chair or arrive after 1pm, ride the less obvious lifts, and check live waits to find the short line. On busy days, consider a smaller nearby hill." },
+    ],
+    cta: { h: "Beat the ice coast lines", p: `See live Northeast waits and where to ski today before you make the drive.` },
+  },
 ];
 
 // ---- template --------------------------------------------------------------
