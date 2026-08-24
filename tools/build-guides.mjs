@@ -596,8 +596,8 @@ const UPDATES = [
     slug: "sort-by-pass",
     version: "1.0.1",
     date: "2026-08-24",
-    title: "Sort Your Mountains by Pass",
-    summary: "The 1.0.1 update groups every resort by Epic, Ikon, Power, or Independent, explains the daily where-to-ski score, and sharpens pass badges.",
+    title: "Sort by Pass, and a Smarter Home Screen",
+    summary: "The 1.0.1 update sorts your mountains by pass, redesigns the offseason home screen with a live countdown, and makes closed mountains read Closed instead of No data.",
     sections: [
       { h2: "Sort by pass", html: `
 <p>You bought a pass. Your mountains should sit together. The new <strong>By pass</strong> sort does exactly that. Open the sort menu and group every resort by <strong>Epic, Ikon, Power, or Independent</strong>, so the mountains you can actually ski are in one place instead of scattered through the whole list.</p>
@@ -606,8 +606,13 @@ const UPDATES = [
 <p>The daily picks were always ranked, but the score sat there as a mystery number. Now it tells you what it means: each pick is scored <strong>0 to 100 on fresh snow, short waits, and how much of the mountain is open</strong>. Higher is a better day. Same ranking, a lot less guessing.</p>` },
       { h2: "Better pass badges", html: `
 <p>Every mountain now wears the right badge, including <strong>Power Pass</strong> resorts like Purgatory and Powderhorn that used to show up with none. We're also working through a full verification of pass affiliations across all 91 resorts, so these keep getting sharper.</p>` },
-      { h2: "Under the hood", html: `
-<p>Plus the usual round of fixes and polish to keep things fast, honest, and out of your way on a powder morning.</p>` },
+      { h2: "An offseason that pulls its weight", html: `
+<p>The hard truth about a ski app in August is that nothing is spinning. So we rebuilt the offseason home screen to be useful instead of empty. It now leads with a <strong>live countdown to the first chair</strong> and a read on roughly when the season opens, then hands you the one job actually worth doing today: <strong>star your mountains and turn on alerts</strong>, so we can ping you the moment the lifts start turning and the first snow lands.</p>
+<p>Less wall of text, more signal. The app is honest about what it can tell you today, and clear about the day it comes alive.</p>` },
+      { h2: "Closed means closed", html: `
+<p>When a mountain is shut for the season, the app used to shrug and say <em>No data</em>, which reads like something is broken. Now a closed mountain simply reads <strong>Closed</strong>. You are never left wondering whether the app glitched or the mountain did.</p>` },
+      { h2: "Smoother everywhere", html: `
+<p>Leaderboards no longer flash a false error when you switch between boards. Your handle shows up instantly on your stats instead of blinking through a placeholder. Where to ski today is quicker to open and easier to tap into. Plus the usual round of fixes to keep things fast, honest, and out of your way on a powder morning.</p>` },
     ],
   },
 ];
