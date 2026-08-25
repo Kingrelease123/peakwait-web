@@ -31,6 +31,14 @@
   strong{color:var(--ink);font-weight:700}
   a{color:var(--brand)}
   footer{border-top:1px solid var(--hair);padding:28px 0;color:var(--ink3);font-size:.85rem}
+  /* CCPA/CPRA category table. Wrapped in .tablewrap so a wide table scrolls itself
+     instead of forcing the whole page to scroll sideways on a phone. */
+  .tablewrap{overflow-x:auto;-webkit-overflow-scrolling:touch;margin:0 0 18px;
+    border:1px solid var(--hair);border-radius:10px}
+  table{border-collapse:collapse;width:100%;min-width:640px;font-size:.86rem}
+  th,td{text-align:left;vertical-align:top;padding:10px 12px;border-bottom:1px solid var(--hair);color:var(--ink2)}
+  th{color:var(--ink);font-weight:700;background:var(--surface);white-space:nowrap}
+  tr:last-child td{border-bottom:none}
 </style>
 </head>
 <body>
@@ -214,6 +222,38 @@ We keep information only as long as needed for the purposes above or as required
 <p>We use reasonable administrative and technical measures designed to protect your information (for
 example, transport encryption and access controls). No method of transmission or storage is perfectly
 secure, so we cannot guarantee absolute security.</p>
+<h2>5A. Categories of personal information (CCPA/CPRA)</h2>
+<p>For California residents, and as a plain summary for everyone, this is what we collect stated in the
+categories the CCPA/CPRA uses. <strong>We do not sell or share your personal information</strong> as those terms
+are defined in the CCPA/CPRA, and we do not use it for cross-context behavioral advertising.</p>
+<div class="tablewrap">
+<table>
+<thead><tr><th>CCPA/CPRA category</th><th>Collect?</th><th>What, specifically</th><th>Why</th><th>Who receives it</th></tr></thead>
+<tbody>
+<tr><td>Identifiers</td><td><strong>Yes</strong></td><td>An <strong>anonymous device identifier</strong> we generate. A <strong>public handle</strong> only if you choose one. <strong>No name, email, phone, or account identifier.</strong></td><td>Rate limiting, abuse and fake-report detection, attributing your own data to you</td><td>Our hosting and database providers; a handle is public by your choice</td></tr>
+<tr><td>Personal information under Cal. Civ. Code §1798.80</td><td>No</td><td>—</td><td>—</td><td>—</td></tr>
+<tr><td>Protected classifications</td><td>No</td><td>—</td><td>—</td><td>—</td></tr>
+<tr><td>Commercial information</td><td><strong>Yes</strong></td><td>Whether you hold an active subscription or Day Pass (entitlement status from Apple)</td><td>Unlocking paid features</td><td>Apple (source); our hosting providers</td></tr>
+<tr><td>Biometric information</td><td>No</td><td>—</td><td>—</td><td>—</td></tr>
+<tr><td>Internet or network activity</td><td><strong>Yes</strong></td><td>First-party <strong>interaction events</strong> (app opens, screens viewed, whether a purchase completed) and your <strong>IP address</strong></td><td>Improving the app; rate limiting and abuse prevention</td><td>Our hosting providers. <strong>No third-party advertising or analytics SDKs</strong></td></tr>
+<tr><td><strong>Geolocation data</strong></td><td><strong>Yes</strong></td><td><strong>Precise location during an active ski session</strong>, including in the background; <strong>coarse region-level location</strong> when you sort by nearest or use &quot;Where to ski today&quot;; <strong>live position</strong> shared with buddies only if you enable it</td><td>Measuring lift waits, attributing reports to the right lift, computing your day, ranking nearby mountains</td><td>Our hosting providers; live position goes only to buddies you accept. Precise coordinates are purged on a short rolling basis (Section 4)</td></tr>
+<tr><td>Sensory data (audio, visual)</td><td>No</td><td>—</td><td>—</td><td>—</td></tr>
+<tr><td>Professional or employment information</td><td>No</td><td>—</td><td>—</td><td>—</td></tr>
+<tr><td>Education information</td><td>No</td><td>—</td><td>—</td><td>—</td></tr>
+<tr><td><strong>Inferences</strong></td><td><strong>Yes</strong></td><td>A <strong>reporter reputation/trust score</strong> derived from how your reports compare with others&#39;</td><td>Weighting reports and detecting coordinated abuse</td><td>Our hosting providers only; never shown to other users</td></tr>
+<tr><td><strong>Sensitive personal information</strong></td><td><strong>Yes — precise geolocation only</strong></td><td>Precise location as described above</td><td>Solely to provide the Service you asked for</td><td>See geolocation row</td></tr>
+</tbody>
+</table>
+</div>
+<p><strong>On sensitive personal information:</strong> precise geolocation is &quot;sensitive&quot; under the CPRA. We use it
+<strong>only</strong> to deliver the service you requested and for the security and abuse-prevention purposes
+described above. We do <strong>not</strong> use or disclose it to infer characteristics about you, and California
+residents therefore have no additional right to limit its use beyond the controls already in the app.</p>
+<p><strong>Retention</strong> is described in Section 4. <strong>Your rights</strong> — to know, access, delete, correct, and not
+be retaliated against — are in Section 6, and the in-app <strong>Delete my history</strong> and <strong>Export my
+history</strong> controls exercise them directly, with no account or identity verification needed because we
+never hold your identity in the first place.</p>
+
 <h2>6. Your choices and rights</h2>
 <ul>
 <li><strong>Delete my history</strong> and <strong>Export my history</strong> are available in the app (Settings → Your data).
