@@ -90,17 +90,27 @@ any of them off at any time in the app or in iOS Settings. If we later add serve
 notifications, we would receive a device push token from Apple solely to deliver them to your device.</li>
 <li><strong>Your ski day.</strong> During a session we compute your day — vertical, runs, top speed, distance, and an
 elevation profile over time — for your recap and season history. Your detailed route/elevation trace
-is kept <strong>on your device</strong> and is not uploaded. <strong>Season totals</strong> (such as vertical feet, runs,
-chairlift rides, and ski days) are <strong>synced to our backend</strong> so they persist and can be shown on
-<strong>public leaderboards</strong> and shared with friends you accept. If you set a <strong>public handle</strong>, these
-totals are visible to other users under that handle; if you do not, they remain tied only to your
-anonymous device identifier.</li>
-<li><strong>Profile and social features (optional).</strong> If you opt in, we store a <strong>public handle</strong> and a
-<strong>preset (non-photo) avatar</strong>, your <strong>friend connections, requests, and mute settings</strong>, a <strong>reporter
-reputation/trust score</strong> derived from how your reports compare with other users&#39; reports, and your
-<strong>self-declared ski ability level</strong>. Your handle and avatar are public (shown on leaderboards and
-used for add-by-handle); friend connections are shared only with the users involved. You remain
-anonymous until you choose to set a handle.</li>
+is kept <strong>on your device</strong> and is not uploaded. What we do sync to our backend is your <strong>season totals</strong> (such as vertical feet, runs,
+chairlift rides, and ski days) and, for each day you ski, a <strong>per-day summary</strong> &mdash; the
+<strong>date</strong>, the <strong>mountain</strong>, and that day&#39;s <strong>runs, vertical, and time on snow</strong>.
+The season totals persist so they can be shown on <strong>public leaderboards</strong> and shared with friends
+you accept. The per-day summaries are what let us compare your day against other skiers&#39; days at the same
+mountain, which is how we can show you the time you didn&#39;t spend waiting; they also feed the aggregated,
+resort-level insights described in Section 3. <strong>A per-day summary records only which mountain and
+which date &mdash; never your route, your coordinates, or where you were on the hill.</strong>
+If you turn on a <strong>public profile</strong>, these totals are visible to other users under your handle; if
+you do not, they remain tied only to your anonymous device identifier and your handle is not listed
+publicly.</li>
+<li><strong>Profile and social features.</strong> Every device is given a <strong>handle</strong> automatically
+&mdash; a two-word ski name like &quot;AlpineRidge07&quot; &mdash; so your crew sees a name instead of a blank and
+so friends can add you by name. You can change it at any time, and it is <strong>not listed publicly unless
+you turn on a public profile</strong>; until you do, it is visible only to people you connect with.
+<strong>Your handle never contains and never reveals your real name</strong> &mdash; we don&#39;t have it. If you
+turn on a public profile we also store a <strong>preset (non-photo) avatar</strong> and show your handle and
+season totals on public leaderboards. We also store your <strong>friend connections, requests, and mute
+settings</strong>, a <strong>reporter reputation/trust score</strong> derived from how your reports compare with other
+users&#39; reports, and your <strong>self-declared ski ability level</strong>. Friend connections are shared only
+with the users involved.</li>
 <li><strong>Queue reports you submit</strong> — a band like &quot;Short&quot; or &quot;Busy,&quot; together with the <strong>precise location</strong>
 where you made the report and the time, which we use to attribute the report to the correct lift and
 to validate it. As described in Section 4, we strip the precise coordinates from stored reports on a
@@ -157,7 +167,9 @@ when you sign out or delete the app.</li>
 <p>We do <strong>not</strong> access your contacts or address book.</p>
 <h2>2. Why we use your information</h2>
 <p>We use the information above to: provide and operate the Service (lift status, waits, routing, your
-day, buddies, alerts); validate and improve crowd-sourced estimates; keep the Service secure and
+day, buddies, alerts); compare your day with other skiers&#39; days at the same mountain on the same date,
+so we can show you how much time you didn&#39;t spend waiting (and so your day contributes, anonymously, to
+that comparison for others); validate and improve crowd-sourced estimates; keep the Service secure and
 prevent abuse; process and unlock purchases; understand and improve how features are used; and comply
 with law. Precise location is used only for the purposes described here — <strong>not</strong> to build advertising
 profiles or infer characteristics about you.</p>
@@ -208,10 +220,12 @@ the IP address used) are retained for as long as needed to establish, exercise, 
 agreement or as required by law — even after other data associated with your device is deleted.</li>
 <li><strong>Anonymous analytics events</strong> are retained no longer than needed for these purposes and generally
 for up to <strong>24 months</strong>, after which we delete or aggregate them.</li>
-<li><strong>Profile, season stats, friend connections, and reporter reputation</strong> are retained while your device
-or account remains active, and until you delete them in the app or request deletion at
-<a href="mailto:contact@peakwait.net">contact@peakwait.net</a>. After deletion, residual <strong>de-identified aggregates</strong> (which no longer identify
-a device) may remain as described above.</li>
+<li><strong>Profile, season stats, per-day ski summaries, friend connections, and reporter reputation</strong> are
+retained while your device or account remains active, and until you delete them in the app or request
+deletion at <a href="mailto:contact@peakwait.net">contact@peakwait.net</a>. Per-day ski summaries are additionally kept only for the
+<strong>current and prior ski season</strong>, after which they are deleted automatically. After deletion,
+residual <strong>de-identified aggregates</strong> (which no longer identify a device) may remain as described
+above.</li>
 <li><strong>Sign in with Apple details</strong> (the account identifier, and any display name you choose to share) are
 stored <strong>only on your device</strong> (in the iOS Keychain) and are never sent to or stored on our servers.
 They are removed when you sign out or delete the app; we hold no server-side copy to retain or delete.</li>
@@ -230,13 +244,15 @@ are defined in the CCPA/CPRA, and we do not use it for cross-context behavioral 
 <table>
 <thead><tr><th>CCPA/CPRA category</th><th>Collect?</th><th>What, specifically</th><th>Why</th><th>Who receives it</th></tr></thead>
 <tbody>
-<tr><td>Identifiers</td><td><strong>Yes</strong></td><td>An <strong>anonymous device identifier</strong> we generate. A <strong>public handle</strong> only if you choose one. <strong>No name, email, phone, or account identifier.</strong></td><td>Rate limiting, abuse and fake-report detection, attributing your own data to you</td><td>Our hosting and database providers; a handle is public by your choice</td></tr>
+<tr><td>Identifiers</td><td><strong>Yes</strong></td><td>An <strong>anonymous device identifier</strong> we generate. A <strong>handle</strong>, assigned automatically and changeable by you, listed publicly only if you turn on a public profile. <strong>No name, email, phone, or account identifier.</strong></td><td>Rate limiting, abuse and fake-report detection, attributing your own data to you</td><td>Our hosting and database providers; a handle is public by your choice</td></tr>
 <tr><td>Personal information under Cal. Civ. Code §1798.80</td><td>No</td><td>—</td><td>—</td><td>—</td></tr>
 <tr><td>Protected classifications</td><td>No</td><td>—</td><td>—</td><td>—</td></tr>
 <tr><td>Commercial information</td><td><strong>Yes</strong></td><td>Whether you hold an active subscription or Day Pass (entitlement status from Apple)</td><td>Unlocking paid features</td><td>Apple (source); our hosting providers</td></tr>
 <tr><td>Biometric information</td><td>No</td><td>—</td><td>—</td><td>—</td></tr>
 <tr><td>Internet or network activity</td><td><strong>Yes</strong></td><td>First-party <strong>interaction events</strong> (app opens, screens viewed, whether a purchase completed) and your <strong>IP address</strong></td><td>Improving the app; rate limiting and abuse prevention</td><td>Our hosting providers. <strong>No third-party advertising or analytics SDKs</strong></td></tr>
-<tr><td><strong>Geolocation data</strong></td><td><strong>Yes</strong></td><td><strong>Precise location during an active ski session</strong>, including in the background; <strong>coarse region-level location</strong> when you sort by nearest or use &quot;Where to ski today&quot;; <strong>live position</strong> shared with buddies only if you enable it</td><td>Measuring lift waits, attributing reports to the right lift, computing your day, ranking nearby mountains</td><td>Our hosting providers; live position goes only to buddies you accept. Precise coordinates are purged on a short rolling basis (Section 4)</td></tr>
+<tr><td><strong>Geolocation data</strong></td><td><strong>Yes</strong></td><td><strong>Precise location during an active ski session</strong>, including in the background; <strong>coarse region-level location</strong> when you sort by nearest or use &quot;Where to ski today&quot;; <strong>live position</strong> shared with buddies only if you enable it</td><td>Measuring lift waits, attributing reports to the right lift, computing your day, ranking nearby mountains</td><td>Our hosting providers; live position goes only to buddies you accept. Precise coordinates are purged on a short rolling basis (Section 4); a per-day
+record of <strong>which mountain you skied on which date</strong> (no coordinates) persists as described in
+Section 4</td></tr>
 <tr><td>Sensory data (audio, visual)</td><td>No</td><td>—</td><td>—</td><td>—</td></tr>
 <tr><td>Professional or employment information</td><td>No</td><td>—</td><td>—</td><td>—</td></tr>
 <tr><td>Education information</td><td>No</td><td>—</td><td>—</td><td>—</td></tr>

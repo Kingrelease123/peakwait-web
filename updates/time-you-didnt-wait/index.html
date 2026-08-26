@@ -1,0 +1,278 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>PeakWait 1.0.2: The Time You Didn't Spend Waiting</title>
+<meta name="description" content="The 1.0.2 update adds Washington and Montana, draws the runs on every mountain map, rebuilds the lift list around one question, and introduces the one ski stat no other app can compute: how long you did not spend in a lift line.">
+<meta name="author" content="PeakWait">
+<link rel="canonical" href="https://peakwait.net/updates/time-you-didnt-wait/">
+<meta property="og:type" content="article">
+<meta property="og:title" content="PeakWait 1.0.2: The Time You Didn't Spend Waiting">
+<meta property="og:description" content="Washington and Montana, trail maps that draw the runs, a rebuilt lift list, and the one ski stat no other app can compute.">
+<meta property="og:url" content="https://peakwait.net/updates/time-you-didnt-wait/">
+<meta property="og:image" content="https://peakwait.net/og.png">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" href="/favicon.ico" sizes="any">
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+<meta name="theme-color" content="#070F16">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"Article","headline":"PeakWait 1.0.2: The Time You Didn't Spend Waiting","description":"Washington and Montana, trail maps that draw the runs, a rebuilt lift list, and the one ski stat no other app can compute.","author":{"@type":"Organization","name":"PeakWait"},"publisher":{"@type":"Organization","name":"PeakWait","logo":{"@type":"ImageObject","url":"https://peakwait.net/icon-512.png"}},"datePublished":"2026-08-25","dateModified":"2026-08-25","mainEntityOfPage":"https://peakwait.net/updates/time-you-didnt-wait/","image":"https://peakwait.net/og.png"}</script>
+<style>:root{--bg:#070F16;--surface:#101D28;--raised:#1B2936;--hair:#2C3B48;--ink:#EFF4F9;--ink2:#ADB9C4;--ink3:#76828D;--brand:#43ACFB;--gold:#FEB84D;--good:#4AE299;--warn:#FB923C;--bad:#F87171;
+--display:-apple-system,BlinkMacSystemFont,"Segoe UI",system-ui,Roboto,Helvetica,sans-serif;--body:-apple-system,BlinkMacSystemFont,"Segoe UI",system-ui,Roboto,sans-serif}
+*{box-sizing:border-box}html{scroll-behavior:smooth}
+body{margin:0;background:var(--bg);color:var(--ink);font-family:var(--body);line-height:1.65;-webkit-font-smoothing:antialiased}
+a{color:var(--brand);text-decoration:none}a:hover{text-decoration:underline}
+.wrap{max-width:720px;margin:0 auto;padding:0 22px}
+.top{border-bottom:1px solid var(--hair)}
+.top .wrap{display:flex;align-items:center;gap:12px;height:62px}
+.brand{display:flex;align-items:center;gap:10px;font-family:var(--display);font-weight:800;font-size:1.1rem;letter-spacing:-.02em;color:var(--ink)}
+.brand img{width:28px;height:28px;border-radius:7px}
+.top .spacer{flex:1}
+.dl{background:var(--brand);color:#04121f;font-weight:800;font-size:.85rem;padding:8px 15px;border-radius:9px}
+.dl:hover{text-decoration:none;filter:brightness(1.06)}
+main{padding:36px 0 72px}
+.crumbs{font-size:.8rem;color:var(--ink3);margin-bottom:18px}
+.crumbs a{color:var(--ink3)}
+h1{font-family:var(--display);font-weight:850;font-size:clamp(1.9rem,4.6vw,2.7rem);line-height:1.05;letter-spacing:-.03em;margin:0 0 12px;text-wrap:balance}
+.byline{font-size:.85rem;color:var(--ink3);margin-bottom:26px}
+.dek{font-size:1.12rem;color:var(--ink);background:var(--surface);border:1px solid var(--hair);border-left:3px solid var(--gold);border-radius:12px;padding:16px 18px;margin:0 0 32px}
+h2{font-family:var(--display);font-weight:800;font-size:1.42rem;letter-spacing:-.02em;margin:38px 0 12px;text-wrap:balance}
+p{margin:0 0 16px;color:var(--ink2)}
+li{margin:0 0 9px;color:var(--ink2)}
+ul{padding-left:22px;margin:0 0 16px}
+strong{color:var(--ink)}
+em{color:var(--ink);font-style:italic}
+.cta{background:linear-gradient(160deg,var(--raised),var(--surface));border:1px solid var(--hair);border-radius:16px;padding:26px 24px;margin:34px 0;text-align:center}
+.cta h3{font-family:var(--display);font-weight:800;font-size:1.3rem;margin:0 0 8px;color:var(--ink)}
+.cta p{color:var(--ink2);margin:0 0 16px}
+.cta a{display:inline-block;background:var(--brand);color:#04121f;font-weight:800;padding:12px 22px;border-radius:11px;font-size:1rem}
+.cta a:hover{text-decoration:none;filter:brightness(1.06)}
+.tagline{color:var(--gold);font-weight:700;font-size:.9rem;margin-top:12px}
+.related{border-top:1px solid var(--hair);margin-top:44px;padding-top:24px}
+.related a{display:block;margin:0 0 8px}
+footer{border-top:1px solid var(--hair);color:var(--ink3);font-size:.85rem;padding:26px 0 40px}
+footer a{color:var(--ink3)}
+.verpill{display:inline-block;background:var(--gold);color:#04121f;font-weight:800;font-size:.72rem;padding:3px 9px;border-radius:6px;letter-spacing:.03em}
+
+/* ── Mockups. Drawn in CSS rather than shipped as screenshots, so they stay sharp at any size,
+      load with the page, and can be corrected when the product moves. ────────────────────────── */
+.mock{background:var(--surface);border:1px solid var(--hair);border-radius:16px;padding:16px;margin:22px 0}
+.mock .cap{font-size:.76rem;color:var(--ink3);margin:12px 2px 0;text-align:center}
+.mocklabel{font-size:.68rem;letter-spacing:.14em;text-transform:uppercase;color:var(--ink3);font-weight:700;margin:0 0 12px}
+.two{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+@media (max-width:560px){.two{grid-template-columns:1fr}}
+.pane{background:var(--bg);border:1px solid var(--hair);border-radius:12px;padding:12px}
+.pane .ph{font-size:.68rem;letter-spacing:.1em;text-transform:uppercase;color:var(--ink3);font-weight:700;margin:0 0 10px}
+.pane .ph.was{color:var(--bad)} .pane .ph.now{color:var(--good)}
+
+/* lift rows */
+.lrow{display:flex;align-items:center;gap:10px;background:var(--surface);border:1px solid var(--hair);
+  border-radius:10px;padding:9px 11px;margin-bottom:8px;position:relative;overflow:hidden}
+.lrow .rail{position:absolute;left:0;top:0;bottom:0;width:4px}
+.lrow .nm{font-size:.86rem;color:var(--ink);font-weight:600;line-height:1.3}
+.lrow .sub{font-size:.7rem;color:var(--ink3);display:block;font-weight:400}
+.lrow .wait{margin-left:auto;text-align:right;font-weight:800;font-size:.86rem;white-space:nowrap}
+.lrow .rng{display:block;font-size:.68rem;color:var(--ink3);font-weight:500}
+.lrow.dim{opacity:.5}
+.chip{display:inline-block;font-size:.62rem;font-weight:800;padding:2px 7px;border-radius:5px;color:#04121f}
+
+/* map */
+.map{height:150px;border-radius:10px;background:linear-gradient(170deg,#12303a,#0b1a22);position:relative;overflow:hidden}
+.map svg{position:absolute;inset:0;width:100%;height:100%}
+.dot{position:absolute;width:11px;height:11px;border-radius:50%;border:2px solid var(--bg)}
+
+/* season */
+.scard{background:linear-gradient(165deg,rgba(254,184,77,.10),var(--surface));border:1px solid rgba(254,184,77,.3);
+  border-radius:12px;padding:14px}
+.big{font-family:var(--display);font-weight:850;letter-spacing:-.03em;line-height:1;font-variant-numeric:tabular-nums}
+.mrow{display:flex;align-items:center;gap:9px;margin-top:8px;font-size:.8rem}
+.mrow .nm{color:var(--ink);flex:1;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.mrow .v{color:var(--ink);font-weight:700;font-variant-numeric:tabular-nums}
+.mrow .d{color:var(--ink3);font-size:.7rem;width:46px;text-align:right}
+.bars{display:flex;align-items:center;gap:8px;margin-top:7px}
+.bars .nm{font-size:.75rem;color:var(--ink2);width:92px;flex:none}
+.track{flex:1;height:7px;background:var(--raised);border-radius:99px;overflow:hidden}
+.fill{height:100%;border-radius:99px}
+.bars .ct{font-size:.7rem;color:var(--ink3);width:22px;text-align:right;font-variant-numeric:tabular-nums}
+.note{font-size:.78rem;color:var(--ink3);border-left:2px solid var(--hair);padding-left:12px;margin:18px 0}
+
+/* ── Auto-playing before/after. A GIF's job, done in CSS: nothing to download, sharp at any size,
+      and it keeps working when the product moves. Both states are always in the DOM, so the
+      comparison is still readable with animation switched off. ──────────────────────────────── */
+.flip{position:relative}
+.flip .layer{transition:opacity .5s ease}
+.flip .after{position:absolute;inset:0}
+.flip .tag{position:absolute;top:10px;right:10px;font-size:.62rem;font-weight:800;letter-spacing:.1em;
+  text-transform:uppercase;padding:3px 8px;border-radius:6px;z-index:3}
+.flip .tag.was{background:var(--bad);color:#1a0606}
+.flip .tag.now{background:var(--good);color:#04121f}
+@media (prefers-reduced-motion:no-preference){
+  .flip .before,.flip .tag.was{animation:showFirst 7s infinite}
+  .flip .after,.flip .tag.now{animation:showSecond 7s infinite}
+  @keyframes showFirst{0%,42%{opacity:1}50%,92%{opacity:0}100%{opacity:1}}
+  @keyframes showSecond{0%,42%{opacity:0}50%,92%{opacity:1}100%{opacity:0}}
+  .draw{stroke-dasharray:220;stroke-dashoffset:220;animation:draw 7s infinite}
+  @keyframes draw{0%,46%{stroke-dashoffset:220}62%,92%{stroke-dashoffset:0}100%{stroke-dashoffset:220}}
+}
+/* No motion: stack the two states and label them, so nothing is lost. */
+@media (prefers-reduced-motion:reduce){
+  .flip .after{position:static;margin-top:12px}
+  .flip .tag{position:static;display:inline-block;margin-bottom:8px}
+}
+</style>
+</head>
+<body>
+
+<header class="top"><div class="wrap">
+  <a class="brand" href="/"><img src="/favicon.svg" alt="PeakWait"/>PeakWait</a>
+  <span class="spacer"></span>
+  <a class="dl" href="https://apps.apple.com/us/app/id6793253589">Download</a>
+</div></header>
+<main><div class="wrap">
+  <nav class="crumbs"><a href="/">Home</a> › <a href="/updates/">Updates</a> › v1.0.2</nav>
+  <p class="byline"><span class="verpill">v1.0.2</span>&nbsp;&nbsp;2026&ndash;27 Season</p>
+  <h1>The Time You Didn't Spend Waiting</h1>
+
+  <p class="dek">Every ski app can tell you how much vertical you skied. Only one of them knows how long everybody else on that mountain spent standing in line that day, which means only one can tell you how much of your day you got back. That is the headline of 1.0.2, along with sixteen new mountains, trail maps that finally draw the runs, and a lift list rebuilt around the only question that matters from a chairlift.</p>
+
+  <h2>A stat nobody else can compute</h2>
+  <p>Vertical is a solved problem. Apps have measured it for a decade, and yours is roughly the same whether you picked good lines or spent the morning in a forty minute queue at the base.</p>
+  <p>What PeakWait has that nothing else does is <strong>a crowd on the same mountain on the same day</strong>. That makes a comparison possible. A lap is a ride up, a run down, and whatever you stood in. Terrain and conditions are shared by everyone on that hill, so most of the difference between your minutes-per-lap and everyone else's is time spent not moving.</p>
+
+  <div class="mock">
+    <p class="mocklabel">Your season · illustrative</p>
+    <div class="scard">
+      <div style="font-size:.68rem;letter-spacing:.13em;text-transform:uppercase;color:var(--gold);font-weight:700">Time you didn't wait</div>
+      <div style="display:flex;align-items:baseline;gap:10px;margin-top:6px">
+        <span class="big" style="font-size:2.6rem;color:var(--gold)">3h 12m</span>
+        <span style="margin-left:auto;font-size:.76rem;color:var(--ink3)">≈ 9 extra runs</span>
+      </div>
+      <p style="font-size:.74rem;color:var(--ink3);margin:9px 0 0">Compared with every other tracked day on the same mountain, across 11 of your days.</p>
+      <p style="font-size:.74rem;color:var(--ink3);opacity:.8;margin:4px 0 0">2 more days are waiting on more skiers on those hills.</p>
+    </div>
+    <p class="cap">Hidden entirely until it has something true to say.</p>
+  </div>
+
+  <p>Three rules keep the number honest, and they are worth stating because a figure like this is easy to fake.</p>
+  <ul>
+    <li><strong>We compare against the median, not the average.</strong> One person who quits after two runs at lunch has an enormous minutes-per-lap, and an average would let them hand everyone else a flattering number.</li>
+    <li><strong>It never goes negative.</strong> This is a time-saved figure, not a scorecard. "You were forty minutes slower than the mountain" is a true fact nobody asked for.</li>
+    <li><strong>It needs a real crowd.</strong> Below five other skiers on that mountain that day, there is nothing honest to compare to, and the day is set aside rather than counted as zero. The app tells you how many days are still waiting, instead of quietly making your season look smaller than it felt.</li>
+  </ul>
+  <p>If we can't measure it, we don't show it. The whole card stays hidden until it has something true to say, because a card reading <em>0m saved</em> would be the app arguing against itself with a number it hasn't earned.</p>
+
+  <h2>Sixteen new mountains, and the Northwest arrives</h2>
+  <p>Washington and Montana are on the map: <strong>Big Sky, Whitefish, Bridger Bowl, Red Lodge, Discovery, Montana Snowbowl, Blacktail, Showdown, Great Divide, Stevens Pass, Crystal Mountain, Mt. Baker, Mission Ridge, White Pass, 49 Degrees North, Bluewood, Loup Loup and Mt. Spokane</strong>. That brings PeakWait to <strong>106 mountains</strong>, every one seeded with real surveyed lift coordinates rather than a pin dropped in the middle of the resort.</p>
+
+  <h2>The maps draw the mountain now</h2>
+  <p>This one was a genuine bug, and an old one. Thirty five resorts had their lifts but none of their runs, so opening the map gave you a handful of pins floating on a plain green field. Jackson Hole, Whistler, Revelstoke, Taos and Mt. Bachelor had all been that way since the day they were added.</p>
+  <p>They now draw <strong>3,648 trails</strong> between them, coloured by difficulty.</p>
+
+  <div class="mock">
+    <div class="map flip">
+      <span class="tag was">Before</span><span class="tag now">After</span>
+      <svg viewBox="0 0 200 150" preserveAspectRatio="none" aria-hidden="true">
+        <path class="draw" d="M52 78 C60 100 58 118 66 140" stroke="#4AE299" stroke-width="2" fill="none"/>
+        <path class="draw" d="M52 78 C40 96 34 112 30 140" stroke="#4AE299" stroke-width="2" fill="none"/>
+        <path class="draw" d="M116 51 C112 80 104 104 96 140" stroke="#43ACFB" stroke-width="2" fill="none"/>
+        <path class="draw" d="M116 51 C130 78 132 106 128 140" stroke="#43ACFB" stroke-width="2" fill="none"/>
+        <path class="draw" d="M142 94 C150 110 156 124 160 140" stroke="#EFF4F9" stroke-width="2" fill="none" opacity=".6"/>
+        <path class="draw" d="M116 51 C96 74 74 74 52 78" stroke="#76828D" stroke-width="1.4" fill="none"/>
+      </svg>
+      <div class="dot" style="background:var(--good);left:26%;top:52%"></div>
+      <div class="dot" style="background:var(--warn);left:58%;top:34%"></div>
+      <div class="dot" style="background:var(--bad);left:71%;top:63%"></div>
+    </div>
+    <p class="cap">Same three lifts. Watch the mountain arrive underneath them.</p>
+  </div>
+
+  <h2>One colour on a row, and it is always the wait</h2>
+  <p>The lift list is where a skier asks the only question that matters from a chairlift: <em>which lift do I go to</em>. It wasn't answering. Each row carried two coloured chips of similar weight, an operational status beside a wait band, and nothing told your eye which one was the answer. A yellow <em>On hold</em> next to a red <em>Long</em> is two claims and no conclusion.</p>
+  <p>That is also why the screen needed a legend, and the legend's colours were a third system that matched neither. <strong>A row that needs a legend isn't finished.</strong></p>
+
+  <div class="mock">
+    <div class="pane flip" style="min-height:186px">
+      <span class="tag was">Before</span><span class="tag now">After</span>
+      <div class="layer before">
+        <div class="lrow"><span class="nm">Tenderfoot</span>
+          <span class="chip" style="background:var(--gold);margin-left:auto">On Hold</span>
+          <span class="chip" style="background:var(--bad)">Long</span></div>
+        <div class="lrow"><span class="nm">Caribou</span>
+          <span class="chip" style="background:var(--good);margin-left:auto">Open</span>
+          <span class="chip" style="background:var(--good)">Short</span></div>
+        <div class="lrow"><span class="nm">Corral Creek</span>
+          <span class="chip" style="background:var(--ink3);margin-left:auto">Closed</span>
+          <span class="chip" style="background:var(--ink3)">No data</span></div>
+        <p style="font-size:.66rem;color:var(--ink3);margin:10px 0 0">● Moving ● Short ● Busy ● Long &nbsp;— legend required</p>
+      </div>
+      <div class="layer after">
+        <div class="lrow"><span class="rail" style="background:var(--bad)"></span>
+          <span class="nm">Tenderfoot<span class="sub">On hold · 2 min ago</span></span>
+          <span class="wait" style="color:var(--bad)">Long<span class="rng">20+ min</span></span></div>
+        <div class="lrow"><span class="rail" style="background:var(--good)"></span>
+          <span class="nm">Caribou<span class="sub">Open · 1 min ago</span></span>
+          <span class="wait" style="color:var(--good)">Short<span class="rng">6&ndash;10 min</span></span></div>
+        <div class="lrow dim"><span class="nm">Corral Creek<span class="sub">Closed today</span></span></div>
+      </div>
+    </div>
+    <p class="cap">A 4pt rail carries the wait and nothing else. Status drops to grey text, every row states its freshness, and closed lifts step out of the way.</p>
+  </div>
+
+  <p>Every row now says how old its report is, because <strong>a band without an age is a claim without evidence</strong>. Closed lifts recede and are no longer tappable: there is no wait to report at a closed lift, and offering the action is how a bad data point gets created.</p>
+
+  <h2>A season worth keeping</h2>
+  <p>Vertical and runs are the commodity half of a ski season. The half worth keeping is where it actually went, and almost nobody predicts that correctly about themselves.</p>
+
+  <div class="mock">
+    <p class="mocklabel">Your mountains · illustrative</p>
+    <div class="mrow"><span class="nm">Arapahoe Basin</span><span class="v">128,400 ft</span><span class="d">9 days</span></div>
+    <div class="mrow"><span class="nm">Copper Mountain</span><span class="v">96,200 ft</span><span class="d">6 days</span></div>
+    <div class="mrow"><span class="nm">Breckenridge</span><span class="v">54,800 ft</span><span class="d">3 days</span></div>
+    <p class="mocklabel" style="margin-top:20px">Records</p>
+    <div class="mrow"><span class="nm">Biggest day<br><span style="font-size:.7rem;color:var(--ink3)">Breckenridge</span></span><span class="v" style="color:var(--gold)">21,030 ft</span></div>
+    <div class="mrow"><span class="nm">Fastest<br><span style="font-size:.7rem;color:var(--ink3)">Copper Mountain</span></span><span class="v" style="color:var(--gold)">46 mph</span></div>
+    <div class="mrow"><span class="nm">Longest day<br><span style="font-size:.7rem;color:var(--ink3)">Arapahoe Basin</span></span><span class="v" style="color:var(--gold)">6h 20m</span></div>
+    <p class="cap">Days and vertical per mountain, your most-ridden chair, and your records — each one naming where it happened.</p>
+  </div>
+
+  <p>Every section here omits itself when the number behind it is zero, so a skier one day into the season gets a shorter screen rather than a wall of noughts.</p>
+
+  <h2>Your crew, without the paperwork</h2>
+  <p>Adding the people you ski with used to mean typing a screen name, which is a strange thing to ask of someone adding their own family. Three changes:</p>
+  <ul>
+    <li><strong>You get a name the moment you open the app.</strong> Two ski words and a number, yours to change. Nobody arrives as a question mark any more.</li>
+    <li><strong>Invite links add someone in one tap</strong>, and the app tells you plainly what happened rather than blaming a handle that was correct all along.</li>
+    <li><strong>You're told when a request is accepted</strong>, instead of finding out next time you happen to open the tab.</li>
+  </ul>
+  <p>Your crew rows now also name the chair each person is on, not just what they're doing. <em>Riding up</em> is a state. <em>Riding up, Pallavicini</em> is a plan.</p>
+
+  <h2>And the rest</h2>
+  <ul>
+    <li><strong>Settings</strong> are grouped into categories instead of one long list.</li>
+    <li><strong>Every state is spelled out.</strong> Section headers said Colorado and California, then MT and WA.</li>
+    <li><strong>Lift names read the way the mountain writes them.</strong> A handful carried raw map metadata: one chair was genuinely called "Chair 10 Bad Rock (Intermittent)".</li>
+    <li><strong>Wait colours are legible in bright sun.</strong> The short-wait colour failed its contrast floor in light mode, which matters on the one screen guaranteed to be read outdoors in glare.</li>
+  </ul>
+
+  <p class="note">On honesty: PeakWait never invents a wait. When we don't know, the app says so. Everything in 1.0.2 is built to the same rule, which is why the new season stat hides rather than guesses, and why closed lifts stopped accepting reports.</p>
+
+  <div class="cta">
+    <h3>Get PeakWait</h3>
+    <p>Live lift waits, where to ski today, and the best next chair, across 106 mountains. Free on the App Store.</p>
+    <a href="https://apps.apple.com/us/app/id6793253589">Download PeakWait, free</a>
+    <div class="tagline">Ski the mountain, skip the wait.</div>
+  </div>
+
+  <div class="related">
+    <a href="/updates/sort-by-pass/">← v1.0.1: Sort by Pass, and a Smarter Home Screen</a>
+    <a href="/updates/">All updates</a>
+  </div>
+
+</div></main>
+
+<footer><div class="wrap">
+  © 2026 PeakWait LLC · <a href="/">Home</a> · <a href="/guides/">Guides</a> · <a href="/updates/">Updates</a> · <a href="/terms/">Terms</a> · <a href="/privacy/">Privacy</a>
+</div></footer>
+</body>
+</html>
