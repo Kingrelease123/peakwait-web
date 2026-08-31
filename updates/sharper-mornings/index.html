@@ -3,21 +3,20 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>PeakWait 1.0.3: What the Mountain Usually Does</title>
-<meta name="description" content="The 1.0.3 update fills the empty screen: a lift nobody has reported now tells you what that hour usually looks like, labelled as a pattern rather than a reading, and only ever to warn you about a wait.">
+<title>PeakWait 1.1: Sharper on the Mornings That Matter</title>
+<meta name="description" content="More accurate waits when lines are building fastest, a useful answer on lifts nobody has reported yet, and recommendations that only compare lifts with real data behind them.">
 <meta name="author" content="PeakWait">
-<link rel="canonical" href="https://peakwait.net/updates/what-the-mountain-usually-does/">
+<link rel="canonical" href="https://peakwait.net/updates/sharper-mornings/">
 <meta property="og:type" content="article">
-<meta property="og:title" content="PeakWait 1.0.3: What the Mountain Usually Does">
-<meta property="og:description" content="Filling the empty screen without ever faking a wait: what a lift usually looks like at this hour, labelled as a pattern, and only ever to warn you.">
-<meta property="og:url" content="https://peakwait.net/updates/what-the-mountain-usually-does/">
+<meta property="og:title" content="PeakWait 1.1: Sharper on the Mornings That Matter">
+<meta property="og:description" content="More accurate waits when lines build fastest, and a useful answer on lifts nobody has reported yet.">
+<meta property="og:url" content="https://peakwait.net/updates/sharper-mornings/">
 <meta property="og:image" content="https://peakwait.net/og.png">
 <meta name="twitter:card" content="summary_large_image">
 <link rel="icon" href="/favicon.ico" sizes="any">
 <link rel="icon" href="/favicon.svg" type="image/svg+xml">
 <link rel="apple-touch-icon" href="/apple-touch-icon.png">
 <meta name="theme-color" content="#070F16">
-<script type="application/ld+json">{"@context":"https://schema.org","@type":"Article","headline":"PeakWait 1.0.3: What the Mountain Usually Does","description":"Filling the empty screen without ever faking a wait: what a lift usually looks like at this hour, labelled as a pattern, and only ever to warn you.","author":{"@type":"Organization","name":"PeakWait"},"publisher":{"@type":"Organization","name":"PeakWait","logo":{"@type":"ImageObject","url":"https://peakwait.net/icon-512.png"}},"datePublished":"2026-08-29","dateModified":"2026-08-29","mainEntityOfPage":"https://peakwait.net/updates/what-the-mountain-usually-does/","image":"https://peakwait.net/og.png"}</script>
 <style>:root{--bg:#070F16;--surface:#101D28;--raised:#1B2936;--hair:#2C3B48;--ink:#EFF4F9;--ink2:#ADB9C4;--ink3:#76828D;--brand:#43ACFB;--gold:#FEB84D;--good:#4AE299;--warn:#FB923C;--bad:#F87171;
 --display:-apple-system,BlinkMacSystemFont,"Segoe UI",system-ui,Roboto,Helvetica,sans-serif;--body:-apple-system,BlinkMacSystemFont,"Segoe UI",system-ui,Roboto,sans-serif}
 *{box-sizing:border-box}html{scroll-behavior:smooth}
@@ -144,83 +143,30 @@ footer a{color:var(--ink3)}
   <a class="dl" href="https://apps.apple.com/us/app/id6793253589">Download</a>
 </div></header>
 <main><div class="wrap">
-  <nav class="crumbs"><a href="/">Home</a> &rsaquo; <a href="/updates/">Updates</a> &rsaquo; v1.0.3</nav>
-  <p class="byline"><span class="verpill">v1.0.3</span>&nbsp;&nbsp;2026&ndash;27 Season</p>
-  <h1>What the Mountain Usually Does</h1>
+  <nav class="crumbs"><a href="/">Home</a> &rsaquo; <a href="/updates/">Updates</a> &rsaquo; v1.1</nav>
+  <p class="byline"><span class="verpill">v1.1</span>&nbsp;&nbsp;2026&ndash;27 Season</p>
+  <h1>Sharper on the Mornings That Matter</h1>
 
-  <p class="dek">A crowd-powered app has one bad morning: the first one, before the crowd arrives. PeakWait has always answered that with grey text reading <em>No reports yet</em>, which is honest and completely useless. In 1.0.3 those lifts tell you what that hour usually looks like instead &mdash; labelled a pattern rather than a reading, and only ever to warn you about a wait, never to tell you one is clear.</p>
+  <p class="dek">Nine o'clock to eleven is when a lift line changes fastest, and it is the window where a wait that is even a few minutes behind sends you to the wrong chair. This release is mostly about that window.</p>
 
-  <h2>The problem with being honest about nothing</h2>
-  <p>Open PeakWait on the first Saturday of the season and most of the mountain is grey. Nobody has reported the Gondola yet because nobody has ridden it yet, and we would rather say so than invent a number. That rule has never moved and is not moving now.</p>
-  <p>But "we don't know" is where the app stops being useful, and it is worth being precise about why the grey is there. We do carry an official feed for roughly half our lifts, and it tells us whether a lift is <em>running</em>. It does not tell us, and cannot tell us, how long you will stand at the bottom of it. No resort publishes that. The grey is a wait problem, and no source we had could touch it.</p>
+  <h2>Accuracy when the mountain is filling up</h2>
+  <p>A queue that is growing is a moving target. The wait you would have found ten minutes ago is not the wait in front of you now, and the faster the line builds the wider that gap gets.</p>
+  <p>PeakWait is meaningfully better at that now. On a busy morning the band you see tracks the line you will actually stand in more closely than it did &mdash; and when a queue is climbing faster than we can keep up with, the app says so instead of showing a number it cannot stand behind.</p>
 
-  <h2>A pattern, not a reading</h2>
-  <p>Every skier already carries this model. Saturday at eleven is worse than Tuesday at two. The first weekend after a storm is worse than both. A six-seater clears its own queue and a slow double does not. Presidents' week is its own category of bad.</p>
-  <p>None of that is a measurement, and none of it is a secret. So the app says it out loud, in the quiet line under the lift name, where it cannot be mistaken for a report:</p>
+  <h2>A useful answer on a lift nobody has reported</h2>
+  <p>Early in the day, most of the mountain has no reports yet. That used to mean grey text and nothing else.</p>
+  <p>Now a lift that nobody has reported tells you what that hour usually looks like &mdash; <em>usually busy now</em>, under the lift name. It is clearly a pattern rather than a reading, it never colours the row, and the moment one real report lands it disappears. It only ever warns you about a wait; it will never tell you a lift is clear.</p>
 
-  <div class="mock">
-    <p class="mocklabel">The lift list &middot; illustrative</p>
-    <div class="rows">
-      <div class="row">
-        <div class="rail" style="background:var(--bad)"></div>
-        <div class="rowbody">
-          <div>
-            <div class="rowname">Lenawee Express</div>
-            <div class="rowmeta">Open &middot; 2 min ago</div>
-          </div>
-          <div class="rowright">
-            <div class="rowband" style="color:var(--bad)">Long</div>
-            <div class="rowsub">20+ min</div>
-          </div>
-        </div>
-      </div>
-      <div class="row">
-        <div class="rail"></div>
-        <div class="rowbody">
-          <div>
-            <div class="rowname">Black Mountain Express</div>
-            <div class="rowmeta">Open &middot; usually busy now</div>
-          </div>
-          <div class="rowright">
-            <div class="first">Be the first</div>
-            <div class="rowsub">tap to report</div>
-          </div>
-        </div>
-      </div>
-    </div>
-    <p class="cap">One row has a wait. The other has a pattern, and no colour, because colour on this list means somebody measured it.</p>
-  </div>
+  <h2>Recommendations that admit what they don't know</h2>
+  <p>&ldquo;Where to ski today&rdquo; and the best-next-chair pick now compare only lifts with a real wait behind them. A lift nobody has reported is not a lift with a short line &mdash; it is a lift we know nothing about, and it should never win a comparison on that basis.</p>
+  <p>When there isn't enough to compare, the app tells you so instead of picking. On a quiet morning that is simply the truth.</p>
 
-  <p>The difference between those two rows is the whole feature. The top row was measured, so it gets the colour bar, the band and the range. The bottom row was not, so it gets none of them &mdash; just a sentence in the same grey the row has always used, and the same invitation to be the first person to report it.</p>
-
-  <h2>Three rules, because a guess on a screen is a promise</h2>
-
-  <div class="rulecard"><b>It disappears the moment anyone reports</b><span>A prediction only ever exists in silence. One real report on that lift and the pattern is gone from the row entirely &mdash; not averaged in, not shown alongside. A person who was standing there beats a model, always, and by a wide enough margin that the model does not get a vote.</span></div>
-
-  <div class="rulecard"><b>It may warn you, never reassure you</b><span>If the model thinks a lift is quiet right now, the app says nothing at all. The two mistakes are not the same size: a warning that turns out wrong costs you nothing, because you find a shorter wait than you braced for. An optimistic guess that turns out wrong costs you twenty-five minutes standing in something you were told was clear. So the model is only allowed to speak in one direction.</span></div>
-
-  <div class="rulecard"><b>It only speaks for a lift we know is spinning</b><span>The pattern needs a live official reading that the lift is open. Predicting a wait for a chair that might be on a wind hold is worse than saying nothing, and it is where the two halves of our data fit together: the resort feed tells us it is running, the pattern tells us what running usually looks like at this hour.</span></div>
-
-  <h2>What we tried to build and threw away</h2>
-  <p>The obvious version of this feature is lift-specific. Everyone who skis knows the base-area lifts get slammed from nine to eleven while the same mountain's upper chairs sit empty, and a model that knew which lifts were which would be far better than one that only knows the hour.</p>
-  <p>We have every lift's coordinates, so we tried to derive it two ways. First by topology: a lift is a base lift if no other lift's top sits near its bottom, since you can only reach an upper lift by riding something else first. Then by trail connectivity: count the runs that feed into each lift's base, on the theory that the busiest lift is the one the most terrain funnels back to.</p>
-  <p>Both were tested against three mountains where the answer is not in dispute. Both ranked beginner carpets above Gondola One at Vail and American Eagle at Copper &mdash; two of the biggest morning waits in Colorado. The first method breaks because the learners' carpets sit at the base with their tops right next to the real base lifts. The second breaks because a lift that serves a lot of terrain is not the same thing as a lift a lot of people are standing at.</p>
-  <p>Neither is repairable with the data we have, because our lift data carries no elevations. So the feature shipped coarse: the hour, the day, the kind of lift, and the kind of day it is. It will get lift-specific when we have a season of our own history to learn from, which is what the word <em>historical</em> is eventually supposed to mean. Until then, a rough honest answer beats a precise invented one.</p>
-
-  <h2>The same standard, applied everywhere else</h2>
-  <p>Making a prediction visible meant auditing every screen that consumes a wait, and that audit found something worth fixing. The lift list has always refused to display a wait that is too thin or too old to trust. <strong>First Tracks, Where to ski today and the best-next-chair recommendation were reading the raw number instead</strong>, underneath that filter.</p>
-  <p>In practice that meant the app could send you across a valley on the strength of a single report it would not have been willing to print on a screen. All four surfaces now read the same filtered value, so a wait the app won't show you is also a wait it won't route you to.</p>
-
-  <h2>Also in 1.0.3</h2>
-  <ul>
-    <li><strong>Your day counts each ride once.</strong> Passive tracking could log a single ride twice, and could occasionally credit it to a neighbouring lift at a shared base. Both are fixed, and a ride is now tagged where you got on rather than where the app noticed.</li>
-    <li><strong>The PeakWait Plus card in Settings reads like a card</strong> instead of a paragraph of text.</li>
-    <li><strong>A quieter, more honest crowd count.</strong> Several corrections to how reports combine, including one that let a single phone's passive reading overwrite the wait a person had typed in by hand on the same device. A tap is now the floor, not a suggestion.</li>
-  </ul>
+  <h2>Steadier when your phone isn't</h2>
+  <p>Lift bases are hard on a phone &mdash; steel towers, canyon walls, cold batteries, no signal. Several improvements here make the app more careful about which location readings it trusts, which mostly shows up as fewer odd results at the bottom of a lift.</p>
 
   <div class="cta">
     <h3>Get PeakWait</h3>
-    <p>Live lift waits, where to ski today, and the best next chair, across 106 mountains. Free on the App Store.</p>
+    <p>Live lift waits, where to ski today, and the best next chair. Free on the App Store.</p>
     <a href="https://apps.apple.com/us/app/id6793253589">Download PeakWait, free</a>
     <div class="tagline">Ski the mountain, skip the wait.</div>
   </div>
