@@ -1,6 +1,6 @@
 # PeakWait — Full Guide Content
 
-> PeakWait is a real-time ski-lift wait app for iPhone. Skiers on the mountain report live lift waits (Moving, Short, Busy, Long), and PeakWait shows which lifts are moving right now, ranks where to ski today by snow and crowds, and points you to the best next chair. It covers 106 resorts across the U.S. and Canada. Free to check status and report waits; PeakWait Plus adds the cross-resort "where to ski today" guide, powder alerts, and live friend location. Made by PeakWait LLC.
+> PeakWait is a real-time ski-lift wait app for iPhone. Skiers on the mountain report live lift waits (Moving, Short, Busy, Long), and PeakWait shows which lifts are moving right now, ranks where to ski today by snow and crowds, and points you to the best next chair. It covers 116 resorts across North and South America. Free to check status and report waits; PeakWait Plus adds the cross-resort "where to ski today" guide, powder alerts, and live friend location. Made by PeakWait LLC.
 
 # Why Ski Resort Lift Lines Feel So Brutal Now (and How to Get Your Day Back)
 By Herb Sendit · July 19, 2026 · https://peakwait.net/guides/ski-resort-lift-lines/
@@ -143,7 +143,7 @@ By Herb Sendit · August 12, 2026 · https://peakwait.net/guides/peakwait-vs-whi
 Short version: the Whistler Peak app (and Whistler Peak Live) is a great all in one dashboard for one mountain. PeakWait is a live, crowdsourced wait tracker for many. If your only question is "which lift is actually short right now," they get there very differently, and the difference matters.
 
 ## What each one is built for
-The Whistler Peak app is a Whistler Blackcomb companion. Conditions, cams, weather, avalanche info, lift status, all in one tidy place for one resort. It's genuinely useful, and plenty of locals lean on it. PeakWait is a cross resort lift wait app. It covers 106 mountains across the U.S. and Canada, including Whistler Blackcomb, and the whole focus is one question: where is the short wait, right now.
+The Whistler Peak app is a Whistler Blackcomb companion. Conditions, cams, weather, avalanche info, lift status, all in one tidy place for one resort. It's genuinely useful, and plenty of locals lean on it. PeakWait is a cross resort lift wait app. It covers 116 mountains across North and South America, including Whistler Blackcomb, and the whole focus is one question: where is the short wait, right now.
 
 ## Where the wait numbers come from (the important part)
 This is the real difference. The Whistler Peak app's wait times, like most resort companion apps, trace back to the resort's own feed. That feed updates on a delay, so the number can trail the actual line by 15 to 40 minutes. A lot of skiers have watched an app say "12 min" while they stood in 40. PeakWait's waits come from skiers on the hill reporting what they see, blended with live movement and stamped with how fresh each report is. It's an estimate too, but it's the crowd's live read instead of a delayed official number. Here's the longer story on why resort wait numbers lag.
@@ -159,7 +159,7 @@ Q: Is the Whistler Peak app accurate for wait times?
 A: It's a solid all in one Whistler dashboard, but its wait numbers come from the resort feed, so they lag real conditions. For the live wait, crowdsourced reports like PeakWait's tend to be closer to what you're actually standing in.
 
 Q: Does PeakWait cover Whistler Blackcomb?
-A: Yes. Whistler Blackcomb is one of 106 resorts PeakWait covers across the U.S. and Canada.
+A: Yes. Whistler Blackcomb is one of 116 resorts PeakWait covers across North and South America.
 
 Q: What's the difference between PeakWait and the Whistler Peak app?
 A: The Whistler Peak app is a single resort dashboard (conditions, cams, status). PeakWait is a cross resort, crowdsourced live wait tracker that also ranks where to ski today.
@@ -176,7 +176,7 @@ By Herb Sendit · August 23, 2026 · https://peakwait.net/guides/best-ski-lift-w
 There's no single app that does everything, and anyone who says otherwise is selling something. Here's the honest breakdown of what skiers actually use for waits, crowds, tracking, and conditions, and which one to open when your only goal is the shortest line.
 
 ## For live lift waits: PeakWait
-Best for the exact question "which lift is short right now." PeakWait shows crowdsourced waits reported by skiers on the hill (Moving, Short, Busy, Long), ranks where to ski today by snow and crowds across 106 resorts, and points you to the best next chair. It's free to check status and report waits, and PeakWait Plus adds the cross resort guide, powder alerts, and live friend location. It's weakest where nobody's reporting yet, though it says "unknown" instead of guessing.
+Best for the exact question "which lift is short right now." PeakWait shows crowdsourced waits reported by skiers on the hill (Moving, Short, Busy, Long), ranks where to ski today by snow and crowds across 116 resorts, and points you to the best next chair. It's free to check status and report waits, and PeakWait Plus adds the cross resort guide, powder alerts, and live friend location. It's weakest where nobody's reporting yet, though it says "unknown" instead of guessing.
 
 ## For official status and trail maps: the resort apps
 The Epic and Ikon apps, plus individual resort apps, are the source of truth for lift and trail status, interactive maps, and your pass. Handy and official. The catch is their wait estimates come from resort sensors and feeds, so they lag the real line, and each one only covers its own resorts.
@@ -464,7 +464,7 @@ Morningside is worth it, but time it. Hit it early before the crowd migrates out
 First gondola or bust, otherwise wait for the late-morning lull. Ski Morningside at the edges of the day, not the middle. Weekdays and non-holidays are dramatically calmer. Check live waits before committing to the gondola or the trek out back.
 
 ## Check before you commit
-Which lift is worth it changes by the hour. PeakWait shows live, crowdsourced waits at Steamboat and points you to the best next chair, so you don't hike out to Morningside to find a 30 minute line. Steamboat is one of 106 resorts it covers.
+Which lift is worth it changes by the hour. PeakWait shows live, crowdsourced waits at Steamboat and points you to the best next chair, so you don't hike out to Morningside to find a 30 minute line. Steamboat is one of 116 resorts it covers.
 
 ## FAQ
 Q: How bad are the lift lines at Steamboat?
@@ -497,7 +497,7 @@ Killington: the big one, and the busy one. The base lifts back up early on weeke
 Weekday if you possibly can. The Northeast weekend surge is intense and concentrated. First chair then bounce, or arrive after 1. Same early-or-late rule as everywhere. Ride mid mountain and the less famous lifts. The marquee pods take the brunt. On a storm or holiday, a smaller nearby hill often beats fighting the flagship.
 
 ## Check before you drive
-The Northeast is dense with resorts, so the "is it worth it" call is really "which one." PeakWait shows live waits across Northeast mountains and ranks where to ski today, so you can pick the short line before you commit to the drive. It covers Killington, Stowe, and the rest of the region among its 106 resorts.
+The Northeast is dense with resorts, so the "is it worth it" call is really "which one." PeakWait shows live waits across Northeast mountains and ranks where to ski today, so you can pick the short line before you commit to the drive. It covers Killington, Stowe, and the rest of the region among its 116 resorts.
 
 ## FAQ
 Q: Which Northeast ski resort has the worst lift lines?
