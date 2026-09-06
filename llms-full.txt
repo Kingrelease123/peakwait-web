@@ -511,3 +511,126 @@ A: Shorter vertical means shorter runs, so even a 15 to 20 minute wait buys only
 
 Q: How do I avoid lift lines at Killington?
 A: Ski weekdays, get first chair or arrive after 1pm, ride the less obvious lifts, and check live waits to find the short line. On busy days, consider a smaller nearby hill.
+
+---
+
+# Breckenridge Lift Lines: Where They Form and How to Skip Them (2026)
+By Herb Sendit · September 4, 2026 · https://peakwait.net/guides/breckenridge-lift-lines/
+
+Breckenridge is routinely the busiest ski resort in the country, and it does not feel busy everywhere. It has 34 lifts spread across five peaks, and on a normal Saturday the wait is concentrated at four of them. If you know which four, you can ski most of the day without standing still.
+
+## The problem is geography, not volume
+Breck sells a lot of tickets, but that is not why you end up waiting. The reason is that five peaks funnel into a small number of base-area lifts, and everybody uses them in the same forty minutes. Peak 8 is the main event. On a weekend morning the crowd stacks at the Colorado SuperChair and the Peak 8 SuperConnect, because those two are how you get from the base to everything worth skiing. Down in town, the BreckConnect Gondola gathers a second crowd of people who parked in Breckenridge and now need to get to Peak 8 at all. Beaver Run SuperChair takes the overflow from the Peak 9 side, and Rocky Mountain SuperChair takes whatever is left. Those four are where your day gets eaten. Falcon, Mercury, Kensho, Independence and Zendo all exist, and on the same morning several of them are turning with nobody on them.
+
+## The morning window, honestly
+The stack builds from about 9:00 and clears around 10:30. That is a real ninety-minute window, not a rumour, and it is the single biggest variable in your day. Skiers who are on a lift by 8:45 essentially skip it. Skiers who show up at 9:20 pay for it twice, once at the gondola and again at the top. If you cannot get there early, the fix is not to go faster. It is to start somewhere else. Peak 9 from the Quicksilver SuperChair side, or the Peak 7 lifts, will both put you on snow while the Peak 8 base is still a maze.
+
+## Where people go wrong at the top
+The second bottleneck of the day is the Imperial SuperChair. It is the highest chairlift in North America, it accesses the terrain everyone photographs, and it has a fraction of the capacity of the chairs feeding it. On a bluebird weekend it can hold a wait long after the base areas have cleared out, and it is not unusual for it to be the only significant wait on the mountain by noon. The Horseshoe Bowl T-Bar next to it moves people in smaller numbers but keeps turning. If the Imperial queue is deep and you can ride a T-bar, you are usually better off.
+
+## The lifts nobody talks about
+Breck's quiet side is real and it is not a secret, it is just inconvenient to reach from the parking lot. Falcon SuperChair on Peak 10 tends to run short on days when Peak 8 is stacked, because getting there costs you a traverse most people will not make. Zendo and Independence on the Peak 6 and Peak 7 side are similar: a little further out, noticeably calmer. The trade is honest. You spend two or three minutes traversing instead of fifteen minutes standing. On a busy Saturday that math is not close.
+
+## Powder days invert everything
+On a storm day the pattern changes completely. The base crowd gets worse and it gets earlier, and the terrain that opens late becomes the whole story. Imperial and the hike-to terrain above it can sit closed for hours after the lifts start turning, which means the crowd that came for it is stuck on the lower mountain, making everything else busier than a normal Saturday. The useful move on those days is to stop guessing about what has opened and check. A lift that is officially open and a lift that is actually spinning are not the same thing, and the gap between them is where powder days are won.
+
+## What actually helps
+Be riding by 8:45, or accept that 9:00 to 10:30 belongs to the crowd. Do not start at Peak 8 if you arrive late. Start where the crowd is not and traverse in. Treat Imperial as a midday decision, not a first-run one. Check before you commit to a traverse. Skiing twenty minutes to a lift with a wait at the end of it is the worst outcome on the mountain. None of that requires an app. What an app gets you is the last one: knowing, before you push off, whether the lift you are heading for is moving. PeakWait shows the current wait on Breckenridge lifts from the skiers who are standing in them, plus which mountain to pick in the first place on a day when I-70 gives you options.
+
+## FAQ
+
+Q: Which lift at Breckenridge has the longest wait?
+A: On a typical weekend morning the wait is concentrated at the Colorado SuperChair, the Peak 8 SuperConnect and the BreckConnect Gondola. Later in the day the Imperial SuperChair often holds the longest wait on the mountain because its capacity is small relative to the terrain it serves.
+
+Q: What time do Breckenridge lift lines get bad?
+A: The stack builds from about 9:00 and generally clears around 10:30. Being on a lift by 8:45 avoids most of it. Holiday weeks push the window later and make it worse.
+
+Q: Is Breckenridge more crowded than Vail or Keystone?
+A: Breckenridge is usually the busiest of the three by visits, but the experience depends on where you ski. Breck's crowd concentrates at a handful of base lifts, so the mountain can feel calm and still have a long wait at the bottom.
+
+Q: How do I avoid Breckenridge crowds without getting there early?
+A: Start away from Peak 8. The Peak 9 and Peak 7 lifts put you on snow while the Peak 8 base is stacked, and Falcon SuperChair on Peak 10 stays comparatively short because reaching it costs a traverse.
+
+Q: Can I see Breckenridge lift wait times live?
+A: Yes. PeakWait shows current waits lift by lift, reported by skiers on the mountain, along with how fresh each reading is. When there is not enough data it says so instead of guessing.
+
+---
+
+# Vail Lift Lines: The Two That Matter and the Ones That Don't (2026)
+By Herb Sendit · September 4, 2026 · https://peakwait.net/guides/vail-lift-lines/
+
+Vail is one of the largest ski areas in North America and it still manages to feel crowded, because size is not the same as spread. Almost everybody enters the mountain through two lifts, and the crowd moves across the terrain in a pattern you can predict and get in front of.
+
+## Everyone starts in the same two places
+Vail has more than thirty lifts, but the front door is narrow. Gondola One out of Vail Village and the Eagle Bahn Gondola out of Lionshead carry most of the mountain's morning traffic, and both of them stack between roughly 8:45 and 10:00. Riva Bahn and Born Free take some of the pressure off, and on a weekend they get a queue of their own before the gondolas clear. This is the whole reason Vail can feel busy on a mountain with this much terrain. The wait is not distributed across the ski area. It is concentrated at the point where the ski area begins.
+
+## The mid-mountain shuffle
+Once you are up, the second pinch is Mountain Top Express. It sits where the front side, the Back Bowls and the rest of the mountain all connect, so it collects people who are not going anywhere in particular. Northwoods Express and Avanti take some of that flow, and Game Creek Express on the far side of the front is reliably calmer than any of them, because it requires committing to one bowl. The pattern that matters: the front side is busiest from roughly 9:00 to 11:00 and again after about 2:30, when people come back over for the ride down. In between, the crowd is somewhere else.
+
+## The Back Bowls run on their own clock
+The Back Bowls are the reason to be at Vail, and they behave differently from the front. They open later, they open unevenly, and on a storm day some of them do not open at all until patrol is finished. That creates a predictable surge: everyone who came for the bowls waits on the front side, then moves in a wave the moment they hear something has opened. If you are in the bowls, High Noon Express and Sun Down Express carry the traffic and generally keep moving, because the terrain absorbs people quickly. The wait in the bowls tends to be short and the ride long, which is the opposite of the front side. Blue Sky Basin, out past the bowls via Skyline Express and Pete's Express, is the furthest thing from the parking lot and it stays the calmest place on the mountain for exactly that reason. The price is that getting back is a project. Plan on it taking longer than you think, and do not leave it until the last chair.
+
+## What a powder day does to all of this
+On a storm day the gondola crowd gets earlier and deeper, the bowls open late, and the front side absorbs a crowd that did not want to be there. It is the one day where being twenty minutes early is worth more than any other decision you make. It is also the day where official information is least reliable. Lift status boards and posted opening times are frequently wrong on a morning when patrol is still working, and skiers standing at the bottom of a rope know before any website does. That gap is worth more than a snow report.
+
+## What actually helps
+Pick your gondola. Gondola One and Eagle Bahn drain different parking situations. The shorter one is often not the one closest to your car. Get past Mountain Top early and let the mid-mountain shuffle happen without you. Go to the bowls when the crowd is still on the front side, not when the wave moves. Treat Blue Sky Basin as a commitment, not a detour, and leave time to get home. Do not trust a posted opening time on a storm morning. Trust what is actually spinning. The decisions above are all timing, and timing is easier when you can see what the mountain is doing right now. PeakWait shows current waits on Vail lifts from the skiers standing in them, with how old each reading is, and it says nothing at all when there is not enough information to be sure. That is a deliberate choice: a confident wrong answer costs you more than an honest blank.
+
+## FAQ
+
+Q: Which Vail lift has the worst wait?
+A: Gondola One and the Eagle Bahn Gondola carry the morning crowd and stack between roughly 8:45 and 10:00. Mountain Top Express is the second pinch point because the front side, the Back Bowls and the rest of the mountain all connect there.
+
+Q: What time are Vail lift lines shortest?
+A: Generally between about 11:00 and 2:00, when the morning crowd has dispersed into the bowls and before the afternoon return to the front side. The front side gets busy again after about 2:30.
+
+Q: Are the Back Bowls less crowded than the front side?
+A: Usually, yes. The terrain absorbs skiers quickly, so waits are shorter even when plenty of people are back there. The catch is that the bowls open later and unevenly, and everyone moves in a wave when they do.
+
+Q: Is Blue Sky Basin worth the trip?
+A: It is the quietest part of the mountain because it is the furthest from the base. Treat it as a commitment rather than a detour and leave real time to get back, because the return is longer than most people expect.
+
+Q: Can I check Vail lift wait times before I drive up?
+A: Yes. PeakWait shows live waits at Vail and across Colorado, so you can compare mountains before you commit to I-70 and then pick lifts once you are there.
+
+---
+
+# Keystone Lift Lines: Three Mountains, One Way In and One Way Home (2026)
+By Herb Sendit · September 6, 2026 · https://peakwait.net/guides/keystone-lift-lines/
+
+Keystone is built like a hallway. Three mountains sit in a row, Dercum in front, North Peak behind it, the Outback behind that, and the only way to the good stuff is over the top of the one in front. That shape decides your whole day. The crowd stacks at the front door in the morning and at the back door in the afternoon, and the skiers who do well at Keystone are the ones who go the other way.
+
+## The shape of the problem
+Dercum Mountain is the front. Two base areas feed it: River Run, with the River Run Gondola and Summit Express, and Mountain House, with Peru Express and Montezuma Express. Every one of those lifts is trying to put you on the same summit. From the summit of Dercum the mountain drops away behind you to a saddle, and from that saddle Santiago Express climbs North Peak while Ruby Express climbs back to where you came from. On North Peak the Outpost Gondola also links the two summits. Behind North Peak is the Outback, served by Outback Express, with Wayback as the only chair that hauls you back out. And off the side of North Peak is Bergman Bowl, the newest terrain, with its own express chair and its own wind holds. Count the exits. To ski the Outback and get home, you ride Wayback, then something up North Peak or back over the saddle, then something over Dercum. Three lifts of climbing to leave. Every skier on the back of the mountain has the same sum to do at about the same time, and that is where the second wait of the day comes from.
+
+## Morning: the front door
+On a weekend the River Run Gondola is the long wait from about 8:45 until 10:15. It is the lift next to the village, the lodging and the biggest parking, and it is a gondola, so people who have not warmed up yet like it. Summit Express loads a few steps away and often runs shorter, because the gondola pulls the crowd toward itself. The move most people miss is the other base. Mountain House is quieter, its parking is closer to the snow, and Peru Express is routinely the shortest way onto the mountain on a Saturday. It does not go all the way to the summit, which is exactly why people skip it, and exactly why it is short. Ride Peru, ski down to Montezuma or across to the summit lifts, and you have made two runs while the gondola crowd has made none. Montezuma Express does go to the summit and it does get its own stack, but it usually builds later and clears faster than the gondola.
+
+## Midday: the back of the mountain is where the day is
+Once the front clears, the crowd drains over the top toward North Peak and the Outback, and the front side goes quiet. This is the window, roughly 10:30 to 2:00, when Keystone works. Santiago Express moves a lot of people and on a normal day keeps up. Outback Express is the best chair on the mountain when the trees are good, and midweek it can run with empty seats. Ruby Express is the sleeper. It runs from the saddle back to the Dercum summit, which sounds useless until you notice it serves a stack of long groomers that nobody laps because everyone is heading further back. On a busy Saturday it is a good place to spend an hour. Bergman Bowl is the wild card. It is high, it is open, and it closes for wind more often than the rest of the mountain. When it is open on a weekend, the express chair holds a wait, because the bowl is the terrain everybody drove up for. When it is closed, all of those people are in the Outback instead, and Outback Express feels it.
+
+## Afternoon: the back door
+This is the wait Keystone is known for among people who ski it a lot, and it is invisible in the morning. From about 2:00 the far lifts start closing and everyone in the Outback has to climb out. Wayback is the only way. It backs up. Then Santiago and the Outpost Gondola back up, because everyone who rode Wayback now needs to get over North Peak. Then the top of Dercum gets busy with people picking a way down. You cannot skip this by skiing faster. You skip it by leaving the back earlier than you want to, or by not being there at all. Skiers who move to Ruby or the front side by 1:30 miss the whole thing and get a quiet last hour on groomers while the Outback crowd stands still. One consolation: the front of Dercum has night skiing, the most of any resort in Colorado, so the front side lifts keep turning after the back has shut. If you are on the front at 3:30, your day is not over.
+
+## Early season is its own animal
+Keystone opens earlier than almost anyone in Colorado, and it does it with a ribbon. One run, one or two lifts, and every skier who could not wait for winter on the same chair. The wait on those days has nothing to do with attendance and everything to do with the fact that there is one lift. It does not matter which base you pick, because only one is open. The honest advice is to go on a weekday or accept the maze as the price of November turns. The Outback and Bergman Bowl open well into the season, and a lot of the mountain's capacity is behind them. Until they open, the whole crowd is on Dercum and North Peak, and the back door wait arrives earlier in the afternoon.
+
+## What actually helps
+Start at Mountain House on a weekend. Peru Express is short because it is unglamorous. Go to the back early and leave it early. The Outback is best from 10:30 to 1:30. After that it is a trap with one exit. Lap Ruby when the mountain is stacked. Long groomers, short wait, and nobody thinks of it. Check Bergman before you commit. A wind hold moves a few hundred people into the Outback, and the sign at the bottom of Wayback will not tell you that. Finish on the front. The last hour on Dercum is quiet while the back is fighting to get out, and the lights come on. Most of that you can do with a trail map and a watch. What the map cannot tell you is whether Wayback is already stacked at 1:45 today, or whether Bergman opened at eleven. PeakWait shows the current wait on Keystone lifts from the skiers standing in them, and on a day when I-70 gives you a choice, which of the Summit County mountains is worth the drive in the first place.
+
+## FAQ
+
+Q: Which lift at Keystone has the longest wait?
+A: On a weekend morning it is the River Run Gondola, with Montezuma Express at the Mountain House base close behind. By early afternoon the longest wait usually moves to the back of the mountain, at Santiago Express and Wayback, because everybody has to climb back over Dercum to get home.
+
+Q: What time do Keystone lift lines get bad?
+A: The base stack runs from roughly 8:45 to 10:15 on a weekend. The afternoon stack at the back of the mountain runs from about 2:00 until the far lifts close. Between those two windows the mountain is usually in decent shape.
+
+Q: Is the Mountain House base less crowded than River Run?
+A: Usually, yes. River Run has the gondola, the village and the bulk of the lodging, so it draws the bigger morning crowd. Mountain House has Peru Express and Montezuma Express, and on most weekends Peru is the shortest way onto the mountain.
+
+Q: How crowded is Keystone early season?
+A: Keystone opens earlier than most Colorado resorts, often with a single run and one or two lifts. On those days everyone on the mountain is on the same lift, so the wait can be long even with a small crowd. Bergman Bowl and the Outback do not open until well into the season.
+
+Q: Can I see Keystone lift wait times live?
+A: Yes. PeakWait shows the current wait at each Keystone lift, reported by skiers standing at it, with how fresh each reading is. When there is not enough data it says so rather than guessing.
