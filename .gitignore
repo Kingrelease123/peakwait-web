@@ -1,0 +1,12 @@
+# Guardrail: this repo is PUBLIC. Never commit credentials or local files.
+.env
+.env.*
+*.pem
+*.key
+*.p8
+*.p12
+*.mobileprovision
+*.cer
+secrets/
+.DS_Store
+node_modules/
