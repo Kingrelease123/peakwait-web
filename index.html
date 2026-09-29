@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="description" content="PeakWait - live cross-resort ski lift wait times. Ski the mountain, skip the wait.">
-<title>PeakWait — Ski the mountain, skip the wait</title>
+<title>PeakWait: Ski the mountain, skip the wait</title>
 <link rel="canonical" href="https://peakwait.net/">
 <meta name="theme-color" content="#070F16">
 <!-- Favicon / app icons -->
@@ -19,16 +19,16 @@
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="PeakWait">
 <meta property="og:title" content="Ski the mountain, skip the wait.">
-<meta property="og:description" content="Live lift status and how long the waits really are, across resorts — then the best next chair. Read from the skiers on the hill right now.">
+<meta property="og:description" content="Live lift status and how long the waits really are, across resorts, then the best next chair. Read from the skiers on the hill right now.">
 <meta property="og:url" content="https://peakwait.net/">
 <meta property="og:image" content="https://peakwait.net/og.png">
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
-<meta property="og:image:alt" content="PeakWait — Ski the mountain, skip the wait.">
+<meta property="og:image:alt" content="PeakWait. Ski the mountain, skip the wait.">
 <!-- Twitter/X -->
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="Ski the mountain, skip the wait.">
-<meta name="twitter:description" content="Live lift status and real lift-wait times across resorts — then the best next chair.">
+<meta name="twitter:description" content="Live lift status and real lift wait times across resorts, then the best next chair.">
 <meta name="twitter:image" content="https://peakwait.net/og.png">
 <style>
   /* ================================================================
@@ -190,6 +190,12 @@
   .stat .n{font-size:clamp(3rem,7vw,4.4rem);line-height:1;color:var(--ink)}
   .stat .l{font-size:.78rem;color:var(--ink3);text-transform:uppercase;letter-spacing:.12em;font-weight:700;margin-top:10px}
   .states{margin-top:40px;color:var(--ink3);font-size:.94rem;text-align:center}
+  .gstrip{margin-top:44px;border-top:1px solid var(--hair);padding-top:26px}
+  .gh{display:flex;justify-content:space-between;align-items:baseline;margin-bottom:12px}
+  .gh a{color:var(--brand);font-weight:700;font-size:.9rem}
+  .glist{display:flex;flex-wrap:wrap;gap:8px 10px}
+  .glist a{color:var(--ink2);font-weight:600;font-size:.9rem;border:1px solid var(--hair);border-radius:999px;padding:6px 13px}
+  .glist a:hover{border-color:var(--brand);color:var(--ink)}
 
   /* Pricing honesty */
   .price2{display:grid;grid-template-columns:1fr 1fr;gap:20px;margin-top:52px}
@@ -280,9 +286,9 @@
         </a>
         <a class="btn ghost" href="#how">See how it works</a>
       </div>
-      <p class="note">Free to see status, waits, and report. Colorado · California · Utah · Washington · Montana · Vermont, and more across the U.S. &amp; Canada.</p>
+      <p class="note">Free to see status, waits, and report. Colorado · California · Utah · Washington · Montana · Vermont, and more across North and South America.</p>
       <div class="instr">
-        <div class="b"><span class="n num">106</span><span class="l">Mountains</span></div>
+        <div class="b"><span class="n num">116</span><span class="l">Mountains</span></div>
         <div class="b"><span class="n num">1,200+</span><span class="l">Lifts tracked</span></div>
         <div class="b"><span class="n num">16</span><span class="l">Regions</span></div>
       </div>
@@ -296,7 +302,7 @@
             <div class="sub"><span class="dot"></span>Updated 2 min ago · light snow</div>
           </div>
           <div class="pick">
-            <div class="lbl">◆ First tracks — go here next</div>
+            <div class="lbl">◆ First tracks. Go here next</div>
             <div class="nm">Excelerator</div>
             <div class="why">Shortest wait near you · moving well</div>
           </div>
@@ -316,12 +322,12 @@
     <div class="head">
       <span class="eyebrow">How it works</span>
       <h2>The wait times nobody else has.</h2>
-      <p class="say">Resort sites tell you a lift is "open." They never tell you it's a 20-minute wait. PeakWait fills that gap with the one source that actually knows — the skiers standing in it.</p>
+      <p class="say">Resort sites tell you a lift is "open." They never tell you it's a 20-minute wait. PeakWait fills that gap with the one source that actually knows: the skiers standing in it.</p>
     </div>
     <div class="steps">
-      <div class="step"><div class="n">1</div><h3>Skiers report the wait</h3><p>One tap says Moving, Short, Busy, or Long. It takes a second — your day auto-tracks the rest.</p></div>
-      <div class="step"><div class="n">2</div><h3>PeakWait reads the crowd</h3><p>Reports blend with official status and live weather into a confidence-rated wait band — never a fake exact number.</p></div>
-      <div class="step"><div class="n">3</div><h3>You get the best next lift</h3><p>The shortest wait worth skiing to from where you stand — so you spend the day riding, not waiting.</p></div>
+      <div class="step"><div class="n">1</div><h3>Skiers report the wait</h3><p>One tap says Moving, Short, Busy, or Long. It takes a second, and your day tracks itself.</p></div>
+      <div class="step"><div class="n">2</div><h3>PeakWait reads the crowd</h3><p>Reports blend with official status and live weather into a confidence-rated wait band, never a fake exact number.</p></div>
+      <div class="step"><div class="n">3</div><h3>You get the best next lift</h3><p>The shortest wait worth skiing to from where you stand, so you spend the day riding, not waiting.</p></div>
     </div>
   </div>
 </section>
@@ -386,16 +392,33 @@
   <div class="wrap">
     <div class="head">
       <span class="eyebrow">Where it works</span>
-      <h2>The mountains where lines hurt most.</h2>
-      <p class="say">From the Colorado corridor to Tahoe, the Wasatch, the Northeast, the Pacific Northwest, and the Canadian Rockies — the big destination resorts, mapped lift-by-lift for the 2026–27 season, with more added as the community grows.</p>
+      <h2>The mountains where the wait hurts most.</h2>
+      <p class="say">From the Colorado corridor to Tahoe, the Wasatch, the Northeast, the Pacific Northwest, the Canadian Rockies and the Andes: the big destination resorts, mapped lift-by-lift for the 2026–27 season, with more added as the community grows.</p>
     </div>
     <div class="statsrow">
-      <div class="stat"><div class="n num">106</div><div class="l">Mountains</div></div>
+      <div class="stat"><div class="n num">116</div><div class="l">Mountains</div></div>
       <div class="stat"><div class="n num">1,200+</div><div class="l">Lifts</div></div>
       <div class="stat"><div class="n num">7,000+</div><div class="l">Trails</div></div>
       <div class="stat"><div class="n num">16</div><div class="l">Regions</div></div>
     </div>
-    <p class="states">Colorado · California · Utah · Washington · Montana · Vermont, and more across the U.S. &amp; Canada — including Ikon &amp; Epic mountains. Don't see yours? Request it right inside the app.</p>
+    <p class="states">Colorado · California · Utah · Washington · Montana · Vermont, and more across North and South America, including Ikon and Epic mountains. Don't see yours? Request it right inside the app.</p>
+    <div class="gstrip">
+      <div class="gh"><span class="eyebrow">Guides</span><a href="/guides/">All guides</a></div>
+      <div class="glist">
+        <a href="/guides/keystone-lift-lines/">Keystone</a>
+        <a href="/guides/breckenridge-lift-lines/">Breckenridge</a>
+        <a href="/guides/vail-lift-lines/">Vail</a>
+        <a href="/guides/copper-mountain-lift-lines/">Copper</a>
+        <a href="/guides/steamboat-crowds-morningside/">Steamboat</a>
+        <a href="/guides/alta-snowbird-powder-day-lines/">Alta and Snowbird</a>
+        <a href="/guides/palisades-tahoe-crowds/">Palisades Tahoe</a>
+        <a href="/guides/whistler-lift-wait-times/">Whistler</a>
+        <a href="/guides/northeast-ski-crowds/">The Northeast</a>
+        <a href="/guides/beat-i70-ski-traffic-colorado-crowds/">Beating I-70</a>
+        <a href="/guides/least-crowded-colorado-ski-resorts/">Quiet Colorado</a>
+        <a href="/guides/epic-vs-ikon-crowds/">Epic vs Ikon</a>
+      </div>
+    </div>
   </div>
 </section>
 
@@ -404,7 +427,7 @@
     <div class="head">
       <span class="eyebrow">Honest by design</span>
       <h2>The crowd data stays free. Forever.</h2>
-      <p class="say">The wait reports are the network — everyone sees them, everyone adds to them. PeakWait Plus is the edge on top.</p>
+      <p class="say">The wait reports are the network. Everyone sees them, everyone adds to them. PeakWait Plus is the edge on top.</p>
     </div>
     <div class="price2">
       <div class="plan">
@@ -421,9 +444,9 @@
         <div class="pn">PeakWait Plus <span class="plusTag">7-day free trial</span></div>
         <div class="pd">The edge, for people who chase powder.</div>
         <ul>
-          <li><span class="ck">◆</span> First Tracks — first to fresh snow</li>
-          <li><span class="ck">◆</span> Predictive waits — where waits are headed</li>
-          <li><span class="ck">◆</span> Every mountain ranked — the full list &amp; anywhere</li>
+          <li><span class="ck">◆</span> First Tracks, first to fresh snow</li>
+          <li><span class="ck">◆</span> Predictive waits, where waits are headed</li>
+          <li><span class="ck">◆</span> Every mountain ranked, the full list, anywhere</li>
           <li><span class="ck">◆</span> Full season stats, streaks &amp; standing</li>
           <li><span class="ck">◆</span> Powder alerts, crew coordination &amp; turn-by-turn (coming this season)</li>
         </ul>
