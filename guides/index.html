@@ -3,11 +3,11 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Ski Guides, Beat the Wait | PeakWait</title>
-<meta name="description" content="No nonsense guides to skiing smarter: how to beat lift waits, dodge crowds, and find where to actually ski today. By Herb Sendit.">
+<title>Ski Guides by Mountain, Beat the Wait | PeakWait</title>
+<meta name="description" content="Where the wait is, mountain by mountain: which lift stacks up, when it clears, and where the quiet side is. Plus how to pick the day and the mountain. By Herb Sendit.">
 <link rel="canonical" href="https://peakwait.net/guides/">
-<meta property="og:title" content="PeakWait Ski Guides, Beat the Wait">
-<meta property="og:description" content="How to beat lift waits, dodge crowds, and find where to actually ski today.">
+<meta property="og:title" content="PeakWait Ski Guides, Mountain by Mountain">
+<meta property="og:description" content="Which lift stacks up, when it clears, and where the quiet side is.">
 <meta property="og:url" content="https://peakwait.net/guides/">
 <meta property="og:image" content="https://peakwait.net/og.png">
 <meta name="twitter:card" content="summary_large_image">
@@ -54,12 +54,40 @@ em{color:var(--ink);font-style:italic}
 .related a{display:block;margin:0 0 8px}
 footer{border-top:1px solid var(--hair);color:var(--ink3);font-size:.85rem;padding:26px 0 40px}
 footer a{color:var(--ink3)}
-.lead{font-size:1.12rem;color:var(--ink2);margin:6px 0 30px}
-.card{display:block;background:var(--surface);border:1px solid var(--hair);border-radius:14px;padding:22px 22px;margin:0 0 16px}
-.card:hover{border-color:var(--brand);text-decoration:none}
-.card h2{font-size:1.3rem;margin:0 0 8px;color:var(--ink)}
-.card p{margin:0 0 10px}
-.card .meta{font-size:.8rem;color:var(--ink3)}</style>
+.wrap{max-width:1040px}
+.lead{font-size:1.1rem;color:var(--ink2);max-width:58ch;margin:0 0 34px}
+.lead b{color:var(--gold);font-weight:700}
+.sec{display:flex;align-items:baseline;gap:14px;margin:44px 0 16px}
+.sec h2{font-size:1.35rem;margin:0}
+.sec span{font-size:.8rem;color:var(--ink3);text-transform:uppercase;letter-spacing:.08em}
+.chips{display:flex;flex-wrap:wrap;gap:8px;margin:0 0 18px}
+.chip{border:1px solid var(--hair);color:var(--ink2);font-size:.82rem;font-weight:600;padding:6px 12px;border-radius:999px;background:transparent;cursor:pointer;font-family:inherit}
+.chip[aria-pressed="true"]{background:var(--ink);color:#04121f;border-color:var(--ink)}
+.chip:focus-visible{outline:2px solid var(--brand);outline-offset:2px}
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(230px,1fr));gap:14px}
+.mtn{display:flex;flex-direction:column;gap:10px;background:var(--surface);border:1px solid var(--hair);border-radius:14px;padding:16px 16px 14px;color:var(--ink);transition:border-color .15s,transform .15s}
+.mtn:hover{border-color:var(--brand);transform:translateY(-1px);text-decoration:none}
+.mtn:focus-visible{outline:2px solid var(--brand)}
+.mtn[hidden]{display:none}
+.rail{height:4px;border-radius:3px;background:linear-gradient(90deg,#4AE299 0 var(--m),#A6E24A var(--m) var(--s),#FEB84D var(--s) var(--b),#FF6B57 var(--b) 100%)}
+.mtn .name{font-weight:800;font-size:1.12rem;letter-spacing:-.015em;line-height:1.15}
+.mtn .where{font-size:.8rem;color:var(--ink3)}
+.mtn .hook{font-size:.9rem;color:var(--ink2);flex:1}
+.mtn .foot{display:flex;justify-content:space-between;align-items:center;font-size:.76rem;color:var(--ink3);font-variant-numeric:tabular-nums}
+.mtn .foot b{color:var(--ink);font-weight:700}
+.tag{font-size:.68rem;font-weight:700;letter-spacing:.06em;text-transform:uppercase;padding:2px 7px;border-radius:5px;border:1px solid var(--gold);color:var(--gold)}
+.legend{display:flex;gap:16px;flex-wrap:wrap;align-items:center;font-size:.78rem;color:var(--ink3);margin:10px 0 0}
+.legend i{display:inline-block;width:10px;height:10px;border-radius:3px;margin-right:5px;vertical-align:-1px}
+.rows{display:flex;flex-direction:column;border-top:1px solid var(--hair)}
+.row{display:grid;grid-template-columns:1fr auto;gap:18px;align-items:baseline;padding:16px 4px;border-bottom:1px solid var(--hair);color:var(--ink)}
+.row:hover{text-decoration:none}.row:hover .t{color:var(--brand)}
+.row .t{font-weight:700;font-size:1.02rem;letter-spacing:-.01em}
+.row .d{color:var(--ink2);font-size:.92rem;margin-top:3px;max-width:70ch}
+.row .m{font-size:.78rem;color:var(--ink3);white-space:nowrap;font-variant-numeric:tabular-nums}
+.cta.wide{margin-top:56px;display:grid;grid-template-columns:1fr auto;gap:20px;align-items:center;text-align:left}
+.cta.wide p{margin:0}
+@media (max-width:640px){.cta.wide{grid-template-columns:1fr}.row{grid-template-columns:1fr}.row .m{white-space:normal}}
+@media (prefers-reduced-motion:reduce){.mtn{transition:none}}</style>
 </head>
 <body>
 
@@ -70,120 +98,57 @@ footer a{color:var(--ink3)}
 </div></header>
 <main><div class="wrap">
   <nav class="crumbs"><a href="/">Home</a> › Guides</nav>
-  <h1>Ski smarter. Skip the wait.</h1>
-  <p class="lead">No nonsense guides to beating lift waits, dodging crowds, and finding where to actually ski today, from someone who has spent way too much of his life in a singles line. By Herb Sendit.</p>
-  
-  <a class="card" href="/guides/ski-resort-lift-lines/">
-    <h2>Why Ski Resort Lift Lines Feel So Brutal Now, and How to Get Your Day Back</h2>
-    <p>Two hour waits, $200 to stand in line, six runs all day. Here's why lift lines got so bad, what skiers actually say about it, and how to claw back the parts you can control.</p>
-    <span class="meta">By Herb Sendit · 8 min read</span>
-  </a>
+  <h1>Where the wait is, mountain by mountain</h1>
+  <p class="lead">Which lift stacks up, when it clears, and where the quiet side is. Written from the singles line by <b>Herb Sendit</b>.</p>
 
-  <a class="card" href="/guides/whistler-lift-wait-times/">
-    <h2>The Most Accurate Whistler Lift Wait Times in 2026</h2>
-    <p>Whistler's lift wait times are wrong more often than the forecast. Here's why every app fibs to you, and the most accurate way to check waits live.</p>
-    <span class="meta">By Herb Sendit · 6 min read</span>
-  </a>
+  <div class="sec"><h2>Find your mountain</h2><span>9 guides</span></div>
+  <div class="chips" role="group" aria-label="Filter by region">
+    <button class="chip" aria-pressed="true" data-f="all">All</button>
+    <button class="chip" aria-pressed="false" data-f="CO">Colorado</button>
+    <button class="chip" aria-pressed="false" data-f="UT">Utah</button>
+    <button class="chip" aria-pressed="false" data-f="CA">Tahoe</button>
+    <button class="chip" aria-pressed="false" data-f="BC">Whistler</button>
+    <button class="chip" aria-pressed="false" data-f="NE">Northeast</button>
+  </div>
+  <div class="grid" id="grid">
+    <a class="mtn" href="/guides/keystone-lift-lines/" data-r="CO" style="--m:22%;--s:45%;--b:75%"><div class="rail"></div><div class="name">Keystone</div><div class="where">Colorado · Epic</div><div class="hook">Three mountains in a row, one way in and one way home. The wait moves from the gondola to Wayback at 2 pm.</div><div class="foot"><span><b>20 lifts</b> · 7 min</span><span class="tag new">New</span></div></a>
+    <a class="mtn" href="/guides/vail-lift-lines/" data-r="CO" style="--m:30%;--s:55%;--b:80%"><div class="rail"></div><div class="name">Vail</div><div class="where">Colorado · Epic</div><div class="hook">Enormous, but nearly everyone enters through the same two lifts.</div><div class="foot"><span><b>32 lifts</b> · 7 min</span></div></a>
+    <a class="mtn" href="/guides/breckenridge-lift-lines/" data-r="CO" style="--m:15%;--s:35%;--b:60%"><div class="rail"></div><div class="name">Breckenridge</div><div class="where">Colorado · Epic</div><div class="hook">34 lifts across five peaks, and almost all the waiting happens at four of them.</div><div class="foot"><span><b>34 lifts</b> · 7 min</span></div></a>
+    <a class="mtn" href="/guides/copper-mountain-lift-lines/" data-r="CO" style="--m:35%;--s:60%;--b:85%"><div class="rail"></div><div class="name">Copper Mountain</div><div class="where">Colorado · Ikon</div><div class="hook">Super Bee and American Flyer take the hit. The pods that stay quiet, lift by lift.</div><div class="foot"><span><b>23 lifts</b> · 5 min</span></div></a>
+    <a class="mtn" href="/guides/alta-snowbird-powder-day-lines/" data-r="UT" style="--m:10%;--s:25%;--b:50%"><div class="rail"></div><div class="name">Alta and Snowbird</div><div class="where">Utah · Ikon</div><div class="hook">Little Cottonwood on a powder day is glorious and brutal in equal measure.</div><div class="foot"><span><b>25 lifts</b> · 6 min</span></div></a>
+    <a class="mtn" href="/guides/palisades-tahoe-crowds/" data-r="CA" style="--m:18%;--s:40%;--b:62%"><div class="rail"></div><div class="name">Palisades Tahoe</div><div class="where">California · Ikon</div><div class="hook">Two great laps and then hour-long waits. When to bail to a quieter Tahoe hill.</div><div class="foot"><span><b>45 lifts</b> · 5 min</span></div></a>
+    <a class="mtn" href="/guides/northeast-ski-crowds/" data-r="NE" style="--m:12%;--s:30%;--b:55%"><div class="rail"></div><div class="name">The Ice Coast</div><div class="where">Vermont and the Northeast</div><div class="hook">Short vertical makes a 20 minute wait feel worse than an hour out West.</div><div class="foot"><span><b>Killington, Stowe</b> · 6 min</span></div></a>
+    <a class="mtn" href="/guides/steamboat-crowds-morningside/" data-r="CO" style="--m:25%;--s:45%;--b:65%"><div class="rail"></div><div class="name">Steamboat</div><div class="where">Colorado · Ikon</div><div class="hook">The gondola and the infamous Morningside chair can eat your morning.</div><div class="foot"><span><b>21 lifts</b> · 5 min</span></div></a>
+    <a class="mtn" href="/guides/whistler-lift-wait-times/" data-r="BC" style="--m:20%;--s:42%;--b:70%"><div class="rail"></div><div class="name">Whistler Blackcomb</div><div class="where">British Columbia · Epic</div><div class="hook">The posted wait times are wrong more often than the forecast. Here is why.</div><div class="foot"><span><b>36 lifts</b> · 6 min</span></div></a>
+  </div>
+  <div class="legend"><span><i style="background:#4AE299"></i>Moving</span><span><i style="background:#A6E24A"></i>Short</span><span><i style="background:#FEB84D"></i>Busy</span><span><i style="background:#FF6B57"></i>Long</span><span>The bar is how a typical Saturday at that mountain splits between Moving, Short, Busy and Long, from the guide. Live waits are in the app.</span></div>
 
-  <a class="card" href="/guides/beat-powder-day-crowds/">
-    <h2>How to Beat Powder Day Crowds and Still Get Fresh Tracks in 2026</h2>
-    <p>Powder days now mean 90 minute waits and everything tracked out by 11am. Here's how to actually score freshies: smarter resort picks, timing, and live wait data. No 5am alarm required.</p>
-    <span class="meta">By Herb Sendit · 5 min read</span>
-  </a>
+  <div class="sec"><h2>Pick the day and the mountain</h2><span>5 guides</span></div>
+  <div class="rows">
+    <a class="row" href="/guides/beat-powder-day-crowds/"><div><div class="t">How to Beat Powder Day Crowds and Still Get Fresh Tracks in 2026</div><div class="d">Powder days now mean 90 minute waits and everything tracked out by 11am. Here's how to actually score freshies: smarter resort picks, timing, and live wait data. No 5am alarm required.</div></div><div class="m">5 min</div></a>
+    <a class="row" href="/guides/beat-i70-ski-traffic-colorado-crowds/"><div><div class="t">How to Beat I-70 Ski Traffic and Colorado Weekend Crowds in 2026</div><div class="d">I-70 on a Saturday is a parking lot with a mountain view. Here's the real Colorado playbook: best days, sleeper resorts, timing, and how to pick a mountain that's actually worth the drive.</div></div><div class="m">7 min</div></a>
+    <a class="row" href="/guides/least-crowded-colorado-ski-resorts/"><div><div class="t">The Least Crowded Colorado Ski Resorts, and How to Find the Quiet One Today</div><div class="d">The big I-70 resorts soak up all of Denver. Here are the Colorado mountains that stay quiet, and how to tell which one is actually empty on any given day.</div></div><div class="m">6 min</div></a>
+    <a class="row" href="/guides/epic-vs-ikon-crowds/"><div><div class="t">Epic vs Ikon: Which Pass Has Worse Lift Lines in 2026?</div><div class="d">The question every skier debates before buying. Here's the honest answer on crowds, why it's not really about the pass, and how to avoid the lines either way.</div></div><div class="m">6 min</div></a>
+    <a class="row" href="/guides/best-time-to-ski-avoid-crowds/"><div><div class="t">The Best Time to Ski to Avoid Crowds in 2026</div><div class="d">The day, the hour, and the dates that decide whether you ski powder or stand in a maze. Here's when to go, when to arrive, and when to just stay home.</div></div><div class="m">5 min</div></a>
+  </div>
 
-  <a class="card" href="/guides/beat-i70-ski-traffic-colorado-crowds/">
-    <h2>How to Beat I-70 Ski Traffic and Colorado Weekend Crowds in 2026</h2>
-    <p>I-70 on a Saturday is a parking lot with a mountain view. Here's the real Colorado playbook: best days, sleeper resorts, timing, and how to pick a mountain that's actually worth the drive.</p>
-    <span class="meta">By Herb Sendit · 7 min read</span>
-  </a>
+  <div class="sec"><h2>Why waits got this bad, and what the apps do about it</h2><span>4 guides</span></div>
+  <div class="rows">
+    <a class="row" href="/guides/ski-resort-lift-lines/"><div><div class="t">Why Ski Resort Lift Lines Feel So Brutal Now, and How to Get Your Day Back</div><div class="d">Two hour waits, $200 to stand in line, six runs all day. Here's why lift lines got so bad, what skiers actually say about it, and how to claw back the parts you can control.</div></div><div class="m">8 min</div></a>
+    <a class="row" href="/guides/peakwait-vs-whistler-peak-app/"><div><div class="t">PeakWait vs the Whistler Peak App: Which Is Better for Lift Waits?</div><div class="d">Both apps help you plan a Whistler day, but they solve different problems. Here's an honest breakdown of where each one wins, and which to use for real time lift waits.</div></div><div class="m">5 min</div></a>
+    <a class="row" href="/guides/best-ski-lift-wait-apps/"><div><div class="t">The Best Apps for Ski Lift Wait Times in 2026</div><div class="d">An honest rundown of the apps skiers use for lift waits, crowds, and conditions, what each one is actually good at, and which to reach for when you just want the short line.</div></div><div class="m">6 min</div></a>
+    <a class="row" href="/guides/how-long-reasonable-lift-wait/"><div><div class="t">How Long Is a Reasonable Lift Wait? What 400+ Skiers Say</div><div class="d">We dug into what skiers actually consider an acceptable lift line. The consensus is shorter than you'd think, and it explains why a bad day feels like a betrayal.</div></div><div class="m">4 min</div></a>
+  </div>
 
-  <a class="card" href="/guides/peakwait-vs-whistler-peak-app/">
-    <h2>PeakWait vs the Whistler Peak App: Which Is Better for Lift Waits?</h2>
-    <p>Both apps help you plan a Whistler day, but they solve different problems. Here's an honest breakdown of where each one wins, and which to use for real time lift waits.</p>
-    <span class="meta">By Herb Sendit · 5 min read</span>
-  </a>
-
-  <a class="card" href="/guides/best-ski-lift-wait-apps/">
-    <h2>The Best Apps for Ski Lift Wait Times in 2026</h2>
-    <p>An honest rundown of the apps skiers use for lift waits, crowds, and conditions, what each one is actually good at, and which to reach for when you just want the short line.</p>
-    <span class="meta">By Herb Sendit · 6 min read</span>
-  </a>
-
-  <a class="card" href="/guides/least-crowded-colorado-ski-resorts/">
-    <h2>The Least Crowded Colorado Ski Resorts, and How to Find the Quiet One Today</h2>
-    <p>The big I-70 resorts soak up all of Denver. Here are the Colorado mountains that stay quiet, and how to tell which one is actually empty on any given day.</p>
-    <span class="meta">By Herb Sendit · 6 min read</span>
-  </a>
-
-  <a class="card" href="/guides/epic-vs-ikon-crowds/">
-    <h2>Epic vs Ikon: Which Pass Has Worse Lift Lines in 2026?</h2>
-    <p>The question every skier debates before buying. Here's the honest answer on crowds, why it's not really about the pass, and how to avoid the lines either way.</p>
-    <span class="meta">By Herb Sendit · 6 min read</span>
-  </a>
-
-  <a class="card" href="/guides/how-long-reasonable-lift-wait/">
-    <h2>How Long Is a Reasonable Lift Wait? What 400+ Skiers Say</h2>
-    <p>We dug into what skiers actually consider an acceptable lift line. The consensus is shorter than you'd think, and it explains why a bad day feels like a betrayal.</p>
-    <span class="meta">By Herb Sendit · 4 min read</span>
-  </a>
-
-  <a class="card" href="/guides/alta-snowbird-powder-day-lines/">
-    <h2>Alta and Snowbird on a Powder Day: The Little Cottonwood Playbook in 2026</h2>
-    <p>Little Cottonwood on a powder day is glorious and brutal in equal measure. Here's how to handle the canyon, the parking, and the lift lines at Alta and Snowbird.</p>
-    <span class="meta">By Herb Sendit · 6 min read</span>
-  </a>
-
-  <a class="card" href="/guides/palisades-tahoe-crowds/">
-    <h2>How to Beat the Crowds at Palisades Tahoe in 2026</h2>
-    <p>Palisades Tahoe on a powder Saturday can mean two great laps and then hour-long lines. Here's how to get more out of it, and when to bail to a quieter Tahoe hill.</p>
-    <span class="meta">By Herb Sendit · 5 min read</span>
-  </a>
-
-  <a class="card" href="/guides/copper-mountain-lift-lines/">
-    <h2>Copper Mountain Lift Lines: Where to Ski and What to Skip in 2026</h2>
-    <p>Copper's lines are all about which lift and when. Here's the honest lift by lift on Super Bee, American Flyer, and the pods that stay quiet.</p>
-    <span class="meta">By Herb Sendit · 5 min read</span>
-  </a>
-
-  <a class="card" href="/guides/best-time-to-ski-avoid-crowds/">
-    <h2>The Best Time to Ski to Avoid Crowds in 2026</h2>
-    <p>The day, the hour, and the dates that decide whether you ski powder or stand in a maze. Here's when to go, when to arrive, and when to just stay home.</p>
-    <span class="meta">By Herb Sendit · 5 min read</span>
-  </a>
-
-  <a class="card" href="/guides/steamboat-crowds-morningside/">
-    <h2>Steamboat Crowds and the Morningside Line: How to Ski Around Them in 2026</h2>
-    <p>Steamboat's gondola and the infamous Morningside lift can eat your morning. Here's where the lines actually are and how the regulars route around them.</p>
-    <span class="meta">By Herb Sendit · 5 min read</span>
-  </a>
-
-  <a class="card" href="/guides/northeast-ski-crowds/">
-    <h2>Beating Lift Lines on the Ice Coast: A Northeast Crowds Guide in 2026</h2>
-    <p>Short vert makes a 20 minute Northeast lift line feel worse than an hour out West. Here's how to beat the crowds at Killington, Stowe, and the rest of the ice coast.</p>
-    <span class="meta">By Herb Sendit · 6 min read</span>
-  </a>
-
-  <a class="card" href="/guides/breckenridge-lift-lines/">
-    <h2>Breckenridge Lift Lines: Where They Form and How to Skip Them in 2026</h2>
-    <p>Breck has 34 lifts across five peaks, and almost all the waiting happens at four of them. Here is where the crowd piles up, when it clears, and how to ski around it.</p>
-    <span class="meta">By Herb Sendit · 7 min read</span>
-  </a>
-
-  <a class="card" href="/guides/vail-lift-lines/">
-    <h2>Vail Lift Lines: The Two That Matter and the Ones That Don't in 2026</h2>
-    <p>Vail is enormous, but nearly everyone enters through the same two lifts. Here is how the crowd moves across the front side, the Back Bowls and Blue Sky Basin, and how to stay ahead of it.</p>
-    <span class="meta">By Herb Sendit · 7 min read</span>
-  </a>
-
-  <a class="card" href="/guides/keystone-lift-lines/">
-    <h2>Keystone Lift Lines: Three Mountains, One Way In and One Way Home in 2026</h2>
-    <p>Keystone is three mountains deep, and the crowd stacks at the front door in the morning and at the back door in the afternoon. Where the waits form at River Run, Montezuma, Santiago and Outback, and how to ski the day backwards.</p>
-    <span class="meta">By Herb Sendit · 7 min read</span>
-  </a>
+  <div class="cta wide"><div><h3>See which lift is actually moving</h3><p>Live waits at 116 mountains, reported by skiers standing in them.</p></div><a href="https://apps.apple.com/us/app/id6793253589">Download PeakWait, free</a></div>
 </div></main>
 
 <footer><div class="wrap">
   © 2026 PeakWait LLC · <a href="/">Home</a> · <a href="/guides/">Guides</a> · <a href="/updates/">Updates</a> · <a href="/terms/">Terms</a> · <a href="/privacy/">Privacy</a>
 </div></footer>
+<script>
+const chips=[...document.querySelectorAll('.chip')],cards=[...document.querySelectorAll('.mtn')];
+chips.forEach(c=>c.addEventListener('click',()=>{chips.forEach(x=>x.setAttribute('aria-pressed',x===c));const f=c.dataset.f;cards.forEach(m=>{m.hidden=f!=='all'&&m.dataset.r!==f});}));
+</script>
 </body>
 </html>

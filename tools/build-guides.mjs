@@ -191,7 +191,7 @@ const ARTICLES = [
     sections: [
       { h2: "What each one is built for", html: `
 <p>The Whistler Peak app is a Whistler Blackcomb companion. Conditions, cams, weather, avalanche info, lift status, all in one tidy place for one resort. It's genuinely useful, and plenty of locals lean on it.</p>
-<p>PeakWait is a cross resort lift wait app. It covers 91 mountains across the U.S. and Canada, including Whistler Blackcomb, and the whole focus is one question: where is the short wait, right now.</p>` },
+<p>PeakWait is a cross resort lift wait app. It covers 116 mountains across North and South America, including Whistler Blackcomb, and the whole focus is one question: where is the short wait, right now.</p>` },
       { h2: "Where the wait numbers come from: the important part", html: `
 <p>This is the real difference. The Whistler Peak app's wait times, like most resort companion apps, trace back to the resort's own feed. That feed updates on a delay, so the number can trail the actual line by 15 to 40 minutes. A lot of skiers have watched an app say "12 min" while they stood in 40.</p>
 <p>PeakWait's waits come from skiers on the hill reporting what they see, blended with live movement and stamped with how fresh each report is. It's an estimate too, but it's the crowd's live read instead of a delayed official number. <a href="/guides/whistler-lift-wait-times/">Here's the longer story on why resort wait numbers lag.</a></p>` },
@@ -206,7 +206,7 @@ const ARTICLES = [
     ],
     faqs: [
       { q: "Is the Whistler Peak app accurate for wait times?", a: "It's a solid all in one Whistler dashboard, but its wait numbers come from the resort feed, so they lag real conditions. For the live wait, crowdsourced reports like PeakWait's tend to be closer to what you're actually standing in." },
-      { q: "Does PeakWait cover Whistler Blackcomb?", a: "Yes. Whistler Blackcomb is one of 91 resorts PeakWait covers across the U.S. and Canada." },
+      { q: "Does PeakWait cover Whistler Blackcomb?", a: "Yes. Whistler Blackcomb is one of 116 resorts PeakWait covers across North and South America." },
       { q: "What's the difference between PeakWait and the Whistler Peak app?", a: "The Whistler Peak app is a single resort dashboard: conditions, cams, status. PeakWait is a cross resort, crowdsourced live wait tracker that also ranks where to ski today." },
       { q: "Which app is best for Whistler lift lines?", a: "For the live wait right now, a crowdsourced tracker like PeakWait. For the full resort dashboard, the Whistler Peak app. A lot of skiers use both." },
     ],
@@ -226,7 +226,7 @@ const ARTICLES = [
     dek: `There's no single app that does everything, and anyone who says otherwise is selling something. Here's the honest breakdown of what skiers actually use for waits, crowds, tracking, and conditions, and which one to open when your only goal is the shortest line.`,
     sections: [
       { h2: "For live lift waits: PeakWait", html: `
-<p>Best for the exact question "which lift is short right now." PeakWait shows crowdsourced waits reported by skiers on the hill, tagged Moving, Short, Busy, or Long, ranks where to ski today by snow and crowds across 91 resorts, and points you to the best next chair. It's free to check status and report waits, and PeakWait Plus adds the cross resort guide, powder alerts, and live friend location. It's weakest where nobody's reporting yet, though it says "unknown" instead of guessing.</p>` },
+<p>Best for the exact question "which lift is short right now." PeakWait shows crowdsourced waits reported by skiers on the hill, tagged Moving, Short, Busy, or Long, ranks where to ski today by snow and crowds across 116 resorts, and points you to the best next chair. It's free to check status and report waits, and PeakWait Plus adds the cross resort guide, powder alerts, and live friend location. It's weakest where nobody's reporting yet, though it says "unknown" instead of guessing.</p>` },
       { h2: "For official status and trail maps: the resort apps", html: `
 <p>The Epic and Ikon apps, plus individual resort apps, are the source of truth for lift and trail status, interactive maps, and your pass. Handy and official. The catch is their wait estimates come from resort sensors and feeds, so they lag the real line, and each one only covers its own resorts.</p>` },
       { h2: "For tracking your day: Slopes", html: `
@@ -244,7 +244,7 @@ const ARTICLES = [
       { q: "Is there a free ski lift wait app?", a: "Yes. PeakWait is free to check lift status and report waits, with an optional Plus tier for the cross resort guide, powder alerts, and live friend location." },
       { q: "What app tells you the least crowded lifts or runs?", a: "A live wait app like PeakWait, which shows which lifts are moving now and points you to the best next chair, is built for exactly that." },
     ],
-    cta: { h: "Get the short line", p: `See live, crowdsourced lift waits and where to ski today across 91 resorts.` },
+    cta: { h: "Get the short line", p: `See live, crowdsourced lift waits and where to ski today across 116 resorts.` },
   },
 
   {
@@ -539,7 +539,7 @@ const ARTICLES = [
   <li>Check live waits before committing to the gondola or the trek out back.</li>
 </ul>` },
       { h2: "Check before you commit", html: `
-<p>Which lift is worth it changes by the hour. PeakWait shows live, crowdsourced waits at Steamboat and points you to the best next chair, so you don't hike out to Morningside to find a 30 minute line. Steamboat is one of 91 resorts it covers.</p>` },
+<p>Which lift is worth it changes by the hour. PeakWait shows live, crowdsourced waits at Steamboat and points you to the best next chair, so you don't hike out to Morningside to find a 30 minute line. Steamboat is one of 116 resorts it covers.</p>` },
     ],
     faqs: [
       { q: "How bad are the lift lines at Steamboat?", a: "On powder and holiday mornings, the base gondola and the Morningside lift can run 30 minutes or more. The rest of the mountain and the tree skiing stay more manageable, and weekdays are much quieter." },
@@ -578,7 +578,7 @@ const ARTICLES = [
   <li>On a storm or holiday, a smaller nearby hill often beats fighting the flagship.</li>
 </ul>` },
       { h2: "Check before you drive", html: `
-<p>The Northeast is dense with resorts, so the "is it worth it" call is really "which one." PeakWait shows live waits across Northeast mountains and ranks where to ski today, so you can pick the short line before you commit to the drive. It covers Killington, Stowe, and the rest of the region among its 91 resorts.</p>` },
+<p>The Northeast is dense with resorts, so the "is it worth it" call is really "which one." PeakWait shows live waits across Northeast mountains and ranks where to ski today, so you can pick the short line before you commit to the drive. It covers Killington, Stowe, and the rest of the region among its 116 resorts.</p>` },
     ],
     faqs: [
       { q: "Which Northeast ski resort has the worst lift lines?", a: "The big Epic and Ikon anchors like Killington draw the heaviest weekend crowds. Lines feel especially bad because Northeast runs are short, so the wait to ski ratio is high." },
@@ -727,7 +727,7 @@ const UPDATES = [
       { h2: "A clearer where to ski today", html: `
 <p>The daily picks were always ranked, but the score sat there as a mystery number. Now it tells you what it means: each pick is scored <strong>0 to 100 on fresh snow, short waits, and how much of the mountain is open</strong>. Higher is a better day. Same ranking, a lot less guessing.</p>` },
       { h2: "Better pass badges", html: `
-<p>Every mountain now wears the right badge, including <strong>Power Pass</strong> resorts like Purgatory and Powderhorn that used to show up with none. We're also working through a full verification of pass affiliations across all 91 resorts, so these keep getting sharper.</p>` },
+<p>Every mountain now wears the right badge, including <strong>Power Pass</strong> resorts like Purgatory and Powderhorn that used to show up with none. We're also working through a full verification of pass affiliations across all 116 resorts, so these keep getting sharper.</p>` },
       { h2: "An offseason that pulls its weight", html: `
 <p>The hard truth about a ski app in August is that nothing is spinning. So we rebuilt the offseason home screen to be useful instead of empty. It now leads with a <strong>live countdown to the first chair</strong> and a read on roughly when the season opens, then hands you the one job actually worth doing today: <strong>star your mountains and turn on alerts</strong>, so we can ping you the moment the lifts start turning and the first snow lands.</p>
 <p>Less wall of text, more signal. The app is honest about what it can tell you today, and clear about the day it comes alive.</p>` },
@@ -873,29 +873,100 @@ ${footer()}
 </html>`;
 }
 
+// ---- guides index: mountains as a grid, everything else as rows -----------------------------
+// The old page was 18 identical cards in publish order, so a skier looking for Keystone scrolled past
+// Whistler and a pass comparison to find it. Mountains are what people search by, so they lead, with
+// the app's own wait colours as the one detail nobody else's guide page could carry.
+const RAIL_LEGEND = "The bar is how a typical Saturday at that mountain splits between Moving, Short, Busy and Long, from the guide. Live waits are in the app.";
+const INDEX_META = {
+  // mountain guides: region filter key, where line, lift count (live app data, 2026-09-29), hook, rail split (% ends of moving/short/busy)
+  "keystone-lift-lines":        { region: "CO", where: "Colorado · Epic",        lifts: "20 lifts", hook: "Three mountains in a row, one way in and one way home. The wait moves from the gondola to Wayback at 2 pm.", rail: [22, 45, 75] },
+  "breckenridge-lift-lines":    { region: "CO", where: "Colorado · Epic",        lifts: "34 lifts", hook: "34 lifts across five peaks, and almost all the waiting happens at four of them.", rail: [15, 35, 60] },
+  "vail-lift-lines":            { region: "CO", where: "Colorado · Epic",        lifts: "32 lifts", hook: "Enormous, but nearly everyone enters through the same two lifts.", rail: [30, 55, 80] },
+  "copper-mountain-lift-lines": { region: "CO", where: "Colorado · Ikon",        lifts: "23 lifts", hook: "Super Bee and American Flyer take the hit. The pods that stay quiet, lift by lift.", rail: [35, 60, 85] },
+  "steamboat-crowds-morningside": { region: "CO", where: "Colorado · Ikon",      lifts: "21 lifts", hook: "The gondola and the infamous Morningside chair can eat your morning.", rail: [25, 45, 65] },
+  "alta-snowbird-powder-day-lines": { region: "UT", where: "Utah · Ikon",         lifts: "25 lifts", hook: "Little Cottonwood on a powder day is glorious and brutal in equal measure.", rail: [10, 25, 50] },
+  "palisades-tahoe-crowds":     { region: "CA", where: "California · Ikon",      lifts: "45 lifts", hook: "Two great laps and then hour-long waits. When to bail to a quieter Tahoe hill.", rail: [18, 40, 62] },
+  "whistler-lift-wait-times":   { region: "BC", where: "British Columbia · Epic", lifts: "36 lifts", hook: "The posted wait times are wrong more often than the forecast. Here is why.", rail: [20, 42, 70] },
+  "northeast-ski-crowds":       { region: "NE", where: "Vermont and the Northeast", lifts: "Killington, Stowe", hook: "Short vertical makes a 20 minute wait feel worse than an hour out West.", rail: [12, 30, 55] },
+  // the rest, by the decision they help with
+  "best-time-to-ski-avoid-crowds": { group: "day" },
+  "beat-i70-ski-traffic-colorado-crowds": { group: "day" },
+  "least-crowded-colorado-ski-resorts": { group: "day" },
+  "beat-powder-day-crowds": { group: "day" },
+  "epic-vs-ikon-crowds": { group: "day" },
+  "ski-resort-lift-lines": { group: "why" },
+  "how-long-reasonable-lift-wait": { group: "why" },
+  "best-ski-lift-wait-apps": { group: "why" },
+  "peakwait-vs-whistler-peak-app": { group: "why" },
+};
+const REGIONS = [["all", "All"], ["CO", "Colorado"], ["UT", "Utah"], ["CA", "Tahoe"], ["BC", "Whistler"], ["NE", "Northeast"]];
+const MOUNTAIN_NAME = {
+  "keystone-lift-lines": "Keystone", "breckenridge-lift-lines": "Breckenridge", "vail-lift-lines": "Vail",
+  "copper-mountain-lift-lines": "Copper Mountain", "steamboat-crowds-morningside": "Steamboat",
+  "alta-snowbird-powder-day-lines": "Alta and Snowbird", "palisades-tahoe-crowds": "Palisades Tahoe",
+  "whistler-lift-wait-times": "Whistler Blackcomb", "northeast-ski-crowds": "The Ice Coast",
+};
+
 function indexHtml(arts) {
-  const cards = arts.map((a) => `
-  <a class="card" href="/guides/${a.slug}/">
-    <h2>${esc(a.title)}</h2>
-    <p>${esc(a.description)}</p>
-    <span class="meta">By ${AUTHOR} · ${esc(a.readTime)} read</span>
-  </a>`).join("\n");
-  const listCss = `.lead{font-size:1.12rem;color:var(--ink2);margin:6px 0 30px}
-.card{display:block;background:var(--surface);border:1px solid var(--hair);border-radius:14px;padding:22px 22px;margin:0 0 16px}
-.card:hover{border-color:var(--brand);text-decoration:none}
-.card h2{font-size:1.3rem;margin:0 0 8px;color:var(--ink)}
-.card p{margin:0 0 10px}
-.card .meta{font-size:.8rem;color:var(--ink3)}`;
+  const missing = arts.filter((a) => !INDEX_META[a.slug]).map((a) => a.slug);
+  if (missing.length) throw new Error(`INDEX_META has no entry for: ${missing.join(", ")} — add it (mountain or group) so the guide appears on /guides/`);
+  const bySlug = Object.fromEntries(arts.map((a) => [a.slug, a]));
+  const newest = [...arts].sort((a, b) => (b.published > a.published ? 1 : -1))[0];
+  const mountains = arts.filter((a) => INDEX_META[a.slug].region).sort((a, b) => (b.published > a.published ? 1 : -1));
+  const rowsFor = (g) => arts.filter((a) => INDEX_META[a.slug].group === g).map((a) => `
+    <a class="row" href="/guides/${a.slug}/"><div><div class="t">${esc(a.title)}</div><div class="d">${esc(a.description)}</div></div><div class="m">${esc(a.readTime)}</div></a>`).join("");
+  const cards = mountains.map((a) => {
+    const m = INDEX_META[a.slug];
+    const tag = a.slug === newest.slug ? `<span class="tag new">New</span>` : "";
+    return `
+    <a class="mtn" href="/guides/${a.slug}/" data-r="${m.region}" style="--m:${m.rail[0]}%;--s:${m.rail[1]}%;--b:${m.rail[2]}%"><div class="rail"></div><div class="name">${esc(MOUNTAIN_NAME[a.slug])}</div><div class="where">${esc(m.where)}</div><div class="hook">${esc(m.hook)}</div><div class="foot"><span><b>${esc(m.lifts)}</b> · ${esc(a.readTime)}</span>${tag}</div></a>`;
+  }).join("");
+  const chips = REGIONS.map(([k, label], i) => `<button class="chip" aria-pressed="${i === 0}" data-f="${k}">${label}</button>`).join("\n    ");
+  const listCss = `.wrap{max-width:1040px}
+.lead{font-size:1.1rem;color:var(--ink2);max-width:58ch;margin:0 0 34px}
+.lead b{color:var(--gold);font-weight:700}
+.sec{display:flex;align-items:baseline;gap:14px;margin:44px 0 16px}
+.sec h2{font-size:1.35rem;margin:0}
+.sec span{font-size:.8rem;color:var(--ink3);text-transform:uppercase;letter-spacing:.08em}
+.chips{display:flex;flex-wrap:wrap;gap:8px;margin:0 0 18px}
+.chip{border:1px solid var(--hair);color:var(--ink2);font-size:.82rem;font-weight:600;padding:6px 12px;border-radius:999px;background:transparent;cursor:pointer;font-family:inherit}
+.chip[aria-pressed="true"]{background:var(--ink);color:#04121f;border-color:var(--ink)}
+.chip:focus-visible{outline:2px solid var(--brand);outline-offset:2px}
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(230px,1fr));gap:14px}
+.mtn{display:flex;flex-direction:column;gap:10px;background:var(--surface);border:1px solid var(--hair);border-radius:14px;padding:16px 16px 14px;color:var(--ink);transition:border-color .15s,transform .15s}
+.mtn:hover{border-color:var(--brand);transform:translateY(-1px);text-decoration:none}
+.mtn:focus-visible{outline:2px solid var(--brand)}
+.mtn[hidden]{display:none}
+.rail{height:4px;border-radius:3px;background:linear-gradient(90deg,#4AE299 0 var(--m),#A6E24A var(--m) var(--s),#FEB84D var(--s) var(--b),#FF6B57 var(--b) 100%)}
+.mtn .name{font-weight:800;font-size:1.12rem;letter-spacing:-.015em;line-height:1.15}
+.mtn .where{font-size:.8rem;color:var(--ink3)}
+.mtn .hook{font-size:.9rem;color:var(--ink2);flex:1}
+.mtn .foot{display:flex;justify-content:space-between;align-items:center;font-size:.76rem;color:var(--ink3);font-variant-numeric:tabular-nums}
+.mtn .foot b{color:var(--ink);font-weight:700}
+.tag{font-size:.68rem;font-weight:700;letter-spacing:.06em;text-transform:uppercase;padding:2px 7px;border-radius:5px;border:1px solid var(--gold);color:var(--gold)}
+.legend{display:flex;gap:16px;flex-wrap:wrap;align-items:center;font-size:.78rem;color:var(--ink3);margin:10px 0 0}
+.legend i{display:inline-block;width:10px;height:10px;border-radius:3px;margin-right:5px;vertical-align:-1px}
+.rows{display:flex;flex-direction:column;border-top:1px solid var(--hair)}
+.row{display:grid;grid-template-columns:1fr auto;gap:18px;align-items:baseline;padding:16px 4px;border-bottom:1px solid var(--hair);color:var(--ink)}
+.row:hover{text-decoration:none}.row:hover .t{color:var(--brand)}
+.row .t{font-weight:700;font-size:1.02rem;letter-spacing:-.01em}
+.row .d{color:var(--ink2);font-size:.92rem;margin-top:3px;max-width:70ch}
+.row .m{font-size:.78rem;color:var(--ink3);white-space:nowrap;font-variant-numeric:tabular-nums}
+.cta.wide{margin-top:56px;display:grid;grid-template-columns:1fr auto;gap:20px;align-items:center;text-align:left}
+.cta.wide p{margin:0}
+@media (max-width:640px){.cta.wide{grid-template-columns:1fr}.row{grid-template-columns:1fr}.row .m{white-space:normal}}
+@media (prefers-reduced-motion:reduce){.mtn{transition:none}}`;
   return `<!doctype html>
 <html lang="en">
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Ski Guides, Beat the Wait | PeakWait</title>
-<meta name="description" content="No nonsense guides to skiing smarter: how to beat lift waits, dodge crowds, and find where to actually ski today. By Herb Sendit.">
+<title>Ski Guides by Mountain, Beat the Wait | PeakWait</title>
+<meta name="description" content="Where the wait is, mountain by mountain: which lift stacks up, when it clears, and where the quiet side is. Plus how to pick the day and the mountain. By Herb Sendit.">
 <link rel="canonical" href="${SITE}/guides/">
-<meta property="og:title" content="PeakWait Ski Guides, Beat the Wait">
-<meta property="og:description" content="How to beat lift waits, dodge crowds, and find where to actually ski today.">
+<meta property="og:title" content="PeakWait Ski Guides, Mountain by Mountain">
+<meta property="og:description" content="Which lift stacks up, when it clears, and where the quiet side is.">
 <meta property="og:url" content="${SITE}/guides/">
 <meta property="og:image" content="${SITE}/og.png">
 <meta name="twitter:card" content="summary_large_image">
@@ -910,11 +981,32 @@ ${listCss}</style>
 ${header()}
 <main><div class="wrap">
   <nav class="crumbs"><a href="/">Home</a> › Guides</nav>
-  <h1>Ski smarter. Skip the wait.</h1>
-  <p class="lead">No nonsense guides to beating lift waits, dodging crowds, and finding where to actually ski today, from someone who has spent way too much of his life in a singles line. By Herb Sendit.</p>
-  ${cards}
+  <h1>Where the wait is, mountain by mountain</h1>
+  <p class="lead">Which lift stacks up, when it clears, and where the quiet side is. Written from the singles line by <b>${AUTHOR}</b>.</p>
+
+  <div class="sec"><h2>Find your mountain</h2><span>${mountains.length} guides</span></div>
+  <div class="chips" role="group" aria-label="Filter by region">
+    ${chips}
+  </div>
+  <div class="grid" id="grid">${cards}
+  </div>
+  <div class="legend"><span><i style="background:#4AE299"></i>Moving</span><span><i style="background:#A6E24A"></i>Short</span><span><i style="background:#FEB84D"></i>Busy</span><span><i style="background:#FF6B57"></i>Long</span><span>${RAIL_LEGEND}</span></div>
+
+  <div class="sec"><h2>Pick the day and the mountain</h2><span>${rowsFor("day").split("<a class").length - 1} guides</span></div>
+  <div class="rows">${rowsFor("day")}
+  </div>
+
+  <div class="sec"><h2>Why waits got this bad, and what the apps do about it</h2><span>${rowsFor("why").split("<a class").length - 1} guides</span></div>
+  <div class="rows">${rowsFor("why")}
+  </div>
+
+  <div class="cta wide"><div><h3>See which lift is actually moving</h3><p>Live waits at 116 mountains, reported by skiers standing in them.</p></div><a href="${DOWNLOAD_URL}">Download PeakWait, free</a></div>
 </div></main>
 ${footer()}
+<script>
+const chips=[...document.querySelectorAll('.chip')],cards=[...document.querySelectorAll('.mtn')];
+chips.forEach(c=>c.addEventListener('click',()=>{chips.forEach(x=>x.setAttribute('aria-pressed',x===c));const f=c.dataset.f;cards.forEach(m=>{m.hidden=f!=='all'&&m.dataset.r!==f});}));
+</script>
 </body>
 </html>`;
 }
@@ -1022,13 +1114,23 @@ ${footer()}
 </html>`;
 }
 
+// Publish dates for the hand-written update posts that never made it into UPDATES.
+const UPDATE_DATES = { andes: "2026-09-06", "sharper-mornings": "2026-08-31", "time-you-didnt-wait": "2026-08-25" };
+
 function sitemap(arts) {
   const urls = [
     { loc: SITE + "/", pri: "1.0" },
     { loc: SITE + "/guides/", pri: "0.8" },
     ...arts.map((a) => ({ loc: `${SITE}/guides/${a.slug}/`, pri: "0.7", lastmod: a.updated })),
     { loc: SITE + "/updates/", pri: "0.5" },
-    ...UPDATES.map((u) => ({ loc: `${SITE}/updates/${u.slug}/`, pri: "0.5", lastmod: u.date })),
+    ...fs.readdirSync(path.join(ROOT, "updates"), { withFileTypes: true })
+      .filter((d) => d.isDirectory())
+      .map((d) => d.name)
+      .sort()
+      .map((slug) => {
+        const u = UPDATES.find((x) => x.slug === slug);
+        return { loc: `${SITE}/updates/${slug}/`, pri: "0.5", lastmod: u ? u.date : UPDATE_DATES[slug] };
+      }),
     { loc: SITE + "/terms/", pri: "0.3" },
     { loc: SITE + "/privacy/", pri: "0.3" },
   ];
@@ -1039,7 +1141,7 @@ ${urls.map((u) => `  <url><loc>${u.loc}</loc>${u.lastmod ? `<lastmod>${u.lastmod
 }
 
 // ---- llms.txt / llms-full.txt (for AI answer engines) ----------------------
-const SUMMARY = "PeakWait is a real-time ski-lift wait app for iPhone. Skiers on the mountain report live lift waits (Moving, Short, Busy, Long), and PeakWait shows which lifts are moving right now, ranks where to ski today by snow and crowds, and points you to the best next chair. It covers 91 resorts across the U.S. and Canada. Free to check status and report waits; PeakWait Plus adds the cross-resort \"where to ski today\" guide, powder alerts, and live friend location. Made by PeakWait LLC.";
+const SUMMARY = "PeakWait is a real-time ski-lift wait app for iPhone. Skiers on the mountain report live lift waits (Moving, Short, Busy, Long), and PeakWait shows which lifts are moving right now, ranks where to ski today by snow and crowds, and points you to the best next chair. It covers 116 resorts across North and South America. Free to check status and report waits; PeakWait Plus adds the cross-resort \"where to ski today\" guide, powder alerts, and live friend location. Made by PeakWait LLC.";
 
 function llmsTxt(arts) {
   return `# PeakWait
@@ -1142,14 +1244,19 @@ for (const a of ARTICLES) {
   n++;
 }
 fs.writeFileSync(path.join(ROOT, "guides", "index.html"), indexHtml(ARTICLES));
-fs.mkdirSync(path.join(ROOT, "updates"), { recursive: true });
-for (const u of UPDATES) {
-  const dir = path.join(ROOT, "updates", u.slug);
-  fs.mkdirSync(dir, { recursive: true });
-  const others = UPDATES.filter((o) => o.slug !== u.slug).slice(0, 3);
-  fs.writeFileSync(path.join(dir, "index.html"), updateHtml(u, others));
+// updates/ is hand-maintained (three posts exist on disk that were never added to UPDATES). The
+// tool used to regenerate updates/index.html and every post from that stale array, which would have
+// deleted them from the sitemap. Pass --updates to regenerate updates from UPDATES on purpose.
+if (process.argv.includes("--updates")) {
+  fs.mkdirSync(path.join(ROOT, "updates"), { recursive: true });
+  for (const u of UPDATES) {
+    const dir = path.join(ROOT, "updates", u.slug);
+    fs.mkdirSync(dir, { recursive: true });
+    const others = UPDATES.filter((o) => o.slug !== u.slug).slice(0, 3);
+    fs.writeFileSync(path.join(dir, "index.html"), updateHtml(u, others));
+  }
+  fs.writeFileSync(path.join(ROOT, "updates", "index.html"), updatesIndexHtml(UPDATES));
 }
-fs.writeFileSync(path.join(ROOT, "updates", "index.html"), updatesIndexHtml(UPDATES));
 fs.writeFileSync(path.join(ROOT, "sitemap.xml"), sitemap(ARTICLES));
 fs.writeFileSync(path.join(ROOT, "robots.txt"), ROBOTS);
 fs.writeFileSync(path.join(ROOT, "llms.txt"), llmsTxt(ARTICLES));
