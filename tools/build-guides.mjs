@@ -18,7 +18,7 @@ const ROOT = path.resolve(path.dirname(new URL(import.meta.url).pathname), "..")
 const ARTICLES = [
   {
     slug: "ski-resort-lift-lines",
-    title: "Why Ski Resort Lift Lines Feel So Brutal Now (and How to Get Your Day Back)",
+    title: "Why Ski Resort Lift Lines Feel So Brutal Now, and How to Get Your Day Back",
     description:
       "Two hour waits, $200 to stand in line, six runs all day. Here's why lift lines got so bad, what skiers actually say about it, and how to claw back the parts you can control.",
     h1: "Why lift lines feel so brutal now, and how to get your ski day back",
@@ -36,14 +36,14 @@ const ARTICLES = [
 <p>Then there's the money. Nothing sours a day faster than the value math: a couple hundred bucks for a ticket, and you got seven runs. People have filmed themselves hiking up the mountain because it was faster than the wait. When paying customers would rather walk than ride the lift, something is broken.</p>` },
       { h2: `The "this isn't even skiing anymore" feeling`, html: `
 <p>The megapass era crammed the mountains full, and you can feel it. Tens of thousands of people squeezing through a handful of lifts stops feeling like a mountain and starts feeling like a theme park with worse food. "It's not even skiing anymore at some of these resorts," people say. That's not gatekeeping. It's grief for something they love.</p>` },
-      { h2: "The part that's actually infuriating (and fixable)", html: `
+      { h2: "The part that's actually infuriating, and fixable", html: `
 <p>Here's the detail buried in every crowd thread, and it's the one that matters. The waits are wildly uneven. There's a 20 minute line at one lift while a chair on the far side of the mountain runs half empty. Lifties aren't filling chairs. One lift absorbs the whole crowd while its twin spins with room to spare.</p>
 <p>So the short wait almost always exists. Somewhere on the mountain, right now, there's a good option. The problem was never that every lift is slammed. The problem is you can't see the empty one from where you're standing, so everybody piles onto the same obvious lift and makes it worse.</p>` },
       { h2: "What you can actually control", html: `
 <p>You can't fix the megapass, the parking, or the powder day math. But you can stop handing your whole day to the longest line on the hill.</p>
 <ul>
   <li><strong>Point the car at the right mountain.</strong> On any given morning, one nearby resort has the snow and the short waits. PeakWait's <strong>"Where to ski today"</strong> ranks them, so you skip the blown out flagship for the sleeper that's quietly having the best day around.</li>
-  <li><strong>Go find the short wait that already exists.</strong> PeakWait shows <strong>live waits reported by skiers on the hill right now</strong> (Moving, Short, Busy, Long) and points you to the <strong>best next chair</strong>, so you ride to the empty lift instead of guessing.</li>
+  <li><strong>Go find the short wait that already exists.</strong> PeakWait shows <strong>live waits reported by skiers on the hill right now</strong>, tagged Moving, Short, Busy, or Long, and points you to the <strong>best next chair</strong>, so you ride to the empty lift instead of guessing.</li>
   <li><strong>Ski like a local.</strong> Take the mid mountain lifts over the base lifts, use the singles line every time, and either grab first chair and bounce by 1, or roll in at 1pm as everyone leaves.</li>
 </ul>
 <p>None of this turns a powder Saturday into a quiet Tuesday. But it's the difference between six runs and sixteen.</p>` },
@@ -52,7 +52,7 @@ const ARTICLES = [
       { q: "Why are ski resort lift lines so long now?", a: "Megapasses like Epic and Ikon put more skiers on the same mountains, powder days pack everyone onto whatever terrain is open, and the waits are uneven, so one popular lift soaks up the traffic while others run under capacity." },
       { q: "Are ski resorts too crowded?", a: "On weekends, holidays, and powder days at the big pass resorts, often yes. Smaller and independent resorts stay much quieter, and on any given day the short waits still exist somewhere. The trick is finding them." },
       { q: "What's the longest you should wait for a lift?", a: "Most experienced skiers cap it around 10 to 15 minutes. Anything past 30 is considered extreme, and plenty of people will just leave rather than wait 45 minutes for a short run." },
-      { q: "How do I find the shortest lift line?", a: "Check live waits from other skiers (like PeakWait's) instead of guessing from the base. The shortest wait is usually on a lift you can't see, and an app that reads it live sends you straight there." },
+      { q: "How do I find the shortest lift line?", a: "Check live waits from other skiers, like PeakWait's, instead of guessing from the base. The shortest wait is usually on a lift you can't see, and an app that reads it live sends you straight there." },
       { q: "Does PeakWait help with crowds?", a: "Yes. It shows live waits from skiers on the hill, ranks which mountain to ski today by snow and waits, and points you to the best next chair, so you spend the day skiing instead of standing." },
     ],
     cta: { h: "Spend the day skiing, not standing", p: `See which mountain has the snow and the short waits today, plus the best next chair once you're there.` },
@@ -60,7 +60,7 @@ const ARTICLES = [
 
   {
     slug: "whistler-lift-wait-times",
-    title: "The Most Accurate Whistler Lift Wait Times (2026)",
+    title: "The Most Accurate Whistler Lift Wait Times in 2026",
     description:
       "Whistler's lift wait times are wrong more often than the forecast. Here's why every app fibs to you, and the most accurate way to check waits live.",
     h1: "The most accurate way to check Whistler lift wait times",
@@ -94,20 +94,20 @@ const ARTICLES = [
 </ul>` },
     ],
     faqs: [
-      { q: "What's the most accurate source for Whistler lift wait times?", a: "Live reports from skiers who are on the hill right now. Official and app numbers mostly come from the resort feed and lag by 15 to 40 minutes, while crowdsourced live reports (like PeakWait's) show the wait as it actually is." },
+      { q: "What's the most accurate source for Whistler lift wait times?", a: "Live reports from skiers who are on the hill right now. Official and app numbers mostly come from the resort feed and lag by 15 to 40 minutes, while crowdsourced live reports, like PeakWait's, show the wait as it actually is." },
       { q: "Is the Whistler Peak app or Epic app accurate for wait times?", a: "They're handy for lift status, but their wait numbers mostly come from Whistler Blackcomb's feed, so they lag the real conditions and often disagree with the wait you're actually standing in." },
       { q: "Why is 7th Heaven always so busy?", a: "Big, popular alpine terrain served by limited chair capacity, so it fills up fast, especially on powder and weekend days. Lap it first thing or late afternoon." },
-      { q: "How does PeakWait get its wait times?", a: "From skiers on the mountain reporting live waits, blended with movement data, shown as timestamped bands (Moving, Short, Busy, Long) instead of one scraped official number." },
+      { q: "How does PeakWait get its wait times?", a: "From skiers on the mountain reporting live waits, blended with movement data, shown as timestamped bands, Moving, Short, Busy, or Long, instead of one scraped official number." },
     ],
     cta: { h: "Skip the guesswork", p: `See Whistler waits from the people actually on the hill, plus the best next chair to ski.` },
   },
 
   {
     slug: "beat-powder-day-crowds",
-    title: "How to Beat Powder Day Crowds and Still Get Fresh Tracks (2026)",
+    title: "How to Beat Powder Day Crowds and Still Get Fresh Tracks in 2026",
     description:
       "Powder days now mean 90 minute waits and everything tracked out by 11am. Here's how to actually score freshies: smarter resort picks, timing, and live wait data. No 5am alarm required.",
-    h1: "How to beat powder day crowds (and still get fresh tracks)",
+    h1: "How to beat powder day crowds, and still get fresh tracks",
     readTime: "5 min",
     published: "2026-08-08",
     updated: "2026-08-08",
@@ -119,14 +119,14 @@ const ARTICLES = [
       { h2: "Lever 1: ride where the crowd isn't", html: `
 <p>The biggest difference maker isn't your alarm clock. It's which mountain you point the car at. Every crowd thread lands on the same answer: smaller hills farther from the city hold fresh snow for days. The hard part is deciding on the morning of. Which nearby mountain actually has the snow and the short waits?</p>
 <p>That's exactly what PeakWait's <strong>"Where to ski today"</strong> does. It ranks the mountains near you by fresh snow, short waits, and how much terrain is open. Skip the blown out flagship, hit the sleeper that's quietly having the best day of anyone, and beat the group chat to it.</p>` },
-      { h2: "Lever 2: time it (you don't have to suffer for this)", html: `
+      { h2: "Lever 2: time it, no suffering required", html: `
 <ul>
   <li><strong>Be booted up before first chair</strong> on a real pow day. The gap between rolling in at 7:45 and 8:20 can be a full extra hour stuck in the base area conga line.</li>
   <li><strong>Weekdays are a different sport.</strong> First ten chairs with a 15 minute buffer and room to breathe.</li>
   <li><strong>Watch the storm clock.</strong> Snow that starts after the lifts open quietly refills your lines while the early crowd wanders off to the lodge for a $19 burger.</li>
 </ul>` },
       { h2: "Lever 3: once you're there, chase live waits, not the herd", html: `
-<p>The classic pow day trap: that "empty" lift you eyeballed 20 minutes ago is now the longest wait on the mountain, because 400 other people had the identical genius idea. PeakWait shows live waits reported by riders on the mountain right now (Moving, Short, Busy, Long, all timestamped) and points you to the best next chair, so you're always drifting toward the short wait instead of into the migration.</p>` },
+<p>The classic pow day trap: that "empty" lift you eyeballed 20 minutes ago is now the longest wait on the mountain, because 400 other people had the identical genius idea. PeakWait shows live waits reported by riders on the mountain right now, tagged Moving, Short, Busy, or Long and timestamped, and points you to the best next chair, so you're always drifting toward the short wait instead of into the migration.</p>` },
     ],
     faqs: [
       { q: "How do I avoid lift lines on a powder day?", a: "Pick a smaller resort farther from the city, be booted up before first chair, and use live wait data to chase the moving lifts instead of following the crowd to the same one." },
@@ -138,7 +138,7 @@ const ARTICLES = [
 
   {
     slug: "beat-i70-ski-traffic-colorado-crowds",
-    title: "How to Beat I-70 Ski Traffic and Colorado Weekend Crowds (2026)",
+    title: "How to Beat I-70 Ski Traffic and Colorado Weekend Crowds in 2026",
     description:
       "I-70 on a Saturday is a parking lot with a mountain view. Here's the real Colorado playbook: best days, sleeper resorts, timing, and how to pick a mountain that's actually worth the drive.",
     h1: "How to beat I-70 traffic and Colorado weekend crowds",
@@ -151,14 +151,14 @@ const ARTICLES = [
       { h2: "The I-70 reality check", html: `
 <p>There are basically two departure windows that work, and a long dead zone of despair in between. Leave Denver by 5 or 6am to beat the wave, or wait until around 10:30am to ride the gap after the early crowd has already wedged itself into the tunnel. Everything in the middle is bumper to bumper with a side of ski rack anxiety.</p>
 <p>PeakWait can't do anything about the traffic itself. But most of the I-70 pain isn't really the drive. It's burning a whole Saturday to sit in it for two hours and arrive at a blown out resort with 45 minute waits. Fix that, and the drive starts to feel worth it.</p>` },
-      { h2: "Pick the day (this is 80% of it)", html: `
+      { h2: "Pick the day, it's 80% of it", html: `
 <ul>
   <li><strong>Sunday beats Saturday.</strong> Half of Denver skied Saturday and is nursing its regrets. Sundays run noticeably quieter.</li>
   <li><strong>Avoid the black diamond dates.</strong> MLK weekend, Presidents weekend, and December 26 through January 2 are a full contact sport. If you have to go, expect to make friends in the singles line.</li>
   <li><strong>Weekdays are cheating, in a good way.</strong> A single PTO day can be worth ten Saturdays. The regulars aren't taking Tuesdays off to post on Reddit. They're already on the hill.</li>
 </ul>` },
       { h2: "Pick the mountain that's actually worth the drive", html: `
-<p>The Front Range flagships (Vail, Breck, Keystone, Copper, Winter Park) soak up the entire Denver metro every weekend. The quiet move the locals make is going independent or farther out: Loveland, Eldora, Monarch, Ski Cooper, Wolf Creek, Crested Butte. Less pass hype, more actual skiing.</p>
+<p>The Front Range flagships, Vail, Breck, Keystone, Copper, and Winter Park, soak up the entire Denver metro every weekend. The quiet move the locals make is going independent or farther out: Loveland, Eldora, Monarch, Ski Cooper, Wolf Creek, Crested Butte. Less pass hype, more actual skiing.</p>
 <p>The catch is picking the right one on the morning of. PeakWait's <strong>"Where to ski today"</strong> ranks the mountains near you by fresh snow, short waits, and how much is open, so you point the car at the hill that's genuinely good today, not the one with the loudest marketing.</p>` },
       { h2: "Once you're there, don't ski like a tourist", html: `
 <ul>
@@ -187,12 +187,12 @@ const ARTICLES = [
     published: "2026-08-12",
     updated: "2026-08-12",
     keywords: "peakwait vs whistler peak, whistler peak app, best whistler ski app, whistler lift wait app",
-    dek: `Short version: the Whistler Peak app (and Whistler Peak Live) is a great all in one dashboard for one mountain. PeakWait is a live, crowdsourced wait tracker for many. If your only question is "which lift is actually short right now," they get there very differently, and the difference matters.`,
+    dek: `Short version: the Whistler Peak app, and Whistler Peak Live, is a great all in one dashboard for one mountain. PeakWait is a live, crowdsourced wait tracker for many. If your only question is "which lift is actually short right now," they get there very differently, and the difference matters.`,
     sections: [
       { h2: "What each one is built for", html: `
 <p>The Whistler Peak app is a Whistler Blackcomb companion. Conditions, cams, weather, avalanche info, lift status, all in one tidy place for one resort. It's genuinely useful, and plenty of locals lean on it.</p>
 <p>PeakWait is a cross resort lift wait app. It covers 91 mountains across the U.S. and Canada, including Whistler Blackcomb, and the whole focus is one question: where is the short wait, right now.</p>` },
-      { h2: "Where the wait numbers come from (the important part)", html: `
+      { h2: "Where the wait numbers come from: the important part", html: `
 <p>This is the real difference. The Whistler Peak app's wait times, like most resort companion apps, trace back to the resort's own feed. That feed updates on a delay, so the number can trail the actual line by 15 to 40 minutes. A lot of skiers have watched an app say "12 min" while they stood in 40.</p>
 <p>PeakWait's waits come from skiers on the hill reporting what they see, blended with live movement and stamped with how fresh each report is. It's an estimate too, but it's the crowd's live read instead of a delayed official number. <a href="/guides/whistler-lift-wait-times/">Here's the longer story on why resort wait numbers lag.</a></p>` },
       { h2: "One mountain versus many", html: `
@@ -207,7 +207,7 @@ const ARTICLES = [
     faqs: [
       { q: "Is the Whistler Peak app accurate for wait times?", a: "It's a solid all in one Whistler dashboard, but its wait numbers come from the resort feed, so they lag real conditions. For the live wait, crowdsourced reports like PeakWait's tend to be closer to what you're actually standing in." },
       { q: "Does PeakWait cover Whistler Blackcomb?", a: "Yes. Whistler Blackcomb is one of 91 resorts PeakWait covers across the U.S. and Canada." },
-      { q: "What's the difference between PeakWait and the Whistler Peak app?", a: "The Whistler Peak app is a single resort dashboard (conditions, cams, status). PeakWait is a cross resort, crowdsourced live wait tracker that also ranks where to ski today." },
+      { q: "What's the difference between PeakWait and the Whistler Peak app?", a: "The Whistler Peak app is a single resort dashboard: conditions, cams, status. PeakWait is a cross resort, crowdsourced live wait tracker that also ranks where to ski today." },
       { q: "Which app is best for Whistler lift lines?", a: "For the live wait right now, a crowdsourced tracker like PeakWait. For the full resort dashboard, the Whistler Peak app. A lot of skiers use both." },
     ],
     cta: { h: "See live Whistler waits", p: `Check crowdsourced lift waits at Whistler and 90 other resorts, plus the best next chair.` },
@@ -215,7 +215,7 @@ const ARTICLES = [
 
   {
     slug: "best-ski-lift-wait-apps",
-    title: "The Best Apps for Ski Lift Wait Times (2026)",
+    title: "The Best Apps for Ski Lift Wait Times in 2026",
     description:
       "An honest rundown of the apps skiers use for lift waits, crowds, and conditions, what each one is actually good at, and which to reach for when you just want the short line.",
     h1: "The best apps for ski lift wait times",
@@ -226,7 +226,7 @@ const ARTICLES = [
     dek: `There's no single app that does everything, and anyone who says otherwise is selling something. Here's the honest breakdown of what skiers actually use for waits, crowds, tracking, and conditions, and which one to open when your only goal is the shortest line.`,
     sections: [
       { h2: "For live lift waits: PeakWait", html: `
-<p>Best for the exact question "which lift is short right now." PeakWait shows crowdsourced waits reported by skiers on the hill (Moving, Short, Busy, Long), ranks where to ski today by snow and crowds across 91 resorts, and points you to the best next chair. It's free to check status and report waits, and PeakWait Plus adds the cross resort guide, powder alerts, and live friend location. It's weakest where nobody's reporting yet, though it says "unknown" instead of guessing.</p>` },
+<p>Best for the exact question "which lift is short right now." PeakWait shows crowdsourced waits reported by skiers on the hill, tagged Moving, Short, Busy, or Long, ranks where to ski today by snow and crowds across 91 resorts, and points you to the best next chair. It's free to check status and report waits, and PeakWait Plus adds the cross resort guide, powder alerts, and live friend location. It's weakest where nobody's reporting yet, though it says "unknown" instead of guessing.</p>` },
       { h2: "For official status and trail maps: the resort apps", html: `
 <p>The Epic and Ikon apps, plus individual resort apps, are the source of truth for lift and trail status, interactive maps, and your pass. Handy and official. The catch is their wait estimates come from resort sensors and feeds, so they lag the real line, and each one only covers its own resorts.</p>` },
       { h2: "For tracking your day: Slopes", html: `
@@ -239,7 +239,7 @@ const ARTICLES = [
 <p>If your goal is spending less of your day in line, you want live crowdsourced waits and a way to pick the right mountain. That's PeakWait. Pair it with your resort app for official status, add a tracker if you love stats, and you've got the whole day covered.</p>` },
     ],
     faqs: [
-      { q: "What's the best app for ski lift wait times?", a: "For live, crowdsourced waits and choosing which mountain to ski, PeakWait. For official lift status, your resort's app (Epic, Ikon, or the resort's own). Many skiers use both together." },
+      { q: "What's the best app for ski lift wait times?", a: "For live, crowdsourced waits and choosing which mountain to ski, PeakWait. For official lift status, your resort's app, Epic, Ikon, or the resort's own. Many skiers use both together." },
       { q: "Do ski resort apps show accurate wait times?", a: "They show official estimates from resort sensors and feeds, which lag the real line, often by 15 to 40 minutes. Crowdsourced apps report the wait as skiers see it right now." },
       { q: "Is there a free ski lift wait app?", a: "Yes. PeakWait is free to check lift status and report waits, with an optional Plus tier for the cross resort guide, powder alerts, and live friend location." },
       { q: "What app tells you the least crowded lifts or runs?", a: "A live wait app like PeakWait, which shows which lifts are moving now and points you to the best next chair, is built for exactly that." },
@@ -249,7 +249,7 @@ const ARTICLES = [
 
   {
     slug: "least-crowded-colorado-ski-resorts",
-    title: "The Least Crowded Colorado Ski Resorts (and How to Find the Quiet One Today)",
+    title: "The Least Crowded Colorado Ski Resorts, and How to Find the Quiet One Today",
     description:
       "The big I-70 resorts soak up all of Denver. Here are the Colorado mountains that stay quiet, and how to tell which one is actually empty on any given day.",
     h1: "The least crowded Colorado ski resorts",
@@ -283,7 +283,7 @@ const ARTICLES = [
 </ul>` },
     ],
     faqs: [
-      { q: "What is the least crowded ski resort in Colorado?", a: "It changes daily, but the independents and farther out hills (Loveland, Arapahoe Basin, Monarch, Ski Cooper, Wolf Creek, Crested Butte, Eldora) stay far quieter than the I-70 flagships. PeakWait's 'Where to ski today' shows which one is actually least crowded on a given day." },
+      { q: "What is the least crowded ski resort in Colorado?", a: "It changes daily, but the independents and farther out hills, Loveland, Arapahoe Basin, Monarch, Ski Cooper, Wolf Creek, Crested Butte, and Eldora, stay far quieter than the I-70 flagships. PeakWait's 'Where to ski today' shows which one is actually least crowded on a given day." },
       { q: "Which Colorado ski resorts have the shortest lift lines?", a: "The smaller, independent, and more distant resorts, especially midweek. The big pass mountains near I-70 have the longest lines on weekends and powder days." },
       { q: "Is A-Basin or Loveland less crowded than Breck or Vail?", a: "Usually yes, especially on weekends. They're higher, simpler, and draw fewer destination visitors, though a powder day can pack anywhere." },
       { q: "How do I know which resort is least crowded today?", a: "Check live, crowdsourced waits. PeakWait ranks nearby resorts by snow and crowds in real time, so you can pick the quiet one before you leave." },
@@ -293,7 +293,7 @@ const ARTICLES = [
 
   {
     slug: "epic-vs-ikon-crowds",
-    title: "Epic vs Ikon: Which Pass Has Worse Lift Lines? (2026)",
+    title: "Epic vs Ikon: Which Pass Has Worse Lift Lines in 2026?",
     description:
       "The question every skier debates before buying. Here's the honest answer on crowds, why it's not really about the pass, and how to avoid the lines either way.",
     h1: "Epic vs Ikon: which pass has worse lift lines?",
@@ -307,7 +307,7 @@ const ARTICLES = [
 <p>Open any ski forum in September and you'll find the same thread: "thinking of switching to Ikon, are the lines really that bad?" The answers flip every year. One season everyone flees Ikon for Epic, the next it reverses. That alone tells you something. The pass isn't the variable that matters.</p>` },
       { h2: "Why it's not really about the pass", html: `
 <p>Both passes concentrate demand the same way. They sell a whole season at a steep discount, so everyone buys one and everyone goes on the good days. The result is identical: weekends and powder days are packed, weekdays are calm. As the r/COsnow regulars put it, they're the same on the weekends.</p>
-<p>What actually drives your wait is the mountain and the timing. Vail on a powder Saturday (Epic) and Winter Park on a powder Saturday (Ikon) are both a maze. Keystone on a Tuesday (Epic) and Arapahoe Basin on a Tuesday (Ikon) are both wide open.</p>` },
+<p>What actually drives your wait is the mountain and the timing. An Epic mountain like Vail on a powder Saturday and an Ikon mountain like Winter Park on a powder Saturday are both a maze. An Epic mountain like Keystone on a Tuesday and an Ikon mountain like Arapahoe Basin on a Tuesday are both wide open.</p>` },
       { h2: "Colorado, pass by pass", html: `
 <p>If you're picking for the Front Range, here's the rough lay of the land. Lineups shift a little season to season, so confirm before you buy.</p>
 <ul>
@@ -322,14 +322,14 @@ const ARTICLES = [
       { q: "Is Epic or Ikon less crowded?", a: "Neither, really. On weekends and powder days they're about the same, because both passes concentrate demand the same way. Crowds depend on the specific mountain and day, not the pass." },
       { q: "Why does everyone say the other pass is more crowded?", a: "The perception flips year to year as skiers switch back and forth. It's mostly recency bias. The data doesn't support one pass being reliably busier than the other." },
       { q: "Which pass should I buy to avoid lines?", a: "Pick based on which specific mountains you'll ski and how close they are, then avoid weekends and holidays. The pass brand matters far less than the mountain and the timing." },
-      { q: "How do I avoid lift lines on Epic or Ikon?", a: "Ski weekdays, favor the quieter mountains on your pass, and use live waits (like PeakWait's) to pick the least crowded option each day. PeakWait covers resorts on both passes." },
+      { q: "How do I avoid lift lines on Epic or Ikon?", a: "Ski weekdays, favor the quieter mountains on your pass, and use live waits, like PeakWait's, to pick the least crowded option each day. PeakWait covers resorts on both passes." },
     ],
     cta: { h: "Beat the lines on any pass", p: `See live waits and where to ski today across resorts on both Epic and Ikon.` },
   },
 
   {
     slug: "how-long-reasonable-lift-wait",
-    title: "How Long Is a Reasonable Lift Wait? (What 400+ Skiers Say)",
+    title: "How Long Is a Reasonable Lift Wait? What 400+ Skiers Say",
     description:
       "We dug into what skiers actually consider an acceptable lift line. The consensus is shorter than you'd think, and it explains why a bad day feels like a betrayal.",
     h1: "How long is a reasonable lift wait?",
@@ -344,7 +344,7 @@ const ARTICLES = [
       { h2: "Why the threshold is so low", html: `
 <p>It's simple math the r/skiing crowd runs constantly. A run at most resorts lasts a few minutes. Wait 15 minutes for a 5 minute run and you've spent three times as long in line as on snow. As one skier put it, "I wouldn't ski at all if I had to wait 45 minutes per run." Another: "anything longer than 10 minutes is unacceptable, I'll find another lift, leave, or take a break."</p>` },
       { h2: "So why do resorts blow past it?", html: `
-<p>Because on weekends and powder days, demand overwhelms lift capacity, and the number you see on the resort app lags the real one. That gap between reasonable (under 15 minutes) and reality (30, 45, 90) is the whole reason a great snow day can still feel like a wasted one.</p>` },
+<p>Because on weekends and powder days, demand overwhelms lift capacity, and the number you see on the resort app lags the real one. That gap between a reasonable wait under 15 minutes and a real one of 30, 45, or 90 minutes is the whole reason a great snow day can still feel like a wasted one.</p>` },
       { h2: "How to stay under the line", html: `
 <p>You can keep your own waits close to that reasonable number without setting a 5am alarm.</p>
 <ul>
@@ -357,14 +357,14 @@ const ARTICLES = [
       { q: "What is a reasonable lift wait time?", a: "Most skiers consider anything under 15 minutes reasonable, and ideally under 5. In a poll of more than 400 skiers, about 96% capped it at 15 minutes, and almost nobody accepted 30 or more." },
       { q: "How long is the average ski lift wait?", a: "It varies wildly by day. Weekday and quieter-resort waits are often under 10 minutes, while weekend and powder-day waits at big resorts routinely hit 30 to 90. On a busy day the real average is far longer than skiers consider acceptable." },
       { q: "How long is too long to wait for a ski lift?", a: "For most skiers, past 15 minutes, and many switch lifts or bail at 10. A 45 minute wait for a short run is widely considered not worth it." },
-      { q: "How do I keep my lift waits short?", a: "Ski weekdays or quieter mountains, use mid mountain lifts and the singles line, and check live waits (like PeakWait's) to chase the short lines instead of guessing." },
+      { q: "How do I keep my lift waits short?", a: "Ski weekdays or quieter mountains, use mid mountain lifts and the singles line, and check live waits, like PeakWait's, to chase the short lines instead of guessing." },
     ],
     cta: { h: "Keep your waits in single digits", p: `See which lifts are actually short right now and where to ski today.` },
   },
 
   {
     slug: "alta-snowbird-powder-day-lines",
-    title: "Alta and Snowbird on a Powder Day: The Little Cottonwood Playbook (2026)",
+    title: "Alta and Snowbird on a Powder Day: The Little Cottonwood Playbook in 2026",
     description:
       "Little Cottonwood on a powder day is glorious and brutal in equal measure. Here's how to handle the canyon, the parking, and the lift lines at Alta and Snowbird.",
     h1: "Alta and Snowbird on a powder day: the Little Cottonwood playbook",
@@ -401,7 +401,7 @@ const ARTICLES = [
 
   {
     slug: "palisades-tahoe-crowds",
-    title: "How to Beat the Crowds at Palisades Tahoe (2026)",
+    title: "How to Beat the Crowds at Palisades Tahoe in 2026",
     description:
       "Palisades Tahoe on a powder Saturday can mean two great laps and then hour-long lines. Here's how to get more out of it, and when to bail to a quieter Tahoe hill.",
     h1: "How to beat the crowds at Palisades Tahoe",
@@ -435,7 +435,7 @@ const ARTICLES = [
 
   {
     slug: "copper-mountain-lift-lines",
-    title: "Copper Mountain Lift Lines: Where to Ski and What to Skip (2026)",
+    title: "Copper Mountain Lift Lines: Where to Ski and What to Skip in 2026",
     description:
       "Copper's lines are all about which lift and when. Here's the honest lift by lift on Super Bee, American Flyer, and the pods that stay quiet.",
     h1: "Copper Mountain lift lines: where to ski, what to skip",
@@ -445,7 +445,7 @@ const ARTICLES = [
     keywords: "copper mountain lift lines, copper super bee line, copper mountain crowds, copper mountain wait times",
     dek: `Copper is a local favorite that gets slammed on weekends, but the crowd is wildly concentrated. A few base lifts eat the whole line while the rest of the mountain runs short. Knowing which is which is the entire game.`,
     sections: [
-      { h2: "The Super Bee trap (and the fix)", html: `
+      { h2: "The Super Bee trap, and the fix", html: `
 <p>Super Bee is Copper's high speed workhorse and its biggest morning bottleneck. On a Saturday it can be a 15 to 30 minute wait at open while the rest of the mountain is quiet. The regulars' consensus is that it's ugly early and then thins out by late morning. Lap something else first, or take the singles line, and come back when it settles.</p>` },
       { h2: "Where the lines actually are", html: `
 <ul>
@@ -464,7 +464,7 @@ const ARTICLES = [
 <p>Which base lift is moving changes hour to hour. PeakWait shows live, crowdsourced waits at Copper and points you to the best next chair, so you're not walking across the base to discover a 25 minute line. And on a big Front Range Saturday, "where to ski today" can tell you whether Copper is even the right call versus a quieter I-70 option.</p>` },
     ],
     faqs: [
-      { q: "How long are the lift lines at Copper Mountain?", a: "On weekend mornings the base lifts (Super Bee, American Flyer) can run 15 to 30 minutes while the rest of the mountain stays short. Lines thin by late morning, and weekdays are quiet." },
+      { q: "How long are the lift lines at Copper Mountain?", a: "On weekend mornings the base lifts, Super Bee and American Flyer, can run 15 to 30 minutes while the rest of the mountain stays short. Lines thin by late morning, and weekdays are quiet." },
       { q: "Is Super Bee always busy at Copper?", a: "It's the biggest morning bottleneck, busy right at open on weekends, then it thins by late morning. Ride other pods first or use the singles line." },
       { q: "What time should I get to Copper Mountain?", a: "First chair, or after about 10:30 once the base crowd spreads out. The 9 to 10:30 window at the base lifts is the worst." },
       { q: "How do I avoid lines at Copper?", a: "Skip the base bottlenecks early, ride the quieter pods and the singles line, and check live waits to see which lift is actually moving." },
@@ -474,7 +474,7 @@ const ARTICLES = [
 
   {
     slug: "best-time-to-ski-avoid-crowds",
-    title: "The Best Time to Ski to Avoid Crowds (2026)",
+    title: "The Best Time to Ski to Avoid Crowds in 2026",
     description:
       "The day, the hour, and the dates that decide whether you ski powder or stand in a maze. Here's when to go, when to arrive, and when to just stay home.",
     h1: "The best time to ski to avoid crowds",
@@ -512,7 +512,7 @@ const ARTICLES = [
 
   {
     slug: "steamboat-crowds-morningside",
-    title: "Steamboat Crowds and the Morningside Line: How to Ski Around Them (2026)",
+    title: "Steamboat Crowds and the Morningside Line: How to Ski Around Them in 2026",
     description:
       "Steamboat's gondola and the infamous Morningside lift can eat your morning. Here's where the lines actually are and how the regulars route around them.",
     h1: "Steamboat crowds and the Morningside line",
@@ -552,7 +552,7 @@ const ARTICLES = [
 
   {
     slug: "northeast-ski-crowds",
-    title: "Beating Lift Lines on the Ice Coast: A Northeast Crowds Guide (2026)",
+    title: "Beating Lift Lines on the Ice Coast: A Northeast Crowds Guide in 2026",
     description:
       "Short vert makes a 20 minute Northeast lift line feel worse than an hour out West. Here's how to beat the crowds at Killington, Stowe, and the rest of the ice coast.",
     h1: "Beating lift lines on the ice coast",
@@ -587,6 +587,128 @@ const ARTICLES = [
       { q: "How do I avoid lift lines at Killington?", a: "Ski weekdays, get first chair or arrive after 1pm, ride the less obvious lifts, and check live waits to find the short line. On busy days, consider a smaller nearby hill." },
     ],
     cta: { h: "Beat the ice coast lines", p: `See live Northeast waits and where to ski today before you make the drive.` },
+  },
+  {
+    slug: "breckenridge-lift-lines",
+    title: "Breckenridge Lift Lines: Where They Form and How to Skip Them in 2026",
+    description:
+      "Breck has 34 lifts across five peaks, and almost all the waiting happens at four of them. Here is where the crowd piles up, when it clears, and how to ski around it.",
+    h1: "Breckenridge lift lines: where they form, and how to skip them",
+    readTime: "7 min",
+    published: "2026-09-04",
+    updated: "2026-09-04",
+    keywords: "breckenridge lift lines, breckenridge crowds, breckenridge lift wait times, breckenridge peak 8 crowds, breckenridge busiest lifts",
+    dek: `Breckenridge is routinely the busiest ski resort in the country, and it does not feel busy everywhere. It has 34 lifts spread across five peaks, and on a normal Saturday the wait is concentrated at four of them. If you know which four, you can ski most of the day without standing still.`,
+    sections: [
+      { h2: "The problem is geography, not volume", html: `
+<p>Breck sells a lot of tickets, but that is not why you end up waiting. The reason is that five peaks funnel into a small number of base-area lifts, and everybody uses them in the same forty minutes.</p><p>Peak 8 is the main event. On a weekend morning the crowd stacks at the Colorado SuperChair and the Peak 8 SuperConnect, because those two are how you get from the base to everything worth skiing. Down in town, the BreckConnect Gondola gathers a second crowd of people who parked in Breckenridge and now need to get to Peak 8 at all. Beaver Run SuperChair takes the overflow from the Peak 9 side, and Rocky Mountain SuperChair takes whatever is left.</p><p>Those four are where your day gets eaten. Falcon, Mercury, Kensho, Independence and Zendo all exist, and on the same morning several of them are turning with nobody on them.</p>` },
+      { h2: "The morning window, honestly", html: `
+<p>The stack builds from about 9:00 and clears around 10:30. That is a real ninety-minute window, not a rumour, and it is the single biggest variable in your day. Skiers who are on a lift by 8:45 essentially skip it. Skiers who show up at 9:20 pay for it twice, once at the gondola and again at the top.</p><p>If you cannot get there early, the fix is not to go faster. It is to start somewhere else. Peak 9 from the Quicksilver SuperChair side, or the Peak 7 lifts, will both put you on snow while the Peak 8 base is still a maze.</p>` },
+      { h2: "Where people go wrong at the top", html: `
+<p>The second bottleneck of the day is the Imperial SuperChair. It is the highest chairlift in North America, it accesses the terrain everyone photographs, and it has a fraction of the capacity of the chairs feeding it. On a bluebird weekend it can hold a wait long after the base areas have cleared out, and it is not unusual for it to be the only significant wait on the mountain by noon.</p><p>The Horseshoe Bowl T-Bar next to it moves people in smaller numbers but keeps turning. If the Imperial queue is deep and you can ride a T-bar, you are usually better off.</p>` },
+      { h2: "The lifts nobody talks about", html: `
+<p>Breck's quiet side is real and it is not a secret, it is just inconvenient to reach from the parking lot. Falcon SuperChair on Peak 10 tends to run short on days when Peak 8 is stacked, because getting there costs you a traverse most people will not make. Zendo and Independence on the Peak 6 and Peak 7 side are similar: a little further out, noticeably calmer.</p><p>The trade is honest. You spend two or three minutes traversing instead of fifteen minutes standing. On a busy Saturday that math is not close.</p>` },
+      { h2: "Powder days invert everything", html: `
+<p>On a storm day the pattern changes completely. The base crowd gets worse and it gets earlier, and the terrain that opens late becomes the whole story. Imperial and the hike-to terrain above it can sit closed for hours after the lifts start turning, which means the crowd that came for it is stuck on the lower mountain, making everything else busier than a normal Saturday.</p><p>The useful move on those days is to stop guessing about what has opened and check. A lift that is officially open and a lift that is actually spinning are not the same thing, and the gap between them is where powder days are won.</p>` },
+      { h2: "What actually helps", html: `
+<ul>
+  <li><strong>Be riding by 8:45,</strong> or accept that 9:00 to 10:30 belongs to the crowd.</li>
+  <li><strong>Do not start at Peak 8 if you arrive late.</strong> Start where the crowd is not and traverse in.</li>
+  <li><strong>Treat Imperial as a midday decision,</strong> not a first-run one.</li>
+  <li><strong>Check before you commit to a traverse.</strong> Skiing twenty minutes to a lift with a wait at the end of it is the worst outcome on the mountain.</li>
+</ul>
+<p>None of that requires an app. What an app gets you is the last one: knowing, before you push off, whether the lift you are heading for is moving. PeakWait shows the current wait on Breckenridge lifts from the skiers who are standing in them, plus which mountain to pick in the first place on a day when I-70 gives you options.</p>` },
+    ],
+    faqs: [
+      { q: "Which lift at Breckenridge has the longest wait?", a: "On a typical weekend morning the wait is concentrated at the Colorado SuperChair, the Peak 8 SuperConnect and the BreckConnect Gondola. Later in the day the Imperial SuperChair often holds the longest wait on the mountain because its capacity is small relative to the terrain it serves." },
+      { q: "What time do Breckenridge lift lines get bad?", a: "The stack builds from about 9:00 and generally clears around 10:30. Being on a lift by 8:45 avoids most of it. Holiday weeks push the window later and make it worse." },
+      { q: "Is Breckenridge more crowded than Vail or Keystone?", a: "Breckenridge is usually the busiest of the three by visits, but the experience depends on where you ski. Breck's crowd concentrates at a handful of base lifts, so the mountain can feel calm and still have a long wait at the bottom." },
+      { q: "How do I avoid Breckenridge crowds without getting there early?", a: "Start away from Peak 8. The Peak 9 and Peak 7 lifts put you on snow while the Peak 8 base is stacked, and Falcon SuperChair on Peak 10 stays comparatively short because reaching it costs a traverse." },
+      { q: "Can I see Breckenridge lift wait times live?", a: "Yes. PeakWait shows current waits lift by lift, reported by skiers on the mountain, along with how fresh each reading is. When there is not enough data it says so instead of guessing." },
+    ],
+    cta: { h: "See which Breck lift is actually moving", p: `Live waits, lift by lift, from skiers on the mountain right now.` },
+  },
+
+  {
+    slug: "vail-lift-lines",
+    title: "Vail Lift Lines: The Two That Matter and the Ones That Don't in 2026",
+    description:
+      "Vail is enormous, but nearly everyone enters through the same two lifts. Here is how the crowd moves across the front side, the Back Bowls and Blue Sky Basin, and how to stay ahead of it.",
+    h1: "Vail lift lines: the two that matter, and the ones that don't",
+    readTime: "7 min",
+    published: "2026-09-04",
+    updated: "2026-09-04",
+    keywords: "vail lift lines, vail crowds, vail lift wait times, gondola one wait, vail back bowls crowds",
+    dek: `Vail is one of the largest ski areas in North America and it still manages to feel crowded, because size is not the same as spread. Almost everybody enters the mountain through two lifts, and the crowd moves across the terrain in a pattern you can predict and get in front of.`,
+    sections: [
+      { h2: "Everyone starts in the same two places", html: `
+<p>Vail has more than thirty lifts, but the front door is narrow. Gondola One out of Vail Village and the Eagle Bahn Gondola out of Lionshead carry most of the mountain's morning traffic, and both of them stack between roughly 8:45 and 10:00. Riva Bahn and Born Free take some of the pressure off, and on a weekend they get a queue of their own before the gondolas clear.</p><p>This is the whole reason Vail can feel busy on a mountain with this much terrain. The wait is not distributed across the ski area. It is concentrated at the point where the ski area begins.</p>` },
+      { h2: "The mid-mountain shuffle", html: `
+<p>Once you are up, the second pinch is Mountain Top Express. It sits where the front side, the Back Bowls and the rest of the mountain all connect, so it collects people who are not going anywhere in particular. Northwoods Express and Avanti take some of that flow, and Game Creek Express on the far side of the front is reliably calmer than any of them, because it requires committing to one bowl.</p><p>The pattern that matters: the front side is busiest from roughly 9:00 to 11:00 and again after about 2:30, when people come back over for the ride down. In between, the crowd is somewhere else.</p>` },
+      { h2: "The Back Bowls run on their own clock", html: `
+<p>The Back Bowls are the reason to be at Vail, and they behave differently from the front. They open later, they open unevenly, and on a storm day some of them do not open at all until patrol is finished. That creates a predictable surge: everyone who came for the bowls waits on the front side, then moves in a wave the moment they hear something has opened.</p><p>If you are in the bowls, High Noon Express and Sun Down Express carry the traffic and generally keep moving, because the terrain absorbs people quickly. The wait in the bowls tends to be short and the ride long, which is the opposite of the front side.</p><p>Blue Sky Basin, out past the bowls via Skyline Express and Pete's Express, is the furthest thing from the parking lot and it stays the calmest place on the mountain for exactly that reason. The price is that getting back is a project. Plan on it taking longer than you think, and do not leave it until the last chair.</p>` },
+      { h2: "What a powder day does to all of this", html: `
+<p>On a storm day the gondola crowd gets earlier and deeper, the bowls open late, and the front side absorbs a crowd that did not want to be there. It is the one day where being twenty minutes early is worth more than any other decision you make.</p><p>It is also the day where official information is least reliable. Lift status boards and posted opening times are frequently wrong on a morning when patrol is still working, and skiers standing at the bottom of a rope know before any website does. That gap is worth more than a snow report.</p>` },
+      { h2: "What actually helps", html: `
+<ul>
+  <li><strong>Pick your gondola.</strong> Gondola One and Eagle Bahn drain different parking situations. The shorter one is often not the one closest to your car.</li>
+  <li><strong>Get past Mountain Top early</strong> and let the mid-mountain shuffle happen without you.</li>
+  <li><strong>Go to the bowls when the crowd is still on the front side,</strong> not when the wave moves.</li>
+  <li><strong>Treat Blue Sky Basin as a commitment,</strong> not a detour, and leave time to get home.</li>
+  <li><strong>Do not trust a posted opening time on a storm morning.</strong> Trust what is actually spinning.</li>
+</ul>
+<p>The decisions above are all timing, and timing is easier when you can see what the mountain is doing right now. PeakWait shows current waits on Vail lifts from the skiers standing in them, with how old each reading is, and it says nothing at all when there is not enough information to be sure. That is a deliberate choice: a confident wrong answer costs you more than an honest blank.</p>` },
+    ],
+    faqs: [
+      { q: "Which Vail lift has the worst wait?", a: "Gondola One and the Eagle Bahn Gondola carry the morning crowd and stack between roughly 8:45 and 10:00. Mountain Top Express is the second pinch point because the front side, the Back Bowls and the rest of the mountain all connect there." },
+      { q: "What time are Vail lift lines shortest?", a: "Generally between about 11:00 and 2:00, when the morning crowd has dispersed into the bowls and before the afternoon return to the front side. The front side gets busy again after about 2:30." },
+      { q: "Are the Back Bowls less crowded than the front side?", a: "Usually, yes. The terrain absorbs skiers quickly, so waits are shorter even when plenty of people are back there. The catch is that the bowls open later and unevenly, and everyone moves in a wave when they do." },
+      { q: "Is Blue Sky Basin worth the trip?", a: "It is the quietest part of the mountain because it is the furthest from the base. Treat it as a commitment rather than a detour and leave real time to get back, because the return is longer than most people expect." },
+      { q: "Can I check Vail lift wait times before I drive up?", a: "Yes. PeakWait shows live waits at Vail and across Colorado, so you can compare mountains before you commit to I-70 and then pick lifts once you are there." },
+    ],
+    cta: { h: "See which Vail lift is actually moving", p: `Live waits, lift by lift, from skiers on the mountain right now.` },
+  },
+
+  {
+    slug: "keystone-lift-lines",
+    title: "Keystone Lift Lines: Three Mountains, One Way In and One Way Home in 2026",
+    description:
+      "Keystone is three mountains deep, and the crowd stacks at the front door in the morning and at the back door in the afternoon. Where the waits form at River Run, Montezuma, Santiago and Outback, and how to ski the day backwards.",
+    h1: "Keystone lift lines: three mountains, one way in and one way home",
+    readTime: "7 min",
+    published: "2026-09-06",
+    updated: "2026-09-06",
+    keywords: "keystone lift lines, keystone crowds, keystone lift wait times, river run gondola line, keystone busiest lifts, keystone outback crowds",
+    dek: `Keystone is built like a hallway. Three mountains sit in a row, Dercum in front, North Peak behind it, the Outback behind that, and the only way to the good stuff is over the top of the one in front. That shape decides your whole day. The crowd stacks at the front door in the morning and at the back door in the afternoon, and the skiers who do well at Keystone are the ones who go the other way.`,
+    sections: [
+      { h2: "The shape of the problem", html: `
+<p>Dercum Mountain is the front. Two base areas feed it: River Run, with the River Run Gondola and Summit Express, and Mountain House, with Peru Express and Montezuma Express. Every one of those lifts is trying to put you on the same summit.</p><p>From the summit of Dercum the mountain drops away behind you to a saddle, and from that saddle Santiago Express climbs North Peak while Ruby Express climbs back to where you came from. On North Peak the Outpost Gondola also links the two summits. Behind North Peak is the Outback, served by Outback Express, with Wayback as the only chair that hauls you back out. And off the side of North Peak is Bergman Bowl, the newest terrain, with its own express chair and its own wind holds.</p><p>Count the exits. To ski the Outback and get home, you ride Wayback, then something up North Peak or back over the saddle, then something over Dercum. Three lifts of climbing to leave. Every skier on the back of the mountain has the same sum to do at about the same time, and that is where the second wait of the day comes from.</p>` },
+      { h2: "Morning: the front door", html: `
+<p>On a weekend the River Run Gondola is the long wait from about 8:45 until 10:15. It is the lift next to the village, the lodging and the biggest parking, and it is a gondola, so people who have not warmed up yet like it. Summit Express loads a few steps away and often runs shorter, because the gondola pulls the crowd toward itself.</p><p>The move most people miss is the other base. Mountain House is quieter, its parking is closer to the snow, and Peru Express is routinely the shortest way onto the mountain on a Saturday. It does not go all the way to the summit, which is exactly why people skip it, and exactly why it is short. Ride Peru, ski down to Montezuma or across to the summit lifts, and you have made two runs while the gondola crowd has made none.</p><p>Montezuma Express does go to the summit and it does get its own stack, but it usually builds later and clears faster than the gondola.</p>` },
+      { h2: "Midday: the back of the mountain is where the day is", html: `
+<p>Once the front clears, the crowd drains over the top toward North Peak and the Outback, and the front side goes quiet. This is the window, roughly 10:30 to 2:00, when Keystone works. Santiago Express moves a lot of people and on a normal day keeps up. Outback Express is the best chair on the mountain when the trees are good, and midweek it can run with empty seats.</p><p>Ruby Express is the sleeper. It runs from the saddle back to the Dercum summit, which sounds useless until you notice it serves a stack of long groomers that nobody laps because everyone is heading further back. On a busy Saturday it is a good place to spend an hour.</p><p>Bergman Bowl is the wild card. It is high, it is open, and it closes for wind more often than the rest of the mountain. When it is open on a weekend, the express chair holds a wait, because the bowl is the terrain everybody drove up for. When it is closed, all of those people are in the Outback instead, and Outback Express feels it.</p>` },
+      { h2: "Afternoon: the back door", html: `
+<p>This is the wait Keystone is known for among people who ski it a lot, and it is invisible in the morning. From about 2:00 the far lifts start closing and everyone in the Outback has to climb out. Wayback is the only way. It backs up. Then Santiago and the Outpost Gondola back up, because everyone who rode Wayback now needs to get over North Peak. Then the top of Dercum gets busy with people picking a way down.</p><p>You cannot skip this by skiing faster. You skip it by leaving the back earlier than you want to, or by not being there at all. Skiers who move to Ruby or the front side by 1:30 miss the whole thing and get a quiet last hour on groomers while the Outback crowd stands still.</p><p>One consolation: the front of Dercum has night skiing, the most of any resort in Colorado, so the front side lifts keep turning after the back has shut. If you are on the front at 3:30, your day is not over.</p>` },
+      { h2: "Early season is its own animal", html: `
+<p>Keystone opens earlier than almost anyone in Colorado, and it does it with a ribbon. One run, one or two lifts, and every skier who could not wait for winter on the same chair. The wait on those days has nothing to do with attendance and everything to do with the fact that there is one lift. It does not matter which base you pick, because only one is open. The honest advice is to go on a weekday or accept the maze as the price of November turns.</p><p>The Outback and Bergman Bowl open well into the season, and a lot of the mountain's capacity is behind them. Until they open, the whole crowd is on Dercum and North Peak, and the back door wait arrives earlier in the afternoon.</p>` },
+      { h2: "What actually helps", html: `
+<ul>
+  <li><strong>Start at Mountain House on a weekend.</strong> Peru Express is short because it is unglamorous.</li>
+  <li><strong>Go to the back early and leave it early.</strong> The Outback is best from 10:30 to 1:30. After that it is a trap with one exit.</li>
+  <li><strong>Lap Ruby when the mountain is stacked.</strong> Long groomers, short wait, and nobody thinks of it.</li>
+  <li><strong>Check Bergman before you commit.</strong> A wind hold moves a few hundred people into the Outback, and the sign at the bottom of Wayback will not tell you that.</li>
+  <li><strong>Finish on the front.</strong> The last hour on Dercum is quiet while the back is fighting to get out, and the lights come on.</li>
+</ul>
+<p>Most of that you can do with a trail map and a watch. What the map cannot tell you is whether Wayback is already stacked at 1:45 today, or whether Bergman opened at eleven. PeakWait shows the current wait on Keystone lifts from the skiers standing in them, and on a day when I-70 gives you a choice, which of the Summit County mountains is worth the drive in the first place.</p>` },
+    ],
+    faqs: [
+      { q: "Which lift at Keystone has the longest wait?", a: "On a weekend morning it is the River Run Gondola, with Montezuma Express at the Mountain House base close behind. By early afternoon the longest wait usually moves to the back of the mountain, at Santiago Express and Wayback, because everybody has to climb back over Dercum to get home." },
+      { q: "What time do Keystone lift lines get bad?", a: "The base stack runs from roughly 8:45 to 10:15 on a weekend. The afternoon stack at the back of the mountain runs from about 2:00 until the far lifts close. Between those two windows the mountain is usually in decent shape." },
+      { q: "Is the Mountain House base less crowded than River Run?", a: "Usually, yes. River Run has the gondola, the village and the bulk of the lodging, so it draws the bigger morning crowd. Mountain House has Peru Express and Montezuma Express, and on most weekends Peru is the shortest way onto the mountain." },
+      { q: "How crowded is Keystone early season?", a: "Keystone opens earlier than most Colorado resorts, often with a single run and one or two lifts. On those days everyone on the mountain is on the same lift, so the wait can be long even with a small crowd. Bergman Bowl and the Outback do not open until well into the season." },
+      { q: "Can I see Keystone lift wait times live?", a: "Yes. PeakWait shows the current wait at each Keystone lift, reported by skiers standing at it, with how fresh each reading is. When there is not enough data it says so rather than guessing." },
+    ],
+    cta: { h: "See which Keystone lift is actually moving", p: `Live waits, lift by lift, from skiers on the mountain right now.` },
   },
 ];
 
@@ -978,6 +1100,37 @@ Allow: /
 
 Sitemap: ${SITE}/sitemap.xml
 `;
+
+// ---- lint --------------------------------------------------------------
+// No parentheses, no em dashes, in guide copy. See docs/marketing/writing-standards.md.
+function lintArticles(arts) {
+  const offenders = [];
+  const bad = (s) => /[()]|—/.test(String(s));
+  const flag = (slug, field, value) => {
+    if (bad(value)) offenders.push(`  ${slug} — ${field}: ${String(value).trim().slice(0, 120)}`);
+  };
+  for (const a of arts) {
+    flag(a.slug, "title", a.title);
+    flag(a.slug, "description", a.description);
+    flag(a.slug, "h1", a.h1);
+    flag(a.slug, "dek", a.dek);
+    a.sections.forEach((s, i) => {
+      flag(a.slug, `sections[${i}].h2`, s.h2);
+      flag(a.slug, `sections[${i}].html`, stripTags(s.html));
+    });
+    a.faqs.forEach((f, i) => {
+      flag(a.slug, `faqs[${i}].q`, f.q);
+      flag(a.slug, `faqs[${i}].a`, f.a);
+    });
+  }
+  if (offenders.length) {
+    console.error(`\nLint failed: ${offenders.length} guide field(s) contain "(", ")", or an em dash "—".\n`);
+    console.error(offenders.join("\n"));
+    console.error("\nSee docs/marketing/writing-standards.md — no parentheses, no em dashes, in guide copy.");
+    process.exit(1);
+  }
+}
+lintArticles(ARTICLES);
 
 // ---- build -----------------------------------------------------------------
 let n = 0;
