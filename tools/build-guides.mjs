@@ -710,6 +710,51 @@ const ARTICLES = [
     ],
     cta: { h: "See which Keystone lift is actually moving", p: `Live waits, lift by lift, from skiers on the mountain right now.` },
   },
+  {
+    slug: "colorado-opening-day",
+    title: "Which Colorado Ski Resorts Open First in 2026, and How to Know the Lifts Are Really Turning",
+    description:
+      "Arapahoe Basin and Keystone race to open in October, Loveland and Wolf Creek follow, and the rest arrive through November. Why the posted date is soft, what opening day actually looks like, and how to know a lift is spinning before you drive.",
+    h1: "Which Colorado ski resorts open first, and how to know the lifts are really turning",
+    readTime: "6 min",
+    published: "2026-10-07",
+    updated: "2026-10-07",
+    keywords: "colorado opening day 2026, when does arapahoe basin open, when does keystone open, first ski resort to open colorado, colorado ski resort opening dates, opening day lift lines",
+    dek: `Every October the same question: who opens first, and when. The honest answer is that nobody knows the day until a few days before, including the resorts. Here is the usual order, what the first day on snow really looks like, and the one thing the posted date cannot tell you.`,
+    sections: [
+      { h2: "Why the date is soft", html: `
+<p>Colorado's early openers do not open on a calendar. They open when a stretch of cold nights lets the snowmaking guns build a base deep enough for a run, and then they announce it two or three days out. Arapahoe Basin's official position every autumn is "as soon as possible," and that is not coyness. It is the truth. A warm week in mid October pushes everyone back; a cold snap pulls the first chair forward.</p>
+<p>So treat any date you read, including the ones below, as a guess with a range. The projected dates on the big ski sites are averages of past seasons. The resort's own page is better, and still changes. The only thing that is not a guess is a lift that is turning.</p>` },
+      { h2: "The usual order", html: `
+<p><strong>Arapahoe Basin and Keystone, mid October.</strong> These two have traded the first chair in Colorado for years. A-Basin has taken it most seasons, as early as October 11 in a cold year and closer to the 20s in a warm one. Keystone has beaten it more than once with a heavy snowmaking push. Either way, the opening is a single run from the top, served by one or two lifts.</p>
+<p><strong>Loveland and Wolf Creek, late October into early November.</strong> Loveland is usually a week or two behind the first pair, with a couple of runs off Chair 1. Wolf Creek is the wild card: it makes almost no snow and opens on natural storms, which in a big October means it opens first and in a dry one means it waits.</p>
+<p><strong>Breckenridge, Copper, Vail and Winter Park, through November.</strong> Breck and Copper tend to open around the second week of November, Copper partly because the speed center for the national team needs a track early. Vail and Winter Park follow in the middle of the month. Eldora is in the same window.</p>
+<p><strong>Steamboat, Aspen, Telluride and Crested Butte, around Thanksgiving.</strong> The destination resorts open later and open bigger, with more terrain on day one and far less of a crush at the base.</p>` },
+      { h2: "What opening day actually looks like", html: `
+<p>Opening day at an early opener is a ribbon. One groomed run, white against brown, with every skier who could not wait for winter on the same chair. The wait on that chair has nothing to do with how busy the resort is. It is a function of one lift and a parking lot full of people who drove up at six.</p>
+<p>At A-Basin that means Black Mountain Express and a wait that can run twenty to forty minutes by ten in the morning on a weekend, and much less on a weekday. At Keystone it is the River Run gondola or Montezuma, with the same shape. The crowd thins after one o'clock, when the first wave has had its laps and gone to lunch. If you want the day without the wait, arrive before the lifts turn or arrive after lunch. The middle of the morning is the worst hour of the whole season.</p>` },
+      { h2: "How to know a lift is really turning", html: `
+<p>The problem with opening week is that the information is a day old. The resort posts an opening date, then a lift list, then an opening time, and all three can change overnight on wind, on a lift inspection, on a last cold night that did or did not come. People drive from Denver on a posted "opens at 9" and find the lift on hold at 9:40.</p>
+<p>PeakWait answers a narrower question: are the lifts turning right now. A mountain shows as open the moment its lifts are running, from the resort's own lift status and from skiers riding them, and the app says which of those it is using. Before that it shows the announced date if the resort has given one, and otherwise an estimate, labelled as an estimate. Once you are there, your phone times your own wait, and the lift's row says what that hour usually looks like until enough skiers have measured it. On a day with one lift, that is the only number that matters.</p>` },
+      { h2: "What actually helps", html: `
+<ul>
+  <li><strong>Watch the overnight lows, not the calendar.</strong> Three or four nights in the teens at the summit is what moves the date.</li>
+  <li><strong>Check the lift, not the date.</strong> An opening date is a plan. A turning lift is a fact.</li>
+  <li><strong>Go on a weekday if you can.</strong> The first weekend doubles the wait for the same run.</li>
+  <li><strong>Arrive before the first chair or after lunch.</strong> The 9:30 to 11:30 window is the crush.</li>
+  <li><strong>Bring rock skis.</strong> A ribbon is a ribbon.</li>
+  <li><strong>Star your mountains in the app.</strong> You get the first snow and the first chair without refreshing a resort website.</li>
+</ul>` },
+    ],
+    faqs: [
+      { q: "When does Arapahoe Basin open for the 2026-27 season?", a: "A-Basin has not set a date. Its position every year is as soon as possible, which in practice has meant mid October, anywhere from the 11th in a cold year to the last week of the month in a warm one. The resort announces a few days ahead once snowmaking has built a run." },
+      { q: "Which Colorado ski resort opens first?", a: "Usually Arapahoe Basin or Keystone, in mid October. The two have traded the first chair for years. Wolf Creek can beat both when a big natural storm lands in October, because it opens on real snow rather than snowmaking." },
+      { q: "How long are the lift waits on opening day?", a: "On a weekend at an early opener, twenty to forty minutes by mid morning on the one lift that is running. It is a single run and a full parking lot, not a busy resort. Weekdays are far shorter, and the wait drops after one o'clock." },
+      { q: "Is opening day worth it?", a: "For the first turns of the year, yes. For skiing, not really: one groomed run, early-season snow, and the longest wait you will stand in all winter. If you want the day without the crush, go on a weekday or arrive after lunch." },
+      { q: "Can I see if the lifts are actually running right now?", a: "Yes. PeakWait shows a mountain as open the moment its lifts are turning, from the resort's own lift status and from skiers riding them, and says which it is using. Before that it shows the resort's announced date or a labelled estimate, never a guess dressed up as a fact." },
+    ],
+    cta: { h: "Know the moment the first chair turns", p: `Star your mountains. PeakWait tells you when the lifts are running and what the wait is, lift by lift.` },
+  },
 ];
 
 // ---- product updates (changelog / release blog) ----------------------------
@@ -891,6 +936,7 @@ const INDEX_META = {
   "northeast-ski-crowds":       { region: "NE", where: "Vermont and the Northeast", lifts: "Killington, Stowe", hook: "Short vertical makes a 20 minute wait feel worse than an hour out West.", rail: [12, 30, 55] },
   // the rest, by the decision they help with
   "best-time-to-ski-avoid-crowds": { group: "day" },
+  "colorado-opening-day":       { group: "day" },
   "beat-i70-ski-traffic-colorado-crowds": { group: "day" },
   "least-crowded-colorado-ski-resorts": { group: "day" },
   "beat-powder-day-crowds": { group: "day" },
@@ -1115,7 +1161,7 @@ ${footer()}
 }
 
 // Publish dates for the hand-written update posts that never made it into UPDATES.
-const UPDATE_DATES = { andes: "2026-09-06", "sharper-mornings": "2026-08-31", "time-you-didnt-wait": "2026-08-25" };
+const UPDATE_DATES = { andes: "2026-09-06", "sharper-mornings": "2026-08-31", "time-you-didnt-wait": "2026-08-25", "three-days-on-snow": "2026-10-06" };
 
 function sitemap(arts) {
   const urls = [
