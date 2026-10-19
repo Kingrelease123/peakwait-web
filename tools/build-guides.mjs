@@ -787,6 +787,15 @@ const UPDATES = [
 // ---- template --------------------------------------------------------------
 const esc = (s) => String(s).replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;").replace(/"/g, "&quot;");
 const MONTHS = ["January","February","March","April","May","June","July","August","September","October","November","December"];
+// Google Analytics (website only). Every generated page carries it; do not paste it into built HTML by hand.
+const GA_TAG = `<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-LJ4V6MDP0Y"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-LJ4V6MDP0Y');
+</script>`;
 const fmtDate = (iso) => { const [y, m, d] = iso.split("-").map(Number); return `${MONTHS[m - 1]} ${d}, ${y}`; };
 const stripTags = (s) => String(s).replace(/<[^>]+>/g, " ").replace(/\s+/g, " ").trim();
 const CSS = `
@@ -882,6 +891,7 @@ function articleHtml(a, others) {
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
+${GA_TAG}
 <title>${esc(a.title)}</title>
 <meta name="description" content="${esc(a.description)}">
 <meta name="keywords" content="${esc(a.keywords)}">
@@ -1008,6 +1018,7 @@ function indexHtml(arts) {
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
+${GA_TAG}
 <title>Ski Guides by Mountain, Beat the Wait | PeakWait</title>
 <meta name="description" content="Where the wait is, mountain by mountain: which lift stacks up, when it clears, and where the quiet side is. Plus how to pick the day and the mountain. By Herb Sendit.">
 <link rel="canonical" href="${SITE}/guides/">
@@ -1080,6 +1091,7 @@ function updateHtml(u, others) {
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
+${GA_TAG}
 <title>PeakWait ${esc(u.version)}: ${esc(u.title)}</title>
 <meta name="description" content="${esc(u.summary)}">
 <meta name="author" content="PeakWait">
@@ -1132,6 +1144,7 @@ function updatesIndexHtml(updates) {
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
+${GA_TAG}
 <title>Product Updates | PeakWait</title>
 <meta name="description" content="What's new in PeakWait: release notes and the story behind each update.">
 <link rel="canonical" href="${SITE}/updates/">
