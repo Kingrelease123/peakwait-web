@@ -1,0 +1,48 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Get PeakWait on iPhone</title>
+<meta name="description" content="PeakWait: live ski lift waits at 116 resorts, from skiers on the mountain. Free on iPhone.">
+<meta name="robots" content="noindex">
+<link rel="canonical" href="https://peakwait.net/">
+<link rel="icon" href="/favicon.svg">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="PeakWait">
+<meta property="og:title" content="PeakWait: Ski the mountain, skip the wait">
+<meta property="og:description" content="Live lift waits at 116 resorts, from skiers on the mountain. Free on iPhone.">
+<meta property="og:url" content="https://peakwait.net/app">
+<meta property="og:image" content="https://peakwait.net/og.png">
+<!-- Short link for bios and posts: counts the visit, then sends the skier to the App Store. -->
+<meta http-equiv="refresh" content="2; url=https://apps.apple.com/app/peakwait/id6793253589">
+<style>
+  :root{ --bg:#070f16; --ink:#eff4f9; --ink2:#adb9c4; --gold:#feb84d; }
+  body{ margin:0; min-height:100vh; display:flex; align-items:center; justify-content:center; background:var(--bg); color:var(--ink);
+        font:16px/1.5 -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; text-align:center; padding:0 16px; }
+  img{ width:72px; height:72px; border-radius:16px; }
+  p{ color:var(--ink2); }
+  a{ color:var(--gold); font-weight:600; }
+</style>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-LJ4V6MDP0Y"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+var STORE = 'https://apps.apple.com/app/peakwait/id6793253589';
+var sent = false;
+function go(){ if (!sent) { sent = true; location.replace(STORE); } }
+gtag('config', 'G-LJ4V6MDP0Y', { event_callback: go, event_timeout: 1000 });
+setTimeout(go, 1200);
+</script>
+</head>
+<body>
+<main>
+  <img src="/icon-192.png" alt="PeakWait">
+  <h1>Opening the App Store…</h1>
+  <p>PeakWait is free on iPhone.</p>
+  <a href="https://apps.apple.com/app/peakwait/id6793253589">Get PeakWait</a>
+</main>
+</body>
+</html>
