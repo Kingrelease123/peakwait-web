@@ -53,6 +53,13 @@ if (published.has(topic.slug)) fail(`${topic.slug} is already published.`);
 console.log(`Writing: ${topic.slug} (${topic.kind})`);
 
 // ── 2. Live PeakWait facts ───────────────────────────────────────────────────────────────────────
+// The first draft, 2026-11-01, called Loveland open because the app's label did, on our calendar
+// guess alone. Each line now carries how it is known.
+const BASIS = {
+  confirmed: "confirmed: lifts are running today by the resort's own lift feed or our riders",
+  announced: "announced: a date the resort itself published",
+  projected: "projected: OUR estimate only, nothing from the resort; not a date and not proof it is open",
+};
 const resorts = await fetch(`${API}/v1/resorts`).then((r) => (r.ok ? r.json() : fail(`GET /v1/resorts → HTTP ${r.status}`)));
 let resort = null;
 let facts = "";
@@ -67,9 +74,9 @@ Season, as the PeakWait app shows it today: ${resort.season?.label || "unknown"}
 }
 const near = resorts
   .filter((r) => (topic.kind === "mountain" ? r.state === resort.state : r.state === "CO"))
-  .map((r) => `- ${r.name}: ${r.season?.label || "unknown"}`)
+  .map((r) => `- ${r.name}: ${r.season?.label || "unknown"} [${BASIS[r.season?.basis] || "unknown basis"}]`)
   .join("\n");
-facts += `Season status in the PeakWait app today for ${topic.kind === "mountain" ? resort.state : "Colorado"} resorts. "announced by the resort" is a date the resort announced; "projected" is only our estimate and must never be stated as a date the resort set:\n${near}\n`;
+facts += `Season status in the PeakWait app today for ${topic.kind === "mountain" ? resort.state : "Colorado"} resorts. The note in brackets says how solid each one is. Never call a resort open, or give a date as the resort's, on our estimate alone:\n${near}\n`;
 
 // ── 3. Ask ───────────────────────────────────────────────────────────────────────────────────────
 const prompt = `Today is ${today}. Write one guide for peakwait.net/guides, the website of PeakWait, an iPhone app for ski lift waits.
@@ -82,7 +89,7 @@ What PeakWait is, and the only claims you may make about it: skiers on the mount
 
 Live PeakWait data you may use as fact:
 ${facts}
-Research: search the web for the rest. Use the resort's own site, local news and well known ski publications. Every specific fact that is not in the PeakWait data above, such as a lift name, a year, a distance, a road, a parking rule or an event, must come from a page you read, listed in "sources" with the fact it supports. Give at least three sources. If you cannot confirm something, leave it out.
+Research: search the web for the rest. Use the resort's own site, local news and well known ski publications. Every specific fact that is not in the PeakWait data above, such as a lift name, a year, a distance, a road, a parking rule or an event, must come from a page you read, listed in "sources" with the fact it supports. Give at least three sources. If you cannot confirm something, leave it out. Never use Wikipedia, Reddit, social media or Google results as a source. When a news page you find contradicts the PeakWait data, such as a resort that closed again, say so plainly and tell the reader to check the resort's site.
 
 Hard rules. A script checks every one and rejects the guide if any fails:
 - No parentheses anywhere. No em dashes. Make an aside its own sentence or cut it.
@@ -242,6 +249,8 @@ for (let attempt = 0; attempt < 2; attempt += 1) {
 
   const errs = check(guide);
   const src = await checkSources(guide.sources);
+  const banned = src.bad.filter((b) => b.endsWith("not an allowed source"));
+  if (banned.length) errs.push(`These sources are not allowed: ${banned.map((b) => b.split(": ")[0]).join(", ")}. Remove them from sources and remove every fact that rests on them from the guide, including any mention of the site by name.`);
   if (src.ok.length < 2) errs.push(`Only ${src.ok.length} source pages load. Failed: ${src.bad.join("; ")}. Give sources that load, and drop facts that rest on the ones that do not.`);
   if (errs.length === 0) {
     console.log(`Checks passed. Sources that load: ${src.ok.length} of ${guide.sources.length}.`);
