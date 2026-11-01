@@ -1,0 +1,69 @@
+name: Daily guide
+
+# Writes one new guide a day for peakwait.net/guides, checks it, builds the site and publishes it by
+# pushing to main (GitHub Pages serves main). See tools/write-guide.mjs for the checks. A guide that
+# fails them is not published and the run fails, so a red run here means "no guide today", never a
+# bad page.
+#
+# Needs one repo secret: ANTHROPIC_API_KEY.
+# Off switch: set the repository variable GUIDES_AUTOPUBLISH to "off" (Settings → Secrets and
+# variables → Actions → Variables). Anything else, or no variable, means on.
+on:
+  schedule:
+    - cron: "40 12 * * *"   # every day, 12:40 UTC, early morning in the Rockies
+  workflow_dispatch:
+    inputs:
+      slug:
+        description: "Write this topic from tools/guide-topics.json instead of the next one"
+        type: string
+        default: ""
+      dry_run:
+        description: "Write and check the guide but publish nothing"
+        type: boolean
+        default: false
+
+permissions:
+  contents: write
+
+concurrency:
+  group: daily-guide
+  cancel-in-progress: false
+
+jobs:
+  guide:
+    if: vars.GUIDES_AUTOPUBLISH != 'off'
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "22"
+      - name: Write, check and build one guide
+        id: write
+        env:
+          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+          GUIDE_MODEL: claude-sonnet-5-5
+          GUIDE_SLUG: ${{ inputs.slug }}
+          GUIDE_DRY_RUN: ${{ inputs.dry_run && '1' || '' }}
+        run: node tools/write-guide.mjs
+      - name: Publish
+        if: ${{ !inputs.dry_run && steps.write.outputs.url != '' }}
+        env:
+          TITLE: ${{ steps.write.outputs.title }}
+          URL: ${{ steps.write.outputs.url }}
+        run: |
+          git config user.name "PeakWait guides"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add guides-src guides sitemap.xml robots.txt llms.txt llms-full.txt
+          git commit -m "guides: $TITLE" -m "Written and checked by the daily guide job. $URL"
+          git push
+      - name: Tell search engines
+        if: ${{ !inputs.dry_run && steps.write.outputs.url != '' }}
+        env:
+          URL: ${{ steps.write.outputs.url }}
+        run: |
+          KEY=$(ls *.txt | grep -E '^[0-9a-f]{32}\.txt$' | head -1 | sed 's/\.txt$//')
+          [ -n "$KEY" ] || { echo "No IndexNow key file; skipping."; exit 0; }
+          curl -s -o /dev/null -w "IndexNow HTTP %{http_code}\n" -X POST https://api.indexnow.org/indexnow \
+            -H "content-type: application/json" \
+            -d "{\"host\":\"peakwait.net\",\"key\":\"$KEY\",\"keyLocation\":\"https://peakwait.net/$KEY.txt\",\"urlList\":[\"$URL\",\"https://peakwait.net/guides/\"]}" || true

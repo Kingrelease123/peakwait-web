@@ -975,8 +975,11 @@ function indexHtml(arts) {
   const cards = mountains.map((a) => {
     const m = INDEX_META[a.slug];
     const tag = a.slug === newest.slug ? `<span class="tag new">New</span>` : "";
+    // Guides the daily job writes have no rail: the split is a judgement from a hand-written guide, and a
+    // generated one would be a made-up number.
+    const rail = m.rail ? ` style="--m:${m.rail[0]}%;--s:${m.rail[1]}%;--b:${m.rail[2]}%"` : "";
     return `
-    <a class="mtn" href="/guides/${a.slug}/" data-r="${m.region}" style="--m:${m.rail[0]}%;--s:${m.rail[1]}%;--b:${m.rail[2]}%"><div class="rail"></div><div class="name">${esc(MOUNTAIN_NAME[a.slug])}</div><div class="where">${esc(m.where)}</div><div class="hook">${esc(m.hook)}</div><div class="foot"><span><b>${esc(m.lifts)}</b> · ${esc(a.readTime)}</span>${tag}</div></a>`;
+    <a class="mtn" href="/guides/${a.slug}/" data-r="${m.region}"${rail}>${m.rail ? `<div class="rail"></div>` : ""}<div class="name">${esc(MOUNTAIN_NAME[a.slug])}</div><div class="where">${esc(m.where)}</div><div class="hook">${esc(m.hook)}</div><div class="foot"><span><b>${esc(m.lifts)}</b> · ${esc(a.readTime)}</span>${tag}</div></a>`;
   }).join("");
   const chips = REGIONS.map(([k, label], i) => `<button class="chip" aria-pressed="${i === 0}" data-f="${k}">${label}</button>`).join("\n    ");
   const listCss = `.wrap{max-width:1040px}
@@ -1261,6 +1264,21 @@ Allow: /
 
 Sitemap: ${SITE}/sitemap.xml
 `;
+
+// ---- generated guides ------------------------------------------------------
+// The daily job (tools/write-guide.mjs) writes one guide per file in guides-src/, so it never edits this
+// file. Each file is { article, index, mountainName? } in the same shapes as ARTICLES and INDEX_META.
+const SRC = path.join(ROOT, "guides-src");
+if (fs.existsSync(SRC)) {
+  for (const f of fs.readdirSync(SRC).filter((f) => f.endsWith(".json")).sort()) {
+    const g = JSON.parse(fs.readFileSync(path.join(SRC, f), "utf8"));
+    if (ARTICLES.some((a) => a.slug === g.article.slug)) throw new Error(`guides-src/${f}: slug ${g.article.slug} already exists`);
+    ARTICLES.push(g.article);
+    INDEX_META[g.article.slug] = g.index;
+    if (g.mountainName) MOUNTAIN_NAME[g.article.slug] = g.mountainName;
+    if (g.index.region && !REGIONS.some(([k]) => k === g.index.region)) REGIONS.push([g.index.region, g.index.regionLabel || g.index.region]);
+  }
+}
 
 // ---- lint --------------------------------------------------------------
 // No parentheses, no em dashes, in guide copy. See docs/marketing/writing-standards.md.
