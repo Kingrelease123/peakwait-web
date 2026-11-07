@@ -1177,7 +1177,7 @@ ${footer()}
 }
 
 // Publish dates for the hand-written update posts that never made it into UPDATES.
-const UPDATE_DATES = { andes: "2026-09-06", "sharper-mornings": "2026-08-31", "time-you-didnt-wait": "2026-08-25", "three-days-on-snow": "2026-10-06", "report-from-the-chair": "2026-10-08" };
+const UPDATE_DATES = { andes: "2026-09-06", "sharper-mornings": "2026-08-31", "time-you-didnt-wait": "2026-08-25", "three-days-on-snow": "2026-10-06", "report-from-the-chair": "2026-10-08", "keeps-counting": "2026-11-07" };
 
 function sitemap(arts) {
   const urls = [
