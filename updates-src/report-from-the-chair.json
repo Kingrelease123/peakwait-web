@@ -1,0 +1,27 @@
+{
+ "slug": "report-from-the-chair",
+ "version": "1.4",
+ "date": "2026-10-08",
+ "title": "Report From the Chair",
+ "summary": "Report the lift you're on from the chair. Waits that count only when your phone saw all of them. Every running lift says what this hour usually looks like, and a mountain shows open the moment its lifts run.",
+ "intro": "<p class=\"dek\">The wait you just stood in, reported from the chair you just boarded. Here is what PeakWait 1.4 brings.</p>",
+ "sections": [
+  {
+   "h2": "Report the lift you're on",
+   "html": "<p>Once you've boarded, PeakWait knows which lift it is. Open the app on the chair, tap the wait, and it goes to that lift, placed at the base where you waited. No more racing the queue to get your report in before you load.</p>"
+  },
+  {
+   "h2": "Waits that count",
+   "html": "<p>A wait is measured only when your phone saw all of it, from reaching the lift to boarding. Anything less is listed as a ride, never sent as a wait. Your own timed wait shows on the lift's row at once, marked as yours. And before anyone has measured a lift, its row says what this hour usually looks like, clearly marked as typical, so the first morning of the season is never a blank list.</p>"
+  },
+  {
+   "h2": "Open when the lifts are running",
+   "html": "<p>A mountain shows as open the moment its lifts are turning, even before the calendar says so. When a resort announces its opening day, that date shows instead of the estimate.</p>"
+  },
+  {
+   "h2": "The small things",
+   "html": "<p>Two lifts taken back to back count as two. Temperature, wind and snowfall follow your units. A report saved without signal sends the moment you're back online.</p>"
+  }
+ ],
+ "css": ""
+}

@@ -1,0 +1,23 @@
+{
+ "slug": "andes",
+ "version": "1.2",
+ "date": "2026-09-06",
+ "title": "A Season in the Other Hemisphere",
+ "summary": "PeakWait adds ten mountains, including Portillo, Valle Nevado and Cerro Catedral. South America is mid season while Colorado waits for snow.",
+ "intro": "<p class=\"dek\">Colorado is still waiting for snow. Chile and Argentina are mid season right now, so PeakWait is now there too. Ten new mountains, and the first outside North America.</p>",
+ "sections": [
+  {
+   "h2": "Ten more mountains, nine of them in the Andes",
+   "html": "<p>Portillo, Valle Nevado, La Parva and El Colorado in Chile. Cerro Catedral, Las Le&ntilde;as, Chapelco, Cerro Bayo and Cerro Castor in Argentina. Sun Valley joins them in Idaho. That brings PeakWait to 116 mountains.</p>\n  <p>There is a practical reason for the timing. A wait app is only as good as the skiers reporting on it, and every honest test of that has to happen on a mountain where people are actually skiing. In September that means the southern hemisphere.</p>"
+  },
+  {
+   "h2": "Recommendations that stop guessing",
+   "html": "<p>&ldquo;Where to ski today&rdquo; and the best next chair are meant to compare only lifts with a real wait behind them, and to say so when there is not enough to compare. On a mountain nobody had reported yet, they were quietly filling the gap with a guess based on the time of day and presenting it like a reading.</p>\n  <p>They no longer do. When there is not enough to go on, the app says that, which on an early season morning is usually the honest answer.</p>"
+  },
+  {
+   "h2": "Waits measured more honestly on a building morning",
+   "html": "<p>A measurement of your wait cannot exist until you reach the chair. We had been crediting that measurement to the moment it was taken rather than the moment it became knowable, which made our own testing look better than the product was, particularly on the mornings when a queue grows fastest.</p>\n  <p>Fixing how we measure did not change what you see today. It changed what we know about it, and a few of the numbers we had published about our own accuracy were too generous. The corrected ones are what we work from now.</p>"
+  }
+ ],
+ "css": ""
+}

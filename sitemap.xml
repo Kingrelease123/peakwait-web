@@ -3,11 +3,9 @@
   <url><loc>https://peakwait.net/</loc><priority>1.0</priority></url>
   <url><loc>https://peakwait.net/guides/</loc><priority>0.8</priority></url>
   <url><loc>https://peakwait.net/guides/ski-resort-lift-lines/</loc><lastmod>2026-08-21</lastmod><priority>0.7</priority></url>
-  <url><loc>https://peakwait.net/guides/whistler-lift-wait-times/</loc><lastmod>2026-07-31</lastmod><priority>0.7</priority></url>
+  <url><loc>https://peakwait.net/guides/whistler-lift-wait-times/</loc><lastmod>2026-11-09</lastmod><priority>0.7</priority></url>
   <url><loc>https://peakwait.net/guides/beat-powder-day-crowds/</loc><lastmod>2026-08-08</lastmod><priority>0.7</priority></url>
   <url><loc>https://peakwait.net/guides/beat-i70-ski-traffic-colorado-crowds/</loc><lastmod>2026-08-16</lastmod><priority>0.7</priority></url>
-  <url><loc>https://peakwait.net/guides/peakwait-vs-whistler-peak-app/</loc><lastmod>2026-08-12</lastmod><priority>0.7</priority></url>
-  <url><loc>https://peakwait.net/guides/best-ski-lift-wait-apps/</loc><lastmod>2026-08-23</lastmod><priority>0.7</priority></url>
   <url><loc>https://peakwait.net/guides/least-crowded-colorado-ski-resorts/</loc><lastmod>2026-08-19</lastmod><priority>0.7</priority></url>
   <url><loc>https://peakwait.net/guides/epic-vs-ikon-crowds/</loc><lastmod>2026-08-22</lastmod><priority>0.7</priority></url>
   <url><loc>https://peakwait.net/guides/how-long-reasonable-lift-wait/</loc><lastmod>2026-08-05</lastmod><priority>0.7</priority></url>
@@ -31,13 +29,13 @@
   <url><loc>https://peakwait.net/guides/winter-park-lift-lines/</loc><lastmod>2026-11-02</lastmod><priority>0.7</priority></url>
   <url><loc>https://peakwait.net/guides/winter-park-vs-copper/</loc><lastmod>2026-11-09</lastmod><priority>0.7</priority></url>
   <url><loc>https://peakwait.net/updates/</loc><priority>0.5</priority></url>
-  <url><loc>https://peakwait.net/updates/andes/</loc><lastmod>2026-09-06</lastmod><priority>0.5</priority></url>
   <url><loc>https://peakwait.net/updates/keeps-counting/</loc><lastmod>2026-11-07</lastmod><priority>0.5</priority></url>
   <url><loc>https://peakwait.net/updates/report-from-the-chair/</loc><lastmod>2026-10-08</lastmod><priority>0.5</priority></url>
-  <url><loc>https://peakwait.net/updates/sharper-mornings/</loc><lastmod>2026-08-31</lastmod><priority>0.5</priority></url>
-  <url><loc>https://peakwait.net/updates/sort-by-pass/</loc><lastmod>2026-08-24</lastmod><priority>0.5</priority></url>
   <url><loc>https://peakwait.net/updates/three-days-on-snow/</loc><lastmod>2026-10-06</lastmod><priority>0.5</priority></url>
+  <url><loc>https://peakwait.net/updates/andes/</loc><lastmod>2026-09-06</lastmod><priority>0.5</priority></url>
+  <url><loc>https://peakwait.net/updates/sharper-mornings/</loc><lastmod>2026-08-31</lastmod><priority>0.5</priority></url>
   <url><loc>https://peakwait.net/updates/time-you-didnt-wait/</loc><lastmod>2026-08-25</lastmod><priority>0.5</priority></url>
+  <url><loc>https://peakwait.net/updates/sort-by-pass/</loc><lastmod>2026-08-24</lastmod><priority>0.5</priority></url>
   <url><loc>https://peakwait.net/terms/</loc><priority>0.3</priority></url>
   <url><loc>https://peakwait.net/privacy/</loc><priority>0.3</priority></url>
 </urlset>
