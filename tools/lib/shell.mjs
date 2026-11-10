@@ -25,7 +25,7 @@ gtag('config', 'G-LJ4V6MDP0Y');
 </script>`;
 
 /** <head> contents shared by every page. `extra` is page-specific tags (ld+json, <style>). */
-export function head({ title, description, url, image = `${SITE}/og.png`, type = "website", extra = "" }) {
+export function head({ title, description, url, image = `${SITE}/assets/og/home.jpg`, type = "website", extra = "" }) {
   return `<meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 ${GA_TAG}

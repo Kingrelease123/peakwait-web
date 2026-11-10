@@ -26,14 +26,14 @@ gtag('config', 'G-LJ4V6MDP0Y');
 <meta property="og:title" content="Ski the mountain, skip the wait.">
 <meta property="og:description" content="See how long the wait is at every lift, and the best next chair from where you stand. Live from the skiers on the hill.">
 <meta property="og:url" content="https://peakwait.net/">
-<meta property="og:image" content="https://peakwait.net/og.png">
+<meta property="og:image" content="https://peakwait.net/assets/og/home.jpg">
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
 <meta property="og:image:alt" content="PeakWait. Ski the mountain, skip the wait.">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="Ski the mountain, skip the wait.">
 <meta name="twitter:description" content="Live lift waits at every lift, and the best next chair. Free on iPhone.">
-<meta name="twitter:image" content="https://peakwait.net/og.png">
+<meta name="twitter:image" content="https://peakwait.net/assets/og/home.jpg">
 <link rel="stylesheet" href="/assets/site.css">
 <script type="application/ld+json">
 {"@context":"https://schema.org","@type":"MobileApplication","name":"PeakWait","operatingSystem":"iOS","applicationCategory":"TravelApplication","description":"Real-time ski-lift wait times reported by skiers on the mountain, plus where to ski today and the best next chair. Covers 116 resorts across North and South America.","url":"https://peakwait.net/","image":"https://peakwait.net/icon-512.png","publisher":{"@type":"Organization","name":"PeakWait LLC","url":"https://peakwait.net/"},"offers":{"@type":"Offer","price":"0","priceCurrency":"USD"}}
@@ -315,7 +315,7 @@ gtag('config', 'G-LJ4V6MDP0Y');
 <section class="film" aria-label="PeakWait in 30 seconds">
   <div class="wrap">
     <div class="filmbox" id="filmbox">
-      <img src="/assets/img/film-poster.jpg" alt="" id="poster" width="1920" height="1080">
+      <video id="film" src="/assets/img/film.mp4" poster="/assets/img/film-poster.jpg" preload="none" playsinline controls width="1920" height="1080"></video>
       <button class="play" id="playbtn" type="button" aria-label="Play the 30-second PeakWait film">
         <span class="t"><b>Powder day. Everybody had the same idea.</b><span>Watch PeakWait in 30 seconds · sound on</span></span>
         <span class="pb"><svg viewBox="0 0 24 24"><path d="M7 4.5v15l13-7.5z"/></svg></span>
@@ -540,12 +540,11 @@ gtag('config', 'G-LJ4V6MDP0Y');
 <script>
   try{ new QRCode(document.getElementById('qr'),{text:'https://apps.apple.com/us/app/id6793253589',width:144,height:144,colorDark:'#070F16',colorLight:'#EFF4F9',correctLevel:QRCode.CorrectLevel.M}); }catch(e){}
   document.querySelectorAll('.menu nav a').forEach(a=>a.addEventListener('click',()=>a.closest('details').open=false));
-  // Film: tap to play once; holds on the last frame (the POV powder run). No loop, no end card.
-  document.getElementById('playbtn').addEventListener('click',function(){
-    const box=document.getElementById('filmbox'); const v=document.createElement('video');
-    v.src='a/film.mp4'; v.controls=true; v.playsInline=true; v.preload='auto';
-    box.replaceChildren(v); v.play().catch(()=>{});
-  });
+  // Film: a real <video> (works with no script); the overlay just starts it and gets out of the way.
+  // Holds on the last frame, the POV powder run. No loop, no end card.
+  (function(){const v=document.getElementById('film'),b=document.getElementById('playbtn');
+    b.addEventListener('click',()=>{b.hidden=true;v.play().catch(()=>{b.hidden=false;});});
+    v.addEventListener('play',()=>{b.hidden=true;});})();
 </script>
 </body>
 </html>
