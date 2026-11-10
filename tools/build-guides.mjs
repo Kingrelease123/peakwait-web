@@ -8,6 +8,7 @@
  */
 import fs from "node:fs";
 import path from "node:path";
+import crypto from "node:crypto";
 
 import { SITE, DOWNLOAD_URL, esc, waitify, head, nav, footer, endCta, device } from "./lib/shell.mjs";
 const AUTHOR = "Herb Sendit";
@@ -703,7 +704,7 @@ function sectionOf(a) {
   if (m.region === "UT") return "ut";
   if (m.region === "CA") return "ca";
   if (m.region) return "more";
-  return /colorado|i-70/i.test(a.title) ? "co" : "play";
+  return /colorado|i-70|winter park|copper|vail|breckenridge|keystone|loveland|arapahoe|steamboat/i.test(a.title) ? "co" : "play";
 }
 // One campaign photo per kind of guide, so the index and articles carry imagery without repeating one shot.
 function imageOf(a) {
@@ -885,7 +886,8 @@ function indexHtml(arts) {
 .latest{display:grid;grid-template-columns:1.4fr 1fr;gap:18px;margin-top:40px}
 .lead{position:relative;border-radius:var(--r-lg);overflow:hidden;border:1px solid var(--hair);min-height:400px;display:grid;align-items:end;background:#000;transition:border-color .18s ease}
 .lead img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:65% 50%}
-.lead::before{content:"";position:absolute;inset:0;z-index:1;background:linear-gradient(0deg,rgba(7,15,22,.96) 18%,rgba(7,15,22,.5) 55%,rgba(7,15,22,.05) 85%)}
+.lead::before{content:"";position:absolute;inset:0;z-index:1;background:linear-gradient(0deg,rgba(7,15,22,.96) 30%,rgba(7,15,22,.72) 62%,rgba(7,15,22,.45))}
+.lead .meta{color:var(--ink)}
 .lead .in{position:relative;z-index:2;padding:clamp(22px,3vw,36px);display:grid;gap:12px}
 .lead h2{font-size:clamp(1.7rem,3vw,2.4rem)}
 .lead p{color:var(--ink2);max-width:50ch}
@@ -1231,6 +1233,15 @@ for (const u of UPDATES) {
   fs.writeFileSync(path.join(dir, "index.html"), updateHtml(u, UPDATES));
 }
 fs.writeFileSync(path.join(ROOT, "updates", "index.html"), updatesIndexHtml(UPDATES));
+// Every page links /assets/site.css?v=<hash>, so a release reaches phones now instead of after the
+// 4-hour browser cache. Hand-written pages (home, invite) get the same version here.
+{
+  const v = crypto.createHash("sha1").update(fs.readFileSync(path.join(ROOT, "assets", "site.css"))).digest("hex").slice(0, 8);
+  for (const p of ["index.html", "add/index.html"]) {
+    const f = path.join(ROOT, p);
+    fs.writeFileSync(f, fs.readFileSync(f, "utf8").replace(/\/assets\/site\.css(\?v=[0-9a-f]+)?/g, `/assets/site.css?v=${v}`));
+  }
+}
 // Home page: the five newest guides, between the guides:start/end markers in /index.html.
 {
   const homeP = path.join(ROOT, "index.html");
@@ -1238,7 +1249,7 @@ fs.writeFileSync(path.join(ROOT, "updates", "index.html"), updatesIndexHtml(UPDA
   const newest = [...ARTICLES].sort((a, b) => (b.published > a.published ? 1 : -1)).slice(0, 5);
   const secName = (a) => SECTIONS.find(([k]) => k === sectionOf(a))[1];
   const cards = newest.map((a, i) => i === 0
-    ? `<a class="gcard feat" href="/guides/${a.slug}/" style="background-image:linear-gradient(0deg,rgba(7,15,22,.92),rgba(7,15,22,.2) 70%),url(${imageOf(a)})"><span class="meta"><i>New</i>${esc(secName(a))} · ${esc(a.readTime)}</span><div style="display:grid;gap:10px"><h3>${esc(waitify(a.h1))}</h3><p>${esc(subOf(a))}</p></div></a>`
+    ? `<a class="gcard feat" href="/guides/${a.slug}/" style="background-image:linear-gradient(0deg,rgba(7,15,22,.96) 30%,rgba(7,15,22,.72) 62%,rgba(7,15,22,.45)),url(${imageOf(a)})"><span class="meta"><i>New</i>${esc(secName(a))} · ${esc(a.readTime)}</span><div style="display:grid;gap:10px"><h3>${esc(waitify(a.h1))}</h3><p>${esc(subOf(a))}</p></div></a>`
     : `<a class="gcard" href="/guides/${a.slug}/"><span class="meta">${esc(secName(a))} · ${esc(a.readTime)}</span><h3>${esc(waitify(a.h1))}</h3><span class="arrow">Read</span></a>`).join("\n      ");
   const next = home.replace(/<!-- guides:start -->[\s\S]*?<!-- guides:end -->/, `<!-- guides:start -->\n      ${cards}\n      <!-- guides:end -->`);
   if (next === home && !home.includes("<!-- guides:start -->")) throw new Error("index.html lost its guides:start/end markers");

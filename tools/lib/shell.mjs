@@ -1,8 +1,11 @@
+import fs from "node:fs";
+import crypto from "node:crypto";
 // Shared page shell for every generated page (guides, updates) and the hand-written ones (home, add).
 // One nav, one footer, one stylesheet (/assets/site.css), so the whole site moves together.
 // Style Guide v1.0: system SF for words, SF Pro Rounded for numerals, blue = actions, gold = earned.
 
 export const SITE = "https://peakwait.net";
+const CSS_V = crypto.createHash("sha1").update(fs.readFileSync(new URL("../../assets/site.css", import.meta.url))).digest("hex").slice(0, 8);
 export const DOWNLOAD_URL = "https://apps.apple.com/us/app/id6793253589";
 export const PH_URL = "https://www.producthunt.com/posts/peakwait";
 
@@ -43,7 +46,7 @@ ${GA_TAG}
 <link rel="icon" href="/favicon.svg" type="image/svg+xml">
 <link rel="apple-touch-icon" href="/apple-touch-icon.png">
 <meta name="theme-color" content="#070F16">
-<link rel="stylesheet" href="/assets/site.css">
+<link rel="stylesheet" href="/assets/site.css?v=${CSS_V}">
 ${extra}`;
 }
 

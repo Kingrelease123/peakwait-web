@@ -34,7 +34,7 @@ gtag('config', 'G-LJ4V6MDP0Y');
 <meta name="twitter:title" content="Ski the mountain, skip the wait.">
 <meta name="twitter:description" content="Live lift waits at every lift, and the best next chair. Free on iPhone.">
 <meta name="twitter:image" content="https://peakwait.net/assets/og/home.jpg">
-<link rel="stylesheet" href="/assets/site.css">
+<link rel="stylesheet" href="/assets/site.css?v=8eb880e5">
 <script type="application/ld+json">
 {"@context":"https://schema.org","@type":"MobileApplication","name":"PeakWait","operatingSystem":"iOS","applicationCategory":"TravelApplication","description":"Real-time ski-lift wait times reported by skiers on the mountain, plus where to ski today and the best next chair. Covers 116 resorts across North and South America.","url":"https://peakwait.net/","image":"https://peakwait.net/icon-512.png","publisher":{"@type":"Organization","name":"PeakWait LLC","url":"https://peakwait.net/"},"offers":{"@type":"Offer","price":"0","priceCurrency":"USD"}}
 </script>
@@ -74,6 +74,7 @@ gtag('config', 'G-LJ4V6MDP0Y');
 .chip{font-weight:800;font-size:.72rem;line-height:1;padding:7px 0;border-radius:var(--r-sm);width:68px;text-align:center;color:#05110B}
 .chip.g{background:var(--good)}.chip.y{background:var(--short)}.chip.o{background:var(--busy)}.chip.r{background:var(--long)}
 @media (max-width:920px){.hero .wrap{grid-template-columns:1fr}.stage{width:min(100%,460px)}}
+@media (max-width:640px){.stage{aspect-ratio:auto;width:100%;display:flex;justify-content:center;padding-top:8px}.stage .photo{display:none}.stage .device{position:relative;left:auto;bottom:auto;--w:min(300px,78vw)}}
 
 /* PROOF STRIP */
 .strip{border-block:1px solid var(--hair);background:var(--surface)}
@@ -135,7 +136,7 @@ gtag('config', 'G-LJ4V6MDP0Y');
 .single{display:flex;justify-content:center}
 .single .device{--w:min(270px,60vw)}
 @media (max-width:900px){.panel,.panel.flip{grid-template-columns:1fr}.panel.flip .media{order:0}.panel .media{padding-top:0}}
-@media (max-width:560px){.pair .device:nth-child(2),.story{display:none}.pair .device{--w:min(260px,72vw)}.rrow{grid-template-columns:minmax(0,1fr) auto}.rrow .i{display:none}.rrow small{white-space:nowrap;overflow:hidden;text-overflow:ellipsis}.crewfig{grid-template-columns:1fr}.crewfig .device{justify-self:center;--w:min(230px,70vw)}}
+@media (max-width:560px){.pair .device:nth-child(2),.story{display:none}.pair .device{--w:min(260px,72vw)}.crewfig{grid-template-columns:1fr}.crewfig .device{justify-self:center;--w:min(230px,70vw)}}
 
 .crewpanel .banner{grid-column:1/-1;margin:0;aspect-ratio:1584/672;border-bottom:1px solid var(--hair)}
 .crewpanel .banner img{width:100%;height:100%;object-fit:cover}
@@ -177,6 +178,7 @@ gtag('config', 'G-LJ4V6MDP0Y');
 .rrow b{display:block;font-size:.95rem;letter-spacing:-.01em}
 .rrow small{display:block;font-size:.76rem;color:var(--ink3);margin-top:2px}
 .rank .ex{font-size:.7rem;color:var(--ink3);padding:8px 4px 0}
+@media (max-width:560px){.rank{padding:12px}.rrow{grid-template-columns:minmax(0,1fr) auto;gap:12px;padding:10px 8px}.rrow .i{display:none}.rrow small{white-space:nowrap;overflow:hidden;text-overflow:ellipsis}}
 @media (max-width:980px){.bento{grid-template-columns:1fr 1fr}.t-where,.t-sm,.t-wide{grid-column:span 2;grid-row:auto}.t-where{grid-template-columns:1fr}.t-season .shot{height:320px}}
 @media (max-width:560px){.bento{grid-template-columns:1fr}.t-where,.t-sm,.t-wide{grid-column:auto}}
 
@@ -227,6 +229,7 @@ gtag('config', 'G-LJ4V6MDP0Y');
 .gcard.feat{background-size:cover;background-position:65% 50%;min-height:340px;grid-row:span 2}
 .gcard.feat h3{font-size:clamp(1.6rem,2.6vw,2.1rem)}
 .gcards .gcard:not(.feat){min-height:0}
+.gcard.feat .meta{color:var(--ink)}
 @media (max-width:900px){.gcards{grid-template-columns:1fr 1fr}.gcard.feat{grid-column:span 2;grid-row:auto}}
 @media (max-width:560px){.gcards{grid-template-columns:1fr}.gcard.feat{grid-column:auto}}
 
@@ -315,7 +318,7 @@ gtag('config', 'G-LJ4V6MDP0Y');
 <section class="film" aria-label="PeakWait in 30 seconds">
   <div class="wrap">
     <div class="filmbox" id="filmbox">
-      <video id="film" src="/assets/img/film.mp4" poster="/assets/img/film-poster.jpg" preload="none" playsinline controls width="1920" height="1080"></video>
+      <video id="film" src="/assets/img/peakwait-film-1080.mp4" poster="/assets/img/film-poster.jpg" preload="none" playsinline controls width="1920" height="1080"></video>
       <button class="play" id="playbtn" type="button" aria-label="Play the 30-second PeakWait film">
         <span class="t"><b>Powder day. Everybody had the same idea.</b><span>Watch PeakWait in 30 seconds · sound on</span></span>
         <span class="pb"><svg viewBox="0 0 24 24"><path d="M7 4.5v15l13-7.5z"/></svg></span>
@@ -482,7 +485,7 @@ gtag('config', 'G-LJ4V6MDP0Y');
     </div>
     <div class="gcards">
 <!-- guides:start -->
-      <a class="gcard feat" href="/guides/winter-park-vs-copper/" style="background-image:linear-gradient(0deg,rgba(7,15,22,.92),rgba(7,15,22,.2) 70%),url(/assets/img/pov.jpg)"><span class="meta"><i>New</i>Playbooks · 5 min</span><div style="display:grid;gap:10px"><h3>Winter Park vs Copper Mountain: Which to Ski on a Saturday</h3><p>Two Ikon mountains off I-70 compared on drive, lift waits, terrain and parking, so you can pick Winter Park or Copper for your Saturday.</p></div></a>
+      <a class="gcard feat" href="/guides/winter-park-vs-copper/" style="background-image:linear-gradient(0deg,rgba(7,15,22,.96) 30%,rgba(7,15,22,.72) 62%,rgba(7,15,22,.45)),url(/assets/img/pov.jpg)"><span class="meta"><i>New</i>Colorado · 5 min</span><div style="display:grid;gap:10px"><h3>Winter Park vs Copper Mountain: Which to Ski on a Saturday</h3><p>Two Ikon mountains off I-70 compared on drive, lift waits, terrain and parking, so you can pick Winter Park or Copper for your Saturday.</p></div></a>
       <a class="gcard" href="/guides/mammoth-mountain-lift-lines/"><span class="meta">California · 5 min</span><h3>Mammoth Mountain Lift Waits: The LA Weekend, Three Lodges and the Gondola</h3><span class="arrow">Read</span></a>
       <a class="gcard" href="/guides/deer-valley-lift-lines/"><span class="meta">Utah · 5 min</span><h3>Deer Valley Lift Waits: Ticket Caps, East Village and Where Waits Build</h3><span class="arrow">Read</span></a>
       <a class="gcard" href="/guides/loveland-lift-lines/"><span class="meta">Colorado · 5 min</span><h3>Loveland Lift Waits: How Waits Work at Denver's Closest Big Mountain</h3><span class="arrow">Read</span></a>
