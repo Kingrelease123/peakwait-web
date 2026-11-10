@@ -795,7 +795,7 @@ function articleHtml(a, others) {
   return `<!doctype html>
 <html lang="en">
 <head>
-${head({ title, description: a.description, url, image: `${SITE}${img}`, type: "article", extra: `<meta name="keywords" content="${esc(a.keywords)}">
+${head({ title, description: a.description, url, image: `${SITE}/assets/og/${sectionOf(a)}.jpg`, type: "article", extra: `<meta name="keywords" content="${esc(a.keywords)}">
 <meta name="author" content="${AUTHOR}">
 <script type="application/ld+json">${JSON.stringify(artLd)}</script>
 <script type="application/ld+json">${JSON.stringify(faqLd)}</script>
@@ -906,7 +906,7 @@ function indexHtml(arts) {
   return `<!doctype html>
 <html lang="en">
 <head>
-${head({ title: "Ski Guides by Mountain: Beat the Wait | PeakWait", description: "Where the waits build, mountain by mountain: which lift stacks up, when it clears, and where the quiet side is. Plus how to pick the day and the mountain. By Herb Sendit.", url: `${SITE}/guides/`, extra: `<style>${css}</style>` })}
+${head({ title: "Ski Guides by Mountain: Beat the Wait | PeakWait", description: "Where the waits build, mountain by mountain: which lift stacks up, when it clears, and where the quiet side is. Plus how to pick the day and the mountain. By Herb Sendit.", url: `${SITE}/guides/`, image: `${SITE}/assets/og/guides.jpg`, extra: `<style>${css}</style>` })}
 </head>
 <body>
 ${nav("/guides/")}
@@ -984,7 +984,7 @@ ${u.css || ""}`;
   return `<!doctype html>
 <html lang="en">
 <head>
-${head({ title: `PeakWait ${u.version}: ${u.title}`, description: u.summary, url, type: "article", extra: `<meta name="author" content="PeakWait">
+${head({ title: `PeakWait ${u.version}: ${u.title}`, description: u.summary, url, image: `${SITE}/assets/og/updates.jpg`, type: "article", extra: `<meta name="author" content="PeakWait">
 <script type="application/ld+json">${JSON.stringify(artLd)}</script>
 <style>${css}</style>` })}
 </head>
@@ -1037,7 +1037,7 @@ function updatesIndexHtml(all) {
   return `<!doctype html>
 <html lang="en">
 <head>
-${head({ title: "What's New in PeakWait | Product Updates", description: "What's new in PeakWait: release notes and the story behind each update.", url: `${SITE}/updates/`, extra: `<style>${css}</style>` })}
+${head({ title: "What's New in PeakWait | Product Updates", description: "What's new in PeakWait: release notes and the story behind each update.", url: `${SITE}/updates/`, image: `${SITE}/assets/og/updates.jpg`, extra: `<style>${css}</style>` })}
 </head>
 <body>
 ${nav()}
