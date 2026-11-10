@@ -2,42 +2,7 @@
 <html lang="en">
 <head>
 <meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Come find me on PeakWait</title>
-<meta name="description" content="A friend wants to ski with you on PeakWait — live lift waits and find your crew on the mountain. Free.">
-<link rel="icon" href="/favicon.svg">
-<!-- Rich, action-oriented link preview (iMessage / social) -->
-<meta property="og:type" content="website">
-<meta property="og:site_name" content="PeakWait">
-<meta property="og:title" content="Come find me on the mountain 🎿">
-<meta property="og:description" content="A friend wants to ski with you. Live lift waits + see your crew in real time — free. Tap to join.">
-<meta property="og:url" content="https://peakwait.net/add">
-<meta property="og:image" content="https://peakwait.net/og-invite.png">
-<meta property="og:image:width" content="1200">
-<meta property="og:image:height" content="630">
-<meta property="og:image:alt" content="Come find me on the mountain — join me on PeakWait.">
-<meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="Come find me on the mountain 🎿">
-<meta name="twitter:description" content="A friend wants to ski with you — live lift waits + find your crew. Free.">
-<meta name="twitter:image" content="https://peakwait.net/og-invite.png">
-<style>
-  :root{ --bg:#070f16; --surface:#101d28; --hair:#2c3b48; --brand:#43acfb; --gold:#feb84d; --ink:#eff4f9; --ink2:#adb9c4;
-    --font:-apple-system,BlinkMacSystemFont,"Segoe UI",system-ui,sans-serif }
-  *{box-sizing:border-box;margin:0;padding:0}
-  body{background:radial-gradient(120% 80% at 50% -10%,#12212e,#070f16 60%);color:var(--ink);font-family:var(--font);
-    min-height:100vh;display:grid;place-items:center;padding:28px;text-align:center}
-  .card{max-width:420px;width:100%;background:var(--surface);border:1px solid var(--hair);border-radius:22px;padding:34px 26px}
-  .logo{display:flex;align-items:center;justify-content:center;gap:9px;margin-bottom:18px}
-  .logo svg{width:30px;height:30px}
-  .logo b{font-size:1.15rem;font-weight:800;letter-spacing:-.01em}
-  .spark{color:var(--gold)}
-  h1{font-size:1.5rem;font-weight:800;letter-spacing:-.02em;line-height:1.2;margin-bottom:8px;text-wrap:balance}
-  h1 .h{color:var(--brand)}
-  p{color:var(--ink2);font-size:.95rem;line-height:1.5;margin-bottom:22px}
-  .btn{display:block;background:var(--gold);color:#1a1205;font-weight:800;text-decoration:none;border-radius:13px;padding:14px;font-size:1rem}
-  .step{color:var(--ink2);font-size:.8rem;margin-top:16px;line-height:1.5}
-  .step b{color:var(--ink)}
-</style>
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <!-- Google tag (gtag.js) -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-LJ4V6MDP0Y"></script>
 <script>
@@ -46,22 +11,66 @@ function gtag(){dataLayer.push(arguments);}
 gtag('js', new Date());
 gtag('config', 'G-LJ4V6MDP0Y');
 </script>
+<title>Come find me on PeakWait</title>
+<meta name="description" content="A friend wants to ski with you on PeakWait: live lift waits and your crew on the mountain. Ski your first day and you both get a week of PeakWait Plus.">
+<link rel="icon" href="/favicon.ico" sizes="any">
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+<meta name="theme-color" content="#070F16">
+<meta name="robots" content="noindex">
+<!-- Link preview (iMessage / social) -->
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="PeakWait">
+<meta property="og:title" content="Come find me on the mountain 🎿">
+<meta property="og:description" content="A friend wants to ski with you. Ski your first day with PeakWait and you both get a week of Plus.">
+<meta property="og:url" content="https://peakwait.net/add">
+<meta property="og:image" content="https://peakwait.net/og-invite.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="Come find me on the mountain. Join me on PeakWait.">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Come find me on the mountain 🎿">
+<meta name="twitter:description" content="Ski your first day with PeakWait and you both get a week of Plus.">
+<meta name="twitter:image" content="https://peakwait.net/og-invite.png">
+<link rel="stylesheet" href="/assets/site.css">
+<style>
+.invite{min-height:100vh;display:grid;align-items:center;background:radial-gradient(120% 70% at 80% 0%,#15304C 0%,transparent 60%),linear-gradient(180deg,var(--skyTop),var(--bg) 80%);padding-block:48px}
+.invite .wrap{display:grid;grid-template-columns:minmax(0,1fr) auto;gap:clamp(32px,6vw,72px);align-items:center;max-width:980px}
+.invite .brandmark{margin-bottom:28px}
+.invite h1{font-size:clamp(2.3rem,6vw,3.8rem);font-weight:850}
+.invite .say{margin-top:18px;color:var(--ink2);font-size:1.12rem;max-width:42ch}
+.gift{margin-top:24px;display:flex;gap:14px;align-items:center;padding:16px 18px;border:1px solid color-mix(in srgb,var(--gold) 40%,var(--hair));border-radius:var(--r-md);background:rgba(254,184,77,.06);max-width:44ch}
+.gift b{color:var(--gold)}
+.gift p{font-size:.98rem;color:var(--ink)}
+.cta{margin-top:28px;display:flex;flex-wrap:wrap;gap:14px;align-items:center}
+.step{margin-top:22px;font-size:.92rem;color:var(--ink3);max-width:46ch}
+.step b{color:var(--ink2)}
+@media (max-width:760px){.invite .wrap{grid-template-columns:1fr}.invite .device{justify-self:center}}
+</style>
 </head>
 <body>
-  <div class="card">
-    <div class="logo"><svg viewBox="0 0 24 24" fill="none" stroke="#43acfb" stroke-width="1.8" stroke-linejoin="round"><path d="M3 20l6-11 4 6 2-3 6 8z"/></svg><b>PeakWait</b></div>
-    <h1><span id="who">A friend</span> wants to ski with you</h1>
-    <p>PeakWait shows live lift waits, points you to the shortest lines, and lets your crew find each other on the mountain.</p>
-    <a class="btn" href="https://apps.apple.com/app/peakwait/id6793253589">Get PeakWait — free</a>
-    <div class="step">Already have the app? Open it, go to <b>Settings → Friends &amp; Family → Add a friend</b> and enter <b id="handle">their handle</b>.</div>
+<main class="invite">
+  <div class="wrap">
+    <div>
+      <a class="brandmark" href="/"><img src="/apple-touch-icon.png" alt="" width="34" height="34">PeakWait</a>
+      <h1><span id="who">A friend</span> wants to ski <span class="gold">with you.</span></h1>
+      <p class="say">PeakWait shows how long the wait is at every lift, points you to the best next chair, and lets your crew find each other on the mountain.</p>
+      <div class="gift"><p><b>A week of Plus, for both of you.</b> Ski your first day with PeakWait and you each get a week of PeakWait Plus.</p></div>
+      <div class="cta">
+        <a class="btn" href="https://apps.apple.com/us/app/id6793253589">Download now for your season</a>
+      </div>
+      <p class="step">Already have the app? Open it, go to <b>Crew → Add a friend</b> and enter <b id="handle">their handle</b>.</p>
+    </div>
+    <div class="device" style="--w:240px"><img src="/assets/img/app-07-crew.jpg" alt="My Crew in PeakWait: friends on the mountain and where each one is" width="990" height="2151"></div>
   </div>
-  <script>
-    // Read the inviter's handle from ?h= and personalize (no tracking, just display).
-    var h = new URLSearchParams(location.search).get('h');
-    if (h && /^[A-Za-z0-9_]{3,20}$/.test(h)) {
-      document.getElementById('who').textContent = '@' + h;
-      document.getElementById('handle').textContent = '@' + h;
-    }
-  </script>
+</main>
+<script>
+  // Read the inviter's handle from ?h= and personalize (no tracking, just display).
+  var h = new URLSearchParams(location.search).get('h');
+  if (h && /^[A-Za-z0-9_]{3,20}$/.test(h)) {
+    document.getElementById('who').textContent = '@' + h;
+    document.getElementById('handle').textContent = '@' + h;
+  }
+</script>
 </body>
 </html>

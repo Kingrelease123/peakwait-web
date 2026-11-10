@@ -2,7 +2,7 @@
 
 > PeakWait is a real-time ski-lift wait app for iPhone. Skiers on the mountain report live lift waits (Moving, Short, Busy, Long), and PeakWait shows which lifts are moving right now, ranks where to ski today by snow and crowds, and points you to the best next chair. It covers 116 resorts across North and South America. Free to check status and report waits; PeakWait Plus adds the cross-resort "where to ski today" guide, powder alerts, and live friend location. Made by PeakWait LLC.
 
-# Why Ski Resort Lift Lines Feel So Brutal Now, and How to Get Your Day Back
+# Why Ski Resort Lift Waits Feel So Brutal Now, and How to Get Your Day Back
 By Herb Sendit · July 19, 2026 · https://peakwait.net/guides/ski-resort-lift-lines/
 
 Skiers don't talk about lift lines like a small annoyance. They talk about them like a betrayal. "I found hell today." "Spent more time in line than skiing." "$200 to stand in a line." "That's a no from me, dawg." The pain is real, it hits hardest on the best days, and the parts you can actually control are very fixable.
@@ -44,32 +44,32 @@ A: Yes. It shows live waits from skiers on the hill, ranks which mountain to ski
 
 ---
 
-# The Most Accurate Whistler Lift Wait Times in 2026
+# Whistler Lift Wait Times in 2026: Where the Waits Build and How to Ski Around Them
 By Herb Sendit · July 31, 2026 · https://peakwait.net/guides/whistler-lift-wait-times/
 
-No source is perfect, but the truest signal isn't a number scraped off Whistler Blackcomb's website. It's what the skiers standing in the wait right now are actually seeing. The official app, the Epic app, and Whistler Peak Live mostly recycle the same resort feed, or a light board somebody updates by hand, and it trails reality by 15 to 40 minutes. That's how your phone says "12 min" while your toes go numb in a 40 minute wait at 7th Heaven.
+Whistler Blackcomb is huge, but the waits still pile up in a few predictable places. Here is where they build, when they clear, and how to check the wait from the people standing in it before you ski across the mountain to join it.
 
-## Why every Whistler wait time is basically fan fiction
-If three different apps show you the same number, it's because they're all drinking from one straw: Whistler Blackcomb's own feed. And that number drifts from reality for gloriously low tech reasons. The light boards are manual. Someone has to literally phone the mountain office and say "hey, it's slammed, change the board." That happens after the wait balloons, not before. Sensor estimates lag. Gate and Bluetooth counters guess the flow the way a mall food court does. Fine for "is it kind of busy," useless for a lift that just plugged up on a pow lap. GPS is only partial. Phone based estimates only work if enough riders have that app open with tracking on, and most people don't. By the time any of it updates, the wait has already changed and everyone's moved on. It's less "live data" and more "a postcard from 25 minutes ago."
+## How a Whistler wait changes through the day
+A wait at Whistler moves fast. The empty chair you spotted on the last lap can be the longest wait on the hill twenty minutes later, especially on a powder morning or when the lower mountain is socked in and everyone heads up top. First hour: the gondolas and the base chairs take the hit while the alpine waits for patrol to open it. Late morning: the alpine lifts fill once they open, and the crowd follows the fresh snow. Lunch: the quietest window of the day for the busy chairs, if you can eat early or late. The trick is reading the wait as it is now, not as it was on your last ride up.
 
-## The one genuinely accurate source: the people already standing there
-The r/Whistler crowd figured this out years ago. The only accurate thing is standing in the line yourself. That's the whole idea behind PeakWait. Instead of a stale scraped number, it shows what riders on the hill this minute are reporting. Skiers tag each lift Moving, Short, Busy, or Long as they see it, blended with live movement on the mountain. Every wait comes with a timestamp, so you know if it's two minutes old or two hours old. And when there's no signal, it says "unknown" instead of confidently making something up. Then it points you to the best next chair across the whole mountain, so you're skiing toward the short wait instead of into the stampede. Still an estimate, sure. But it's the crowd's live read from people who are actually there. About as honest as "just go look," without the part where you trudge across the base in ski boots to find out.
+## Check the wait from the people already standing in it
+That is the whole idea behind PeakWait. It shows what riders on the hill this minute are reporting, so you can pick a chair before you ski to it. Skiers tag each lift Moving, Short, Busy, or Long as they see it, blended with live movement on the mountain. Every wait comes with a timestamp, so you know if it's two minutes old or two hours old. With no signal, it says so instead of guessing. Then it points you to the best next chair across the whole mountain, so you're skiing toward the short wait instead of into the crowd.
 
 ## 7th Heaven, Harmony, Symphony: the usual suspects
-The alpine trio can hit 45 minutes on a weekend or powder day. Amazing terrain, not so amazing lift capacity. Lap it early or late, not at noon with everyone else. When the lower mountain is socked in or unskiable, everybody funnels up top and the alpine waits spike. That's exactly when live data earns its keep. Pow mornings: the empty lift you spotted 20 minutes ago is now the longest wait on the hill. Chase live, not lagged.
+The alpine trio can hit 45 minutes on a weekend or powder day. Amazing terrain, not so amazing lift capacity. Lap it early or late, not at noon with everyone else. When the lower mountain is socked in or unskiable, everybody funnels up top and the alpine waits spike. That's exactly when a live wait earns its keep. Pow mornings: the empty lift you spotted 20 minutes ago is now the longest wait on the hill. Go by the live wait, not the last one you saw.
 
 ## FAQ
-Q: What's the most accurate source for Whistler lift wait times?
-A: Live reports from skiers who are on the hill right now. Official and app numbers mostly come from the resort feed and lag by 15 to 40 minutes, while crowdsourced live reports, like PeakWait's, show the wait as it actually is.
+Q: How do I check Whistler lift wait times live?
+A: Open PeakWait for live waits reported by skiers on the mountain right now, shown as Moving, Short, Busy or Long with how fresh each one is.
 
-Q: Is the Whistler Peak app or Epic app accurate for wait times?
-A: They're handy for lift status, but their wait numbers mostly come from Whistler Blackcomb's feed, so they lag the real conditions and often disagree with the wait you're actually standing in.
+Q: When are Whistler lift waits shortest?
+A: First chair, over lunch and in the last hour of the day, and midweek outside the holidays.
 
 Q: Why is 7th Heaven always so busy?
 A: Big, popular alpine terrain served by limited chair capacity, so it fills up fast, especially on powder and weekend days. Lap it first thing or late afternoon.
 
 Q: How does PeakWait get its wait times?
-A: From skiers on the mountain reporting live waits, blended with movement data, shown as timestamped bands, Moving, Short, Busy, or Long, instead of one scraped official number.
+A: From skiers on the mountain reporting live waits, blended with movement data, shown as timestamped bands: Moving, Short, Busy, or Long.
 
 
 ---
@@ -137,78 +137,6 @@ A: No. It's a lift wait and where to ski app, not a traffic router. But it helps
 
 ---
 
-# PeakWait vs the Whistler Peak App: Which Is Better for Lift Waits?
-By Herb Sendit · August 12, 2026 · https://peakwait.net/guides/peakwait-vs-whistler-peak-app/
-
-Short version: the Whistler Peak app, and Whistler Peak Live, is a great all in one dashboard for one mountain. PeakWait is a live, crowdsourced wait tracker for many. If your only question is "which lift is actually short right now," they get there very differently, and the difference matters.
-
-## What each one is built for
-The Whistler Peak app is a Whistler Blackcomb companion. Conditions, cams, weather, avalanche info, lift status, all in one tidy place for one resort. It's genuinely useful, and plenty of locals lean on it. PeakWait is a cross resort lift wait app. It covers 116 mountains across North and South America, including Whistler Blackcomb, and the whole focus is one question: where is the short wait, right now.
-
-## Where the wait numbers come from: the important part
-This is the real difference. The Whistler Peak app's wait times, like most resort companion apps, trace back to the resort's own feed. That feed updates on a delay, so the number can trail the actual line by 15 to 40 minutes. A lot of skiers have watched an app say "12 min" while they stood in 40. PeakWait's waits come from skiers on the hill reporting what they see, blended with live movement and stamped with how fresh each report is. It's an estimate too, but it's the crowd's live read instead of a delayed official number. Here's the longer story on why resort wait numbers lag.
-
-## One mountain versus many
-If you only ever ski Whistler, a Whistler only app makes sense. If you ski more than one resort, or you want to decide between a few on a given morning, a single resort app can't help you choose. PeakWait's "Where to ski today" ranks nearby mountains by snow and waits, which is the actual call you make before you leave the house.
-
-## So which should you use?
-Use the Whistler Peak app for the full Whistler dashboard: cams, avalanche, weather, official status. Use PeakWait for live crowdsourced lift waits, the best next chair, and deciding which mountain to ski, at Whistler and 90 other resorts. Honestly, run both. They don't really compete. One's a resort dashboard, the other's a live wait tracker.
-
-## FAQ
-Q: Is the Whistler Peak app accurate for wait times?
-A: It's a solid all in one Whistler dashboard, but its wait numbers come from the resort feed, so they lag real conditions. For the live wait, crowdsourced reports like PeakWait's tend to be closer to what you're actually standing in.
-
-Q: Does PeakWait cover Whistler Blackcomb?
-A: Yes. Whistler Blackcomb is one of 116 resorts PeakWait covers across North and South America.
-
-Q: What's the difference between PeakWait and the Whistler Peak app?
-A: The Whistler Peak app is a single resort dashboard: conditions, cams, status. PeakWait is a cross resort, crowdsourced live wait tracker that also ranks where to ski today.
-
-Q: Which app is best for Whistler lift lines?
-A: For the live wait right now, a crowdsourced tracker like PeakWait. For the full resort dashboard, the Whistler Peak app. A lot of skiers use both.
-
-
----
-
-# The Best Apps for Ski Lift Wait Times in 2026
-By Herb Sendit · August 23, 2026 · https://peakwait.net/guides/best-ski-lift-wait-apps/
-
-There's no single app that does everything, and anyone who says otherwise is selling something. Here's the honest breakdown of what skiers actually use for waits, crowds, tracking, and conditions, and which one to open when your only goal is the shortest line.
-
-## For live lift waits: PeakWait
-Best for the exact question "which lift is short right now." PeakWait shows crowdsourced waits reported by skiers on the hill, tagged Moving, Short, Busy, or Long, ranks where to ski today by snow and crowds across 116 resorts, and points you to the best next chair. It's free to check status and report waits, and PeakWait Plus adds the cross resort guide, powder alerts, and live friend location. It's weakest where nobody's reporting yet, though it says "unknown" instead of guessing.
-
-## For official status and trail maps: the resort apps
-The Epic and Ikon apps, plus individual resort apps, are the source of truth for lift and trail status, interactive maps, and your pass. Handy and official. The catch is their wait estimates come from resort sensors and feeds, so they lag the real line, and each one only covers its own resorts.
-
-## For tracking your day: Slopes
-If you want vertical, speed, runs, and a map of your day, Slopes is excellent. It's a tracking app, not a wait app, so it won't tell you which line is short, but it pairs well with one that does. PeakWait also records your day, if you'd rather keep everything in one place.
-
-## For snow and conditions: OnTheSnow and the forecast apps
-For snowfall totals, base depth, and forecasts, condition apps and sites do the job well. They're great for deciding whether to go, not for what to do once you're there.
-
-## For one resort, all in one: local companion apps
-Aggregators like Whistler Peak Live bundle cams, weather, avalanche, and status for a single mountain. Good dashboards, one resort each, and their waits still ride on the resort feed. Here's the full PeakWait vs Whistler Peak breakdown.
-
-## The short answer
-If your goal is spending less of your day in line, you want live crowdsourced waits and a way to pick the right mountain. That's PeakWait. Pair it with your resort app for official status, add a tracker if you love stats, and you've got the whole day covered.
-
-## FAQ
-Q: What's the best app for ski lift wait times?
-A: For live, crowdsourced waits and choosing which mountain to ski, PeakWait. For official lift status, your resort's app, Epic, Ikon, or the resort's own. Many skiers use both together.
-
-Q: Do ski resort apps show accurate wait times?
-A: They show official estimates from resort sensors and feeds, which lag the real line, often by 15 to 40 minutes. Crowdsourced apps report the wait as skiers see it right now.
-
-Q: Is there a free ski lift wait app?
-A: Yes. PeakWait is free to check lift status and report waits, with an optional Plus tier for the cross resort guide, powder alerts, and live friend location.
-
-Q: What app tells you the least crowded lifts or runs?
-A: A live wait app like PeakWait, which shows which lifts are moving now and points you to the best next chair, is built for exactly that.
-
-
----
-
 # The Least Crowded Colorado Ski Resorts, and How to Find the Quiet One Today
 By Herb Sendit · August 19, 2026 · https://peakwait.net/guides/least-crowded-colorado-ski-resorts/
 
@@ -242,7 +170,7 @@ A: Check live, crowdsourced waits. PeakWait ranks nearby resorts by snow and cro
 
 ---
 
-# Epic vs Ikon: Which Pass Has Worse Lift Lines in 2026?
+# Epic vs Ikon: Which Pass Has Longer Lift Waits in 2026?
 By Herb Sendit · August 22, 2026 · https://peakwait.net/guides/epic-vs-ikon-crowds/
 
 Every fall, skiers switch passes over crowds, and every spring they swear the other one was worse. Here's the honest take: on a weekend, Epic and Ikon are about the same. The crowd is a function of which mountain and which day, far more than which pass is in your pocket.
@@ -287,7 +215,7 @@ In one r/SkiPA poll of more than 400 skiers, the results were lopsided. Almost e
 It's simple math the r/skiing crowd runs constantly. A run at most resorts lasts a few minutes. Wait 15 minutes for a 5 minute run and you've spent three times as long in line as on snow. As one skier put it, "I wouldn't ski at all if I had to wait 45 minutes per run." Another: "anything longer than 10 minutes is unacceptable, I'll find another lift, leave, or take a break."
 
 ## So why do resorts blow past it?
-Because on weekends and powder days, demand overwhelms lift capacity, and the number you see on the resort app lags the real one. That gap between a reasonable wait under 15 minutes and a real one of 30, 45, or 90 minutes is the whole reason a great snow day can still feel like a wasted one.
+Because on weekends and powder days, demand overwhelms lift capacity, and the wait builds faster than you can see it from the base. That gap between a reasonable wait under 15 minutes and a real one of 30, 45, or 90 minutes is the whole reason a great snow day can still feel like a wasted one.
 
 ## How to stay under the line
 You can keep your own waits close to that reasonable number without setting a 5am alarm. Ride mid mountain lifts and the singles line, not the base bottlenecks. Go on the right day and the right mountain. Weekdays and quieter hills stay in single digits. Check live waits before you commit. PeakWait shows which lifts are actually short right now and points you to the best next chair, so you're not gambling a run on a 40 minute surprise.
@@ -377,7 +305,7 @@ A: Go early or late, ski the less obvious pods and the singles line, and check l
 
 ---
 
-# Copper Mountain Lift Lines: Where to Ski and What to Skip in 2026
+# Copper Mountain Lift Waits: Where to Ski and What to Skip in 2026
 By Herb Sendit · August 17, 2026 · https://peakwait.net/guides/copper-mountain-lift-lines/
 
 Copper is a local favorite that gets slammed on weekends, but the crowd is wildly concentrated. A few base lifts eat the whole line while the rest of the mountain runs short. Knowing which is which is the entire game.
@@ -482,7 +410,7 @@ A: Weekdays and non-holiday periods. Avoid holiday weeks and the first sunny day
 
 ---
 
-# Beating Lift Lines on the Ice Coast: A Northeast Crowds Guide in 2026
+# Beating Lift Waits on the Ice Coast: A Northeast Crowds Guide in 2026
 By Herb Sendit · August 9, 2026 · https://peakwait.net/guides/northeast-ski-crowds/
 
 Out West, a long wait ruins a long run. In the Northeast, the runs are shorter, so the wait to ski ratio is even more brutal. A 20 minute line for a two minute trail is its own special heartbreak. Here's how to ski around it on the ice coast.
@@ -515,7 +443,7 @@ A: Ski weekdays, get first chair or arrive after 1pm, ride the less obvious lift
 
 ---
 
-# Breckenridge Lift Lines: Where They Form and How to Skip Them in 2026
+# Breckenridge Lift Waits: Where They Form and How to Skip Them in 2026
 By Herb Sendit · September 4, 2026 · https://peakwait.net/guides/breckenridge-lift-lines/
 
 Breckenridge is routinely the busiest ski resort in the country, and it does not feel busy everywhere. It has 34 lifts spread across five peaks, and on a normal Saturday the wait is concentrated at four of them. If you know which four, you can ski most of the day without standing still.
@@ -557,7 +485,7 @@ A: Yes. PeakWait shows current waits lift by lift, reported by skiers on the mou
 
 ---
 
-# Vail Lift Lines: The Two That Matter and the Ones That Don't in 2026
+# Vail Lift Waits: The Two That Matter and the Ones That Don't in 2026
 By Herb Sendit · September 4, 2026 · https://peakwait.net/guides/vail-lift-lines/
 
 Vail is one of the largest ski areas in North America and it still manages to feel crowded, because size is not the same as spread. Almost everybody enters the mountain through two lifts, and the crowd moves across the terrain in a pattern you can predict and get in front of.
@@ -596,7 +524,7 @@ A: Yes. PeakWait shows live waits at Vail and across Colorado, so you can compar
 
 ---
 
-# Keystone Lift Lines: Three Mountains, One Way In and One Way Home in 2026
+# Keystone Lift Waits: Three Mountains, One Way In and One Way Home in 2026
 By Herb Sendit · September 6, 2026 · https://peakwait.net/guides/keystone-lift-lines/
 
 Keystone is built like a hallway. Three mountains sit in a row, Dercum in front, North Peak behind it, the Outback behind that, and the only way to the good stuff is over the top of the one in front. That shape decides your whole day. The crowd stacks at the front door in the morning and at the back door in the afternoon, and the skiers who do well at Keystone are the ones who go the other way.
@@ -677,7 +605,7 @@ A: Yes. PeakWait shows a mountain as open the moment its lifts are turning, from
 
 ---
 
-# Arapahoe Basin Lift Lines: First Chair, Beavers, Parking
+# Arapahoe Basin Lift Waits: First Chair, Beavers, Parking
 By Herb Sendit · November 5, 2026 · https://peakwait.net/guides/arapahoe-basin-lift-lines/
 
 Arapahoe Basin opened for 2026-27 on October 28 with one chair and one run, which is exactly when the Black Mountain Express wait gets interesting. Here is how first chair season works, what changes when the Beavers and Steep Gullies come into play, how to handle weekend parking in the Early Riser lot, and why the spring season is worth planning around. It comes from someone who has stood in these waits with cold toes.
@@ -767,7 +695,7 @@ A: Yes. Every date here is a target. A resort can open early when snow arrives, 
 
 ---
 
-# Deer Valley Lift Lines: Ticket Caps and East Village Waits
+# Deer Valley Lift Waits: Ticket Caps and East Village Waits
 By Herb Sendit · November 7, 2026 · https://peakwait.net/guides/deer-valley-lift-lines/
 
 Deer Valley limits how many lift tickets it sells each day, so people assume there are no lift lines. Then the resort more than doubled in size and the traffic patterns changed. This guide covers what the resort has confirmed about the caps, what is new on the East Village side, and which chairs funnel people into one spot. The season has not started yet, so read this as a map and not as today's conditions.
@@ -851,7 +779,7 @@ A: Old skis or a board you do not mind scratching, since rocks and unmarked obst
 
 ---
 
-# Loveland Lift Lines: Waits at Denver's Closest Big Mountain
+# Loveland Lift Waits: Waits at Denver's Closest Big Mountain
 By Herb Sendit · November 6, 2026 · https://peakwait.net/guides/loveland-lift-lines/
 
 Loveland sits 53 miles from Denver at exit 216, just before the Eisenhower Tunnel, and that location is most of its charm. You get 1,800 acres, free parking and a reputation for waits that stay short. Here is how the lifts split up, what Chair 1 is now, when to send beginners to the Valley, and when the calm gets tested.
@@ -896,7 +824,7 @@ A: The resort lists the Snowstang bus from Denver for direct service. Check the 
 
 ---
 
-# Mammoth Mountain Lift Lines: Main, Canyon, Eagle Guide
+# Mammoth Mountain Lift Waits: Main, Canyon, Eagle Guide
 By Herb Sendit · November 8, 2026 · https://peakwait.net/guides/mammoth-mountain-lift-lines/
 
 Mammoth sits about five hours from Los Angeles, and on a winter Saturday it can feel like most of LA made the drive. This guide covers where the weekend crowd piles up, how Main Lodge, Canyon and Eagle differ, and what the gondola to the top is really like. The resort announced Nov 13 as opening day, so we start there.
@@ -938,7 +866,7 @@ A: Pine Forecast lists powder weekends, the winter holiday week and Presidents' 
 
 ---
 
-# Park City Lift Lines: Where the Waits Are and How to Dodge Them
+# Park City Lift Waits: Where the Waits Are and How to Dodge Them
 By Herb Sendit · November 4, 2026 · https://peakwait.net/guides/park-city-lift-lines/
 
 Park City Mountain is the largest ski resort in the United States, which means the waits are not in one place. They shift between Mountain Village, Canyons Village and the Quicksilver Gondola that links them. Here is where people pile up, and how to spend your day on the chairs that are not the obvious ones.
@@ -980,7 +908,7 @@ A: Yes. The app shows skier reports of Moving, Short, Busy or Long on each lift,
 
 ---
 
-# Winter Park Lift Lines: Where Waits Build and How to Dodge Them
+# Winter Park Lift Waits: Where Waits Build and How to Dodge Them
 By Herb Sendit · November 2, 2026 · https://peakwait.net/guides/winter-park-lift-lines/
 
 Winter Park is the closest big ski area to Denver, so the waits build in predictable places at predictable times. The Mary Jane base, the Gondola and the first hour on a weekend are where most people lose their morning. Here is where the crunch happens, how the drive over Berthoud Pass fits in, and where to go when the main chairs are packed.

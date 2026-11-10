@@ -2,15 +2,14 @@
 /**
  * PeakWait Guides — static content engine.
  * Add an entry to ARTICLES, run `node tools/build-guides.mjs`, commit the output.
- * Emits: /guides/<slug>/index.html, /guides/index.html, /sitemap.xml, /robots.txt
+ * Emits: /guides/<slug>/index.html, /guides/index.html, /updates/** (from updates-src/), /sitemap.xml, /robots.txt
  * Author byline is always "Herb Sendit" (never the founder's real name).
  * Voice: human, funny, no em-dashes, minimal hyphens.
  */
 import fs from "node:fs";
 import path from "node:path";
 
-const SITE = "https://peakwait.net";
-const DOWNLOAD_URL = "https://apps.apple.com/us/app/id6793253589"; // live App Store listing
+import { SITE, DOWNLOAD_URL, esc, waitify, head, nav, footer, endCta, device } from "./lib/shell.mjs";
 const AUTHOR = "Herb Sendit";
 const ROOT = path.resolve(path.dirname(new URL(import.meta.url).pathname), "..");
 
@@ -60,46 +59,45 @@ const ARTICLES = [
 
   {
     slug: "whistler-lift-wait-times",
-    title: "The Most Accurate Whistler Lift Wait Times in 2026",
+    title: "Whistler Lift Wait Times in 2026: Where the Waits Build and How to Ski Around Them",
     description:
-      "Whistler's lift wait times are wrong more often than the forecast. Here's why every app fibs to you, and the most accurate way to check waits live.",
-    h1: "The most accurate way to check Whistler lift wait times",
-    readTime: "6 min",
+      "Where the waits build at Whistler Blackcomb, lift by lift, when they clear, and how to check the wait live before you commit to a chair.",
+    h1: "Whistler lift wait times: where the waits build and how to ski around them",
+    readTime: "5 min",
     published: "2026-07-31",
-    updated: "2026-07-31",
-    keywords: "whistler lift wait times, most accurate lift wait times, whistler chairlift wait times, 7th heaven wait, whistler peak app",
-    dek: `No source is perfect, but the truest signal isn't a number scraped off Whistler Blackcomb's website. It's what the skiers standing in the wait right now are actually seeing. The official app, the Epic app, and Whistler Peak Live mostly recycle the same resort feed, or a light board somebody updates by hand, and it trails reality by 15 to 40 minutes. That's how your phone says "12 min" while your toes go numb in a 40 minute wait at 7th Heaven.`,
+    updated: "2026-11-09",
+    keywords: "whistler lift wait times, whistler chairlift wait times, 7th heaven wait, whistler blackcomb crowds, best time to ski whistler",
+    dek: `Whistler Blackcomb is huge, but the waits still pile up in a few predictable places. Here is where they build, when they clear, and how to check the wait from the people standing in it before you ski across the mountain to join it.`,
     sections: [
-      { h2: "Why every Whistler wait time is basically fan fiction", html: `
-<p>If three different apps show you the same number, it's because they're all drinking from one straw: Whistler Blackcomb's own feed. And that number drifts from reality for gloriously low tech reasons.</p>
+      { h2: "How a Whistler wait changes through the day", html: `
+<p>A wait at Whistler moves fast. The empty chair you spotted on the last lap can be the longest wait on the hill twenty minutes later, especially on a powder morning or when the lower mountain is socked in and everyone heads up top.</p>
 <ul>
-  <li><strong>The light boards are manual.</strong> Someone has to literally phone the mountain office and say "hey, it's slammed, change the board." That happens after the wait balloons, not before.</li>
-  <li><strong>Sensor estimates lag.</strong> Gate and Bluetooth counters guess the flow the way a mall food court does. Fine for "is it kind of busy," useless for a lift that just plugged up on a pow lap.</li>
-  <li><strong>GPS is only partial.</strong> Phone based estimates only work if enough riders have that app open with tracking on, and most people don't.</li>
+  <li><strong>First hour:</strong> the gondolas and the base chairs take the hit while the alpine waits for patrol to open it.</li>
+  <li><strong>Late morning:</strong> the alpine lifts fill once they open, and the crowd follows the fresh snow.</li>
+  <li><strong>Lunch:</strong> the quietest window of the day for the busy chairs, if you can eat early or late.</li>
 </ul>
-<p>By the time any of it updates, the wait has already changed and everyone's moved on. It's less "live data" and more "a postcard from 25 minutes ago."</p>` },
-      { h2: "The one genuinely accurate source: the people already standing there", html: `
-<p>The r/Whistler crowd figured this out years ago. The only accurate thing is standing in the line yourself. That's the whole idea behind PeakWait. Instead of a stale scraped number, it shows what riders on the hill this minute are reporting.</p>
+<p>The trick is reading the wait as it is now, not as it was on your last ride up.</p>` },
+      { h2: "Check the wait from the people already standing in it", html: `
+<p>That is the whole idea behind PeakWait. It shows what riders on the hill this minute are reporting, so you can pick a chair before you ski to it.</p>
 <ul>
   <li>Skiers tag each lift Moving, Short, Busy, or Long as they see it, blended with live movement on the mountain.</li>
-  <li>Every wait comes with a timestamp, so you know if it's two minutes old or two hours old. And when there's no signal, it says "unknown" instead of confidently making something up.</li>
-  <li>Then it points you to the best next chair across the whole mountain, so you're skiing toward the short wait instead of into the stampede.</li>
-</ul>
-<p>Still an estimate, sure. But it's the crowd's live read from people who are actually there. About as honest as "just go look," without the part where you trudge across the base in ski boots to find out.</p>` },
+  <li>Every wait comes with a timestamp, so you know if it's two minutes old or two hours old. With no signal, it says so instead of guessing.</li>
+  <li>Then it points you to the best next chair across the whole mountain, so you're skiing toward the short wait instead of into the crowd.</li>
+</ul>` },
       { h2: "7th Heaven, Harmony, Symphony: the usual suspects", html: `
 <ul>
   <li><strong>The alpine trio</strong> can hit 45 minutes on a weekend or powder day. Amazing terrain, not so amazing lift capacity. Lap it early or late, not at noon with everyone else.</li>
-  <li><strong>When the lower mountain is socked in or unskiable,</strong> everybody funnels up top and the alpine waits spike. That's exactly when live data earns its keep.</li>
-  <li><strong>Pow mornings:</strong> the empty lift you spotted 20 minutes ago is now the longest wait on the hill. Chase live, not lagged.</li>
+  <li><strong>When the lower mountain is socked in or unskiable,</strong> everybody funnels up top and the alpine waits spike. That's exactly when a live wait earns its keep.</li>
+  <li><strong>Pow mornings:</strong> the empty lift you spotted 20 minutes ago is now the longest wait on the hill. Go by the live wait, not the last one you saw.</li>
 </ul>` },
     ],
     faqs: [
-      { q: "What's the most accurate source for Whistler lift wait times?", a: "Live reports from skiers who are on the hill right now. Official and app numbers mostly come from the resort feed and lag by 15 to 40 minutes, while crowdsourced live reports, like PeakWait's, show the wait as it actually is." },
-      { q: "Is the Whistler Peak app or Epic app accurate for wait times?", a: "They're handy for lift status, but their wait numbers mostly come from Whistler Blackcomb's feed, so they lag the real conditions and often disagree with the wait you're actually standing in." },
+      { q: "How do I check Whistler lift wait times live?", a: "Open PeakWait for live waits reported by skiers on the mountain right now, shown as Moving, Short, Busy or Long with how fresh each one is." },
+      { q: "When are Whistler lift waits shortest?", a: "First chair, over lunch and in the last hour of the day, and midweek outside the holidays." },
       { q: "Why is 7th Heaven always so busy?", a: "Big, popular alpine terrain served by limited chair capacity, so it fills up fast, especially on powder and weekend days. Lap it first thing or late afternoon." },
-      { q: "How does PeakWait get its wait times?", a: "From skiers on the mountain reporting live waits, blended with movement data, shown as timestamped bands, Moving, Short, Busy, or Long, instead of one scraped official number." },
+      { q: "How does PeakWait get its wait times?", a: "From skiers on the mountain reporting live waits, blended with movement data, shown as timestamped bands: Moving, Short, Busy, or Long." },
     ],
-    cta: { h: "Skip the guesswork", p: `See Whistler waits from the people actually on the hill, plus the best next chair to ski.` },
+    cta: { h: "Check Whistler waits first", p: `See Whistler waits from the people on the hill, plus the best next chair to ski.` },
   },
 
   {
@@ -175,76 +173,6 @@ const ARTICLES = [
       { q: "Does PeakWait show I-70 traffic?", a: "No. It's a lift wait and where to ski app, not a traffic router. But it helps with the real problem: picking a mountain that actually has snow and short waits, so you don't waste a Saturday driving to a blown out resort." },
     ],
     cta: { h: "Make the drive worth it", p: `See which Colorado mountain has the snow and the shortest waits today, before you commit to I-70.` },
-  },
-
-  {
-    slug: "peakwait-vs-whistler-peak-app",
-    title: "PeakWait vs the Whistler Peak App: Which Is Better for Lift Waits?",
-    description:
-      "Both apps help you plan a Whistler day, but they solve different problems. Here's an honest breakdown of where each one wins, and which to use for real time lift waits.",
-    h1: "PeakWait vs the Whistler Peak app: which one for lift waits?",
-    readTime: "5 min",
-    published: "2026-08-12",
-    updated: "2026-08-12",
-    keywords: "peakwait vs whistler peak, whistler peak app, best whistler ski app, whistler lift wait app",
-    dek: `Short version: the Whistler Peak app, and Whistler Peak Live, is a great all in one dashboard for one mountain. PeakWait is a live, crowdsourced wait tracker for many. If your only question is "which lift is actually short right now," they get there very differently, and the difference matters.`,
-    sections: [
-      { h2: "What each one is built for", html: `
-<p>The Whistler Peak app is a Whistler Blackcomb companion. Conditions, cams, weather, avalanche info, lift status, all in one tidy place for one resort. It's genuinely useful, and plenty of locals lean on it.</p>
-<p>PeakWait is a cross resort lift wait app. It covers 116 mountains across North and South America, including Whistler Blackcomb, and the whole focus is one question: where is the short wait, right now.</p>` },
-      { h2: "Where the wait numbers come from: the important part", html: `
-<p>This is the real difference. The Whistler Peak app's wait times, like most resort companion apps, trace back to the resort's own feed. That feed updates on a delay, so the number can trail the actual line by 15 to 40 minutes. A lot of skiers have watched an app say "12 min" while they stood in 40.</p>
-<p>PeakWait's waits come from skiers on the hill reporting what they see, blended with live movement and stamped with how fresh each report is. It's an estimate too, but it's the crowd's live read instead of a delayed official number. <a href="/guides/whistler-lift-wait-times/">Here's the longer story on why resort wait numbers lag.</a></p>` },
-      { h2: "One mountain versus many", html: `
-<p>If you only ever ski Whistler, a Whistler only app makes sense. If you ski more than one resort, or you want to decide between a few on a given morning, a single resort app can't help you choose. PeakWait's "Where to ski today" ranks nearby mountains by snow and waits, which is the actual call you make before you leave the house.</p>` },
-      { h2: "So which should you use?", html: `
-<ul>
-  <li><strong>Use the Whistler Peak app for</strong> the full Whistler dashboard: cams, avalanche, weather, official status.</li>
-  <li><strong>Use PeakWait for</strong> live crowdsourced lift waits, the best next chair, and deciding which mountain to ski, at Whistler and 90 other resorts.</li>
-  <li><strong>Honestly, run both.</strong> They don't really compete. One's a resort dashboard, the other's a live wait tracker.</li>
-</ul>` },
-    ],
-    faqs: [
-      { q: "Is the Whistler Peak app accurate for wait times?", a: "It's a solid all in one Whistler dashboard, but its wait numbers come from the resort feed, so they lag real conditions. For the live wait, crowdsourced reports like PeakWait's tend to be closer to what you're actually standing in." },
-      { q: "Does PeakWait cover Whistler Blackcomb?", a: "Yes. Whistler Blackcomb is one of 116 resorts PeakWait covers across North and South America." },
-      { q: "What's the difference between PeakWait and the Whistler Peak app?", a: "The Whistler Peak app is a single resort dashboard: conditions, cams, status. PeakWait is a cross resort, crowdsourced live wait tracker that also ranks where to ski today." },
-      { q: "Which app is best for Whistler lift lines?", a: "For the live wait right now, a crowdsourced tracker like PeakWait. For the full resort dashboard, the Whistler Peak app. A lot of skiers use both." },
-    ],
-    cta: { h: "See live Whistler waits", p: `Check crowdsourced lift waits at Whistler and 90 other resorts, plus the best next chair.` },
-  },
-
-  {
-    slug: "best-ski-lift-wait-apps",
-    title: "The Best Apps for Ski Lift Wait Times in 2026",
-    description:
-      "An honest rundown of the apps skiers use for lift waits, crowds, and conditions, what each one is actually good at, and which to reach for when you just want the short line.",
-    h1: "The best apps for ski lift wait times",
-    readTime: "6 min",
-    published: "2026-08-23",
-    updated: "2026-08-23",
-    keywords: "best ski lift wait app, ski lift wait times app, best ski apps, apps for lift lines, ski crowd app",
-    dek: `There's no single app that does everything, and anyone who says otherwise is selling something. Here's the honest breakdown of what skiers actually use for waits, crowds, tracking, and conditions, and which one to open when your only goal is the shortest line.`,
-    sections: [
-      { h2: "For live lift waits: PeakWait", html: `
-<p>Best for the exact question "which lift is short right now." PeakWait shows crowdsourced waits reported by skiers on the hill, tagged Moving, Short, Busy, or Long, ranks where to ski today by snow and crowds across 116 resorts, and points you to the best next chair. It's free to check status and report waits, and PeakWait Plus adds the cross resort guide, powder alerts, and live friend location. It's weakest where nobody's reporting yet, though it says "unknown" instead of guessing.</p>` },
-      { h2: "For official status and trail maps: the resort apps", html: `
-<p>The Epic and Ikon apps, plus individual resort apps, are the source of truth for lift and trail status, interactive maps, and your pass. Handy and official. The catch is their wait estimates come from resort sensors and feeds, so they lag the real line, and each one only covers its own resorts.</p>` },
-      { h2: "For tracking your day: Slopes", html: `
-<p>If you want vertical, speed, runs, and a map of your day, Slopes is excellent. It's a tracking app, not a wait app, so it won't tell you which line is short, but it pairs well with one that does. PeakWait also records your day, if you'd rather keep everything in one place.</p>` },
-      { h2: "For snow and conditions: OnTheSnow and the forecast apps", html: `
-<p>For snowfall totals, base depth, and forecasts, condition apps and sites do the job well. They're great for deciding whether to go, not for what to do once you're there.</p>` },
-      { h2: "For one resort, all in one: local companion apps", html: `
-<p>Aggregators like Whistler Peak Live bundle cams, weather, avalanche, and status for a single mountain. Good dashboards, one resort each, and their waits still ride on the resort feed. <a href="/guides/peakwait-vs-whistler-peak-app/">Here's the full PeakWait vs Whistler Peak breakdown.</a></p>` },
-      { h2: "The short answer", html: `
-<p>If your goal is spending less of your day in line, you want live crowdsourced waits and a way to pick the right mountain. That's PeakWait. Pair it with your resort app for official status, add a tracker if you love stats, and you've got the whole day covered.</p>` },
-    ],
-    faqs: [
-      { q: "What's the best app for ski lift wait times?", a: "For live, crowdsourced waits and choosing which mountain to ski, PeakWait. For official lift status, your resort's app, Epic, Ikon, or the resort's own. Many skiers use both together." },
-      { q: "Do ski resort apps show accurate wait times?", a: "They show official estimates from resort sensors and feeds, which lag the real line, often by 15 to 40 minutes. Crowdsourced apps report the wait as skiers see it right now." },
-      { q: "Is there a free ski lift wait app?", a: "Yes. PeakWait is free to check lift status and report waits, with an optional Plus tier for the cross resort guide, powder alerts, and live friend location." },
-      { q: "What app tells you the least crowded lifts or runs?", a: "A live wait app like PeakWait, which shows which lifts are moving now and points you to the best next chair, is built for exactly that." },
-    ],
-    cta: { h: "Get the short line", p: `See live, crowdsourced lift waits and where to ski today across 116 resorts.` },
   },
 
   {
@@ -344,7 +272,7 @@ const ARTICLES = [
       { h2: "Why the threshold is so low", html: `
 <p>It's simple math the r/skiing crowd runs constantly. A run at most resorts lasts a few minutes. Wait 15 minutes for a 5 minute run and you've spent three times as long in line as on snow. As one skier put it, "I wouldn't ski at all if I had to wait 45 minutes per run." Another: "anything longer than 10 minutes is unacceptable, I'll find another lift, leave, or take a break."</p>` },
       { h2: "So why do resorts blow past it?", html: `
-<p>Because on weekends and powder days, demand overwhelms lift capacity, and the number you see on the resort app lags the real one. That gap between a reasonable wait under 15 minutes and a real one of 30, 45, or 90 minutes is the whole reason a great snow day can still feel like a wasted one.</p>` },
+<p>Because on weekends and powder days, demand overwhelms lift capacity, and the wait builds faster than you can see it from the base. That gap between a reasonable wait under 15 minutes and a real one of 30, 45, or 90 minutes is the whole reason a great snow day can still feel like a wasted one.</p>` },
       { h2: "How to stay under the line", html: `
 <p>You can keep your own waits close to that reasonable number without setting a 5am alarm.</p>
 <ul>
@@ -757,193 +685,167 @@ const ARTICLES = [
   },
 ];
 
-// ---- product updates (changelog / release blog) ----------------------------
-const UPDATES = [
-  {
-    slug: "sort-by-pass",
-    version: "1.0.1",
-    date: "2026-08-24",
-    title: "Sort by Pass, and a Smarter Home Screen",
-    summary: "The 1.0.1 update sorts your mountains by pass, redesigns the offseason home screen with a live countdown, and makes closed mountains read Closed instead of No data.",
-    sections: [
-      { h2: "Sort by pass", html: `
-<p>You bought a pass. Your mountains should sit together. The new <strong>By pass</strong> sort does exactly that. Open the sort menu and group every resort by <strong>Epic, Ikon, Power, or Independent</strong>, so the mountains you can actually ski are in one place instead of scattered through the whole list.</p>
-<p>It's a small change that turns out to matter a lot when you're deciding where to go on a pass day.</p>` },
-      { h2: "A clearer where to ski today", html: `
-<p>The daily picks were always ranked, but the score sat there as a mystery number. Now it tells you what it means: each pick is scored <strong>0 to 100 on fresh snow, short waits, and how much of the mountain is open</strong>. Higher is a better day. Same ranking, a lot less guessing.</p>` },
-      { h2: "Better pass badges", html: `
-<p>Every mountain now wears the right badge, including <strong>Power Pass</strong> resorts like Purgatory and Powderhorn that used to show up with none. We're also working through a full verification of pass affiliations across all 116 resorts, so these keep getting sharper.</p>` },
-      { h2: "An offseason that pulls its weight", html: `
-<p>The hard truth about a ski app in August is that nothing is spinning. So we rebuilt the offseason home screen to be useful instead of empty. It now leads with a <strong>live countdown to the first chair</strong> and a read on roughly when the season opens, then hands you the one job actually worth doing today: <strong>star your mountains and turn on alerts</strong>, so we can ping you the moment the lifts start turning and the first snow lands.</p>
-<p>Less wall of text, more signal. The app is honest about what it can tell you today, and clear about the day it comes alive.</p>` },
-      { h2: "Closed means closed", html: `
-<p>When a mountain is shut for the season, the app used to shrug and say <em>No data</em>, which reads like something is broken. Now a closed mountain simply reads <strong>Closed</strong>. You are never left wondering whether the app glitched or the mountain did.</p>` },
-      { h2: "Smoother everywhere", html: `
-<p>Leaderboards no longer flash a false error when you switch between boards. Your handle shows up instantly on your stats instead of blinking through a placeholder. Where to ski today is quicker to open and easier to tap into. Plus the usual round of fixes to keep things fast, honest, and out of your way on a powder morning.</p>` },
-    ],
-  },
-];
-
 // ---- template --------------------------------------------------------------
-const esc = (s) => String(s).replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;").replace(/"/g, "&quot;");
+// Pages share the site shell (tools/lib/shell.mjs + /assets/site.css): one nav, one footer, one style.
 const MONTHS = ["January","February","March","April","May","June","July","August","September","October","November","December"];
-// Google Analytics (website only). Every generated page carries it; do not paste it into built HTML by hand.
-const GA_TAG = `<!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-LJ4V6MDP0Y"></script>
-<script>
-window.dataLayer = window.dataLayer || [];
-function gtag(){dataLayer.push(arguments);}
-gtag('js', new Date());
-gtag('config', 'G-LJ4V6MDP0Y');
-</script>`;
 const fmtDate = (iso) => { const [y, m, d] = iso.split("-").map(Number); return `${MONTHS[m - 1]} ${d}, ${y}`; };
+const fmtShort = (iso) => { const [y, m, d] = iso.split("-").map(Number); return `${MONTHS[m - 1].slice(0, 3)} ${d}`; };
+const fmtMonth = (iso) => { const [y, m] = iso.split("-").map(Number); return `${MONTHS[m - 1].slice(0, 3)} ${y}`; };
 const stripTags = (s) => String(s).replace(/<[^>]+>/g, " ").replace(/\s+/g, " ").trim();
-const CSS = `
-:root{--bg:#070F16;--surface:#101D28;--raised:#1B2936;--hair:#2C3B48;--ink:#EFF4F9;--ink2:#ADB9C4;--ink3:#76828D;--brand:#43ACFB;--gold:#FEB84D;--good:#4AE299;
---display:-apple-system,BlinkMacSystemFont,"Segoe UI",system-ui,Roboto,Helvetica,sans-serif;--body:-apple-system,BlinkMacSystemFont,"Segoe UI",system-ui,Roboto,sans-serif}
-*{box-sizing:border-box}html{scroll-behavior:smooth}
-body{margin:0;background:var(--bg);color:var(--ink);font-family:var(--body);line-height:1.65;-webkit-font-smoothing:antialiased}
-a{color:var(--brand);text-decoration:none}a:hover{text-decoration:underline}
-.wrap{max-width:720px;margin:0 auto;padding:0 22px}
-.top{border-bottom:1px solid var(--hair)}
-.top .wrap{display:flex;align-items:center;gap:12px;height:62px}
-.brand{display:flex;align-items:center;gap:10px;font-family:var(--display);font-weight:800;font-size:1.1rem;letter-spacing:-.02em;color:var(--ink)}
-.brand img{width:28px;height:28px;border-radius:7px}
-.top .spacer{flex:1}
-.dl{background:var(--brand);color:#04121f;font-weight:800;font-size:.85rem;padding:8px 15px;border-radius:9px}
-.dl:hover{text-decoration:none;filter:brightness(1.06)}
-main{padding:36px 0 72px}
-.crumbs{font-size:.8rem;color:var(--ink3);margin-bottom:18px}
-.crumbs a{color:var(--ink3)}
-h1{font-family:var(--display);font-weight:850;font-size:clamp(1.9rem,4.6vw,2.7rem);line-height:1.05;letter-spacing:-.03em;margin:0 0 12px;text-wrap:balance}
-.byline{font-size:.85rem;color:var(--ink3);margin-bottom:26px}
-.byline b{color:var(--gold)}
-.dek{font-size:1.12rem;color:var(--ink);background:var(--surface);border:1px solid var(--hair);border-left:3px solid var(--gold);border-radius:12px;padding:16px 18px;margin:0 0 32px}
-h2{font-family:var(--display);font-weight:800;font-size:1.42rem;letter-spacing:-.02em;margin:38px 0 12px;text-wrap:balance}
-p{margin:0 0 16px;color:var(--ink2)}
-li{margin:0 0 9px;color:var(--ink2)}
-ul{padding-left:22px;margin:0 0 16px}
-strong{color:var(--ink)}
-em{color:var(--ink);font-style:italic}
-.cta{background:linear-gradient(160deg,var(--raised),var(--surface));border:1px solid var(--hair);border-radius:16px;padding:26px 24px;margin:34px 0;text-align:center}
-.cta h3{font-family:var(--display);font-weight:800;font-size:1.3rem;margin:0 0 8px;color:var(--ink)}
-.cta p{color:var(--ink2);margin:0 0 16px}
-.cta a{display:inline-block;background:var(--brand);color:#04121f;font-weight:800;padding:12px 22px;border-radius:11px;font-size:1rem}
-.cta a:hover{text-decoration:none;filter:brightness(1.06)}
-.tagline{color:var(--gold);font-weight:700;font-size:.9rem;margin-top:12px}
-.faq h2{margin-top:8px}
-.faq dt{font-weight:800;color:var(--ink);margin:20px 0 6px;font-family:var(--display)}
-.faq dd{margin:0 0 6px;color:var(--ink2)}
-.related{border-top:1px solid var(--hair);margin-top:44px;padding-top:24px}
-.related a{display:block;margin:0 0 8px}
-footer{border-top:1px solid var(--hair);color:var(--ink3);font-size:.85rem;padding:26px 0 40px}
-footer a{color:var(--ink3)}
-`.trim();
 
-const header = () => `
-<header class="top"><div class="wrap">
-  <a class="brand" href="/"><img src="/favicon.svg" alt="PeakWait"/>PeakWait</a>
-  <span class="spacer"></span>
-  <a class="dl" href="${DOWNLOAD_URL}">Download</a>
-</div></header>`;
-
-const footer = () => `
-<footer><div class="wrap">
-  © 2026 PeakWait LLC · <a href="/">Home</a> · <a href="/guides/">Guides</a> · <a href="/updates/">Updates</a> · <a href="/terms/">Terms</a> · <a href="/privacy/">Privacy</a>
-</div></footer>`;
-
-const ctaBlock = (c) => `
-<div class="cta">
-  <h3>${esc(c.h)}</h3>
-  <p>${esc(c.p)}</p>
-  <a href="${DOWNLOAD_URL}">Download PeakWait, free</a>
-  <div class="tagline">Ski the mountain, skip the wait.</div>
-</div>`;
+// ---- guides: where each guide sits, and its campaign image -----------------
+// Index sections, in order. Mountain guides go by region; the rest are playbooks, except the Colorado
+// ones, which a Colorado skier looks for under Colorado.
+const SECTIONS = [["co", "Colorado"], ["ut", "Utah"], ["ca", "California"], ["more", "More mountains"], ["play", "Playbooks"]];
+function sectionOf(a) {
+  const m = INDEX_META[a.slug];
+  if (m.region === "CO") return "co";
+  if (m.region === "UT") return "ut";
+  if (m.region === "CA") return "ca";
+  if (m.region) return "more";
+  return /colorado|i-70/i.test(a.title) ? "co" : "play";
+}
+// One campaign photo per kind of guide, so the index and articles carry imagery without repeating one shot.
+function imageOf(a) {
+  const m = INDEX_META[a.slug];
+  const byRegion = { CO: "rw-guide.jpg", UT: "rw-hero3.jpg", CA: "rw-hero1.jpg", BC: "rw-hero4.jpg", NE: "hero.jpg" };
+  if (m.region) return `/assets/img/${byRegion[m.region] || "rw-hero4.jpg"}`;
+  return m.group === "why" ? "/assets/img/film-poster.jpg" : "/assets/img/pov.jpg";
+}
+const subOf = (a) => INDEX_META[a.slug].hook || a.description;
 
 function articleHtml(a, others) {
   const url = `${SITE}/guides/${a.slug}/`;
+  const title = waitify(a.title);
+  const img = imageOf(a);
   const faqLd = {
     "@context": "https://schema.org", "@type": "FAQPage",
     mainEntity: a.faqs.map((f) => ({ "@type": "Question", name: f.q, acceptedAnswer: { "@type": "Answer", text: f.a } })),
   };
   const artLd = {
-    "@context": "https://schema.org", "@type": "Article", headline: a.title,
+    "@context": "https://schema.org", "@type": "Article", headline: title,
     description: a.description, author: { "@type": "Person", name: AUTHOR },
     publisher: { "@type": "Organization", name: "PeakWait", logo: { "@type": "ImageObject", url: `${SITE}/icon-512.png` } },
-    datePublished: a.published, dateModified: a.updated, mainEntityOfPage: url, image: `${SITE}/og.png`,
+    datePublished: a.published, dateModified: a.updated, mainEntityOfPage: url, image: `${SITE}${img}`,
   };
   const crumbLd = {
     "@context": "https://schema.org", "@type": "BreadcrumbList",
     itemListElement: [
       { "@type": "ListItem", position: 1, name: "Home", item: SITE + "/" },
       { "@type": "ListItem", position: 2, name: "Guides", item: SITE + "/guides/" },
-      { "@type": "ListItem", position: 3, name: a.title, item: url },
+      { "@type": "ListItem", position: 3, name: title, item: url },
     ],
   };
+  const m = INDEX_META[a.slug];
+  const sec = SECTIONS.find(([k]) => k === sectionOf(a))[1];
   const midIdx = Math.ceil(a.sections.length / 2);
-  const body = a.sections.map((s, i) => `<h2>${esc(s.h2)}</h2>${s.html.trim()}` + (i === midIdx - 1 ? ctaBlock(a.cta) : "")).join("\n");
-  const faq = `<section class="faq"><h2>FAQ</h2><dl>` +
-    a.faqs.map((f) => `<dt>${esc(f.q)}</dt><dd>${esc(f.a)}</dd>`).join("") + `</dl></section>`;
-  const related = others.length ? `<div class="related"><h2>More from Herb</h2>` +
-    others.map((o) => `<a href="/guides/${o.slug}/">${esc(o.title)}</a>`).join("") + `</div>` : "";
+  const appcard = `
+    <div class="appcard">
+      <div class="t"><b>${esc(a.cta.h)}</b><p>${esc(a.cta.p)}</p><a class="btn" href="${DOWNLOAD_URL}">Download now for your season</a></div>
+      <div class="shot">${device("/assets/img/app-02-resort-lifts.jpg", "A lift list in PeakWait with a wait on every lift", 160)}</div>
+    </div>`;
+  const body = a.sections.map((s, i) => `<h2 id="s${i + 1}">${esc(s.h2)}</h2>${s.html.trim()}` + (i === midIdx - 1 ? appcard : "")).join("\n");
+  const toc = a.sections.map((s, i) => `<li><a href="#s${i + 1}"${i === 0 ? ' class="on"' : ""}>${esc(s.h2)}</a></li>`).join("") + `<li><a href="#faq">FAQ</a></li>`;
+  const faq = `<h2 id="faq">FAQ</h2><div class="faqlist">` +
+    a.faqs.map((f, i) => `<details${i === 0 ? " open" : ""}><summary>${esc(f.q)}</summary><p>${esc(f.a)}</p></details>`).join("") + `</div>`;
+  const facts = m.region
+    ? `<dl class="facts"><div><dt>Where</dt><dd>${esc(m.where)}</dd></div><div><dt>Lifts</dt><dd>${esc(String(m.lifts).replace(/ lifts?$/, ""))}</dd></div><div><dt>Read</dt><dd>${esc(a.readTime)}</dd></div></dl>`
+    : "";
+  const more = others.length ? `<section class="wrap more" aria-label="Keep reading"><span class="eyebrow">Keep reading</span><div class="cards">` +
+    others.map((o) => `<a class="card" href="/guides/${o.slug}/"><span class="meta">${esc(SECTIONS.find(([k]) => k === sectionOf(o))[1])} · ${esc(o.readTime)}</span><h3>${esc(waitify(o.h1 || o.title))}</h3></a>`).join("") +
+    `</div></section>` : "";
+  const css = `
+.ahead{padding-block:clamp(40px,6vw,72px) 32px;background:linear-gradient(180deg,var(--skyTop),var(--bg))}
+.ahead .inner{max-width:880px;display:grid;gap:18px}
+.ahead h1{font-size:clamp(2.1rem,4.8vw,3.4rem);font-weight:850}
+.ahead .dek{font-size:clamp(1.06rem,1.6vw,1.22rem);color:var(--ink2);max-width:62ch}
+.byline{display:flex;gap:18px;flex-wrap:wrap;color:var(--ink3);font-size:.9rem}
+.byline b{color:var(--ink2);font-weight:600}
+.facts{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:1px;margin:4px 0 0;max-width:620px;background:var(--hair);border:1px solid var(--hair);border-radius:var(--r-md);overflow:hidden}
+.facts div{background:var(--surface);padding:14px 16px;display:grid;gap:6px;min-width:0}
+.facts dt{font-size:.66rem;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--ink3)}
+.facts dd{margin:0;font-family:var(--num);font-weight:700;font-size:1.02rem}
+.leadimg{margin:0 auto}
+.leadimg img{width:100%;height:auto;aspect-ratio:1584/672;object-fit:cover;border-radius:var(--r-lg);border:1px solid var(--hair)}
+@media (max-width:640px){.leadimg img{aspect-ratio:16/10}.facts{grid-template-columns:1fr 1fr}}
+.body{display:grid;grid-template-columns:220px minmax(0,680px) 1fr;gap:clamp(24px,4vw,56px);padding-block:48px 24px}
+.toc{position:sticky;top:96px;align-self:start;font-size:.9rem}
+.toc ol{list-style:none;margin:14px 0 0;padding:0;display:grid;gap:2px;border-left:1px solid var(--hair)}
+.toc a{display:block;padding:6px 0 6px 14px;margin-left:-1px;border-left:2px solid transparent;color:var(--ink3);line-height:1.35}
+.toc a:hover{color:var(--ink)}
+.toc a.on{color:var(--ink);border-left-color:var(--brand)}
+@media (max-width:1000px){.body{grid-template-columns:minmax(0,1fr)}.toc{display:none}.prose{max-width:680px}}
+.appcard{margin:44px 0;border:1px solid var(--hair);border-radius:var(--r-lg);background:linear-gradient(160deg,var(--tint),var(--surface) 65%);display:grid;grid-template-columns:minmax(0,1fr) auto;gap:20px;align-items:center;overflow:hidden;padding:26px 26px 0}
+.appcard .t{display:grid;gap:10px;padding-bottom:26px}
+.appcard b{font-size:1.25rem;color:var(--ink);letter-spacing:-.02em;line-height:1.2}
+.appcard p{margin:0;color:var(--ink2);font-size:.98rem;line-height:1.5}
+.appcard .shot{height:230px;overflow:hidden;align-self:end}
+.prose .appcard .btn{justify-self:start;text-decoration:none;color:var(--onBrand)}
+@media (max-width:560px){.appcard{grid-template-columns:1fr}.appcard .shot{justify-self:center}}
+.faqlist details{border-top:1px solid var(--hair);padding-block:16px}
+.faqlist details:last-child{border-bottom:1px solid var(--hair)}
+.faqlist summary{cursor:pointer;list-style:none;display:flex;justify-content:space-between;gap:16px;font-weight:700;color:var(--ink);line-height:1.4}
+.faqlist summary::-webkit-details-marker{display:none}
+.faqlist summary::after{content:'+';color:var(--ink3);font-weight:600}
+.faqlist details[open] summary::after{content:'\\2212'}
+.faqlist p{margin:10px 0 0;color:var(--ink2)}
+.more{padding-block:56px 0;border-top:1px solid var(--hair);margin-top:40px}
+.more .cards{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:18px;margin-top:22px}
+@media (max-width:760px){.more .cards{grid-template-columns:1fr}}`;
   return `<!doctype html>
 <html lang="en">
 <head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-${GA_TAG}
-<title>${esc(a.title)}</title>
-<meta name="description" content="${esc(a.description)}">
-<meta name="keywords" content="${esc(a.keywords)}">
+${head({ title, description: a.description, url, image: `${SITE}${img}`, type: "article", extra: `<meta name="keywords" content="${esc(a.keywords)}">
 <meta name="author" content="${AUTHOR}">
-<link rel="canonical" href="${url}">
-<meta property="og:type" content="article">
-<meta property="og:title" content="${esc(a.title)}">
-<meta property="og:description" content="${esc(a.description)}">
-<meta property="og:url" content="${url}">
-<meta property="og:image" content="${SITE}/og.png">
-<meta name="twitter:card" content="summary_large_image">
-<link rel="icon" href="/favicon.ico" sizes="any">
-<link rel="icon" href="/favicon.svg" type="image/svg+xml">
-<link rel="apple-touch-icon" href="/apple-touch-icon.png">
-<meta name="theme-color" content="#070F16">
 <script type="application/ld+json">${JSON.stringify(artLd)}</script>
 <script type="application/ld+json">${JSON.stringify(faqLd)}</script>
 <script type="application/ld+json">${JSON.stringify(crumbLd)}</script>
-<style>${CSS}</style>
+<style>${css}</style>` })}
 </head>
 <body>
-${header()}
-<main><div class="wrap">
-  <nav class="crumbs"><a href="/">Home</a> › <a href="/guides/">Guides</a> › ${esc(a.title)}</nav>
-  <h1>${esc(a.h1)}</h1>
-  <p class="byline">By <b>${AUTHOR}</b> · ${esc(a.readTime)} read · ${a.updated !== a.published ? "Updated " : ""}${fmtDate(a.updated)}</p>
-  <p class="dek">${a.dek}</p>
-  ${body}
-  ${faq}
-  ${related}
-</div></main>
+${nav("/guides/")}
+<main>
+<header class="ahead"><div class="wrap"><div class="inner">
+  <nav class="crumbs" aria-label="Breadcrumb"><a href="/guides/">Guides</a><span>/</span><a href="/guides/#${sectionOf(a)}">${esc(sec)}</a></nav>
+  <h1>${esc(waitify(a.h1))}</h1>
+  <p class="dek">${stripTags(a.dek).length > 320 ? esc(stripTags(a.dek).slice(0, 317).replace(/\s+\S*$/, "")) + "…" : esc(stripTags(a.dek))}</p>
+  <div class="byline"><span>By <b>${AUTHOR}</b></span><span>${esc(a.readTime)} read</span><span>${a.updated !== a.published ? "Updated " : ""}${fmtDate(a.updated)}</span></div>
+  ${facts}
+</div></div></header>
+<figure class="wrap leadimg"><img src="${img}" alt="" width="1584" height="672"></figure>
+<div class="wrap body">
+  <aside class="toc" aria-label="In this guide"><span class="eyebrow">In this guide</span><ol>${toc}</ol></aside>
+  <article class="prose">
+    ${body}
+    ${faq}
+  </article>
+  <div aria-hidden="true"></div>
+</div>
+${more}
+<div class="wrap">${endCta("Download now for your season.", "See every wait before you ride. PeakWait is free on the App Store.")}</div>
+</main>
 ${footer()}
+<script>
+const tl=[...document.querySelectorAll('.toc a')];
+const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting)tl.forEach(l=>l.classList.toggle('on',l.hash==='#'+e.target.id))}),{rootMargin:'-20% 0px -70% 0px'});
+document.querySelectorAll('.prose h2[id]').forEach(h=>io.observe(h));
+</script>
 </body>
 </html>`;
 }
 
-// ---- guides index: mountains as a grid, everything else as rows -----------------------------
-// The old page was 18 identical cards in publish order, so a skier looking for Keystone scrolled past
-// Whistler and a pass comparison to find it. Mountains are what people search by, so they lead, with
-// the app's own wait colours as the one detail nobody else's guide page could carry.
-const RAIL_LEGEND = "The bar is how a typical Saturday at that mountain splits between Moving, Short, Busy and Long, from the guide. Live waits are in the app.";
+// ---- guides index: latest up top, then every guide by region -----------------------------
 const INDEX_META = {
-  // mountain guides: region filter key, where line, lift count (live app data, 2026-09-29), hook, rail split (% ends of moving/short/busy)
-  "keystone-lift-lines":        { region: "CO", where: "Colorado · Epic",        lifts: "20 lifts", hook: "Three mountains in a row, one way in and one way home. The wait moves from the gondola to Wayback at 2 pm.", rail: [22, 45, 75] },
-  "breckenridge-lift-lines":    { region: "CO", where: "Colorado · Epic",        lifts: "34 lifts", hook: "34 lifts across five peaks, and almost all the waiting happens at four of them.", rail: [15, 35, 60] },
-  "vail-lift-lines":            { region: "CO", where: "Colorado · Epic",        lifts: "32 lifts", hook: "Enormous, but nearly everyone enters through the same two lifts.", rail: [30, 55, 80] },
-  "copper-mountain-lift-lines": { region: "CO", where: "Colorado · Ikon",        lifts: "23 lifts", hook: "Super Bee and American Flyer take the hit. The pods that stay quiet, lift by lift.", rail: [35, 60, 85] },
-  "steamboat-crowds-morningside": { region: "CO", where: "Colorado · Ikon",      lifts: "21 lifts", hook: "The gondola and the infamous Morningside chair can eat your morning.", rail: [25, 45, 65] },
-  "alta-snowbird-powder-day-lines": { region: "UT", where: "Utah · Ikon",         lifts: "25 lifts", hook: "Little Cottonwood on a powder day is glorious and brutal in equal measure.", rail: [10, 25, 50] },
-  "palisades-tahoe-crowds":     { region: "CA", where: "California · Ikon",      lifts: "45 lifts", hook: "Two great laps and then hour-long waits. When to bail to a quieter Tahoe hill.", rail: [18, 40, 62] },
-  "whistler-lift-wait-times":   { region: "BC", where: "British Columbia · Epic", lifts: "36 lifts", hook: "The posted wait times are wrong more often than the forecast. Here is why.", rail: [20, 42, 70] },
-  "northeast-ski-crowds":       { region: "NE", where: "Vermont and the Northeast", lifts: "Killington, Stowe", hook: "Short vertical makes a 20 minute wait feel worse than an hour out West.", rail: [12, 30, 55] },
+  // mountain guides: region filter key, where line, lift count (live app data, 2026-09-29), hook
+  "keystone-lift-lines":        { region: "CO", where: "Colorado · Epic",        lifts: "20 lifts", hook: "Three mountains in a row, one way in and one way home. The wait moves from the gondola to Wayback at 2 pm." },
+  "breckenridge-lift-lines":    { region: "CO", where: "Colorado · Epic",        lifts: "34 lifts", hook: "34 lifts across five peaks, and almost all the waiting happens at four of them." },
+  "vail-lift-lines":            { region: "CO", where: "Colorado · Epic",        lifts: "32 lifts", hook: "Enormous, but nearly everyone enters through the same two lifts." },
+  "copper-mountain-lift-lines": { region: "CO", where: "Colorado · Ikon",        lifts: "23 lifts", hook: "Super Bee and American Flyer take the hit. The pods that stay quiet, lift by lift." },
+  "steamboat-crowds-morningside": { region: "CO", where: "Colorado · Ikon",      lifts: "21 lifts", hook: "The gondola and the Morningside chair can eat your morning." },
+  "alta-snowbird-powder-day-lines": { region: "UT", where: "Utah · Ikon",         lifts: "25 lifts", hook: "Little Cottonwood on a powder day is glorious and brutal in equal measure." },
+  "palisades-tahoe-crowds":     { region: "CA", where: "California · Ikon",      lifts: "45 lifts", hook: "Two great laps and then hour-long waits. When to bail to a quieter Tahoe hill." },
+  "whistler-lift-wait-times":   { region: "BC", where: "British Columbia · Epic", lifts: "36 lifts", hook: "Where the waits build at Whistler Blackcomb, lift by lift, and how to ski around them." },
+  "northeast-ski-crowds":       { region: "NE", where: "Vermont and the Northeast", lifts: "Killington, Stowe", hook: "Short vertical makes a 20 minute wait feel worse than an hour out West." },
   // the rest, by the decision they help with
   "best-time-to-ski-avoid-crowds": { group: "day" },
   "colorado-opening-day":       { group: "day" },
@@ -953,10 +855,8 @@ const INDEX_META = {
   "epic-vs-ikon-crowds": { group: "day" },
   "ski-resort-lift-lines": { group: "why" },
   "how-long-reasonable-lift-wait": { group: "why" },
-  "best-ski-lift-wait-apps": { group: "why" },
-  "peakwait-vs-whistler-peak-app": { group: "why" },
 };
-const REGIONS = [["all", "All"], ["CO", "Colorado"], ["UT", "Utah"], ["CA", "Tahoe"], ["BC", "Whistler"], ["NE", "Northeast"]];
+const REGIONS = [["CO", "Colorado"], ["UT", "Utah"], ["CA", "California"], ["BC", "Canada"], ["NE", "Northeast"]];
 const MOUNTAIN_NAME = {
   "keystone-lift-lines": "Keystone", "breckenridge-lift-lines": "Breckenridge", "vail-lift-lines": "Vail",
   "copper-mountain-lift-lines": "Copper Mountain", "steamboat-crowds-morningside": "Steamboat",
@@ -967,232 +867,215 @@ const MOUNTAIN_NAME = {
 function indexHtml(arts) {
   const missing = arts.filter((a) => !INDEX_META[a.slug]).map((a) => a.slug);
   if (missing.length) throw new Error(`INDEX_META has no entry for: ${missing.join(", ")} — add it (mountain or group) so the guide appears on /guides/`);
-  const bySlug = Object.fromEntries(arts.map((a) => [a.slug, a]));
-  const newest = [...arts].sort((a, b) => (b.published > a.published ? 1 : -1))[0];
-  const mountains = arts.filter((a) => INDEX_META[a.slug].region).sort((a, b) => (b.published > a.published ? 1 : -1));
-  const rowsFor = (g) => arts.filter((a) => INDEX_META[a.slug].group === g).map((a) => `
-    <a class="row" href="/guides/${a.slug}/"><div><div class="t">${esc(a.title)}</div><div class="d">${esc(a.description)}</div></div><div class="m">${esc(a.readTime)}</div></a>`).join("");
-  const cards = mountains.map((a) => {
-    const m = INDEX_META[a.slug];
-    const tag = a.slug === newest.slug ? `<span class="tag new">New</span>` : "";
-    // Guides the daily job writes have no rail: the split is a judgement from a hand-written guide, and a
-    // generated one would be a made-up number.
-    const rail = m.rail ? ` style="--m:${m.rail[0]}%;--s:${m.rail[1]}%;--b:${m.rail[2]}%"` : "";
-    return `
-    <a class="mtn" href="/guides/${a.slug}/" data-r="${m.region}"${rail}>${m.rail ? `<div class="rail"></div>` : ""}<div class="name">${esc(MOUNTAIN_NAME[a.slug])}</div><div class="where">${esc(m.where)}</div><div class="hook">${esc(m.hook)}</div><div class="foot"><span><b>${esc(m.lifts)}</b> · ${esc(a.readTime)}</span>${tag}</div></a>`;
-  }).join("");
-  const chips = REGIONS.map(([k, label], i) => `<button class="chip" aria-pressed="${i === 0}" data-f="${k}">${label}</button>`).join("\n    ");
-  const listCss = `.wrap{max-width:1040px}
-.lead{font-size:1.1rem;color:var(--ink2);max-width:58ch;margin:0 0 34px}
-.lead b{color:var(--gold);font-weight:700}
-.sec{display:flex;align-items:baseline;gap:14px;margin:44px 0 16px}
-.sec h2{font-size:1.35rem;margin:0}
-.sec span{font-size:.8rem;color:var(--ink3);text-transform:uppercase;letter-spacing:.08em}
-.chips{display:flex;flex-wrap:wrap;gap:8px;margin:0 0 18px}
-.chip{border:1px solid var(--hair);color:var(--ink2);font-size:.82rem;font-weight:600;padding:6px 12px;border-radius:999px;background:transparent;cursor:pointer;font-family:inherit}
-.chip[aria-pressed="true"]{background:var(--ink);color:#04121f;border-color:var(--ink)}
-.chip:focus-visible{outline:2px solid var(--brand);outline-offset:2px}
-.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(230px,1fr));gap:14px}
-.mtn{display:flex;flex-direction:column;gap:10px;background:var(--surface);border:1px solid var(--hair);border-radius:14px;padding:16px 16px 14px;color:var(--ink);transition:border-color .15s,transform .15s}
-.mtn:hover{border-color:var(--brand);transform:translateY(-1px);text-decoration:none}
-.mtn:focus-visible{outline:2px solid var(--brand)}
-.mtn[hidden]{display:none}
-.rail{height:4px;border-radius:3px;background:linear-gradient(90deg,#4AE299 0 var(--m),#A6E24A var(--m) var(--s),#FEB84D var(--s) var(--b),#FF6B57 var(--b) 100%)}
-.mtn .name{font-weight:800;font-size:1.12rem;letter-spacing:-.015em;line-height:1.15}
-.mtn .where{font-size:.8rem;color:var(--ink3)}
-.mtn .hook{font-size:.9rem;color:var(--ink2);flex:1}
-.mtn .foot{display:flex;justify-content:space-between;align-items:center;font-size:.76rem;color:var(--ink3);font-variant-numeric:tabular-nums}
-.mtn .foot b{color:var(--ink);font-weight:700}
-.tag{font-size:.68rem;font-weight:700;letter-spacing:.06em;text-transform:uppercase;padding:2px 7px;border-radius:5px;border:1px solid var(--gold);color:var(--gold)}
-.legend{display:flex;gap:16px;flex-wrap:wrap;align-items:center;font-size:.78rem;color:var(--ink3);margin:10px 0 0}
-.legend i{display:inline-block;width:10px;height:10px;border-radius:3px;margin-right:5px;vertical-align:-1px}
-.rows{display:flex;flex-direction:column;border-top:1px solid var(--hair)}
-.row{display:grid;grid-template-columns:1fr auto;gap:18px;align-items:baseline;padding:16px 4px;border-bottom:1px solid var(--hair);color:var(--ink)}
-.row:hover{text-decoration:none}.row:hover .t{color:var(--brand)}
-.row .t{font-weight:700;font-size:1.02rem;letter-spacing:-.01em}
-.row .d{color:var(--ink2);font-size:.92rem;margin-top:3px;max-width:70ch}
-.row .m{font-size:.78rem;color:var(--ink3);white-space:nowrap;font-variant-numeric:tabular-nums}
-.cta.wide{margin-top:56px;display:grid;grid-template-columns:1fr auto;gap:20px;align-items:center;text-align:left}
-.cta.wide p{margin:0}
-@media (max-width:640px){.cta.wide{grid-template-columns:1fr}.row{grid-template-columns:1fr}.row .m{white-space:normal}}
-@media (prefers-reduced-motion:reduce){.mtn{transition:none}}`;
+  const byDate = [...arts].sort((a, b) => (b.published > a.published ? 1 : b.published < a.published ? -1 : 0));
+  const [lead, ...side] = byDate.slice(0, 4);
+  const secName = (a) => SECTIONS.find(([k]) => k === sectionOf(a))[1];
+  const groups = SECTIONS.map(([k, label]) => [k, label, arts.filter((a) => sectionOf(a) === k).sort((a, b) => (waitify(a.h1) > waitify(b.h1) ? 1 : -1))]).filter(([, , list]) => list.length);
+  const row = (a) => `<li><a href="/guides/${a.slug}/"><b>${esc(waitify(a.h1))}<small>${esc(subOf(a))}</small></b><span>${esc(a.readTime)}</span></a></li>`;
+  const filters = [`<button type="button" data-f="all" aria-pressed="true">All<span>${arts.length}</span></button>`]
+    .concat(groups.map(([k, label, list]) => `<button type="button" data-f="${k}" aria-pressed="false">${label}<span>${list.length}</span></button>`)).join("\n  ");
+  const css = `
+.filters{position:sticky;top:calc(68px + env(safe-area-inset-top,0px));z-index:30;background:color-mix(in srgb,var(--bg) 88%,transparent);backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);border-bottom:1px solid var(--hair)}
+.filters .wrap{display:flex;gap:8px;padding-block:14px;overflow-x:auto;scrollbar-width:none}
+.filters .wrap::-webkit-scrollbar{display:none}
+.filters button{flex:0 0 auto;font:600 .9rem/1 var(--sans);color:var(--ink2);background:transparent;border:1px solid var(--hair);border-radius:999px;padding:9px 15px;cursor:pointer}
+.filters button:hover{color:var(--ink);border-color:var(--ink3)}
+.filters button[aria-pressed="true"]{background:var(--ink);color:var(--bg);border-color:var(--ink)}
+.filters button span{font-family:var(--num);opacity:.6;margin-left:6px}
+.latest{display:grid;grid-template-columns:1.4fr 1fr;gap:18px;margin-top:40px}
+.lead{position:relative;border-radius:var(--r-lg);overflow:hidden;border:1px solid var(--hair);min-height:400px;display:grid;align-items:end;background:#000;transition:border-color .18s ease}
+.lead img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:65% 50%}
+.lead::before{content:"";position:absolute;inset:0;z-index:1;background:linear-gradient(0deg,rgba(7,15,22,.96) 18%,rgba(7,15,22,.5) 55%,rgba(7,15,22,.05) 85%)}
+.lead .in{position:relative;z-index:2;padding:clamp(22px,3vw,36px);display:grid;gap:12px}
+.lead h2{font-size:clamp(1.7rem,3vw,2.4rem)}
+.lead p{color:var(--ink2);max-width:50ch}
+.lead:hover{border-color:var(--brand)}
+.side{display:grid;gap:18px}
+@media (max-width:860px){.latest{grid-template-columns:1fr}.lead{min-height:340px}}
+.group{margin-top:72px;scroll-margin-top:150px}
+.group > header{display:flex;justify-content:space-between;align-items:baseline;gap:16px;padding-bottom:16px;border-bottom:1px solid var(--hair)}
+.group h2{font-size:clamp(1.5rem,2.6vw,2rem)}
+.group header span{color:var(--ink3);font-size:.9rem}
+.rows{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:1fr 1fr;column-gap:40px}
+.rows a{display:grid;grid-template-columns:minmax(0,1fr) auto;gap:16px;align-items:baseline;padding-block:18px;border-bottom:1px solid var(--hair)}
+.rows a b{font-size:1.04rem;font-weight:700;letter-spacing:-.01em;line-height:1.3}
+.rows a small{display:block;color:var(--ink3);font-size:.88rem;margin-top:4px;font-weight:400;line-height:1.45}
+.rows a span{font-family:var(--num);color:var(--ink3);font-size:.85rem;white-space:nowrap}
+.rows a:hover b{color:var(--brand)}
+@media (max-width:760px){.rows{grid-template-columns:1fr}}`;
   return `<!doctype html>
 <html lang="en">
 <head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-${GA_TAG}
-<title>Ski Guides by Mountain, Beat the Wait | PeakWait</title>
-<meta name="description" content="Where the wait is, mountain by mountain: which lift stacks up, when it clears, and where the quiet side is. Plus how to pick the day and the mountain. By Herb Sendit.">
-<link rel="canonical" href="${SITE}/guides/">
-<meta property="og:title" content="PeakWait Ski Guides, Mountain by Mountain">
-<meta property="og:description" content="Which lift stacks up, when it clears, and where the quiet side is.">
-<meta property="og:url" content="${SITE}/guides/">
-<meta property="og:image" content="${SITE}/og.png">
-<meta name="twitter:card" content="summary_large_image">
-<link rel="icon" href="/favicon.ico" sizes="any">
-<link rel="icon" href="/favicon.svg" type="image/svg+xml">
-<link rel="apple-touch-icon" href="/apple-touch-icon.png">
-<meta name="theme-color" content="#070F16">
-<style>${CSS}
-${listCss}</style>
+${head({ title: "Ski Guides by Mountain: Beat the Wait | PeakWait", description: "Where the waits build, mountain by mountain: which lift stacks up, when it clears, and where the quiet side is. Plus how to pick the day and the mountain. By Herb Sendit.", url: `${SITE}/guides/`, extra: `<style>${css}</style>` })}
 </head>
 <body>
-${header()}
-<main><div class="wrap">
-  <nav class="crumbs"><a href="/">Home</a> › Guides</nav>
-  <h1>Where the wait is, mountain by mountain</h1>
-  <p class="lead">Which lift stacks up, when it clears, and where the quiet side is. Written from the singles line by <b>${AUTHOR}</b>.</p>
-
-  <div class="sec"><h2>Find your mountain</h2><span>${mountains.length} guides</span></div>
-  <div class="chips" role="group" aria-label="Filter by region">
-    ${chips}
-  </div>
-  <div class="grid" id="grid">${cards}
-  </div>
-  <div class="legend"><span><i style="background:#4AE299"></i>Moving</span><span><i style="background:#A6E24A"></i>Short</span><span><i style="background:#FEB84D"></i>Busy</span><span><i style="background:#FF6B57"></i>Long</span><span>${RAIL_LEGEND}</span></div>
-
-  <div class="sec"><h2>Pick the day and the mountain</h2><span>${rowsFor("day").split("<a class").length - 1} guides</span></div>
-  <div class="rows">${rowsFor("day")}
-  </div>
-
-  <div class="sec"><h2>Why waits got this bad, and what the apps do about it</h2><span>${rowsFor("why").split("<a class").length - 1} guides</span></div>
-  <div class="rows">${rowsFor("why")}
-  </div>
-
-  <div class="cta wide"><div><h3>See which lift is actually moving</h3><p>Live waits at 116 mountains, reported by skiers standing in them.</p></div><a href="${DOWNLOAD_URL}">Download PeakWait, free</a></div>
-</div></main>
+${nav("/guides/")}
+<main>
+<section class="phero"><div class="wrap">
+  <span class="eyebrow">PeakWait Guides</span>
+  <h1>Ski smarter, mountain by mountain.</h1>
+  <p class="say">Where the waits build, when to go and how to get there. Written by skiers, updated through the season.</p>
+</div></section>
+<div class="filters" role="toolbar" aria-label="Filter guides"><div class="wrap">
+  ${filters}
+</div></div>
+<div class="wrap">
+  <section class="latest" data-g="all" aria-label="Latest guides">
+    <a class="lead" href="/guides/${lead.slug}/"><img src="${imageOf(lead)}" alt=""><div class="in"><span class="meta"><i>New</i>${esc(secName(lead))} · ${esc(lead.readTime)} · ${fmtShort(lead.published)}</span><h2>${esc(waitify(lead.h1))}</h2><p>${esc(subOf(lead))}</p></div></a>
+    <div class="side">${side.map((a) => `
+      <a class="card" href="/guides/${a.slug}/"><span class="meta">${esc(secName(a))} · ${esc(a.readTime)} · ${fmtShort(a.published)}</span><h3>${esc(waitify(a.h1))}</h3></a>`).join("")}
+    </div>
+  </section>
+${groups.map(([k, label, list]) => `
+  <section class="group" id="${k}" data-g="${k}">
+    <header><h2>${label}</h2><span>${list.length} ${list.length === 1 ? "guide" : "guides"}</span></header>
+    <ul class="rows">${list.map(row).join("\n      ")}</ul>
+  </section>`).join("")}
+  ${endCta("See the waits before you go.", "Every guide is better with the live wait in your pocket. PeakWait is free on the App Store.")}
+</div>
+</main>
 ${footer()}
 <script>
-const chips=[...document.querySelectorAll('.chip')],cards=[...document.querySelectorAll('.mtn')];
-chips.forEach(c=>c.addEventListener('click',()=>{chips.forEach(x=>x.setAttribute('aria-pressed',x===c));const f=c.dataset.f;cards.forEach(m=>{m.hidden=f!=='all'&&m.dataset.r!==f});}));
+const fb=document.querySelectorAll('.filters button'),gs=document.querySelectorAll('[data-g]');
+fb.forEach(b=>b.addEventListener('click',()=>{const f=b.dataset.f;fb.forEach(x=>x.setAttribute('aria-pressed',x===b));gs.forEach(g=>g.hidden=!(f==='all'||g.dataset.g===f));}));
 </script>
 </body>
 </html>`;
 }
 
-function updateHtml(u, others) {
+// ---- updates (release notes), from updates-src/*.json ---------------------------
+// Each file: { slug, version, date, title, summary, intro, sections:[{h2, html, shot?}], css? }.
+// shot = { src, alt, kind: "device" | "story" } puts a real screen beside that section.
+const shotHtml = (s) => !s ? "" : s.kind === "story"
+  ? `<img class="storyimg" src="${s.src}" alt="${esc(s.alt)}" loading="lazy" width="1080" height="1920">`
+  : device(s.src, s.alt, 220);
+
+function updateHtml(u, all) {
   const url = `${SITE}/updates/${u.slug}/`;
+  const i = all.findIndex((x) => x.slug === u.slug);
+  const older = all[i + 1], newer = all[i - 1];
   const artLd = {
     "@context": "https://schema.org", "@type": "Article", headline: `PeakWait ${u.version}: ${u.title}`,
     description: u.summary, author: { "@type": "Organization", name: "PeakWait" },
     publisher: { "@type": "Organization", name: "PeakWait", logo: { "@type": "ImageObject", url: `${SITE}/icon-512.png` } },
     datePublished: u.date, dateModified: u.date, mainEntityOfPage: url, image: `${SITE}/og.png`,
   };
-  const body = u.sections.map((s) => `<h2>${esc(s.h2)}</h2>${s.html.trim()}`).join("\n");
-  const other = others.length ? `<div class="related"><h2>More updates</h2>` +
-    others.map((o) => `<a href="/updates/${o.slug}/">v${esc(o.version)} · ${esc(o.title)}</a>`).join("") + `</div>` : "";
-  const cta = `
-<div class="cta">
-  <h3>Get PeakWait</h3>
-  <p>Live lift waits, where to ski today, and the best next chair. Free on the App Store.</p>
-  <a href="${DOWNLOAD_URL}">Download PeakWait, free</a>
-  <div class="tagline">Ski the mountain, skip the wait.</div>
-</div>`;
+  const anyShot = u.sections.some((s) => s.shot);
+  const body = anyShot
+    ? u.sections.map((s, n) => `<section class="feat${s.shot ? "" : " noshot"}"><div class="t prose"><span class="n">${String(n + 1).padStart(2, "0")}</span><h2>${esc(s.h2)}</h2>${s.html.trim()}</div>${s.shot ? `<div class="shot">${shotHtml(s.shot)}</div>` : ""}</section>`).join("\n")
+    : `<article class="prose solo">${u.sections.map((s) => `<h2>${esc(s.h2)}</h2>${s.html.trim()}`).join("\n")}</article>`;
+  const css = `
+.ahead{padding-block:clamp(40px,6vw,72px) 40px;background:linear-gradient(180deg,var(--skyTop),var(--bg))}
+.ahead .inner{max-width:820px;display:grid;gap:18px}
+.ahead h1{font-size:clamp(2.3rem,5.2vw,3.6rem);font-weight:850}
+.ahead .intro p,.ahead .intro .dek{font-size:1.16rem;color:var(--ink2);max-width:60ch;margin:0}
+.feat{display:grid;grid-template-columns:minmax(0,1fr) auto;gap:clamp(28px,5vw,64px);align-items:center;padding-block:56px;border-top:1px solid var(--hair)}
+.feat:nth-of-type(even){grid-template-columns:auto minmax(0,1fr)}
+.feat:nth-of-type(even) .shot{order:-1}
+.feat.noshot{grid-template-columns:1fr}
+.feat .t{max-width:60ch}
+.feat .n{font-family:var(--num);font-weight:800;font-size:.9rem;color:var(--ink3)}
+.feat .t h2{margin:8px 0 14px}
+.storyimg{width:200px;height:auto;aspect-ratio:9/16;border-radius:20px;border:1px solid var(--hair);box-shadow:0 40px 80px -30px rgba(0,0,0,.9)}
+@media (max-width:760px){.feat,.feat:nth-of-type(even){grid-template-columns:1fr}.feat .shot{order:0!important;justify-self:center}}
+.solo{max-width:720px;padding-top:24px;border-top:1px solid var(--hair)}
+.pn{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap;padding-block:24px 8px}
+${u.css || ""}`;
   return `<!doctype html>
 <html lang="en">
 <head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-${GA_TAG}
-<title>PeakWait ${esc(u.version)}: ${esc(u.title)}</title>
-<meta name="description" content="${esc(u.summary)}">
-<meta name="author" content="PeakWait">
-<link rel="canonical" href="${url}">
-<meta property="og:type" content="article">
-<meta property="og:title" content="PeakWait ${esc(u.version)}: ${esc(u.title)}">
-<meta property="og:description" content="${esc(u.summary)}">
-<meta property="og:url" content="${url}">
-<meta property="og:image" content="${SITE}/og.png">
-<meta name="twitter:card" content="summary_large_image">
-<link rel="icon" href="/favicon.ico" sizes="any">
-<link rel="icon" href="/favicon.svg" type="image/svg+xml">
-<link rel="apple-touch-icon" href="/apple-touch-icon.png">
-<meta name="theme-color" content="#070F16">
+${head({ title: `PeakWait ${u.version}: ${u.title}`, description: u.summary, url, type: "article", extra: `<meta name="author" content="PeakWait">
 <script type="application/ld+json">${JSON.stringify(artLd)}</script>
-<style>${CSS}
-.verpill{display:inline-block;background:var(--gold);color:#04121f;font-weight:800;font-size:.72rem;padding:3px 9px;border-radius:6px;letter-spacing:.03em}</style>
+<style>${css}</style>` })}
 </head>
 <body>
-${header()}
-<main><div class="wrap">
-  <nav class="crumbs"><a href="/">Home</a> › <a href="/updates/">Updates</a> › v${esc(u.version)}</nav>
-  <p class="byline"><span class="verpill">v${esc(u.version)}</span>&nbsp;&nbsp;${fmtDate(u.date)}</p>
+${nav()}
+<main>
+<header class="ahead"><div class="wrap"><div class="inner">
+  <nav class="crumbs" aria-label="Breadcrumb"><a href="/updates/">What's new</a><span>/</span><span>${esc(u.version)}</span></nav>
+  <span class="ver"><b>${esc(u.version)}</b>${fmtDate(u.date)}</span>
   <h1>${esc(u.title)}</h1>
+  ${u.intro ? `<div class="intro">${u.intro}</div>` : `<div class="intro"><p>${esc(u.summary)}</p></div>`}
+</div></div></header>
+<div class="wrap">
   ${body}
-  ${cta}
-  ${other}
-</div></main>
+  ${endCta(`Get PeakWait ${u.version}.`, "Live lift waits, where to ski today and the best next chair. Free on the App Store.")}
+  <nav class="pn" aria-label="More updates">${older ? `<a class="arrow" href="/updates/${older.slug}/">${esc(older.version)}: ${esc(older.title)}</a>` : "<span></span>"}<a class="arrow" href="/updates/">All updates</a></nav>
+</div>
+</main>
 ${footer()}
 </body>
 </html>`;
 }
 
-function updatesIndexHtml(updates) {
-  const cards = updates.map((u) => `
-  <a class="card" href="/updates/${u.slug}/">
-    <h2><span class="verpill">v${esc(u.version)}</span> ${esc(u.title)}</h2>
-    <p>${esc(u.summary)}</p>
-    <span class="meta">${fmtDate(u.date)}</span>
-  </a>`).join("\n");
-  const listCss = `.lead{font-size:1.12rem;color:var(--ink2);margin:6px 0 30px}
-.verpill{display:inline-block;background:var(--gold);color:#04121f;font-weight:800;font-size:.7rem;padding:2px 8px;border-radius:6px;letter-spacing:.03em;vertical-align:middle;margin-right:6px}
-.card{display:block;background:var(--surface);border:1px solid var(--hair);border-radius:14px;padding:22px 22px;margin:0 0 16px}
-.card:hover{border-color:var(--brand);text-decoration:none}
-.card h2{font-size:1.25rem;margin:0 0 8px;color:var(--ink)}
-.card p{margin:0 0 10px}
-.card .meta{font-size:.8rem;color:var(--ink3)}`;
+function updatesIndexHtml(all) {
+  const [latest, ...rest] = all;
+  const shots = latest.sections.filter((s) => s.shot).slice(0, 2);
+  const css = `
+.latest{display:grid;grid-template-columns:minmax(0,1.1fr) minmax(0,.9fr);border:1px solid var(--hair);border-radius:28px;overflow:hidden;background:linear-gradient(160deg,var(--tint),var(--surface) 60%);transition:border-color .18s ease}
+.latest:hover{border-color:var(--brand)}
+.latest .copy{padding:clamp(28px,5vw,56px);display:grid;gap:16px;align-content:center;min-width:0}
+.latest h2{font-size:clamp(1.9rem,3.6vw,2.8rem)}
+.latest p{color:var(--ink2);font-size:1.06rem;max-width:46ch}
+.latest ul{list-style:none;margin:0;padding:0;display:grid;gap:9px}
+.latest li{display:flex;gap:10px;font-size:.98rem}
+.latest li::before{content:"";flex:0 0 6px;height:6px;margin-top:9px;border-radius:50%;background:var(--ink3)}
+.latest .media{display:flex;align-items:center;justify-content:center;gap:18px;padding:clamp(24px,4vw,48px)}
+.latest .media .storyimg{width:min(180px,30vw);height:auto;aspect-ratio:9/16;border-radius:18px;border:1px solid var(--hair);margin-top:60px;box-shadow:0 40px 80px -30px rgba(0,0,0,.9)}
+@media (max-width:860px){.latest{grid-template-columns:1fr}.latest .media .storyimg{display:none}}
+.tl{position:relative;margin-top:72px}
+.tl::before{content:"";position:absolute;left:96px;top:8px;bottom:8px;width:1px;background:var(--hair)}
+.rel{position:relative;display:grid;grid-template-columns:96px minmax(0,1fr);gap:32px;padding-block:22px}
+.rel .v{font-family:var(--num);font-weight:800;font-size:1.25rem;padding-top:2px}
+.rel .v small{display:block;font-family:var(--sans);font-weight:600;font-size:.72rem;letter-spacing:.1em;text-transform:uppercase;color:var(--ink3);margin-top:6px}
+.rel::after{content:"";position:absolute;left:92px;top:30px;width:9px;height:9px;border-radius:50%;background:var(--bg);border:2px solid var(--ink3)}
+.rel a{display:grid;gap:8px;padding:22px 24px;margin-left:12px;border:1px solid var(--hair);border-radius:var(--r-lg);background:var(--surface);transition:border-color .18s ease,transform .18s ease}
+.rel a:hover{border-color:var(--brand);transform:translateX(2px)}
+.rel h3{font-size:1.3rem}
+.rel p{color:var(--ink2);font-size:.98rem;max-width:70ch}
+@media (max-width:640px){.tl::before{left:6px}.rel{grid-template-columns:1fr;gap:10px;padding-left:24px}.rel::after{left:2px;top:28px}.rel a{margin-left:0}.rel .v small{display:inline;margin-left:8px}}`;
   return `<!doctype html>
 <html lang="en">
 <head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-${GA_TAG}
-<title>Product Updates | PeakWait</title>
-<meta name="description" content="What's new in PeakWait: release notes and the story behind each update.">
-<link rel="canonical" href="${SITE}/updates/">
-<meta property="og:title" content="PeakWait Product Updates">
-<meta property="og:description" content="What's new in PeakWait: release notes and the story behind each update.">
-<meta property="og:url" content="${SITE}/updates/">
-<meta property="og:image" content="${SITE}/og.png">
-<meta name="twitter:card" content="summary_large_image">
-<link rel="icon" href="/favicon.ico" sizes="any">
-<link rel="icon" href="/favicon.svg" type="image/svg+xml">
-<link rel="apple-touch-icon" href="/apple-touch-icon.png">
-<meta name="theme-color" content="#070F16">
-<style>${CSS}
-${listCss}</style>
+${head({ title: "What's New in PeakWait | Product Updates", description: "What's new in PeakWait: release notes and the story behind each update.", url: `${SITE}/updates/`, extra: `<style>${css}</style>` })}
 </head>
 <body>
-${header()}
-<main><div class="wrap">
-  <nav class="crumbs"><a href="/">Home</a> › Updates</nav>
-  <h1>Product updates</h1>
-  <p class="lead">What's new in PeakWait, and the story behind each release.</p>
-  ${cards}
-</div></main>
+${nav()}
+<main>
+<section class="phero"><div class="wrap">
+  <span class="eyebrow">What's new</span>
+  <h1>Better every release.</h1>
+  <p class="say">What's new in PeakWait, and the story behind each update.</p>
+</div></section>
+<div class="wrap">
+  <a class="latest" href="/updates/${latest.slug}/">
+    <div class="copy">
+      <span class="ver"><b>${esc(latest.version)}</b>Latest · ${fmtMonth(latest.date)}</span>
+      <h2>${esc(latest.title)}</h2>
+      <p>${esc(latest.summary)}</p>
+      <ul>${latest.sections.map((s) => `<li>${esc(s.h2)}</li>`).join("")}</ul>
+      <span class="arrow">Read the update</span>
+    </div>
+    ${shots.length ? `<div class="media">${shots.map((s) => shotHtml(s.shot)).join("")}</div>` : ""}
+  </a>
+  <div class="tl">${rest.map((u) => `
+    <div class="rel"><span class="v">${esc(u.version)}<small>${fmtMonth(u.date)}</small></span><a href="/updates/${u.slug}/"><h3>${esc(u.title)}</h3><p>${esc(u.summary)}</p></a></div>`).join("")}
+  </div>
+  ${endCta("Get the latest PeakWait.", "Every update arrives free from the App Store.")}
+</div>
+</main>
 ${footer()}
 </body>
 </html>`;
 }
 
-// Publish dates for the hand-written update posts that never made it into UPDATES.
-const UPDATE_DATES = { andes: "2026-09-06", "sharper-mornings": "2026-08-31", "time-you-didnt-wait": "2026-08-25", "three-days-on-snow": "2026-10-06", "report-from-the-chair": "2026-10-08", "keeps-counting": "2026-11-07" };
-
-function sitemap(arts) {
+function sitemap(arts, updates) {
   const urls = [
     { loc: SITE + "/", pri: "1.0" },
     { loc: SITE + "/guides/", pri: "0.8" },
     ...arts.map((a) => ({ loc: `${SITE}/guides/${a.slug}/`, pri: "0.7", lastmod: a.updated })),
     { loc: SITE + "/updates/", pri: "0.5" },
-    ...fs.readdirSync(path.join(ROOT, "updates"), { withFileTypes: true })
-      .filter((d) => d.isDirectory())
-      .map((d) => d.name)
-      .sort()
-      .map((slug) => {
-        const u = UPDATES.find((x) => x.slug === slug);
-        return { loc: `${SITE}/updates/${slug}/`, pri: "0.5", lastmod: u ? u.date : UPDATE_DATES[slug] };
-      }),
+    ...updates.map((u) => ({ loc: `${SITE}/updates/${u.slug}/`, pri: "0.5", lastmod: u.date })),
     { loc: SITE + "/terms/", pri: "0.3" },
     { loc: SITE + "/privacy/", pri: "0.3" },
   ];
@@ -1201,6 +1084,16 @@ function sitemap(arts) {
 ${urls.map((u) => `  <url><loc>${u.loc}</loc>${u.lastmod ? `<lastmod>${u.lastmod}</lastmod>` : ""}<priority>${u.pri}</priority></url>`).join("\n")}
 </urlset>`;
 }
+
+// ---- retired guides --------------------------------------------------------
+// Guides taken down (Bill, 2026-11-09: they compared PeakWait by name to other apps). Each old URL
+// keeps working as a redirect so links and search results land somewhere useful.
+const RETIRED = { "peakwait-vs-whistler-peak-app": "/guides/whistler-lift-wait-times/", "best-ski-lift-wait-apps": "/guides/" };
+const redirectHtml = (to) => `<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><title>PeakWait Guides</title>
+<link rel="canonical" href="${SITE}${to}"><meta name="robots" content="noindex">
+<meta http-equiv="refresh" content="0; url=${to}"></head>
+<body><p><a href="${to}">Continue to PeakWait Guides</a></p></body></html>`;
 
 // ---- llms.txt / llms-full.txt (for AI answer engines) ----------------------
 const SUMMARY = "PeakWait is a real-time ski-lift wait app for iPhone. Skiers on the mountain report live lift waits (Moving, Short, Busy, Long), and PeakWait shows which lifts are moving right now, ranks where to ski today by snow and crowds, and points you to the best next chair. It covers 116 resorts across North and South America. Free to check status and report waits; PeakWait Plus adds the cross-resort \"where to ski today\" guide, powder alerts, and live friend location. Made by PeakWait LLC.";
@@ -1211,7 +1104,7 @@ function llmsTxt(arts) {
 > ${SUMMARY}
 
 ## Guides
-${arts.map((a) => `- [${a.title}](${SITE}/guides/${a.slug}/): ${a.description}`).join("\n")}
+${arts.map((a) => `- [${waitify(a.title)}](${SITE}/guides/${a.slug}/): ${a.description}`).join("\n")}
 
 ## Product
 - [PeakWait home](${SITE}/): what PeakWait is, its features, and the download link.
@@ -1224,7 +1117,7 @@ ${arts.map((a) => `- [${a.title}](${SITE}/guides/${a.slug}/): ${a.description}`)
 }
 
 function articleText(a) {
-  let out = `# ${a.title}\nBy ${AUTHOR} · ${fmtDate(a.published)} · ${SITE}/guides/${a.slug}/\n\n${stripTags(a.dek)}\n\n`;
+  let out = `# ${waitify(a.title)}\nBy ${AUTHOR} · ${fmtDate(a.published)} · ${SITE}/guides/${a.slug}/\n\n${stripTags(a.dek)}\n\n`;
   for (const s of a.sections) out += `## ${s.h2}\n${stripTags(s.html)}\n\n`;
   out += `## FAQ\n` + a.faqs.map((f) => `Q: ${f.q}\nA: ${f.a}`).join("\n\n") + "\n";
   return out;
@@ -1316,27 +1209,43 @@ let n = 0;
 for (const a of ARTICLES) {
   const dir = path.join(ROOT, "guides", a.slug);
   fs.mkdirSync(dir, { recursive: true });
-  const others = ARTICLES.filter((o) => o.slug !== a.slug).slice(0, 3);
-  fs.writeFileSync(path.join(dir, "index.html"), articleHtml(a, others));
+  // Keep reading: same section first, then the newest of the rest.
+  const sameSec = ARTICLES.filter((o) => o.slug !== a.slug && sectionOf(o) === sectionOf(a));
+  const rest = ARTICLES.filter((o) => o.slug !== a.slug && sectionOf(o) !== sectionOf(a)).sort((x, y) => (y.published > x.published ? 1 : -1));
+  fs.writeFileSync(path.join(dir, "index.html"), articleHtml(a, [...sameSec, ...rest].slice(0, 3)));
   n++;
 }
 fs.writeFileSync(path.join(ROOT, "guides", "index.html"), indexHtml(ARTICLES));
-// updates/ is hand-maintained (three posts exist on disk that were never added to UPDATES). The
-// tool used to regenerate updates/index.html and every post from that stale array, which would have
-// deleted them from the sitemap. Pass --updates to regenerate updates from UPDATES on purpose.
-if (process.argv.includes("--updates")) {
-  fs.mkdirSync(path.join(ROOT, "updates"), { recursive: true });
-  for (const u of UPDATES) {
-    const dir = path.join(ROOT, "updates", u.slug);
-    fs.mkdirSync(dir, { recursive: true });
-    const others = UPDATES.filter((o) => o.slug !== u.slug).slice(0, 3);
-    fs.writeFileSync(path.join(dir, "index.html"), updateHtml(u, others));
-  }
-  fs.writeFileSync(path.join(ROOT, "updates", "index.html"), updatesIndexHtml(UPDATES));
+for (const [slug, to] of Object.entries(RETIRED)) {
+  fs.mkdirSync(path.join(ROOT, "guides", slug), { recursive: true });
+  fs.writeFileSync(path.join(ROOT, "guides", slug, "index.html"), redirectHtml(to));
 }
-fs.writeFileSync(path.join(ROOT, "sitemap.xml"), sitemap(ARTICLES));
+// Updates: one JSON per release in updates-src/, newest first.
+const USRC = path.join(ROOT, "updates-src");
+const UPDATES = fs.readdirSync(USRC).filter((f) => f.endsWith(".json"))
+  .map((f) => JSON.parse(fs.readFileSync(path.join(USRC, f), "utf8")))
+  .sort((a, b) => (b.date > a.date ? 1 : -1));
+for (const u of UPDATES) {
+  const dir = path.join(ROOT, "updates", u.slug);
+  fs.mkdirSync(dir, { recursive: true });
+  fs.writeFileSync(path.join(dir, "index.html"), updateHtml(u, UPDATES));
+}
+fs.writeFileSync(path.join(ROOT, "updates", "index.html"), updatesIndexHtml(UPDATES));
+// Home page: the five newest guides, between the guides:start/end markers in /index.html.
+{
+  const homeP = path.join(ROOT, "index.html");
+  const home = fs.readFileSync(homeP, "utf8");
+  const newest = [...ARTICLES].sort((a, b) => (b.published > a.published ? 1 : -1)).slice(0, 5);
+  const secName = (a) => SECTIONS.find(([k]) => k === sectionOf(a))[1];
+  const cards = newest.map((a, i) => i === 0
+    ? `<a class="gcard feat" href="/guides/${a.slug}/" style="background-image:linear-gradient(0deg,rgba(7,15,22,.92),rgba(7,15,22,.2) 70%),url(${imageOf(a)})"><span class="meta"><i>New</i>${esc(secName(a))} · ${esc(a.readTime)}</span><div style="display:grid;gap:10px"><h3>${esc(waitify(a.h1))}</h3><p>${esc(subOf(a))}</p></div></a>`
+    : `<a class="gcard" href="/guides/${a.slug}/"><span class="meta">${esc(secName(a))} · ${esc(a.readTime)}</span><h3>${esc(waitify(a.h1))}</h3><span class="arrow">Read</span></a>`).join("\n      ");
+  const next = home.replace(/<!-- guides:start -->[\s\S]*?<!-- guides:end -->/, `<!-- guides:start -->\n      ${cards}\n      <!-- guides:end -->`);
+  if (next === home && !home.includes("<!-- guides:start -->")) throw new Error("index.html lost its guides:start/end markers");
+  fs.writeFileSync(homeP, next);
+}
+fs.writeFileSync(path.join(ROOT, "sitemap.xml"), sitemap(ARTICLES, UPDATES));
 fs.writeFileSync(path.join(ROOT, "robots.txt"), ROBOTS);
 fs.writeFileSync(path.join(ROOT, "llms.txt"), llmsTxt(ARTICLES));
 fs.writeFileSync(path.join(ROOT, "llms-full.txt"), llmsFull(ARTICLES));
-console.log(`Built ${n} guides + index + sitemap.xml + robots.txt + llms.txt + llms-full.txt`);
-console.log(ARTICLES.map((a) => `  ${SITE}/guides/${a.slug}/`).join("\n"));
+console.log(`Built ${n} guides + index + ${UPDATES.length} updates + sitemap.xml + robots.txt + llms.txt + llms-full.txt`);

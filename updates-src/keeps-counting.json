@@ -1,0 +1,51 @@
+{
+ "slug": "keeps-counting",
+ "version": "1.5",
+ "date": "2026-11-07",
+ "title": "A Day That Keeps Counting",
+ "summary": "Your ski day keeps counting with no signal. Answer How's the wait from your lock screen or Apple Watch, get a welcome when you arrive, share your day as a story, and earn a week of PeakWait Plus for every friend you bring.",
+ "intro": "<p class=\"dek\">Dead zones, cold hands and a crew to find. Here is what PeakWait 1.5 brings.</p>",
+ "sections": [
+  {
+   "h2": "No signal, no problem",
+   "html": "<p>Mountains are full of dead zones, and your day now rides right through them. Losing signal no longer ends your day. It ends only when you actually leave the mountain, with every run and chair counted.</p>\n  <p>Open a resort with no signal and you see its lifts as they last were, with the time they were checked. Waits show as unknown until you're back online, because an old wait is not a live one. Any wait you tap is saved and sent the moment you have signal again.</p>",
+   "shot": {
+    "src": "/assets/img/app-05-day.jpg",
+    "alt": "Day screen with vertical, runs and chairs counted",
+    "kind": "device"
+   }
+  },
+  {
+   "h2": "How's the wait? Answer from your lock screen",
+   "html": "<p>Stand at a lift for a minute and PeakWait asks <strong>How's the wait?</strong> Tap Moving, Short, Busy or Long right on the notification, from your lock screen or your Apple Watch. No unlocking, no gloves off for long. If you'd rather not be asked, turn it off in Settings, Notifications.</p>",
+   "shot": {
+    "src": "/assets/img/app-04-report-sheet.jpg",
+    "alt": "How's the wait at Beavers, with Moving, Short, Busy and Long",
+    "kind": "device"
+   }
+  },
+  {
+   "h2": "A welcome when you arrive",
+   "html": "<p>When your day starts, PeakWait welcomes you to the mountain. Tap it and you're straight into that resort's lifts. Turn it on from the Day tab and the welcome reaches you in the parking lot, before you've even opened the app.</p>"
+  },
+  {
+   "h2": "Your day, story-sized",
+   "html": "<p>Tap <strong>Share as a story</strong> after a day and PeakWait makes a full-screen picture of it: your vertical, runs, chairs and favourite lift. It's sized for Instagram and fits the group chat too.</p>",
+   "shot": {
+    "src": "/assets/img/story.jpg",
+    "alt": "A ski day shared as a story",
+    "kind": "story"
+   }
+  },
+  {
+   "h2": "Bring your crew, get a week of Plus",
+   "html": "<p>Invite a friend from the Crew tab. When they ski their first day with PeakWait, you both get a week of PeakWait Plus. Every friend adds another week, up to eight a season.</p>",
+   "shot": {
+    "src": "/assets/img/app-07-crew.jpg",
+    "alt": "My Crew screen with the invite card",
+    "kind": "device"
+   }
+  }
+ ],
+ "css": ""
+}
