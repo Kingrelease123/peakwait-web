@@ -1,0 +1,37 @@
+{
+ "slug": "first-chair",
+ "version": "1.6",
+ "date": "2026-11-12",
+ "title": "First Chair Starts Your Day",
+ "summary": "Your ski day now starts by itself on your first chair. Truer vertical from your iPhone's barometer, and live waits that load over satellite when there's no cell signal.",
+ "intro": "<p class=\"dek\">Phone in your pocket, gloves on. Here is what PeakWait 1.6 brings.</p>",
+ "sections": [
+  {
+   "h2": "Your day starts on the first chair",
+   "html": "<p>Arrive, boot up and ride. PeakWait now starts your ski day on your first chair, with the phone still in your pocket. No opening the app with cold hands before you load.</p>\n  <p>For this, set location for PeakWait to <strong>Always</strong> with <strong>Precise Location</strong> on. Your welcome to the mountain now arrives once you're on foot near the lifts.</p>",
+   "shot": {
+    "src": "/assets/img/app-05-day.jpg",
+    "alt": "Day screen with vertical, runs and chairs counted",
+    "kind": "device"
+   }
+  },
+  {
+   "h2": "Truer vertical, from your iPhone's barometer",
+   "html": "<p>Your iPhone has a barometer, and PeakWait now reads it during a ski day. Your vertical and runs count more accurately, even with no signal.</p>\n  <p>The first time your day starts, iPhone asks for <strong>Motion &amp; Fitness</strong>. Allow it for the sharper count. Saying no keeps everything working as before.</p>"
+  },
+  {
+   "h2": "Live waits over satellite",
+   "html": "<p>No cell signal but open sky? On T-Mobile satellite with iOS 26, a resort's live waits load in a tiny download, and your wait reports still send.</p>",
+   "shot": {
+    "src": "/assets/img/app-02-resort-lifts.jpg",
+    "alt": "PeakWait lift list at Arapahoe Basin, every lift with its wait band",
+    "kind": "device"
+   }
+  },
+  {
+   "h2": "Also new this month",
+   "html": "<p>Your day keeps running at the far lifts of big mountains. If your day started with no signal, lift counting picks up by itself once the lift list arrives. PeakWait Plus is recognised as soon as the app opens. And a mountain that has not opened yet now says <strong>Not open yet</strong> on its lifts.</p>"
+  }
+ ],
+ "css": ""
+}
