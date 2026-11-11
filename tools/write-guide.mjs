@@ -24,6 +24,7 @@ import fs from "node:fs";
 import path from "node:path";
 import { spawnSync } from "node:child_process";
 import { callAnthropic } from "./lib/anthropic.mjs";
+import { britishSummary } from "./lib/american.mjs";
 
 const ROOT = path.resolve(path.dirname(new URL(import.meta.url).pathname), "..");
 const API = (process.env.PEAKWAIT_API || "https://peakwait-api.fly.dev").replace(/\/$/, "");
@@ -93,6 +94,7 @@ Research: search the web for the rest. Use the resort's own site, local news and
 
 Hard rules. A script checks every one and rejects the guide if any fails:
 - No parentheses anywhere. No em dashes. Make an aside its own sentence or cut it.
+- American English spelling: color, favorite, gray, center, meters, canceled, traveled, recognized. A real place keeps its own spelling.
 - Never use these words: community, lifestyle, stoke, stoked, shred, disrupt, AI-powered, gaper, "the mountains are calling". Use "epic" only as the name of the Epic Pass.
 - Call the queue a "wait", not a "line". The phrase "lift lines" may appear in the title, h1 and keywords because people search for it, and a few times in the body.
 - Never invent PeakWait statistics. Do not write "PeakWait data shows", "our users report", average waits in minutes from PeakWait, or anything like it. Waits in minutes are fine only as what skiers commonly say or what a source says.
@@ -173,6 +175,8 @@ function check(g) {
     for (const b of BANNED) if (b.test(v)) errs.push(`${field} uses a banned word (${b.source}).`);
     for (const b of INVENTED) if (b.test(v)) errs.push(`${field} claims a PeakWait statistic: "${v.match(b)[0]}". Remove it.`);
     if (/\$\s?\d/.test(v)) errs.push(`${field} mentions a price. No prices.`);
+    const british = britishSummary(v);
+    if (british) errs.push(`${field} uses British spelling: ${british}. Write American English.`);
   }
   for (const [i, s] of g.sections.entries()) {
     for (const m of s.html.matchAll(/<\/?([a-zA-Z0-9]+)([^>]*)>/g)) {

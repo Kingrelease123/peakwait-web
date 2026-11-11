@@ -11,6 +11,7 @@ import path from "node:path";
 import crypto from "node:crypto";
 
 import { SITE, DOWNLOAD_URL, esc, waitify, head, nav, footer, endCta, device } from "./lib/shell.mjs";
+import { britishSummary } from "./lib/american.mjs";
 const AUTHOR = "Herb Sendit";
 const ROOT = path.resolve(path.dirname(new URL(import.meta.url).pathname), "..");
 
@@ -29,7 +30,7 @@ const ARTICLES = [
     dek: `Skiers don't talk about lift lines like a small annoyance. They talk about them like a betrayal. "I found hell today." "Spent more time in line than skiing." "$200 to stand in a line." "That's a no from me, dawg." The pain is real, it hits hardest on the best days, and the parts you can actually control are very fixable.`,
     sections: [
       { h2: "The math that quietly ruins the day", html: `
-<p>The real wound isn't the wait. It's the ratio. An hour in line for a two minute run. A whole powder day boiled down to six runs. People do that math while their toes go numb, and something snaps. "I spent more time in various lift lines than actually skiing." At that point you're not skiing. You're queueing with a hobby attached.</p>` },
+<p>The real wound isn't the wait. It's the ratio. An hour in line for a two minute run. A whole powder day boiled down to six runs. People do that math while their toes go numb, and something snaps. "I spent more time in various lift lines than actually skiing." At that point you're not skiing. You're queuing with a hobby attached.</p>` },
       { h2: "The powder day paradox", html: `
 <p>Here's the cruel part. The best snow brings the worst waits. The exact days you'd skip work to ski are the days everyone else has the same idea. Fresh snow falls, terrain opens slowly while patrol does avalanche work, and the whole mountain funnels onto three lifts. Best conditions, longest lines, every single time. You could set your watch by it.</p>` },
       { h2: `"$200 to stand in a line"`, html: `
@@ -532,7 +533,7 @@ const ARTICLES = [
       { h2: "The problem is geography, not volume", html: `
 <p>Breck sells a lot of tickets, but that is not why you end up waiting. The reason is that five peaks funnel into a small number of base-area lifts, and everybody uses them in the same forty minutes.</p><p>Peak 8 is the main event. On a weekend morning the crowd stacks at the Colorado SuperChair and the Peak 8 SuperConnect, because those two are how you get from the base to everything worth skiing. Down in town, the BreckConnect Gondola gathers a second crowd of people who parked in Breckenridge and now need to get to Peak 8 at all. Beaver Run SuperChair takes the overflow from the Peak 9 side, and Rocky Mountain SuperChair takes whatever is left.</p><p>Those four are where your day gets eaten. Falcon, Mercury, Kensho, Independence and Zendo all exist, and on the same morning several of them are turning with nobody on them.</p>` },
       { h2: "The morning window, honestly", html: `
-<p>The stack builds from about 9:00 and clears around 10:30. That is a real ninety-minute window, not a rumour, and it is the single biggest variable in your day. Skiers who are on a lift by 8:45 essentially skip it. Skiers who show up at 9:20 pay for it twice, once at the gondola and again at the top.</p><p>If you cannot get there early, the fix is not to go faster. It is to start somewhere else. Peak 9 from the Quicksilver SuperChair side, or the Peak 7 lifts, will both put you on snow while the Peak 8 base is still a maze.</p>` },
+<p>The stack builds from about 9:00 and clears around 10:30. That is a real ninety-minute window, not a rumor, and it is the single biggest variable in your day. Skiers who are on a lift by 8:45 essentially skip it. Skiers who show up at 9:20 pay for it twice, once at the gondola and again at the top.</p><p>If you cannot get there early, the fix is not to go faster. It is to start somewhere else. Peak 9 from the Quicksilver SuperChair side, or the Peak 7 lifts, will both put you on snow while the Peak 8 base is still a maze.</p>` },
       { h2: "Where people go wrong at the top", html: `
 <p>The second bottleneck of the day is the Imperial SuperChair. It is the highest chairlift in North America, it accesses the terrain everyone photographs, and it has a fraction of the capacity of the chairs feeding it. On a bluebird weekend it can hold a wait long after the base areas have cleared out, and it is not unusual for it to be the only significant wait on the mountain by noon.</p><p>The Horseshoe Bowl T-Bar next to it moves people in smaller numbers but keeps turning. If the Imperial queue is deep and you can ride a T-bar, you are usually better off.</p>` },
       { h2: "The lifts nobody talks about", html: `
@@ -664,7 +665,7 @@ const ARTICLES = [
 <p>At A-Basin that means Black Mountain Express and a wait that can run twenty to forty minutes by ten in the morning on a weekend, and much less on a weekday. At Keystone it is the River Run gondola or Montezuma, with the same shape. The crowd thins after one o'clock, when the first wave has had its laps and gone to lunch. If you want the day without the wait, arrive before the lifts turn or arrive after lunch. The middle of the morning is the worst hour of the whole season.</p>` },
       { h2: "How to know a lift is really turning", html: `
 <p>The problem with opening week is that the information is a day old. The resort posts an opening date, then a lift list, then an opening time, and all three can change overnight on wind, on a lift inspection, on a last cold night that did or did not come. People drive from Denver on a posted "opens at 9" and find the lift on hold at 9:40.</p>
-<p>PeakWait answers a narrower question: are the lifts turning right now. A mountain shows as open the moment its lifts are running, from the resort's own lift status and from skiers riding them, and the app says which of those it is using. Before that it shows the announced date if the resort has given one, and otherwise an estimate, labelled as an estimate. Once you are there, your phone times your own wait, and the lift's row says what that hour usually looks like until enough skiers have measured it. On a day with one lift, that is the only number that matters.</p>` },
+<p>PeakWait answers a narrower question: are the lifts turning right now. A mountain shows as open the moment its lifts are running, from the resort's own lift status and from skiers riding them, and the app says which of those it is using. Before that it shows the announced date if the resort has given one, and otherwise an estimate, labeled as an estimate. Once you are there, your phone times your own wait, and the lift's row says what that hour usually looks like until enough skiers have measured it. On a day with one lift, that is the only number that matters.</p>` },
       { h2: "What actually helps", html: `
 <ul>
   <li><strong>Watch the overnight lows, not the calendar.</strong> Three or four nights in the teens at the summit is what moves the date.</li>
@@ -680,7 +681,7 @@ const ARTICLES = [
       { q: "Which Colorado ski resort opens first?", a: "Usually Arapahoe Basin or Keystone, in mid October. The two have traded the first chair for years. Wolf Creek can beat both when a big natural storm lands in October, because it opens on real snow rather than snowmaking." },
       { q: "How long are the lift waits on opening day?", a: "On a weekend at an early opener, twenty to forty minutes by mid morning on the one lift that is running. It is a single run and a full parking lot, not a busy resort. Weekdays are far shorter, and the wait drops after one o'clock." },
       { q: "Is opening day worth it?", a: "For the first turns of the year, yes. For skiing, not really: one groomed run, early-season snow, and the longest wait you will stand in all winter. If you want the day without the crush, go on a weekday or arrive after lunch." },
-      { q: "Can I see if the lifts are actually running right now?", a: "Yes. PeakWait shows a mountain as open the moment its lifts are turning, from the resort's own lift status and from skiers riding them, and says which it is using. Before that it shows the resort's announced date or a labelled estimate, never a guess dressed up as a fact." },
+      { q: "Can I see if the lifts are actually running right now?", a: "Yes. PeakWait shows a mountain as open the moment its lifts are turning, from the resort's own lift status and from skiers riding them, and says which it is using. Before that it shows the resort's announced date or a labeled estimate, never a guess dressed up as a fact." },
     ],
     cta: { h: "Know the moment the first chair turns", p: `Star your mountains. PeakWait tells you when the lifts are running and what the wait is, lift by lift.` },
   },
@@ -1227,6 +1228,20 @@ const USRC = path.join(ROOT, "updates-src");
 const UPDATES = fs.readdirSync(USRC).filter((f) => f.endsWith(".json"))
   .map((f) => JSON.parse(fs.readFileSync(path.join(USRC, f), "utf8")))
   .sort((a, b) => (b.date > a.date ? 1 : -1));
+// American English in every guide and update article. See docs/marketing/writing-standards.md in peakwait.
+function lintSpelling(pages) {
+  const offenders = pages.flatMap(([name, page]) => {
+    const british = britishSummary(stripTags(JSON.stringify(page)));
+    return british ? [`  ${name}: ${british}`] : [];
+  });
+  if (offenders.length) {
+    console.error(`\nLint failed: British spelling in ${offenders.length} page(s). PeakWait writes American English.\n`);
+    console.error(offenders.join("\n"));
+    process.exit(1);
+  }
+}
+lintSpelling([...ARTICLES.map((a) => [`guides/${a.slug}`, a]), ...UPDATES.map((u) => [`updates/${u.slug}`, u])]);
+
 for (const u of UPDATES) {
   const dir = path.join(ROOT, "updates", u.slug);
   fs.mkdirSync(dir, { recursive: true });
