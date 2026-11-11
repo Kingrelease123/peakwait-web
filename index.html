@@ -13,7 +13,8 @@ gtag('config', 'G-LJ4V6MDP0Y');
 // Count taps on any App Store link, and tell the App Store which part of the site sent them.
 document.addEventListener('click',function(e){var a=e.target.closest&&e.target.closest('a[href*="apps.apple.com"]');if(!a)return;
   var from=location.pathname.split('/')[1]||'home';
-  if(a.href.indexOf('ct=')<0)a.href+=(a.href.indexOf('?')<0?'?':'&')+'ct=web-'+from;
+  var u=a.href,q=function(k,v){if(u.indexOf(k+'=')<0)u+=(u.indexOf('?')<0?'?':'&')+k+'='+v;};
+  q('pt','127647061');q('ct','web-'+from);q('mt','8');a.href=u;
   gtag('event','app_store_click',{from:from});});
 </script>
 <title>PeakWait: Ski the mountain, skip the wait</title>
@@ -546,7 +547,7 @@ document.addEventListener('click',function(e){var a=e.target.closest&&e.target.c
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js"></script>
 <script>
-  try{ new QRCode(document.getElementById('qr'),{text:'https://apps.apple.com/us/app/id6793253589?ct=web-qr',width:144,height:144,colorDark:'#070F16',colorLight:'#EFF4F9',correctLevel:QRCode.CorrectLevel.M}); }catch(e){}
+  try{ new QRCode(document.getElementById('qr'),{text:'https://apps.apple.com/us/app/id6793253589?pt=127647061&ct=web-qr&mt=8',width:144,height:144,colorDark:'#070F16',colorLight:'#EFF4F9',correctLevel:QRCode.CorrectLevel.M}); }catch(e){}
   document.querySelectorAll('.menu nav a').forEach(a=>a.addEventListener('click',()=>a.closest('details').open=false));
   // Film: a real <video> (works with no script); the overlay just starts it and gets out of the way.
   // Holds on the last frame, the POV powder run. No loop, no end card.
