@@ -10,6 +10,11 @@ window.dataLayer = window.dataLayer || [];
 function gtag(){dataLayer.push(arguments);}
 gtag('js', new Date());
 gtag('config', 'G-LJ4V6MDP0Y');
+// Count taps on any App Store link, and tell the App Store which part of the site sent them.
+document.addEventListener('click',function(e){var a=e.target.closest&&e.target.closest('a[href*="apps.apple.com"]');if(!a)return;
+  var from=location.pathname.split('/')[1]||'home';
+  if(a.href.indexOf('ct=')<0)a.href+=(a.href.indexOf('?')<0?'?':'&')+'ct=web-'+from;
+  gtag('event','app_store_click',{from:from});});
 </script>
 <title>PeakWait 1.4: Report From the Chair</title>
 <meta name="description" content="Report the lift you're on from the chair. Waits that count only when your phone saw all of them. Every running lift says what this hour usually looks like, and a mountain shows open the moment its lifts run.">

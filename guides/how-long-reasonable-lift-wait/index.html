@@ -10,6 +10,11 @@ window.dataLayer = window.dataLayer || [];
 function gtag(){dataLayer.push(arguments);}
 gtag('js', new Date());
 gtag('config', 'G-LJ4V6MDP0Y');
+// Count taps on any App Store link, and tell the App Store which part of the site sent them.
+document.addEventListener('click',function(e){var a=e.target.closest&&e.target.closest('a[href*="apps.apple.com"]');if(!a)return;
+  var from=location.pathname.split('/')[1]||'home';
+  if(a.href.indexOf('ct=')<0)a.href+=(a.href.indexOf('?')<0?'?':'&')+'ct=web-'+from;
+  gtag('event','app_store_click',{from:from});});
 </script>
 <title>How Long Is a Reasonable Lift Wait? What 400+ Skiers Say</title>
 <meta name="description" content="We dug into what skiers actually consider an acceptable lift line. The consensus is shorter than you'd think, and it explains why a bad day feels like a betrayal.">

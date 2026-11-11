@@ -10,6 +10,11 @@ window.dataLayer = window.dataLayer || [];
 function gtag(){dataLayer.push(arguments);}
 gtag('js', new Date());
 gtag('config', 'G-LJ4V6MDP0Y');
+// Count taps on any App Store link, and tell the App Store which part of the site sent them.
+document.addEventListener('click',function(e){var a=e.target.closest&&e.target.closest('a[href*="apps.apple.com"]');if(!a)return;
+  var from=location.pathname.split('/')[1]||'home';
+  if(a.href.indexOf('ct=')<0)a.href+=(a.href.indexOf('?')<0?'?':'&')+'ct=web-'+from;
+  gtag('event','app_store_click',{from:from});});
 </script>
 <title>PeakWait 1.0.1: Sort by Pass, and a Smarter Home Screen</title>
 <meta name="description" content="The 1.0.1 update sorts your mountains by pass, redesigns the offseason home screen with a live countdown, and makes closed mountains read Closed instead of No data.">

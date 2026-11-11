@@ -10,6 +10,11 @@ window.dataLayer = window.dataLayer || [];
 function gtag(){dataLayer.push(arguments);}
 gtag('js', new Date());
 gtag('config', 'G-LJ4V6MDP0Y');
+// Count taps on any App Store link, and tell the App Store which part of the site sent them.
+document.addEventListener('click',function(e){var a=e.target.closest&&e.target.closest('a[href*="apps.apple.com"]');if(!a)return;
+  var from=location.pathname.split('/')[1]||'home';
+  if(a.href.indexOf('ct=')<0)a.href+=(a.href.indexOf('?')<0?'?':'&')+'ct=web-'+from;
+  gtag('event','app_store_click',{from:from});});
 </script>
 <title>PeakWait 1.5: A Day That Keeps Counting</title>
 <meta name="description" content="Your ski day keeps counting with no signal. Answer How's the wait from your lock screen or Apple Watch, get a welcome when you arrive, share your day as a story, and earn a week of PeakWait Plus for every friend you bring.">
