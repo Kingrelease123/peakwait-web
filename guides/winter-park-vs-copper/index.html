@@ -13,7 +13,8 @@ gtag('config', 'G-LJ4V6MDP0Y');
 // Count taps on any App Store link, and tell the App Store which part of the site sent them.
 document.addEventListener('click',function(e){var a=e.target.closest&&e.target.closest('a[href*="apps.apple.com"]');if(!a)return;
   var from=location.pathname.split('/')[1]||'home';
-  if(a.href.indexOf('ct=')<0)a.href+=(a.href.indexOf('?')<0?'?':'&')+'ct=web-'+from;
+  var u=a.href,q=function(k,v){if(u.indexOf(k+'=')<0)u+=(u.indexOf('?')<0?'?':'&')+k+'='+v;};
+  q('pt','127647061');q('ct','web-'+from);q('mt','8');a.href=u;
   gtag('event','app_store_click',{from:from});});
 </script>
 <title>Winter Park vs Copper Mountain: Where to Ski on a Saturday</title>
