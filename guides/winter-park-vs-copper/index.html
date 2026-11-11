@@ -10,6 +10,11 @@ window.dataLayer = window.dataLayer || [];
 function gtag(){dataLayer.push(arguments);}
 gtag('js', new Date());
 gtag('config', 'G-LJ4V6MDP0Y');
+// Count taps on any App Store link, and tell the App Store which part of the site sent them.
+document.addEventListener('click',function(e){var a=e.target.closest&&e.target.closest('a[href*="apps.apple.com"]');if(!a)return;
+  var from=location.pathname.split('/')[1]||'home';
+  if(a.href.indexOf('ct=')<0)a.href+=(a.href.indexOf('?')<0?'?':'&')+'ct=web-'+from;
+  gtag('event','app_store_click',{from:from});});
 </script>
 <title>Winter Park vs Copper Mountain: Where to Ski on a Saturday</title>
 <meta name="description" content="Two Ikon mountains off I-70 compared on drive, lift waits, terrain and parking, so you can pick Winter Park or Copper for your Saturday.">

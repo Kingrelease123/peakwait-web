@@ -10,6 +10,11 @@ window.dataLayer = window.dataLayer || [];
 function gtag(){dataLayer.push(arguments);}
 gtag('js', new Date());
 gtag('config', 'G-LJ4V6MDP0Y');
+// Count taps on any App Store link, and tell the App Store which part of the site sent them.
+document.addEventListener('click',function(e){var a=e.target.closest&&e.target.closest('a[href*="apps.apple.com"]');if(!a)return;
+  var from=location.pathname.split('/')[1]||'home';
+  if(a.href.indexOf('ct=')<0)a.href+=(a.href.indexOf('?')<0?'?':'&')+'ct=web-'+from;
+  gtag('event','app_store_click',{from:from});});
 </script>
 <title>Come find me on PeakWait</title>
 <meta name="description" content="A friend wants to ski with you on PeakWait: live lift waits and your crew on the mountain. Ski your first day and you both get a week of PeakWait Plus.">
@@ -59,7 +64,7 @@ gtag('config', 'G-LJ4V6MDP0Y');
       <div class="cta">
         <a class="btn" href="https://apps.apple.com/us/app/id6793253589">Download now for your season</a>
       </div>
-      <p class="step">Already have the app? Open it, go to <b>Crew → Add a friend</b> and enter <b id="handle">their handle</b>.</p>
+      <p class="step">Already have the app? Open it, tap <b>Crew</b>, then <b>Add by handle</b>, and enter <b id="handle">their handle</b>.</p>
     </div>
     <div class="device" style="--w:240px"><img src="/assets/img/app-07-crew.jpg" alt="My Crew in PeakWait: friends on the mountain and where each one is" width="990" height="2151"></div>
   </div>
