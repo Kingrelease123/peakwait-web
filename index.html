@@ -83,13 +83,6 @@ document.addEventListener('click',function(e){var a=e.target.closest&&e.target.c
 @media (max-width:640px){.stage{aspect-ratio:auto;width:100%;display:flex;justify-content:center;padding-top:8px}.stage .photo{display:none}.stage .device{position:relative;left:auto;bottom:auto;--w:min(300px,78vw)}}
 
 /* PROOF STRIP */
-.strip{border-block:1px solid var(--hair);background:var(--surface)}
-.strip .wrap{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));padding-block:26px}
-.strip .wrap > div{display:grid;gap:4px;padding-inline:20px;border-left:1px solid var(--hair)}
-.strip .wrap > div:first-child{border-left:0;padding-left:0}
-.strip .n{font-size:1.9rem;line-height:1}
-.strip .l{font-size:.78rem;color:var(--ink3);font-weight:600}
-@media (max-width:720px){.strip .wrap{grid-template-columns:1fr 1fr;gap:22px 0}.strip .wrap > div:nth-child(3){border-left:0;padding-left:0}}
 
 /* HOW IT WORKS */
 .steps{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:clamp(20px,3vw,32px);margin-top:56px}
@@ -298,13 +291,6 @@ document.addEventListener('click',function(e){var a=e.target.closest&&e.target.c
     </div>
   </div>
 </section>
-
-<div class="strip"><div class="wrap">
-  <div><span class="n num">116</span><span class="l">mountains, lift by lift</span></div>
-  <div><span class="n num">1,500+</span><span class="l">lifts mapped</span></div>
-  <div><span class="n num">2</span><span class="l">taps to report a wait</span></div>
-  <div><span class="n num">$0</span><span class="l">to see every wait</span></div>
-</div></div>
 
 <section class="sec" id="how">
   <div class="wrap">
