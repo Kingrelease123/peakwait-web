@@ -7,7 +7,7 @@ import crypto from "node:crypto";
 export const SITE = "https://peakwait.net";
 const CSS_V = crypto.createHash("sha1").update(fs.readFileSync(new URL("../../assets/site.css", import.meta.url))).digest("hex").slice(0, 8);
 export const DOWNLOAD_URL = "https://apps.apple.com/us/app/id6793253589";
-export const PH_URL = "https://www.producthunt.com/posts/peakwait";
+export const PH_URL = "https://www.producthunt.com/products/peakwait";
 
 export const esc = (s) => String(s).replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;").replace(/"/g, "&quot;");
 
