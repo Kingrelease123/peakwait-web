@@ -68,7 +68,9 @@ document.addEventListener('click',function(e){var a=e.target.closest&&e.target.c
 .qr .code canvas,.qr .code img{width:100%!important;height:100%!important}
 .qr span{font-size:.82rem;line-height:1.35;color:var(--ink2);max-width:12ch}
 @media (hover:none),(max-width:860px){.qr{display:none}}
-.avail{margin-top:18px;font-size:.84rem;color:var(--ink3)}
+.avail{margin-top:18px;font-size:.84rem;color:var(--ink3);display:flex;align-items:center;gap:10px 14px;flex-wrap:wrap}
+.soon{display:inline-flex;align-items:center;gap:8px;padding:6px 12px;border:1px solid var(--hair);border-radius:999px;background:var(--surface);color:var(--ink2);font-weight:600}
+.soon::before{content:"";width:7px;height:7px;border-radius:50%;background:var(--gold)}
 .stage{position:relative;justify-self:center;width:min(100%,520px);aspect-ratio:1/1.12}
 .stage .photo{position:absolute;inset:0 0 14% 30%;border-radius:var(--r-lg);overflow:hidden;border:1px solid var(--hair)}
 .stage .photo img{width:100%;height:100%;object-fit:cover;object-position:82% 50%}
@@ -251,6 +253,7 @@ document.addEventListener('click',function(e){var a=e.target.closest&&e.target.c
 .closer .in{display:grid;grid-template-columns:minmax(0,1fr) auto;gap:32px;align-items:end}
 .closer h2{font-size:clamp(2.4rem,6vw,4.4rem);font-weight:850}
 .closer p{color:var(--ink2);font-size:1.12rem;max-width:42ch;margin-top:16px}
+.closer p.avail{font-size:.84rem;margin-top:18px}
 @media (max-width:760px){.closer .in{grid-template-columns:1fr}}
 </style>
 </head>
@@ -283,7 +286,7 @@ document.addEventListener('click',function(e){var a=e.target.closest&&e.target.c
         </div>
         <div class="qr" aria-hidden="true"><div class="code" id="qr"></div><span>Scan to get it on your iPhone</span></div>
       </div>
-      <p class="avail">Free · iPhone · iOS 17 or later</p>
+      <p class="avail"><span>Free · iPhone · iOS 17 or later</span><span class="soon">Android is on the way</span></p>
     </div>
     <div class="stage">
       <div class="photo"><img src="/assets/img/hero.jpg" alt="A skier on a summit at first light above a sea of mist" width="2400" height="1018"></div>
@@ -496,6 +499,7 @@ document.addEventListener('click',function(e){var a=e.target.closest&&e.target.c
       <details><summary>Where do the waits come from?</summary><p>From skiers on the mountain. They share a wait in two taps, and phones standing in a wait time it on their own, so waits stay live even when someone forgets to report.</p></details>
       <details><summary>Why bands and not minutes?</summary><p>Moving, Short, Busy and Long show what a crowd of skiers can reliably tell. When there is not enough to go on yet, PeakWait shows the lift's status and a typical wait for that hour.</p></details>
       <details><summary>Does it work with no signal?</summary><p>Your day keeps counting with no signal, and anything you report sends the moment you are back in coverage.</p></details>
+      <details><summary>Is PeakWait on Android?</summary><p>Android is on the way, and it will be on Google Play. Today PeakWait is free on iPhone.</p></details>
             <details><summary>Which mountains?</summary><p>116 across North and South America, Epic, Ikon and independents. You can request a mountain right in the app.</p></details>
     </div>
   </div>
@@ -508,6 +512,7 @@ document.addEventListener('click',function(e){var a=e.target.closest&&e.target.c
       <span class="eyebrow">Available now</span>
       <h2 style="margin-top:14px">Download now for <span class="gold">your season.</span></h2>
       <p>Get PeakWait before your first chair and spend the day riding, not waiting.</p>
+      <p class="avail"><span class="soon">Android is on the way</span></p>
     </div>
     <div class="badges">
       <a class="badge as" href="https://apps.apple.com/us/app/id6793253589" aria-label="Download PeakWait on the App Store"><img src="/assets/img/appstore-badge.svg" alt="Download on the App Store" width="162" height="54"></a>
