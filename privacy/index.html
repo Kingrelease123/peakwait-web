@@ -124,7 +124,10 @@ or health data. On iPhone you can decline, or turn it off in iOS Settings, and e
 &mdash; a two-word ski name like &quot;AlpineRidge07&quot; &mdash; so your crew sees a name instead of a blank and
 so friends can add you by name. You can change it at any time, and it is <strong>not listed publicly unless
 you turn on a public profile</strong>; until you do, it is visible only to people you connect with.
-<strong>Your handle never contains and never reveals your real name</strong> &mdash; we don&#39;t have it. If you
+<strong>Your handle never contains and never reveals your real name.</strong> If you choose to, you can add
+a crew name so the friends you have accepted can recognize you. It is optional, is shown only to
+people you have connected with, never appears on public leaderboards or share pages, and can be
+changed or removed at any time. If you
 turn on a public profile we also store a preset (non-photo) avatar and show your handle and
 season totals on public leaderboards. We also store your friend connections, requests, and mute
 settings, a reporter reputation/trust score derived from how your reports compare with other
@@ -176,6 +179,11 @@ are tied to your anonymous device identifier so we can find and fix the problem.
 <li><strong>App and phone type.</strong> With each request the app tells us whether it is the iPhone app or the
 Android app and which version it is. We keep the first and the most recent time we heard from
 your device. We use this to fix problems and to understand how PeakWait is used.</li>
+<li><strong>How you use the app.</strong> The app tells us which choices you made for location, notifications and
+motion, which welcome steps you finished, which mountains you opened and starred, when a ski day
+started and ended, whether you arrived through an invite or a code, and whether a purchase was
+completed, canceled or failed. These are tied to your anonymous device identifier. We use them to
+fix problems and to understand how PeakWait is used.</li>
 <li><strong>Questions we ask in the app.</strong> Now and then PeakWait may show one short optional question, such as
 how you heard about us. If you answer, we store your answer with your anonymous device
 identifier. You can dismiss a question and it is not shown again.</li>
@@ -295,12 +303,12 @@ are defined in the CCPA/CPRA, and we do not use it for cross-context behavioral 
 <table>
 <thead><tr><th>CCPA/CPRA category</th><th>Collect?</th><th>What, specifically</th><th>Why</th><th>Who receives it</th></tr></thead>
 <tbody>
-<tr><td>Identifiers</td><td><strong>Yes</strong></td><td>An anonymous device identifier we generate. A handle, assigned automatically and changeable by you, listed publicly only if you turn on a public profile. An email address only if you choose to add one. <strong>No name, phone, or account identifier.</strong></td><td>Rate limiting, abuse and fake-report detection, attributing your own data to you, reaching you if you gave an email address</td><td>Our hosting and database providers; a handle is public by your choice</td></tr>
+<tr><td>Identifiers</td><td><strong>Yes</strong></td><td>An anonymous device identifier we generate. A handle, assigned automatically and changeable by you, listed publicly only if you turn on a public profile. A crew name only if you choose to add one, shown only to friends you have accepted. An email address only if you choose to add one. <strong>No phone number or account identifier.</strong></td><td>Rate limiting, abuse and fake-report detection, attributing your own data to you, reaching you if you gave an email address</td><td>Our hosting and database providers; a handle is public by your choice</td></tr>
 <tr><td>Personal information under Cal. Civ. Code §1798.80</td><td>No</td><td>—</td><td>—</td><td>—</td></tr>
 <tr><td>Protected classifications</td><td>No</td><td>—</td><td>—</td><td>—</td></tr>
 <tr><td>Commercial information</td><td><strong>Yes</strong></td><td>Whether you hold an active subscription or Day Pass (entitlement status from Apple or Google Play)</td><td>Unlocking paid features</td><td>Apple or Google Play (source); our hosting providers</td></tr>
 <tr><td>Biometric information</td><td>No</td><td>—</td><td>—</td><td>—</td></tr>
-<tr><td>Internet or network activity</td><td><strong>Yes</strong></td><td>First-party interaction events (app opens, upgrade screens viewed, whether a purchase completed, whether the app lost its connection or sent a report), problem reports, crash reports and app errors, the app version and phone type, answers to in-app questions, and your IP address</td><td>Improving the app; finding and fixing problems; rate limiting and abuse prevention</td><td>Our hosting providers. <strong>No third-party advertising or analytics SDKs in the app</strong></td></tr>
+<tr><td>Internet or network activity</td><td><strong>Yes</strong></td><td>First-party interaction events (app opens, upgrade screens viewed, your choices for location, notifications and motion, welcome steps finished, mountains opened and starred, when a ski day started and ended, whether you arrived through an invite or a code, whether a purchase was completed, canceled or failed, whether the app lost its connection or sent a report), problem reports, crash reports and app errors, the app version and phone type, answers to in-app questions, and your IP address</td><td>Improving the app; finding and fixing problems; rate limiting and abuse prevention</td><td>Our hosting providers. <strong>No third-party advertising or analytics SDKs in the app</strong></td></tr>
 <tr><td><strong>Geolocation data</strong></td><td><strong>Yes</strong></td><td><strong>Precise location during an active ski session</strong>, including in the background; coarse region-level location when you sort by nearest or use &quot;Where to ski today&quot;; live position shared with buddies only if you enable it</td><td>Measuring lift waits, attributing reports to the right lift, computing your day, ranking nearby mountains</td><td>Our hosting providers; live position goes only to buddies you accept. Precise coordinates are purged on a short rolling basis (Section 4); a per-day
 record of <strong>which mountain you skied on which date</strong> (no coordinates) persists as described in
 Section 4</td></tr>
@@ -318,8 +326,8 @@ described above. We do not use or disclose it to infer characteristics about you
 residents therefore have no additional right to limit its use beyond the controls already in the app.</p>
 <p><strong>Retention</strong> is described in Section 4. <strong>Your rights</strong> — to know, access, delete, correct, and not
 be retaliated against — are in Section 6, and the in-app Delete my history and Export my
-history controls exercise them directly, with no account needed. We hold no name, and an email address only if
-you chose to add one.</p>
+history controls exercise them directly, with no account needed. We hold a crew name and an email address only if
+you chose to add them.</p>
 
 <h2>6. Your choices and rights</h2>
 <ul>
@@ -328,7 +336,7 @@ you chose to add one.</p>
 submitted queue reports and lift observations, your ski-session and season activity data, your public
 profile (handle and preset avatar), your friend connections, requests, and mute settings, your invite
 records and rewards, your
-reporter reputation, your analytics events, your email address if you added one, your problem and
+reporter reputation, your analytics events, your crew name and your email address if you added them, your problem and
 crash reports, your answers to in-app questions, and your device state — except information we must retain
 for legal, security, tax, or anti-abuse purposes and de-identified aggregates that no longer identify
 a device. Some queue and lift reports are stored <strong>without any link to your device identifier</strong>;
