@@ -1,0 +1,41 @@
+{
+ "slug": "crew-in-one-tap",
+ "version": "1.7",
+ "date": "2026-11-18",
+ "title": "Your Crew in One Tap",
+ "summary": "Send your crew link and a friend joins in one tap. Crew requests now reach you by themselves, and starred mountains keep their place in the full list.",
+ "intro": "<p class=\"dek\">Less setup in the parking lot, more time on snow. Here is what PeakWait 1.7 brings.</p>",
+ "sections": [
+  {
+   "h2": "One tap and they're in your crew",
+   "html": "<p>Send your crew link from <strong>My Crew</strong>, or let a friend scan your QR code at the car. They tap it and they are in your crew. Nothing for you to find, nothing for you to accept.</p>\n  <p>One link is good for 30 days and 20 friends, so a single text covers the whole group chat.</p>",
+   "shot": {
+    "src": "/assets/img/app-07-crew.jpg",
+    "alt": "My Crew screen with friends on the mountain and the invite card",
+    "kind": "device"
+   }
+  },
+  {
+   "h2": "Joining shares nothing by itself",
+   "html": "<p>Being in a crew does not put anyone on the map. Sharing your location on the mountain stays a separate switch, and each person turns on their own.</p>"
+  },
+  {
+   "h2": "Crew requests find you",
+   "html": "<p>When someone asks to join your crew, a number now appears on the <strong>Crew</strong> tab the next time you open PeakWait. No more checking back to see who asked.</p>"
+  },
+  {
+   "h2": "Starred mountains, in both places",
+   "html": "<p>Star a mountain and it sits under <strong>Favorites</strong> at the top. It also keeps its place in the full list, right where you expect to find it.</p>",
+   "shot": {
+    "src": "/assets/img/app-01-resorts.jpg",
+    "alt": "PeakWait mountain list with a star beside each mountain",
+    "kind": "device"
+   }
+  },
+  {
+   "h2": "Also new this month",
+   "html": "<p>The <strong>How's the wait</strong> sheet now sizes itself to what it shows, so every wait band has room. And if PeakWait is earning its spot on your home screen, Settings has a new <strong>Rate PeakWait</strong> row.</p>"
+  }
+ ],
+ "css": ""
+}
