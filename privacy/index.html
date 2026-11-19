@@ -57,7 +57,7 @@ gtag('config', 'G-LJ4V6MDP0Y');
 
 <main class="wrap">
 <h1>PeakWait Privacy Policy</h1>
-<p class="meta">Last updated: November 17, 2026 · Effective: November 17, 2026</p>
+<p class="meta">Last updated: November 19, 2026 · Effective: November 19, 2026</p>
 <p>PeakWait (&quot;PeakWait,&quot; &quot;we,&quot; &quot;us&quot;) is operated by PeakWait LLC. This policy explains
 what we collect, why, how long we keep it, who we share it with, and the choices you have. It applies
 to the PeakWait apps for iPhone and Android and related services (the &quot;Service&quot;). The Service is <strong>intended for users in
@@ -98,10 +98,13 @@ location is used or sent</strong> for this.</li>
 <li><strong>On-mountain and notification data.</strong> Notifications require your one-time permission on your phone, and
 nothing is delivered unless you grant it. Once you allow notifications, some on-mountain alerts (such
 as an arrival or shorter-wait nudge) are on by default and can be turned off in the app, while
-others (such as Powder Alerts) stay off until you enable them. These alerts are currently computed
-and shown on your device (local notifications) — we do not send them from our servers. You can turn
-any of them off at any time in the app or in your phone&#39;s settings. If we later add server-sent (push)
-notifications, we would receive a device push token from Apple or Google solely to deliver them to your device.</li>
+others (such as Powder Alerts) stay off until you enable them. Most alerts are worked out and shown on your device. A few, such as a crew request or a friend
+joining from your invite, are sent from our servers so they can reach you when the app is
+closed. To deliver those, your phone gives us a delivery address issued by Apple or Google,
+called a push token, and its time zone so we can stay quiet at night. We keep both with your
+anonymous account, use them only to deliver PeakWait notifications you have left switched on,
+never for advertising, and delete them when you turn notifications off, delete your account, or
+the address stops working. You can turn any of them off at any time in the app or in your phone&#39;s settings.</li>
 <li><strong>Your ski day.</strong> During a session we compute your day — vertical, runs, top speed, distance, and an
 elevation profile over time — for your recap and season history. Your detailed route/elevation trace
 is kept on your device and is not uploaded. What we do sync to our backend is your season totals (such as vertical feet, runs,
@@ -235,11 +238,11 @@ with service providers that help us run PeakWait, by category:</p>
 <li><strong>Cloud hosting &amp; infrastructure</strong> (application, database, and cache hosting) — to run the backend
 and store data.</li>
 <li><strong>Apple</strong> — for App Store purchases and subscription status, Sign in with Apple, App Attest, and
-Universal Links (for invite and share links). Today all notifications are generated on your device;
-only if we later add server-sent push notifications would Apple also handle push delivery.</li>
+Universal Links (for invite and share links). Apple also delivers the notifications we send from our servers to iPhones.</li>
 <li><strong>Google</strong>, on Android, for delivering the app through Google Play, for the links that open
 the app from an invite or a shared day, and, where PeakWait Plus is offered on Google Play, for purchases and
-subscription status.</li>
+subscription status. On Android, Google delivers the notifications we send from our servers, through Firebase Cloud
+Messaging.</li>
 <li><strong>Weather and mapping providers</strong> — to show conditions and maps.
 These providers may process data only to provide services to us. We may also disclose information if
 required by law, to protect rights and safety, or in connection with a merger or acquisition (in which
@@ -304,6 +307,7 @@ are defined in the CCPA/CPRA, and we do not use it for cross-context behavioral 
 <thead><tr><th>CCPA/CPRA category</th><th>Collect?</th><th>What, specifically</th><th>Why</th><th>Who receives it</th></tr></thead>
 <tbody>
 <tr><td>Identifiers</td><td><strong>Yes</strong></td><td>An anonymous device identifier we generate. A handle, assigned automatically and changeable by you, listed publicly only if you turn on a public profile. A crew name only if you choose to add one, shown only to friends you have accepted. An email address only if you choose to add one. <strong>No phone number or account identifier.</strong></td><td>Rate limiting, abuse and fake-report detection, attributing your own data to you, reaching you if you gave an email address</td><td>Our hosting and database providers; a handle is public by your choice</td></tr>
+<tr><td>Identifiers: notification delivery</td><td><strong>Yes</strong></td><td>A push token issued by Apple or Google and your phone&#39;s time zone, only once you have allowed notifications</td><td>Delivering the PeakWait notifications you have left switched on. Kept until you turn notifications off, delete your account, or the address stops working</td><td>Apple or Google, to deliver the notification; our hosting and database providers</td></tr>
 <tr><td>Personal information under Cal. Civ. Code §1798.80</td><td>No</td><td>—</td><td>—</td><td>—</td></tr>
 <tr><td>Protected classifications</td><td>No</td><td>—</td><td>—</td><td>—</td></tr>
 <tr><td>Commercial information</td><td><strong>Yes</strong></td><td>Whether you hold an active subscription or Day Pass (entitlement status from Apple or Google Play)</td><td>Unlocking paid features</td><td>Apple or Google Play (source); our hosting providers</td></tr>
