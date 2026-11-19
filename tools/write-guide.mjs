@@ -64,7 +64,8 @@ const BASIS = {
 const resorts = await fetch(`${API}/v1/resorts`).then((r) => (r.ok ? r.json() : fail(`GET /v1/resorts → HTTP ${r.status}`)));
 let resort = null;
 let facts = "";
-if (topic.kind === "mountain") {
+// A mountain guide always names its resort; a day or why topic about one mountain may name one too.
+if (topic.kind === "mountain" || topic.resort) {
   resort = resorts.find((r) => r.slug === topic.resort);
   if (!resort) fail(`Topic ${topic.slug} names resort ${topic.resort}, which the API does not have.`);
   const lifts = await fetch(`${API}/v1/resorts/${resort.slug}/lifts`).then((r) => (r.ok ? r.json() : []));
@@ -74,10 +75,10 @@ Lifts PeakWait tracks here: ${resort.liftCount}. Names and types: ${named.map((l
 Season, as the PeakWait app shows it today: ${resort.season?.label || "unknown"}.\n`;
 }
 const near = resorts
-  .filter((r) => (topic.kind === "mountain" ? r.state === resort.state : r.state === "CO"))
+  .filter((r) => r.state === (resort ? resort.state : "CO"))
   .map((r) => `- ${r.name}: ${r.season?.label || "unknown"} [${BASIS[r.season?.basis] || "unknown basis"}]`)
   .join("\n");
-facts += `Season status in the PeakWait app today for ${topic.kind === "mountain" ? resort.state : "Colorado"} resorts. The note in brackets says how solid each one is. Never call a resort open, or give a date as the resort's, on our estimate alone:\n${near}\n`;
+facts += `Season status in the PeakWait app today for ${resort ? resort.state : "Colorado"} resorts. The note in brackets says how solid each one is. Never call a resort open, or give a date as the resort's, on our estimate alone:\n${near}\n`;
 
 // ── 3. Ask ───────────────────────────────────────────────────────────────────────────────────────
 const prompt = `Today is ${today}. Write one guide for peakwait.net/guides, the website of PeakWait, an iPhone app for ski lift waits.
@@ -288,7 +289,7 @@ const article = {
 const index = topic.kind === "mountain"
   ? { region: topic.region, ...(topic.regionLabel ? { regionLabel: topic.regionLabel } : {}), where: topic.where, lifts: `${resort.liftCount} lifts`, hook: guide.hook }
   : { group: topic.kind };
-const record = { article, index, ...(resort ? { mountainName: resort.name } : {}), sources: guide.sources, model: MODEL, written: today };
+const record = { article, index, ...(topic.kind === "mountain" ? { mountainName: resort.name } : {}), sources: guide.sources, model: MODEL, written: today };
 
 if (DRY) {
   console.log(JSON.stringify(record, null, 2));
