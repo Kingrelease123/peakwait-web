@@ -16,9 +16,12 @@ document.addEventListener('click',function(e){var a=e.target.closest&&e.target.c
   var u=a.href,q=function(k,v){if(u.indexOf(k+'=')<0)u+=(u.indexOf('?')<0?'?':'&')+k+'='+v;};
   q('pt','127647061');q('ct','web-'+from);q('mt','8');a.href=u;
   gtag('event','app_store_click',{from:from});});
+// Count taps on any Google Play link too.
+document.addEventListener('click',function(e){var a=e.target.closest&&e.target.closest('a[href*="play.google.com"]');if(!a)return;
+  gtag('event','google_play_click',{from:location.pathname.split('/')[1]||'home'});});
 </script>
 <title>PeakWait: Ski the mountain, skip the wait</title>
-<meta name="description" content="See how long the wait is at every lift, and the best next chair from where you stand. Live from the skiers on the hill, at 116 mountains. Free on iPhone.">
+<meta name="description" content="See how long the wait is at every lift, and the best next chair from where you stand. Live from the skiers on the hill, at 116 mountains. Free on iPhone and Android.">
 <link rel="canonical" href="https://peakwait.net/">
 <meta name="theme-color" content="#070F16">
 <link rel="icon" href="/favicon.ico" sizes="any">
@@ -38,11 +41,11 @@ document.addEventListener('click',function(e){var a=e.target.closest&&e.target.c
 <meta property="og:image:alt" content="PeakWait. Ski the mountain, skip the wait.">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="Ski the mountain, skip the wait.">
-<meta name="twitter:description" content="Live lift waits at every lift, and the best next chair. Free on iPhone.">
+<meta name="twitter:description" content="Live lift waits at every lift, and the best next chair. Free on iPhone and Android.">
 <meta name="twitter:image" content="https://peakwait.net/assets/og/home.jpg">
 <link rel="stylesheet" href="/assets/site.css?v=0642ecf6">
 <script type="application/ld+json">
-{"@context":"https://schema.org","@type":"MobileApplication","name":"PeakWait","operatingSystem":"iOS","applicationCategory":"TravelApplication","description":"Real-time ski-lift wait times reported by skiers on the mountain, plus where to ski today and the best next chair. Covers 116 resorts across North and South America.","url":"https://peakwait.net/","image":"https://peakwait.net/icon-512.png","publisher":{"@type":"Organization","name":"PeakWait LLC","url":"https://peakwait.net/"},"offers":{"@type":"Offer","price":"0","priceCurrency":"USD"}}
+{"@context":"https://schema.org","@type":"MobileApplication","name":"PeakWait","operatingSystem":"iOS, Android","applicationCategory":"TravelApplication","description":"Real-time ski-lift wait times reported by skiers on the mountain, plus where to ski today and the best next chair. Covers 116 resorts across North and South America.","url":"https://peakwait.net/","image":"https://peakwait.net/icon-512.png","publisher":{"@type":"Organization","name":"PeakWait LLC","url":"https://peakwait.net/"},"offers":{"@type":"Offer","price":"0","priceCurrency":"USD"}}
 </script>
 <script type="application/ld+json">
 {"@context":"https://schema.org","@type":"Organization","name":"PeakWait","legalName":"PeakWait LLC","url":"https://peakwait.net/","logo":"https://peakwait.net/icon-512.png","description":"PeakWait is a real-time ski-lift wait app: skiers report live lift waits and PeakWait shows where to ski today and the best next chair across 116 resorts in North and South America."}
@@ -68,9 +71,11 @@ document.addEventListener('click',function(e){var a=e.target.closest&&e.target.c
 .qr .code canvas,.qr .code img{width:100%!important;height:100%!important}
 .qr span{font-size:.82rem;line-height:1.35;color:var(--ink2);max-width:12ch}
 @media (hover:none),(max-width:860px){.qr{display:none}}
+.stores{display:flex;flex-wrap:wrap;align-items:center;gap:14px}
+/* Google's image carries its own empty margin; the negative margin lines the badge itself up with the App Store one. */
+.badge.gp img{height:80px;width:auto;margin:-11px -13px}
+.stores.sm .badge.gp img{height:67px;margin:-9px -11px}
 .avail{margin-top:18px;font-size:.84rem;color:var(--ink3);display:flex;align-items:center;gap:10px 14px;flex-wrap:wrap}
-.soon{display:inline-flex;align-items:center;gap:8px;padding:6px 12px;border:1px solid var(--hair);border-radius:999px;background:var(--surface);color:var(--ink2);font-weight:600}
-.soon::before{content:"";width:7px;height:7px;border-radius:50%;background:var(--gold)}
 .stage{position:relative;justify-self:center;width:min(100%,520px);aspect-ratio:1/1.12}
 .stage .photo{position:absolute;inset:0 0 14% 30%;border-radius:var(--r-lg);overflow:hidden;border:1px solid var(--hair)}
 .stage .photo img{width:100%;height:100%;object-fit:cover;object-position:82% 50%}
@@ -253,7 +258,6 @@ document.addEventListener('click',function(e){var a=e.target.closest&&e.target.c
 .closer .in{display:grid;grid-template-columns:minmax(0,1fr) auto;gap:32px;align-items:end}
 .closer h2{font-size:clamp(2.4rem,6vw,4.4rem);font-weight:850}
 .closer p{color:var(--ink2);font-size:1.12rem;max-width:42ch;margin-top:16px}
-.closer p.avail{font-size:.84rem;margin-top:18px}
 @media (max-width:760px){.closer .in{grid-template-columns:1fr}}
 </style>
 </head>
@@ -281,12 +285,12 @@ document.addEventListener('click',function(e){var a=e.target.closest&&e.target.c
       <p class="lede">See how long the wait is at every lift, and the best next chair from where you stand. Live from the skiers on the hill.</p>
       <div class="get">
         <div class="badges">
-          <a class="badge as" href="https://apps.apple.com/us/app/id6793253589" aria-label="Download PeakWait on the App Store"><img src="/assets/img/appstore-badge.svg" alt="Download on the App Store" width="162" height="54"></a>
+          <div class="stores"><a class="badge as" href="https://apps.apple.com/us/app/id6793253589" aria-label="Download PeakWait on the App Store"><img src="/assets/img/appstore-badge.svg" alt="Download on the App Store" width="162" height="54"></a><a class="badge gp" href="https://play.google.com/store/apps/details?id=com.peakwait.app" aria-label="Get PeakWait on Google Play"><img src="/assets/img/google-play-badge.png" alt="Get it on Google Play" width="207" height="80"></a></div>
           <a class="badge ph" href="https://www.producthunt.com/posts/peakwait" aria-label="PeakWait on Product Hunt"><img src="/assets/img/ph-badge.svg" alt="PeakWait on Product Hunt" width="213" height="46"></a>
         </div>
-        <div class="qr" aria-hidden="true"><div class="code" id="qr"></div><span>Scan to get it on your iPhone</span></div>
+        <div class="qr" aria-hidden="true"><div class="code" id="qr"></div><span>Scan to get it on your phone</span></div>
       </div>
-      <p class="avail"><span>Free · iPhone · iOS 17 or later</span><span class="soon">Android is on the way</span></p>
+      <p class="avail"><span>Free · iPhone, iOS 17 or later · Android 8 or later</span></p>
     </div>
     <div class="stage">
       <div class="photo"><img src="/assets/img/hero.jpg" alt="A skier on a summit at first light above a sea of mist" width="2400" height="1018"></div>
@@ -298,7 +302,7 @@ document.addEventListener('click',function(e){var a=e.target.closest&&e.target.c
 <section class="sec" id="how">
   <div class="wrap">
     <div class="head"><span class="eyebrow">How it works</span><h2>Every lift, read by the skiers on it.</h2>
-      <p class="say">PeakWait turns what skiers see in the maze into a live wait for every chair, then points you to the best one to ride next.</p></div>
+      <p class="say">PeakWait turns what skiers see at the lift into a live wait for every chair, then points you to the best one to ride next.</p></div>
     <div class="steps">
       <div class="step"><span class="n">Step 1</span><h3>Pick your mountain</h3><p>116 mountains across Epic, Ikon and the independents. Every lift, live.</p>
         <div class="shot"><div class="device"><img src="/assets/img/app-01-resorts.jpg" alt="PeakWait list of mountains with lift counts and pass" loading="lazy" width="990" height="2151"></div></div></div>
@@ -499,7 +503,7 @@ document.addEventListener('click',function(e){var a=e.target.closest&&e.target.c
       <details><summary>Where do the waits come from?</summary><p>From skiers on the mountain. They share a wait in two taps, and phones standing in a wait time it on their own, so waits stay live even when someone forgets to report.</p></details>
       <details><summary>Why bands and not minutes?</summary><p>Moving, Short, Busy and Long show what a crowd of skiers can reliably tell. When there is not enough to go on yet, PeakWait shows the lift's status and a typical wait for that hour.</p></details>
       <details><summary>Does it work with no signal?</summary><p>Your day keeps counting with no signal, and anything you report sends the moment you are back in coverage.</p></details>
-      <details><summary>Is PeakWait on Android?</summary><p>Android is on the way, and it will be on Google Play. Today PeakWait is free on iPhone.</p></details>
+      <details><summary>Is PeakWait on Android?</summary><p>Yes. PeakWait is on Google Play for Android phones and on the App Store for iPhone. Both are free.</p></details>
             <details><summary>Which mountains?</summary><p>116 across North and South America, Epic, Ikon and independents. You can request a mountain right in the app.</p></details>
     </div>
   </div>
@@ -512,10 +516,9 @@ document.addEventListener('click',function(e){var a=e.target.closest&&e.target.c
       <span class="eyebrow">Available now</span>
       <h2 style="margin-top:14px">Download now for <span class="gold">your season.</span></h2>
       <p>Get PeakWait before your first chair and spend the day riding, not waiting.</p>
-      <p class="avail"><span class="soon">Android is on the way</span></p>
     </div>
     <div class="badges">
-      <a class="badge as" href="https://apps.apple.com/us/app/id6793253589" aria-label="Download PeakWait on the App Store"><img src="/assets/img/appstore-badge.svg" alt="Download on the App Store" width="162" height="54"></a>
+      <div class="stores"><a class="badge as" href="https://apps.apple.com/us/app/id6793253589" aria-label="Download PeakWait on the App Store"><img src="/assets/img/appstore-badge.svg" alt="Download on the App Store" width="162" height="54"></a><a class="badge gp" href="https://play.google.com/store/apps/details?id=com.peakwait.app" aria-label="Get PeakWait on Google Play"><img src="/assets/img/google-play-badge.png" alt="Get it on Google Play" width="207" height="80"></a></div>
       <a class="badge ph" href="https://www.producthunt.com/posts/peakwait" aria-label="PeakWait on Product Hunt"><img src="/assets/img/ph-badge.svg" alt="PeakWait on Product Hunt" width="213" height="46"></a>
     </div>
   </div></div>
@@ -526,19 +529,19 @@ document.addEventListener('click',function(e){var a=e.target.closest&&e.target.c
   <div class="wrap">
     <div class="fgrid">
       <div class="about"><a class="brandmark" href="#top"><img src="/apple-touch-icon.png" width="34" height="34" alt="">PeakWait</a><p>Live lift waits from the skiers on the hill. Ski the mountain, skip the wait.</p>
-        <a class="badge as" href="https://apps.apple.com/us/app/id6793253589" aria-label="Download PeakWait on the App Store"><img src="/assets/img/appstore-badge.svg" alt="Download on the App Store" width="135" height="45" style="height:45px"></a></div>
+        <div class="stores sm"><a class="badge as" href="https://apps.apple.com/us/app/id6793253589" aria-label="Download PeakWait on the App Store"><img src="/assets/img/appstore-badge.svg" alt="Download on the App Store" width="135" height="45" style="height:45px"></a><a class="badge gp" href="https://play.google.com/store/apps/details?id=com.peakwait.app" aria-label="Get PeakWait on Google Play"><img src="/assets/img/google-play-badge.png" alt="Get it on Google Play" width="173" height="67"></a></div></div>
       <div><h5>Product</h5><ul><li><a href="#how">How it works</a></li><li><a href="#features">Features</a></li><li><a href="#plus">PeakWait Plus</a></li><li><a href="#pricing">Pricing</a></li></ul></div>
       <div><h5>Read</h5><ul><li><a href="/guides/">Guides</a></li><li><a href="/updates/">What's new</a></li><li><a href="#mountains">Mountains</a></li></ul></div>
       <div><h5>Company</h5><ul><li><a href="/privacy/">Privacy</a></li><li><a href="/terms/">Terms</a></li><li><a href="mailto:contact@peakwait.net">contact@peakwait.net</a></li></ul></div>
     </div>
-    <div class="legal"><span>Safety: PeakWait gives advisory information only. Posted signs, ski patrol, closures and resort operations always come first. Waits are estimated bands and can be wrong, stale or unavailable.</span><span>PeakWait is independent and not affiliated with any resort or pass. © 2026 PeakWait LLC</span></div>
+    <div class="legal"><span>Safety: PeakWait gives advisory information only. Posted signs, ski patrol, closures and resort operations always come first. Waits are estimated bands and can be wrong, stale or unavailable.</span><span>PeakWait is independent and not affiliated with any resort or pass. © 2026 PeakWait LLC</span><span>Google Play and the Google Play logo are trademarks of Google LLC.</span></div>
   </div>
 </footer>
 
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js"></script>
 <script>
-  try{ new QRCode(document.getElementById('qr'),{text:'https://apps.apple.com/us/app/id6793253589?pt=127647061&ct=web-qr&mt=8',width:144,height:144,colorDark:'#070F16',colorLight:'#EFF4F9',correctLevel:QRCode.CorrectLevel.M}); }catch(e){}
+  try{ new QRCode(document.getElementById('qr'),{text:'https://peakwait.net/app',width:144,height:144,colorDark:'#070F16',colorLight:'#EFF4F9',correctLevel:QRCode.CorrectLevel.M}); }catch(e){}
   document.querySelectorAll('.menu nav a').forEach(a=>a.addEventListener('click',()=>a.closest('details').open=false));
   // Film: a real <video> (works with no script); the overlay just starts it and gets out of the way.
   // Holds on the last frame, the POV powder run. No loop, no end card.

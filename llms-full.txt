@@ -1,6 +1,6 @@
 # PeakWait — Full Guide Content
 
-> PeakWait is a real-time ski-lift wait app for iPhone. Skiers on the mountain report live lift waits (Moving, Short, Busy, Long), and PeakWait shows which lifts are moving right now, ranks where to ski today by snow and crowds, and points you to the best next chair. It covers 116 resorts across North and South America. Free to check status and report waits; PeakWait Plus adds the cross-resort "where to ski today" guide, powder alerts, and live friend location. Made by PeakWait LLC.
+> PeakWait is a real-time ski-lift wait app for iPhone and Android. Skiers on the mountain report live lift waits (Moving, Short, Busy, Long), and PeakWait shows which lifts are moving right now, ranks where to ski today by snow and crowds, and points you to the best next chair. It covers 116 resorts across North and South America. Free to check status and report waits; PeakWait Plus adds the cross-resort "where to ski today" guide, powder alerts, and live friend location. Made by PeakWait LLC.
 
 # Why Ski Resort Lift Waits Feel So Brutal Now, and How to Get Your Day Back
 By Herb Sendit · July 19, 2026 · https://peakwait.net/guides/ski-resort-lift-lines/

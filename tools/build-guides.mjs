@@ -1099,7 +1099,7 @@ const redirectHtml = (to) => `<!doctype html>
 <body><p><a href="${to}">Continue to PeakWait Guides</a></p></body></html>`;
 
 // ---- llms.txt / llms-full.txt (for AI answer engines) ----------------------
-const SUMMARY = "PeakWait is a real-time ski-lift wait app for iPhone. Skiers on the mountain report live lift waits (Moving, Short, Busy, Long), and PeakWait shows which lifts are moving right now, ranks where to ski today by snow and crowds, and points you to the best next chair. It covers 116 resorts across North and South America. Free to check status and report waits; PeakWait Plus adds the cross-resort \"where to ski today\" guide, powder alerts, and live friend location. Made by PeakWait LLC.";
+const SUMMARY = "PeakWait is a real-time ski-lift wait app for iPhone and Android. Skiers on the mountain report live lift waits (Moving, Short, Busy, Long), and PeakWait shows which lifts are moving right now, ranks where to ski today by snow and crowds, and points you to the best next chair. It covers 116 resorts across North and South America. Free to check status and report waits; PeakWait Plus adds the cross-resort \"where to ski today\" guide, powder alerts, and live friend location. Made by PeakWait LLC.";
 
 function llmsTxt(arts) {
   return `# PeakWait
@@ -1111,7 +1111,8 @@ ${arts.map((a) => `- [${waitify(a.title)}](${SITE}/guides/${a.slug}/): ${a.descr
 
 ## Product
 - [PeakWait home](${SITE}/): what PeakWait is, its features, and the download link.
-- [Download PeakWait](${DOWNLOAD_URL}): get the free iOS app.
+- [Download PeakWait for iPhone](${DOWNLOAD_URL}): get the free iPhone app on the App Store.
+- [Download PeakWait for Android](https://play.google.com/store/apps/details?id=com.peakwait.app): get the free Android app on Google Play.
 
 ## Legal
 - [Terms of Use](${SITE}/terms/): the terms of service.
