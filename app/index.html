@@ -36,8 +36,11 @@
 window.dataLayer = window.dataLayer || [];
 function gtag(){dataLayer.push(arguments);}
 gtag('js', new Date());
-var APPLE = 'https://apps.apple.com/app/peakwait/id6793253589';
-var PLAY = 'https://play.google.com/store/apps/details?id=com.peakwait.app';
+// A link can name where it was posted (peakwait.net/app?c=instagram-ad). The name rides along to the
+// store, so App Store Connect and Play Console can count the installs that came from it.
+var FROM = ((location.search.match(/[?&]c=([A-Za-z0-9-]{1,40})(&|$)/) || [])[1] || '').toLowerCase();
+var APPLE = 'https://apps.apple.com/app/peakwait/id6793253589' + (FROM ? '?pt=127647061&ct=' + FROM + '&mt=8' : '');
+var PLAY = 'https://play.google.com/store/apps/details?id=com.peakwait.app' + (FROM ? '&referrer=' + encodeURIComponent('utm_source=' + FROM + '&utm_medium=link') : '');
 var ua = navigator.userAgent || '';
 var PHONE = /Android/i.test(ua) ? 'android' : (/iPhone|iPad|iPod/i.test(ua) ? 'iphone' : '');
 var STORE = PHONE === 'android' ? PLAY : (PHONE === 'iphone' ? APPLE : '');
@@ -45,6 +48,10 @@ var sent = false;
 function go(){ if (STORE && !sent) { sent = true; location.replace(STORE); } }
 gtag('config', 'G-LJ4V6MDP0Y', STORE ? { event_callback: go, event_timeout: 1000 } : {});
 if (STORE) setTimeout(go, 1200);
+document.addEventListener('DOMContentLoaded', function(){
+  var as = document.querySelector('.stores a.as'), gp = document.querySelector('.stores a.gp');
+  if (as) as.href = APPLE; if (gp) gp.href = PLAY;
+});
 document.addEventListener('click', function(e){
   var a = e.target.closest && e.target.closest('.stores a'); if (!a) return;
   gtag('event', a.className === 'gp' ? 'google_play_click' : 'app_store_click', { from: 'app' });
