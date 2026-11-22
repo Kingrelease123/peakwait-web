@@ -16,6 +16,14 @@ document.addEventListener('click',function(e){var a=e.target.closest&&e.target.c
   var u=a.href,q=function(k,v){if(u.indexOf(k+'=')<0)u+=(u.indexOf('?')<0?'?':'&')+k+'='+v;};
   q('pt','127647061');q('ct','web-'+from);q('mt','8');a.href=u;
   gtag('event','app_store_click',{from:from});});
+// Count taps on any Google Play link too, and tell Google Play which part of the site sent them.
+document.addEventListener('click',function(e){var a=e.target.closest&&e.target.closest('a[href*="play.google.com"]');if(!a)return;
+  var from=location.pathname.split('/')[1]||'home';
+  if(a.href.indexOf('referrer=')<0)a.href+='&referrer='+encodeURIComponent('utm_source=web-'+from+'&utm_medium=link');
+  gtag('event','google_play_click',{from:from});});
+// A plain Download button goes to /app/, which picks the store by phone. Name the part of the site for it.
+document.addEventListener('click',function(e){var a=e.target.closest&&e.target.closest('a[href="/app/"]');if(!a)return;
+  a.href='/app/?c=web-'+(location.pathname.split('/')[1]||'home');});
 </script>
 <title>Thanksgiving Skiing in Colorado 2026: What's Open and When to Go</title>
 <meta name="description" content="Thanksgiving is Nov. 26. See what is open at A-Basin, Copper and Winter Park, which days should be quieter, and when to leave Denver on I-70.">
@@ -31,7 +39,7 @@ document.addEventListener('click',function(e){var a=e.target.closest&&e.target.c
 <link rel="icon" href="/favicon.svg" type="image/svg+xml">
 <link rel="apple-touch-icon" href="/apple-touch-icon.png">
 <meta name="theme-color" content="#070F16">
-<link rel="stylesheet" href="/assets/site.css?v=0642ecf6">
+<link rel="stylesheet" href="/assets/site.css?v=f5675014">
 <meta name="keywords" content="thanksgiving skiing colorado, colorado ski resorts open thanksgiving 2026, arapahoe basin thanksgiving, copper mountain thanksgiving, winter park thanksgiving, I-70 ski traffic thanksgiving, colorado lift lines thanksgiving">
 <meta name="author" content="Herb Sendit">
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"Article","headline":"Thanksgiving Skiing in Colorado 2026: What's Open and When to Go","description":"Thanksgiving is Nov. 26. See what is open at A-Basin, Copper and Winter Park, which days should be quieter, and when to leave Denver on I-70.","author":{"@type":"Person","name":"Herb Sendit"},"publisher":{"@type":"Organization","name":"PeakWait","logo":{"@type":"ImageObject","url":"https://peakwait.net/icon-512.png"}},"datePublished":"2026-11-19","dateModified":"2026-11-19","mainEntityOfPage":"https://peakwait.net/guides/thanksgiving-skiing-colorado/","image":"https://peakwait.net/assets/img/pov.jpg"}</script>
@@ -81,7 +89,7 @@ document.addEventListener('click',function(e){var a=e.target.closest&&e.target.c
   <div class="wrap">
     <a class="brandmark" href="/"><img src="/apple-touch-icon.png" alt="" width="34" height="34">PeakWait</a>
     <nav class="links" aria-label="Main"><a href="/#how">How it works</a><a href="/#features">Features</a><a href="/#plus">Plus</a><a href="/#mountains">Mountains</a><a href="/guides/" aria-current="page">Guides</a></nav>
-    <a class="btn" href="https://apps.apple.com/us/app/id6793253589">Download</a>
+    <a class="btn" href="/app/">Download</a>
     <details class="menu"><summary aria-label="Menu"><span></span></summary>
       <nav aria-label="Menu"><a href="/#how">How it works</a><a href="/#features">Features</a><a href="/#plus">PeakWait Plus</a><a href="/#mountains">Mountains</a><a href="/guides/">Guides</a><a href="/updates/">What's new</a></nav>
     </details>
@@ -103,7 +111,7 @@ document.addEventListener('click',function(e){var a=e.target.closest&&e.target.c
 <h2 id="s2">The rest of the I-70 neighbors, and what still has not opened</h2><p>Loveland is also marked confirmed in the app, and it opened Saturday, November 7, per <a href="https://unofficialnetworks.com/2026/11/09/six-open-ski-areas-united-states/">Unofficial Networks</a>. Keystone, Breckenridge, Vail and Eldora show open for the season on dates the resorts announced. Vail and Winter Park both opened November 13, according to <a href="https://www.cbsnews.com/colorado/news/more-colorado-ski-areas-opening-2026-2027-season/">CBS Colorado</a>.</p><p>More is coming. Powderhorn and Purgatory list November 20. Beaver Creek and Crested Butte list November 25. Aspen Mountain and Snowmass list November 26. Those are all dates the resorts published.</p><h3>Two things to double check</h3><p>The app shows Steamboat at about November 22, but that is only the app's own estimate with nothing from the resort behind it. CBS Colorado reported on November 17 that Steamboat pushed its planned opening back to November 27. Check Steamboat's own site. Telluride, Monarch Mountain, Echo Mountain and Silverton Mountain are estimates only too, so do not book around them.</p><p>Wolf Creek is listed open for the season on a resort announcement. CBS Colorado says flooding temporarily closed it after its October opening day. Check the resort's site for its current status before you point the car that way.</p>
 <h2 id="s3">Why the wait is at the bottom</h2><p>With only a few chairs running, everyone in the parking lot funnels onto the same one or two lifts. Winter Park's mountain report listed four of 24 lifts and about one percent of the mountain open on opening day, per SnowBrains. One report from A-Basin's first weekend described the single chairlift as pretty crowded. That is the whole story of early-season lift lines. The resorts are not slow. The math is just brutal.</p><ul><li><strong>Be early:</strong> The first hour after the lifts open is when you can still get laps in before the crowd settles in.</li><li><strong>Use the Rope Drop Club:</strong> At Winter Park, Ikon Pass holders who ski two days in November earn two Rope Drop days. Those give access to a separate, likely shorter wait at Super Gauge and the Gondola, per <a href="https://www.powder.com/news/winter-park-opening-day-2026">POWDER</a>.</li><li><strong>Eat at noon:</strong> Most people do, and the chair you were stuck at tends to thin out.</li></ul>
     <div class="appcard">
-      <div class="t"><b>Get PeakWait before you go</b><p>Download PeakWait on your iPhone to see which lifts are open and what skiers are reporting for the wait before you pick a chair.</p><a class="btn" href="https://apps.apple.com/us/app/id6793253589">Download now for your season</a></div>
+      <div class="t"><b>Get PeakWait before you go</b><p>Download PeakWait on your iPhone to see which lifts are open and what skiers are reporting for the wait before you pick a chair.</p><a class="btn" href="/app/">Download now for your season</a></div>
       <div class="shot"><div class="device" style="--w:160px"><img src="/assets/img/app-02-resort-lifts.jpg" alt="A lift list in PeakWait with a wait on every lift" loading="lazy" width="990" height="2151"></div></div>
     </div>
 <h2 id="s4">Which days of the long weekend are quieter</h2><p>I do not have a headcount by day, so this is reading the calendar, not a measurement.</p><ul><li><strong>Thursday, November 26:</strong> Probably your best bet. AAA expects minimal road traffic on Thanksgiving Day, per <a href="https://www.wbur.org/news/2026/11/16/thanksgiving-driving-best-worst-traffic">WBUR</a>. The skiers in the lot are the ones who skipped cooking, and there are fewer of them.</li><li><strong>Friday, November 27:</strong> Everyone has the day off, and it shows. Expect the heaviest waits at the first chair, so get there before the lifts open.</li><li><strong>Saturday, November 28:</strong> Copper hosts the men's World Cup super-G in East Village, and the races and events are free to attend, per <a href="https://www.coppercolorado.com/copper-cup/event-experience/race-info-and-schedules/">Copper Mountain</a>. Expect extra people around the base. If you want a calmer day, ski A-Basin or Loveland instead.</li><li><strong>Sunday, November 29:</strong> The men's giant slalom is at Copper. On the hill, skiers who want to beat the drive home tend to bail early, which can help your afternoon. The drive home is the real problem, covered next.</li></ul>
@@ -115,20 +123,20 @@ document.addEventListener('click',function(e){var a=e.target.closest&&e.target.c
 </div>
 <section class="wrap more" aria-label="Keep reading"><span class="eyebrow">Keep reading</span><div class="cards"><a class="card" href="/guides/beat-i70-ski-traffic-colorado-crowds/"><span class="meta">Colorado · 7 min</span><h3>How to beat I-70 traffic and Colorado weekend crowds</h3></a><a class="card" href="/guides/least-crowded-colorado-ski-resorts/"><span class="meta">Colorado · 6 min</span><h3>The least crowded Colorado ski resorts</h3></a><a class="card" href="/guides/copper-mountain-lift-lines/"><span class="meta">Colorado · 5 min</span><h3>Copper Mountain lift waits: where to ski, what to skip</h3></a></div></section>
 <div class="wrap"><aside class="endcta">
-    <div><h2>Download now for your season.</h2><p>See every wait before you ride. PeakWait is free on the App Store.</p></div>
-    <div class="badges"><a class="badge as" href="https://apps.apple.com/us/app/id6793253589" aria-label="Download PeakWait on the App Store"><img src="/assets/img/appstore-badge.svg" alt="Download on the App Store" width="162" height="54"></a></div>
+    <div><h2>Download now for your season.</h2><p>See every wait before you ride. PeakWait is free on iPhone and Android.</p></div>
+    <div class="badges"><div class="stores"><a class="badge as" href="https://apps.apple.com/us/app/id6793253589" aria-label="Download PeakWait on the App Store"><img src="/assets/img/appstore-badge.svg" alt="Download on the App Store" width="162" height="54"></a><a class="badge gp" href="https://play.google.com/store/apps/details?id=com.peakwait.app" aria-label="Get PeakWait on Google Play"><img src="/assets/img/google-play-badge.png" alt="Get it on Google Play" width="207" height="80"></a></div></div>
   </aside></div>
 </main>
 <footer>
   <div class="wrap">
     <div class="fgrid">
       <div class="about"><a class="brandmark" href="/"><img src="/apple-touch-icon.png" alt="" width="34" height="34">PeakWait</a><p>Live lift waits from the skiers on the hill. Ski the mountain, skip the wait.</p>
-        <a class="badge as" href="https://apps.apple.com/us/app/id6793253589" aria-label="Download PeakWait on the App Store"><img src="/assets/img/appstore-badge.svg" alt="Download on the App Store" width="135" height="45" style="height:45px"></a></div>
+        <div class="stores sm"><a class="badge as" href="https://apps.apple.com/us/app/id6793253589" aria-label="Download PeakWait on the App Store"><img src="/assets/img/appstore-badge.svg" alt="Download on the App Store" width="135" height="45" style="height:45px"></a><a class="badge gp" href="https://play.google.com/store/apps/details?id=com.peakwait.app" aria-label="Get PeakWait on Google Play"><img src="/assets/img/google-play-badge.png" alt="Get it on Google Play" width="173" height="67"></a></div></div>
       <div><h5>Product</h5><ul><li><a href="/#how">How it works</a></li><li><a href="/#features">Features</a></li><li><a href="/#plus">PeakWait Plus</a></li><li><a href="/#pricing">Pricing</a></li></ul></div>
       <div><h5>Read</h5><ul><li><a href="/guides/">Guides</a></li><li><a href="/updates/">What's new</a></li><li><a href="/#mountains">Mountains</a></li></ul></div>
       <div><h5>Company</h5><ul><li><a href="/privacy/">Privacy</a></li><li><a href="/terms/">Terms</a></li><li><a href="mailto:contact@peakwait.net">contact@peakwait.net</a></li></ul></div>
     </div>
-    <div class="legal"><span>Safety: PeakWait gives advisory information only. Posted signs, ski patrol, closures and resort operations always come first.</span><span>PeakWait is independent and not affiliated with any resort or pass. © 2026 PeakWait LLC</span></div>
+    <div class="legal"><span>Safety: PeakWait gives advisory information only. Posted signs, ski patrol, closures and resort operations always come first.</span><span>PeakWait is independent and not affiliated with any resort or pass. © 2026 PeakWait LLC</span><span>Google Play and the Google Play logo are trademarks of Google LLC.</span></div>
   </div>
 </footer>
 <script>document.querySelectorAll('.menu nav a').forEach(a=>a.addEventListener('click',()=>a.closest('details').open=false));</script>

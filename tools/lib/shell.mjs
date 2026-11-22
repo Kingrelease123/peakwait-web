@@ -7,6 +7,10 @@ import crypto from "node:crypto";
 export const SITE = "https://peakwait.net";
 const CSS_V = crypto.createHash("sha1").update(fs.readFileSync(new URL("../../assets/site.css", import.meta.url))).digest("hex").slice(0, 8);
 export const DOWNLOAD_URL = "https://apps.apple.com/us/app/id6793253589";
+export const PLAY_URL = "https://play.google.com/store/apps/details?id=com.peakwait.app";
+// A plain "Download" button goes here: that page sends an iPhone to the App Store and an Android
+// phone to Google Play, and lets anyone else pick.
+export const GET_URL = "/app/";
 export const PH_URL = "https://www.producthunt.com/posts/peakwait";
 
 export const esc = (s) => String(s).replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;").replace(/"/g, "&quot;");
@@ -31,6 +35,14 @@ document.addEventListener('click',function(e){var a=e.target.closest&&e.target.c
   var u=a.href,q=function(k,v){if(u.indexOf(k+'=')<0)u+=(u.indexOf('?')<0?'?':'&')+k+'='+v;};
   q('pt','127647061');q('ct','web-'+from);q('mt','8');a.href=u;
   gtag('event','app_store_click',{from:from});});
+// Count taps on any Google Play link too, and tell Google Play which part of the site sent them.
+document.addEventListener('click',function(e){var a=e.target.closest&&e.target.closest('a[href*="play.google.com"]');if(!a)return;
+  var from=location.pathname.split('/')[1]||'home';
+  if(a.href.indexOf('referrer=')<0)a.href+='&referrer='+encodeURIComponent('utm_source=web-'+from+'&utm_medium=link');
+  gtag('event','google_play_click',{from:from});});
+// A plain Download button goes to /app/, which picks the store by phone. Name the part of the site for it.
+document.addEventListener('click',function(e){var a=e.target.closest&&e.target.closest('a[href="/app/"]');if(!a)return;
+  a.href='/app/?c=web-'+(location.pathname.split('/')[1]||'home');});
 </script>`;
 
 /** <head> contents shared by every page. `extra` is page-specific tags (ld+json, <style>). */
@@ -65,7 +77,7 @@ export function nav(current = "") {
   <div class="wrap">
     <a class="brandmark" href="/"><img src="/apple-touch-icon.png" alt="" width="34" height="34">PeakWait</a>
     <nav class="links" aria-label="Main">${LINKS.map(([h, l]) => a(h, l)).join("")}</nav>
-    <a class="btn" href="${DOWNLOAD_URL}">Download</a>
+    <a class="btn" href="${GET_URL}">Download</a>
     <details class="menu"><summary aria-label="Menu"><span></span></summary>
       <nav aria-label="Menu">${LINKS.map(([h, l]) => `<a href="${h}">${l === "Plus" ? "PeakWait Plus" : l}</a>`).join("")}<a href="/updates/">What's new</a></nav>
     </details>
@@ -78,22 +90,22 @@ export function footer() {
   <div class="wrap">
     <div class="fgrid">
       <div class="about"><a class="brandmark" href="/"><img src="/apple-touch-icon.png" alt="" width="34" height="34">PeakWait</a><p>Live lift waits from the skiers on the hill. Ski the mountain, skip the wait.</p>
-        <a class="badge as" href="${DOWNLOAD_URL}" aria-label="Download PeakWait on the App Store"><img src="/assets/img/appstore-badge.svg" alt="Download on the App Store" width="135" height="45" style="height:45px"></a></div>
+        <div class="stores sm"><a class="badge as" href="${DOWNLOAD_URL}" aria-label="Download PeakWait on the App Store"><img src="/assets/img/appstore-badge.svg" alt="Download on the App Store" width="135" height="45" style="height:45px"></a><a class="badge gp" href="${PLAY_URL}" aria-label="Get PeakWait on Google Play"><img src="/assets/img/google-play-badge.png" alt="Get it on Google Play" width="173" height="67"></a></div></div>
       <div><h5>Product</h5><ul><li><a href="/#how">How it works</a></li><li><a href="/#features">Features</a></li><li><a href="/#plus">PeakWait Plus</a></li><li><a href="/#pricing">Pricing</a></li></ul></div>
       <div><h5>Read</h5><ul><li><a href="/guides/">Guides</a></li><li><a href="/updates/">What's new</a></li><li><a href="/#mountains">Mountains</a></li></ul></div>
       <div><h5>Company</h5><ul><li><a href="/privacy/">Privacy</a></li><li><a href="/terms/">Terms</a></li><li><a href="mailto:contact@peakwait.net">contact@peakwait.net</a></li></ul></div>
     </div>
-    <div class="legal"><span>Safety: PeakWait gives advisory information only. Posted signs, ski patrol, closures and resort operations always come first.</span><span>PeakWait is independent and not affiliated with any resort or pass. © 2026 PeakWait LLC</span></div>
+    <div class="legal"><span>Safety: PeakWait gives advisory information only. Posted signs, ski patrol, closures and resort operations always come first.</span><span>PeakWait is independent and not affiliated with any resort or pass. © 2026 PeakWait LLC</span><span>Google Play and the Google Play logo are trademarks of Google LLC.</span></div>
   </div>
 </footer>
 <script>document.querySelectorAll('.menu nav a').forEach(a=>a.addEventListener('click',()=>a.closest('details').open=false));</script>`;
 }
 
-/** The closing App Store band used at the end of guides and updates. */
+/** The closing download band used at the end of guides and updates: both stores. */
 export function endCta(h, p) {
   return `<aside class="endcta">
     <div><h2>${esc(h)}</h2><p>${esc(p)}</p></div>
-    <div class="badges"><a class="badge as" href="${DOWNLOAD_URL}" aria-label="Download PeakWait on the App Store"><img src="/assets/img/appstore-badge.svg" alt="Download on the App Store" width="162" height="54"></a></div>
+    <div class="badges"><div class="stores"><a class="badge as" href="${DOWNLOAD_URL}" aria-label="Download PeakWait on the App Store"><img src="/assets/img/appstore-badge.svg" alt="Download on the App Store" width="162" height="54"></a><a class="badge gp" href="${PLAY_URL}" aria-label="Get PeakWait on Google Play"><img src="/assets/img/google-play-badge.png" alt="Get it on Google Play" width="207" height="80"></a></div></div>
   </aside>`;
 }
 

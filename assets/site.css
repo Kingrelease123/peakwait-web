@@ -38,6 +38,11 @@ p{margin:0}
 .badge:hover{transform:translateY(-1px)}
 .badge.as img{height:54px;width:auto}
 .badge.ph img{height:46px;width:auto}
+.stores{display:flex;flex-wrap:wrap;align-items:center;gap:14px}
+/* Google's image carries its own empty margin; the negative margin lines the badge itself up with the App Store one. */
+.badge.gp img{height:80px;width:auto;margin:-11px -13px}
+.stores.sm .badge.gp img{height:67px;margin:-9px -11px}
+.endcta .stores{flex-direction:column;align-items:flex-start}
 .arrow{display:inline-flex;align-items:center;gap:6px;color:var(--brand);font-weight:700;font-size:.95rem}
 .arrow::after{content:"\2192";transition:transform .18s ease}
 .arrow:hover::after{transform:translateX(3px)}

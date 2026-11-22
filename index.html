@@ -16,9 +16,14 @@ document.addEventListener('click',function(e){var a=e.target.closest&&e.target.c
   var u=a.href,q=function(k,v){if(u.indexOf(k+'=')<0)u+=(u.indexOf('?')<0?'?':'&')+k+'='+v;};
   q('pt','127647061');q('ct','web-'+from);q('mt','8');a.href=u;
   gtag('event','app_store_click',{from:from});});
-// Count taps on any Google Play link too.
+// Count taps on any Google Play link too, and tell Google Play which part of the site sent them.
 document.addEventListener('click',function(e){var a=e.target.closest&&e.target.closest('a[href*="play.google.com"]');if(!a)return;
-  gtag('event','google_play_click',{from:location.pathname.split('/')[1]||'home'});});
+  var from=location.pathname.split('/')[1]||'home';
+  if(a.href.indexOf('referrer=')<0)a.href+='&referrer='+encodeURIComponent('utm_source=web-'+from+'&utm_medium=link');
+  gtag('event','google_play_click',{from:from});});
+// A plain Download button goes to /app/, which picks the store by phone. Name the part of the site for it.
+document.addEventListener('click',function(e){var a=e.target.closest&&e.target.closest('a[href="/app/"]');if(!a)return;
+  a.href='/app/?c=web-'+(location.pathname.split('/')[1]||'home');});
 </script>
 <title>PeakWait: Ski the mountain, skip the wait</title>
 <meta name="description" content="See how long the wait is at every lift, and the best next chair from where you stand. Live from the skiers on the hill, at 116 mountains. Free on iPhone and Android.">
@@ -43,7 +48,7 @@ document.addEventListener('click',function(e){var a=e.target.closest&&e.target.c
 <meta name="twitter:title" content="Ski the mountain, skip the wait.">
 <meta name="twitter:description" content="Live lift waits at every lift, and the best next chair. Free on iPhone and Android.">
 <meta name="twitter:image" content="https://peakwait.net/assets/og/home.jpg">
-<link rel="stylesheet" href="/assets/site.css?v=0642ecf6">
+<link rel="stylesheet" href="/assets/site.css?v=f5675014">
 <script type="application/ld+json">
 {"@context":"https://schema.org","@type":"MobileApplication","name":"PeakWait","operatingSystem":"iOS, Android","applicationCategory":"TravelApplication","description":"Real-time ski-lift wait times reported by skiers on the mountain, plus where to ski today and the best next chair. Covers 116 resorts across North and South America.","url":"https://peakwait.net/","image":"https://peakwait.net/icon-512.png","publisher":{"@type":"Organization","name":"PeakWait LLC","url":"https://peakwait.net/"},"offers":{"@type":"Offer","price":"0","priceCurrency":"USD"}}
 </script>
@@ -269,7 +274,7 @@ document.addEventListener('click',function(e){var a=e.target.closest&&e.target.c
     <nav class="links" aria-label="Main">
       <a href="#how">How it works</a><a href="#features">Features</a><a href="#plus">Plus</a><a href="#mountains">Mountains</a><a href="/guides/">Guides</a>
     </nav>
-    <a class="btn" href="https://apps.apple.com/us/app/id6793253589">Download</a>
+    <a class="btn" href="/app/">Download</a>
     <details class="menu"><summary aria-label="Menu"><span></span></summary>
       <nav aria-label="Menu"><a href="#how">How it works</a><a href="#features">Features</a><a href="#plus">PeakWait Plus</a><a href="#mountains">Mountains</a><a href="/guides/">Guides</a></nav>
     </details>
@@ -451,7 +456,7 @@ document.addEventListener('click',function(e){var a=e.target.closest&&e.target.c
       <div class="crow" role="row"><span class="f" role="cell">Predictive waits and First Tracks</span><span class="c" role="cell"><span class="dash">—</span></span><span class="c gp" role="cell"><svg viewBox="0 0 24 24" aria-label="Included"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg></span></div>
       <div class="crow" role="row"><span class="f" role="cell">Time you didn't wait, full season records</span><span class="c" role="cell"><span class="dash">—</span></span><span class="c gp" role="cell"><svg viewBox="0 0 24 24" aria-label="Included"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg></span></div>
       <div class="crow" role="row"><span class="f" role="cell">Powder Alerts at your favorites</span><span class="c" role="cell"><span class="dash">—</span></span><span class="c gp" role="cell"><svg viewBox="0 0 24 24" aria-label="Included"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg></span></div>
-      <div class="crow cta" role="row"><span class="f" role="cell"></span><span class="c" role="cell"><a class="btn ghost" href="https://apps.apple.com/us/app/id6793253589">Get it free</a></span><span class="c" role="cell"><a class="btn goldbtn" href="https://apps.apple.com/us/app/id6793253589">Try 7 days free</a></span></div>
+      <div class="crow cta" role="row"><span class="f" role="cell"></span><span class="c" role="cell"><a class="btn ghost" href="/app/">Get it free</a></span><span class="c" role="cell"><a class="btn goldbtn" href="https://apps.apple.com/us/app/id6793253589">Try 7 days free</a></span></div>
     </div>
     <p class="pricenote">Plus is also $7.99 a month, or $4.99 for a single Day Pass. Prices in US dollars; the App Store shows your local price.</p>
   </div>
@@ -484,11 +489,11 @@ document.addEventListener('click',function(e){var a=e.target.closest&&e.target.c
     </div>
     <div class="gcards">
 <!-- guides:start -->
-      <a class="gcard feat" href="/guides/killington-lift-lines/" style="background-image:linear-gradient(0deg,rgba(7,15,22,.96) 30%,rgba(7,15,22,.72) 62%,rgba(7,15,22,.45)),url(/assets/img/hero.jpg)"><span class="meta"><i>New</i>More mountains · 5 min</span><div style="display:grid;gap:10px"><h3>Killington Lift Waits: Where the Waits Build and How to Beat Them</h3><p>Six peaks, two gondolas and a season into May. Here is where Killington waits build and where to go instead.</p></div></a>
+      <a class="gcard feat" href="/guides/first-chair-winter-park/" style="background-image:linear-gradient(0deg,rgba(7,15,22,.96) 30%,rgba(7,15,22,.72) 62%,rgba(7,15,22,.45)),url(/assets/img/pov.jpg)"><span class="meta"><i>New</i>Colorado · 5 min</span><div style="display:grid;gap:10px"><h3>First Chair at Winter Park: When to Arrive and Where to Start</h3><p>Winter Park first chair is 9 a.m. on weekdays and 8 a.m. on weekends from Dec 5. Here is when to park, which base to pick, and the first lifts to ride.</p></div></a>
+      <a class="gcard" href="/guides/first-chair-guide/"><span class="meta">Playbooks · 5 min</span><h3>First Chair: Is It Worth Beating the Lift Waits?</h3><span class="arrow">Read</span></a>
+      <a class="gcard" href="/guides/thanksgiving-skiing-colorado/"><span class="meta">Colorado · 5 min</span><h3>Thanksgiving Skiing in Colorado: What Is Open and When to Go</h3><span class="arrow">Read</span></a>
+      <a class="gcard" href="/guides/killington-lift-lines/"><span class="meta">More mountains · 5 min</span><h3>Killington Lift Waits: Where the Waits Build and How to Beat Them</h3><span class="arrow">Read</span></a>
       <a class="gcard" href="/guides/stowe-lift-lines/"><span class="meta">More mountains · 5 min</span><h3>Stowe Lift Waits: How to Beat the Saturday Crowd</h3><span class="arrow">Read</span></a>
-      <a class="gcard" href="/guides/big-sky-lift-lines/"><span class="meta">More mountains · 5 min</span><h3>Big Sky Lift Waits: Big Terrain, Short Waits, One Long Tram</h3><span class="arrow">Read</span></a>
-      <a class="gcard" href="/guides/jackson-hole-lift-lines/"><span class="meta">More mountains · 5 min</span><h3>Jackson Hole Lift Waits: The Tram Wait, the Gondolas and Powder Days</h3><span class="arrow">Read</span></a>
-      <a class="gcard" href="/guides/ski-singles-line-guide/"><span class="meta">Playbooks · 6 min</span><h3>Ski Singles Line Guide: How It Works and When It Saves You Time</h3><span class="arrow">Read</span></a>
       <!-- guides:end -->
     </div>
   </div>

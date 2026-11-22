@@ -16,6 +16,14 @@ document.addEventListener('click',function(e){var a=e.target.closest&&e.target.c
   var u=a.href,q=function(k,v){if(u.indexOf(k+'=')<0)u+=(u.indexOf('?')<0?'?':'&')+k+'='+v;};
   q('pt','127647061');q('ct','web-'+from);q('mt','8');a.href=u;
   gtag('event','app_store_click',{from:from});});
+// Count taps on any Google Play link too, and tell Google Play which part of the site sent them.
+document.addEventListener('click',function(e){var a=e.target.closest&&e.target.closest('a[href*="play.google.com"]');if(!a)return;
+  var from=location.pathname.split('/')[1]||'home';
+  if(a.href.indexOf('referrer=')<0)a.href+='&referrer='+encodeURIComponent('utm_source=web-'+from+'&utm_medium=link');
+  gtag('event','google_play_click',{from:from});});
+// A plain Download button goes to /app/, which picks the store by phone. Name the part of the site for it.
+document.addEventListener('click',function(e){var a=e.target.closest&&e.target.closest('a[href="/app/"]');if(!a)return;
+  a.href='/app/?c=web-'+(location.pathname.split('/')[1]||'home');});
 </script>
 <title>Mammoth Mountain Lift Waits: Main, Canyon, Eagle Guide</title>
 <meta name="description" content="Mammoth Mountain lift lines on an LA weekend: where the crowd piles up, how Main, Canyon and Eagle differ, and what to expect at the Panorama Gondola.">
@@ -31,7 +39,7 @@ document.addEventListener('click',function(e){var a=e.target.closest&&e.target.c
 <link rel="icon" href="/favicon.svg" type="image/svg+xml">
 <link rel="apple-touch-icon" href="/apple-touch-icon.png">
 <meta name="theme-color" content="#070F16">
-<link rel="stylesheet" href="/assets/site.css?v=0642ecf6">
+<link rel="stylesheet" href="/assets/site.css?v=f5675014">
 <meta name="keywords" content="mammoth mountain lift lines, mammoth mountain lift wait times, mammoth main lodge vs canyon lodge, mammoth eagle lodge, panorama gondola mammoth, mammoth crowds weekend, mammoth mountain opening day">
 <meta name="author" content="Herb Sendit">
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"Article","headline":"Mammoth Mountain Lift Waits: Main, Canyon, Eagle Guide","description":"Mammoth Mountain lift lines on an LA weekend: where the crowd piles up, how Main, Canyon and Eagle differ, and what to expect at the Panorama Gondola.","author":{"@type":"Person","name":"Herb Sendit"},"publisher":{"@type":"Organization","name":"PeakWait","logo":{"@type":"ImageObject","url":"https://peakwait.net/icon-512.png"}},"datePublished":"2026-11-08","dateModified":"2026-11-08","mainEntityOfPage":"https://peakwait.net/guides/mammoth-mountain-lift-lines/","image":"https://peakwait.net/assets/img/rw-hero1.jpg"}</script>
@@ -81,7 +89,7 @@ document.addEventListener('click',function(e){var a=e.target.closest&&e.target.c
   <div class="wrap">
     <a class="brandmark" href="/"><img src="/apple-touch-icon.png" alt="" width="34" height="34">PeakWait</a>
     <nav class="links" aria-label="Main"><a href="/#how">How it works</a><a href="/#features">Features</a><a href="/#plus">Plus</a><a href="/#mountains">Mountains</a><a href="/guides/" aria-current="page">Guides</a></nav>
-    <a class="btn" href="https://apps.apple.com/us/app/id6793253589">Download</a>
+    <a class="btn" href="/app/">Download</a>
     <details class="menu"><summary aria-label="Menu"><span></span></summary>
       <nav aria-label="Menu"><a href="/#how">How it works</a><a href="/#features">Features</a><a href="/#plus">PeakWait Plus</a><a href="/#mountains">Mountains</a><a href="/guides/">Guides</a><a href="/updates/">What's new</a></nav>
     </details>
@@ -103,7 +111,7 @@ document.addEventListener('click',function(e){var a=e.target.closest&&e.target.c
 <h2 id="s2">The LA weekend surge, and how it actually arrives</h2><p>The drive from Los Angeles is roughly five hours up US 395, and Avant Ski puts it at about 315 miles. That distance does something odd to the crowd. Pine Forecast describes Southern California visitors bunching into Saturday morning arrivals, and says storms slow the drive and push arrivals later into the morning. Sunday return traffic on 395 can eat your afternoon even when the lifts were fine.</p><p>Here is what that means on the hill.</p><ul><li><strong>Friday night people:</strong> They sleep in town and are first on the lifts Saturday. You can be one of them.</li><li><strong>Saturday late morning:</strong> The drivers arrive, park, boot up and hit the same few lifts at once. Main Lodge feels it first.</li><li><strong>Sunday after lunch:</strong> Plenty of people leave early to beat the drive. Waits often ease while the sun is still good.</li></ul><p>Powder weekends, Presidents' Day weekend and the winter holiday week are the heavy windows according to Pine Forecast. Midweek is calmer. If you can only go Saturday, the next sections are for you.</p>
 <h2 id="s3">Main Lodge versus Canyon versus Eagle</h2><h3>Main Lodge: the big front door</h3><p>Main Lodge sits at 9,000 feet and is the highest and longest running lodge, per the resort. It has direct access to the Panorama Gondola and the Main Park. It is also where the most people end up on a weekend. A Mammoth guide from Aso Mammoth says the lower mountain around Main stays crowded all day, and that around noon is your best shot at a run you really want there.</p><h3>Canyon Lodge: the town side</h3><p>Canyon is near town, and you can reach it on the free Village Gondola, which is how a lot of people with condos get there. It is central, and Eagle is one lift away. Visit Mammoth suggests skipping the wait at Canyon Express and taking Chair 8 early in the day. That tip matches a general rule from Aso Mammoth, which says express chairs often have longer waits than slower neighbors because everyone assumes they will be shorter. At Canyon, try Chair 8 before you commit to Canyon Express. Look at Chair 21 next to Gold Rush Express and Stump Alley Express too.</p><h3>Eagle Lodge: the quiet side door</h3><p>Eagle has gentle beginner terrain and access to the steeps of Lincoln Mountain, and it sits next to Juniper Springs Resort, per the resort. Visit Mammoth says Eagle and Canyon tend to have shorter waits than Main early in the day. From Eagle Express, Avant Ski points intermediates toward Chair 25 and Cloud Nine Express for glades, and calls the blue run Bridges rarely crowded. No lodge stays quiet all day, but Eagle is where I would start a Saturday if Main looked heavy.</p>
     <div class="appcard">
-      <div class="t"><b>Get PeakWait before you drive</b><p>Download PeakWait on your iPhone so you can see Mammoth's open lifts and live waits before you pick a lodge.</p><a class="btn" href="https://apps.apple.com/us/app/id6793253589">Download now for your season</a></div>
+      <div class="t"><b>Get PeakWait before you drive</b><p>Download PeakWait on your iPhone so you can see Mammoth's open lifts and live waits before you pick a lodge.</p><a class="btn" href="/app/">Download now for your season</a></div>
       <div class="shot"><div class="device" style="--w:160px"><img src="/assets/img/app-02-resort-lifts.jpg" alt="A lift list in PeakWait with a wait on every lift" loading="lazy" width="990" height="2151"></div></div>
     </div>
 <h2 id="s4">The gondola to the top</h2><p>The Panorama Gondola loads from the building across from the Main Lodge west entrance. The resort says the ride to the top takes about 7 minutes, and the summit sits at 11,053 feet. PeakWait tracks it as two pieces, Panorama Gondola Lower and Panorama Gondola Upper, each listed at 2,400 skiers per hour. The Village Gondola is a separate lift that runs between the Village and Canyon Lodge.</p><p>Two things make the gondola wait different from a chair wait.</p><ul><li><strong>Sightseers share it:</strong> The resort sells scenic rides on the same gondola, so you may be in a cabin with people holding coffee and no skis.</li><li><strong>Weather holds:</strong> The resort tells you to check lift and trail status first, since the gondola can be on a weather hold.</li></ul><p>Early in the season the top is not a given. One local snow report says the upper mountain needs a good three to four foot base to open. After a storm, expect a long wait at Chair 23 and a crowd at the top hunting for whatever powder is left, says Aso Mammoth. That same guide notes that the higher you go, the faster you usually get on a lift. So if the gondola wait is Long at 10 AM, ride it at noon when the first wave is eating.</p>
@@ -115,20 +123,20 @@ document.addEventListener('click',function(e){var a=e.target.closest&&e.target.c
 </div>
 <section class="wrap more" aria-label="Keep reading"><span class="eyebrow">Keep reading</span><div class="cards"><a class="card" href="/guides/palisades-tahoe-crowds/"><span class="meta">California · 5 min</span><h3>How to beat the crowds at Palisades Tahoe</h3></a><a class="card" href="/guides/first-chair-winter-park/"><span class="meta">Colorado · 5 min</span><h3>First Chair at Winter Park: When to Arrive and Where to Start</h3></a><a class="card" href="/guides/first-chair-guide/"><span class="meta">Playbooks · 5 min</span><h3>First Chair: Is It Worth Beating the Lift Waits?</h3></a></div></section>
 <div class="wrap"><aside class="endcta">
-    <div><h2>Download now for your season.</h2><p>See every wait before you ride. PeakWait is free on the App Store.</p></div>
-    <div class="badges"><a class="badge as" href="https://apps.apple.com/us/app/id6793253589" aria-label="Download PeakWait on the App Store"><img src="/assets/img/appstore-badge.svg" alt="Download on the App Store" width="162" height="54"></a></div>
+    <div><h2>Download now for your season.</h2><p>See every wait before you ride. PeakWait is free on iPhone and Android.</p></div>
+    <div class="badges"><div class="stores"><a class="badge as" href="https://apps.apple.com/us/app/id6793253589" aria-label="Download PeakWait on the App Store"><img src="/assets/img/appstore-badge.svg" alt="Download on the App Store" width="162" height="54"></a><a class="badge gp" href="https://play.google.com/store/apps/details?id=com.peakwait.app" aria-label="Get PeakWait on Google Play"><img src="/assets/img/google-play-badge.png" alt="Get it on Google Play" width="207" height="80"></a></div></div>
   </aside></div>
 </main>
 <footer>
   <div class="wrap">
     <div class="fgrid">
       <div class="about"><a class="brandmark" href="/"><img src="/apple-touch-icon.png" alt="" width="34" height="34">PeakWait</a><p>Live lift waits from the skiers on the hill. Ski the mountain, skip the wait.</p>
-        <a class="badge as" href="https://apps.apple.com/us/app/id6793253589" aria-label="Download PeakWait on the App Store"><img src="/assets/img/appstore-badge.svg" alt="Download on the App Store" width="135" height="45" style="height:45px"></a></div>
+        <div class="stores sm"><a class="badge as" href="https://apps.apple.com/us/app/id6793253589" aria-label="Download PeakWait on the App Store"><img src="/assets/img/appstore-badge.svg" alt="Download on the App Store" width="135" height="45" style="height:45px"></a><a class="badge gp" href="https://play.google.com/store/apps/details?id=com.peakwait.app" aria-label="Get PeakWait on Google Play"><img src="/assets/img/google-play-badge.png" alt="Get it on Google Play" width="173" height="67"></a></div></div>
       <div><h5>Product</h5><ul><li><a href="/#how">How it works</a></li><li><a href="/#features">Features</a></li><li><a href="/#plus">PeakWait Plus</a></li><li><a href="/#pricing">Pricing</a></li></ul></div>
       <div><h5>Read</h5><ul><li><a href="/guides/">Guides</a></li><li><a href="/updates/">What's new</a></li><li><a href="/#mountains">Mountains</a></li></ul></div>
       <div><h5>Company</h5><ul><li><a href="/privacy/">Privacy</a></li><li><a href="/terms/">Terms</a></li><li><a href="mailto:contact@peakwait.net">contact@peakwait.net</a></li></ul></div>
     </div>
-    <div class="legal"><span>Safety: PeakWait gives advisory information only. Posted signs, ski patrol, closures and resort operations always come first.</span><span>PeakWait is independent and not affiliated with any resort or pass. © 2026 PeakWait LLC</span></div>
+    <div class="legal"><span>Safety: PeakWait gives advisory information only. Posted signs, ski patrol, closures and resort operations always come first.</span><span>PeakWait is independent and not affiliated with any resort or pass. © 2026 PeakWait LLC</span><span>Google Play and the Google Play logo are trademarks of Google LLC.</span></div>
   </div>
 </footer>
 <script>document.querySelectorAll('.menu nav a').forEach(a=>a.addEventListener('click',()=>a.closest('details').open=false));</script>

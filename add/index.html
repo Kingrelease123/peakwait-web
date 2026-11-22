@@ -16,6 +16,14 @@ document.addEventListener('click',function(e){var a=e.target.closest&&e.target.c
   var u=a.href,q=function(k,v){if(u.indexOf(k+'=')<0)u+=(u.indexOf('?')<0?'?':'&')+k+'='+v;};
   q('pt','127647061');q('ct','web-'+from);q('mt','8');a.href=u;
   gtag('event','app_store_click',{from:from});});
+// Count taps on any Google Play link too, and tell Google Play which part of the site sent them.
+document.addEventListener('click',function(e){var a=e.target.closest&&e.target.closest('a[href*="play.google.com"]');if(!a)return;
+  var from=location.pathname.split('/')[1]||'home';
+  if(a.href.indexOf('referrer=')<0)a.href+='&referrer='+encodeURIComponent('utm_source=web-'+from+'&utm_medium=link');
+  gtag('event','google_play_click',{from:from});});
+// A plain Download button goes to /app/, which picks the store by phone. Name the part of the site for it.
+document.addEventListener('click',function(e){var a=e.target.closest&&e.target.closest('a[href="/app/"]');if(!a)return;
+  a.href='/app/?c=web-'+(location.pathname.split('/')[1]||'home');});
 </script>
 <title>Come find me on PeakWait</title>
 <meta name="description" content="A friend wants to ski with you on PeakWait: live lift waits and your crew on the mountain. Ski your first day and you both get a week of PeakWait Plus.">
@@ -38,7 +46,7 @@ document.addEventListener('click',function(e){var a=e.target.closest&&e.target.c
 <meta name="twitter:title" content="Come find me on the mountain 🎿">
 <meta name="twitter:description" content="Ski your first day with PeakWait and you both get a week of Plus.">
 <meta name="twitter:image" content="https://peakwait.net/assets/og/invite.jpg">
-<link rel="stylesheet" href="/assets/site.css?v=0642ecf6">
+<link rel="stylesheet" href="/assets/site.css?v=f5675014">
 <style>
 .invite{min-height:100vh;display:grid;align-items:center;background:radial-gradient(120% 70% at 80% 0%,#15304C 0%,transparent 60%),linear-gradient(180deg,var(--skyTop),var(--bg) 80%);padding-block:48px}
 .invite .wrap{display:grid;grid-template-columns:minmax(0,1fr) auto;gap:clamp(32px,6vw,72px);align-items:center;max-width:980px}
@@ -63,7 +71,7 @@ document.addEventListener('click',function(e){var a=e.target.closest&&e.target.c
       <p class="say">PeakWait shows how long the wait is at every lift, points you to the best next chair, and lets your crew find each other on the mountain.</p>
       <div class="gift"><p><b>A week of Plus, for both of you.</b> Ski your first day with PeakWait and you each get a week of PeakWait Plus.</p></div>
       <div class="cta">
-        <a class="btn" href="https://apps.apple.com/us/app/id6793253589">Download now for your season</a>
+        <a class="btn" href="/app/">Download now for your season</a>
       </div>
       <p class="step">Already have the app? Open it, tap <b>Crew</b>, then <b>Add by handle</b>, and enter <b id="handle">their handle</b>.</p>
     </div>
