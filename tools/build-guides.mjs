@@ -10,7 +10,7 @@ import fs from "node:fs";
 import path from "node:path";
 import crypto from "node:crypto";
 
-import { SITE, DOWNLOAD_URL, esc, waitify, head, nav, footer, endCta, device } from "./lib/shell.mjs";
+import { SITE, DOWNLOAD_URL, GET_URL, esc, waitify, head, nav, footer, endCta, device } from "./lib/shell.mjs";
 import { britishSummary } from "./lib/american.mjs";
 const AUTHOR = "Herb Sendit";
 const ROOT = path.resolve(path.dirname(new URL(import.meta.url).pathname), "..");
@@ -743,7 +743,7 @@ function articleHtml(a, others) {
   const midIdx = Math.ceil(a.sections.length / 2);
   const appcard = `
     <div class="appcard">
-      <div class="t"><b>${esc(a.cta.h)}</b><p>${esc(a.cta.p)}</p><a class="btn" href="${DOWNLOAD_URL}">Download now for your season</a></div>
+      <div class="t"><b>${esc(a.cta.h)}</b><p>${esc(a.cta.p)}</p><a class="btn" href="${GET_URL}">Download now for your season</a></div>
       <div class="shot">${device("/assets/img/app-02-resort-lifts.jpg", "A lift list in PeakWait with a wait on every lift", 160)}</div>
     </div>`;
   const body = a.sections.map((s, i) => `<h2 id="s${i + 1}">${esc(s.h2)}</h2>${s.html.trim()}` + (i === midIdx - 1 ? appcard : "")).join("\n");
@@ -824,7 +824,7 @@ ${nav("/guides/")}
   <div aria-hidden="true"></div>
 </div>
 ${more}
-<div class="wrap">${endCta("Download now for your season.", "See every wait before you ride. PeakWait is free on the App Store.")}</div>
+<div class="wrap">${endCta("Download now for your season.", "See every wait before you ride. PeakWait is free on iPhone and Android.")}</div>
 </main>
 ${footer()}
 <script>
@@ -934,7 +934,7 @@ ${groups.map(([k, label, list]) => `
     <header><h2>${label}</h2><span>${list.length} ${list.length === 1 ? "guide" : "guides"}</span></header>
     <ul class="rows">${list.map(row).join("\n      ")}</ul>
   </section>`).join("")}
-  ${endCta("See the waits before you go.", "Every guide is better with the live wait in your pocket. PeakWait is free on the App Store.")}
+  ${endCta("See the waits before you go.", "Every guide is better with the live wait in your pocket. PeakWait is free on iPhone and Android.")}
 </div>
 </main>
 ${footer()}
@@ -1064,7 +1064,7 @@ ${nav()}
   <div class="tl">${rest.map((u) => `
     <div class="rel"><span class="v">${esc(u.version)}<small>${fmtMonth(u.date)}</small></span><a href="/updates/${u.slug}/"><h3>${esc(u.title)}</h3><p>${esc(u.summary)}</p></a></div>`).join("")}
   </div>
-  ${endCta("Get the latest PeakWait.", "Every update arrives free from the App Store.")}
+  ${endCta("Get the latest PeakWait.", "Every update arrives free from the App Store and Google Play.")}
 </div>
 </main>
 ${footer()}

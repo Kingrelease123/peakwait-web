@@ -16,6 +16,14 @@ document.addEventListener('click',function(e){var a=e.target.closest&&e.target.c
   var u=a.href,q=function(k,v){if(u.indexOf(k+'=')<0)u+=(u.indexOf('?')<0?'?':'&')+k+'='+v;};
   q('pt','127647061');q('ct','web-'+from);q('mt','8');a.href=u;
   gtag('event','app_store_click',{from:from});});
+// Count taps on any Google Play link too, and tell Google Play which part of the site sent them.
+document.addEventListener('click',function(e){var a=e.target.closest&&e.target.closest('a[href*="play.google.com"]');if(!a)return;
+  var from=location.pathname.split('/')[1]||'home';
+  if(a.href.indexOf('referrer=')<0)a.href+='&referrer='+encodeURIComponent('utm_source=web-'+from+'&utm_medium=link');
+  gtag('event','google_play_click',{from:from});});
+// A plain Download button goes to /app/, which picks the store by phone. Name the part of the site for it.
+document.addEventListener('click',function(e){var a=e.target.closest&&e.target.closest('a[href="/app/"]');if(!a)return;
+  a.href='/app/?c=web-'+(location.pathname.split('/')[1]||'home');});
 </script>
 <title>Aspen Snowmass Lift Waits: Where Snowmass Backs Up</title>
 <meta name="description" content="Four mountains, one ticket. Where Snowmass lift waits build, when to bail to Buttermilk or Highlands, and how to check before you board the bus.">
@@ -31,7 +39,7 @@ document.addEventListener('click',function(e){var a=e.target.closest&&e.target.c
 <link rel="icon" href="/favicon.svg" type="image/svg+xml">
 <link rel="apple-touch-icon" href="/apple-touch-icon.png">
 <meta name="theme-color" content="#070F16">
-<link rel="stylesheet" href="/assets/site.css?v=0642ecf6">
+<link rel="stylesheet" href="/assets/site.css?v=f5675014">
 <meta name="keywords" content="aspen snowmass lift lines, snowmass lift waits, snowmass crowds, buttermilk vs highlands, aspen four mountains one ticket, snowmass village express wait">
 <meta name="author" content="Herb Sendit">
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"Article","headline":"Aspen Snowmass Lift Waits: Where Snowmass Backs Up","description":"Four mountains, one ticket. Where Snowmass lift waits build, when to bail to Buttermilk or Highlands, and how to check before you board the bus.","author":{"@type":"Person","name":"Herb Sendit"},"publisher":{"@type":"Organization","name":"PeakWait","logo":{"@type":"ImageObject","url":"https://peakwait.net/icon-512.png"}},"datePublished":"2026-11-13","dateModified":"2026-11-13","mainEntityOfPage":"https://peakwait.net/guides/aspen-snowmass-lift-lines/","image":"https://peakwait.net/assets/img/rw-guide.jpg"}</script>
@@ -81,7 +89,7 @@ document.addEventListener('click',function(e){var a=e.target.closest&&e.target.c
   <div class="wrap">
     <a class="brandmark" href="/"><img src="/apple-touch-icon.png" alt="" width="34" height="34">PeakWait</a>
     <nav class="links" aria-label="Main"><a href="/#how">How it works</a><a href="/#features">Features</a><a href="/#plus">Plus</a><a href="/#mountains">Mountains</a><a href="/guides/" aria-current="page">Guides</a></nav>
-    <a class="btn" href="https://apps.apple.com/us/app/id6793253589">Download</a>
+    <a class="btn" href="/app/">Download</a>
     <details class="menu"><summary aria-label="Menu"><span></span></summary>
       <nav aria-label="Menu"><a href="/#how">How it works</a><a href="/#features">Features</a><a href="/#plus">PeakWait Plus</a><a href="/#mountains">Mountains</a><a href="/guides/">Guides</a><a href="/updates/">What's new</a></nav>
     </details>
@@ -103,7 +111,7 @@ document.addEventListener('click',function(e){var a=e.target.closest&&e.target.c
 <h2 id="s2">What is open when this season</h2><p>As of today, November 13, nothing at Aspen Snowmass is spinning yet. Snowmass and Aspen Mountain are scheduled to open Thursday, November 26, which is Thanksgiving Day. Aspen Highlands and Buttermilk follow on December 12. Those are the resort's own announced dates, and a local guide notes that dates depend on weather. I found no news of a change, but check the resort's site before you book a flight around them.</p><p>That gap matters for this guide. For the first two weeks you only have Snowmass and Aspen Mountain, and Aspen Mountain has no green runs at all according to the Storm Skiing Journal. If you bring a beginner on opening weekend, Buttermilk is not there to bail to yet.</p><p>Closing dates run the other way. The resort lists Buttermilk closing April 4, Highlands and Snowmass April 11, and Aspen Mountain April 18. Late in the season your bail options shrink again.</p>
 <h2 id="s3">Where Snowmass backs up</h2><p>Snowmass has two ways out of the Fanny Hill base: the Village Express six-pack and the Elk Camp Gondola. PeakRankings says most visitors start on one of those two. When the gondola was built, the Aspen Times reported it was meant to split the base crowd instead of putting everyone on the Village Express.</p><ul><li><strong>Village Express:</strong> a longtime local on a skiing forum said it gets busy in the morning right after children's ski school starts at 9:30. His rule of thumb was that when it has a 10 minute wait, the gondola is probably 5 or less. That post is old, so treat it as a pattern and not a promise.</li><li><strong>Elk Camp:</strong> the same local called it the most popular chair on the mountain. The Aspen Times reports the 30-year-old quad was replaced with a six-seater that adds 50 percent capacity. The reputation may be older than the lift.</li><li><strong>Cirque T-Bar:</strong> it replaced the old Cirque platter and doubles the capacity, according to the Aspen Times. Expert terrain up high gets easier to lap.</li><li><strong>Big Burn, Alpine Springs and Elk Camp:</strong> the forum names these, along with the Village Express, as the busiest chairs on a normal day.</li></ul><p>The one that surprises people is at the end of the day. PeakRankings warns that the Sky Cab, a pulse gondola with limited capacity, can build a long wait when everyone heads back toward the Mall to catch the buses to free parking.</p>
     <div class="appcard">
-      <div class="t"><b>Check the wait before you ski</b><p>Get the PeakWait app on your iPhone to see live lift waits at Snowmass and the other three mountains.</p><a class="btn" href="https://apps.apple.com/us/app/id6793253589">Download now for your season</a></div>
+      <div class="t"><b>Check the wait before you ski</b><p>Get the PeakWait app on your iPhone to see live lift waits at Snowmass and the other three mountains.</p><a class="btn" href="/app/">Download now for your season</a></div>
       <div class="shot"><div class="device" style="--w:160px"><img src="/assets/img/app-02-resort-lifts.jpg" alt="A lift list in PeakWait with a wait on every lift" loading="lazy" width="990" height="2151"></div></div>
     </div>
 <h2 id="s4">The clock matters more than the lift</h2><p>To be fair, Snowmass is not a place where a wait runs your whole day. That same forum local said even between Christmas and New Year, lift lines rarely pass 5 minutes and top out around 10. A local lodging guide still calls the stretch around New Year's Eve the busiest two weeks of the year.</p><p>So the pattern is simple. Mornings after ski school drops off are the pinch point at the base. Late morning pushes people toward the popular chairs. Around 3 p.m. the village funnels back down.</p><ul><li><strong>First chair:</strong> beat the 9:30 ski school wave and get your first two laps in before it.</li><li><strong>Lunch:</strong> eat early or late. Ullrhof, the mid-mountain restaurant, was slated to reopen this winter after a full rebuild. I would not bet on a quiet lunch there while everyone gets a look.</li><li><strong>Last run:</strong> ski to the Mall if you are taking the bus, not into the village, so the Sky Cab is not your last wait of the day.</li></ul>
@@ -115,20 +123,20 @@ document.addEventListener('click',function(e){var a=e.target.closest&&e.target.c
 </div>
 <section class="wrap more" aria-label="Keep reading"><span class="eyebrow">Keep reading</span><div class="cards"><a class="card" href="/guides/beat-i70-ski-traffic-colorado-crowds/"><span class="meta">Colorado · 7 min</span><h3>How to beat I-70 traffic and Colorado weekend crowds</h3></a><a class="card" href="/guides/least-crowded-colorado-ski-resorts/"><span class="meta">Colorado · 6 min</span><h3>The least crowded Colorado ski resorts</h3></a><a class="card" href="/guides/copper-mountain-lift-lines/"><span class="meta">Colorado · 5 min</span><h3>Copper Mountain lift waits: where to ski, what to skip</h3></a></div></section>
 <div class="wrap"><aside class="endcta">
-    <div><h2>Download now for your season.</h2><p>See every wait before you ride. PeakWait is free on the App Store.</p></div>
-    <div class="badges"><a class="badge as" href="https://apps.apple.com/us/app/id6793253589" aria-label="Download PeakWait on the App Store"><img src="/assets/img/appstore-badge.svg" alt="Download on the App Store" width="162" height="54"></a></div>
+    <div><h2>Download now for your season.</h2><p>See every wait before you ride. PeakWait is free on iPhone and Android.</p></div>
+    <div class="badges"><div class="stores"><a class="badge as" href="https://apps.apple.com/us/app/id6793253589" aria-label="Download PeakWait on the App Store"><img src="/assets/img/appstore-badge.svg" alt="Download on the App Store" width="162" height="54"></a><a class="badge gp" href="https://play.google.com/store/apps/details?id=com.peakwait.app" aria-label="Get PeakWait on Google Play"><img src="/assets/img/google-play-badge.png" alt="Get it on Google Play" width="207" height="80"></a></div></div>
   </aside></div>
 </main>
 <footer>
   <div class="wrap">
     <div class="fgrid">
       <div class="about"><a class="brandmark" href="/"><img src="/apple-touch-icon.png" alt="" width="34" height="34">PeakWait</a><p>Live lift waits from the skiers on the hill. Ski the mountain, skip the wait.</p>
-        <a class="badge as" href="https://apps.apple.com/us/app/id6793253589" aria-label="Download PeakWait on the App Store"><img src="/assets/img/appstore-badge.svg" alt="Download on the App Store" width="135" height="45" style="height:45px"></a></div>
+        <div class="stores sm"><a class="badge as" href="https://apps.apple.com/us/app/id6793253589" aria-label="Download PeakWait on the App Store"><img src="/assets/img/appstore-badge.svg" alt="Download on the App Store" width="135" height="45" style="height:45px"></a><a class="badge gp" href="https://play.google.com/store/apps/details?id=com.peakwait.app" aria-label="Get PeakWait on Google Play"><img src="/assets/img/google-play-badge.png" alt="Get it on Google Play" width="173" height="67"></a></div></div>
       <div><h5>Product</h5><ul><li><a href="/#how">How it works</a></li><li><a href="/#features">Features</a></li><li><a href="/#plus">PeakWait Plus</a></li><li><a href="/#pricing">Pricing</a></li></ul></div>
       <div><h5>Read</h5><ul><li><a href="/guides/">Guides</a></li><li><a href="/updates/">What's new</a></li><li><a href="/#mountains">Mountains</a></li></ul></div>
       <div><h5>Company</h5><ul><li><a href="/privacy/">Privacy</a></li><li><a href="/terms/">Terms</a></li><li><a href="mailto:contact@peakwait.net">contact@peakwait.net</a></li></ul></div>
     </div>
-    <div class="legal"><span>Safety: PeakWait gives advisory information only. Posted signs, ski patrol, closures and resort operations always come first.</span><span>PeakWait is independent and not affiliated with any resort or pass. © 2026 PeakWait LLC</span></div>
+    <div class="legal"><span>Safety: PeakWait gives advisory information only. Posted signs, ski patrol, closures and resort operations always come first.</span><span>PeakWait is independent and not affiliated with any resort or pass. © 2026 PeakWait LLC</span><span>Google Play and the Google Play logo are trademarks of Google LLC.</span></div>
   </div>
 </footer>
 <script>document.querySelectorAll('.menu nav a').forEach(a=>a.addEventListener('click',()=>a.closest('details').open=false));</script>

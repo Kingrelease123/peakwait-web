@@ -16,6 +16,14 @@ document.addEventListener('click',function(e){var a=e.target.closest&&e.target.c
   var u=a.href,q=function(k,v){if(u.indexOf(k+'=')<0)u+=(u.indexOf('?')<0?'?':'&')+k+'='+v;};
   q('pt','127647061');q('ct','web-'+from);q('mt','8');a.href=u;
   gtag('event','app_store_click',{from:from});});
+// Count taps on any Google Play link too, and tell Google Play which part of the site sent them.
+document.addEventListener('click',function(e){var a=e.target.closest&&e.target.closest('a[href*="play.google.com"]');if(!a)return;
+  var from=location.pathname.split('/')[1]||'home';
+  if(a.href.indexOf('referrer=')<0)a.href+='&referrer='+encodeURIComponent('utm_source=web-'+from+'&utm_medium=link');
+  gtag('event','google_play_click',{from:from});});
+// A plain Download button goes to /app/, which picks the store by phone. Name the part of the site for it.
+document.addEventListener('click',function(e){var a=e.target.closest&&e.target.closest('a[href="/app/"]');if(!a)return;
+  a.href='/app/?c=web-'+(location.pathname.split('/')[1]||'home');});
 </script>
 <title>PeakWait 1.5: A Day That Keeps Counting</title>
 <meta name="description" content="Your ski day keeps counting with no signal. Answer How's the wait from your lock screen or Apple Watch, get a welcome when you arrive, share your day as a story, and earn a week of PeakWait Plus for every friend you bring.">
@@ -31,7 +39,7 @@ document.addEventListener('click',function(e){var a=e.target.closest&&e.target.c
 <link rel="icon" href="/favicon.svg" type="image/svg+xml">
 <link rel="apple-touch-icon" href="/apple-touch-icon.png">
 <meta name="theme-color" content="#070F16">
-<link rel="stylesheet" href="/assets/site.css?v=0642ecf6">
+<link rel="stylesheet" href="/assets/site.css?v=f5675014">
 <meta name="author" content="PeakWait">
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"Article","headline":"PeakWait 1.5: A Day That Keeps Counting","description":"Your ski day keeps counting with no signal. Answer How's the wait from your lock screen or Apple Watch, get a welcome when you arrive, share your day as a story, and earn a week of PeakWait Plus for every friend you bring.","author":{"@type":"Organization","name":"PeakWait"},"publisher":{"@type":"Organization","name":"PeakWait","logo":{"@type":"ImageObject","url":"https://peakwait.net/icon-512.png"}},"datePublished":"2026-11-07","dateModified":"2026-11-07","mainEntityOfPage":"https://peakwait.net/updates/keeps-counting/","image":"https://peakwait.net/og.png"}</script>
 <style>
@@ -57,7 +65,7 @@ document.addEventListener('click',function(e){var a=e.target.closest&&e.target.c
   <div class="wrap">
     <a class="brandmark" href="/"><img src="/apple-touch-icon.png" alt="" width="34" height="34">PeakWait</a>
     <nav class="links" aria-label="Main"><a href="/#how">How it works</a><a href="/#features">Features</a><a href="/#plus">Plus</a><a href="/#mountains">Mountains</a><a href="/guides/">Guides</a></nav>
-    <a class="btn" href="https://apps.apple.com/us/app/id6793253589">Download</a>
+    <a class="btn" href="/app/">Download</a>
     <details class="menu"><summary aria-label="Menu"><span></span></summary>
       <nav aria-label="Menu"><a href="/#how">How it works</a><a href="/#features">Features</a><a href="/#plus">PeakWait Plus</a><a href="/#mountains">Mountains</a><a href="/guides/">Guides</a><a href="/updates/">What's new</a></nav>
     </details>
@@ -79,7 +87,7 @@ document.addEventListener('click',function(e){var a=e.target.closest&&e.target.c
 <section class="feat"><div class="t prose"><span class="n">05</span><h2>Bring your crew, get a week of Plus</h2><p>Invite a friend from the Crew tab. When they ski their first day with PeakWait, you both get a week of PeakWait Plus. Every friend adds another week, up to eight a season.</p></div><div class="shot"><div class="device" style="--w:220px"><img src="/assets/img/app-07-crew.jpg" alt="My Crew screen with the invite card" loading="lazy" width="990" height="2151"></div></div></section>
   <aside class="endcta">
     <div><h2>Get PeakWait 1.5.</h2><p>Live lift waits, where to ski today and the best next chair. Free on the App Store.</p></div>
-    <div class="badges"><a class="badge as" href="https://apps.apple.com/us/app/id6793253589" aria-label="Download PeakWait on the App Store"><img src="/assets/img/appstore-badge.svg" alt="Download on the App Store" width="162" height="54"></a></div>
+    <div class="badges"><div class="stores"><a class="badge as" href="https://apps.apple.com/us/app/id6793253589" aria-label="Download PeakWait on the App Store"><img src="/assets/img/appstore-badge.svg" alt="Download on the App Store" width="162" height="54"></a><a class="badge gp" href="https://play.google.com/store/apps/details?id=com.peakwait.app" aria-label="Get PeakWait on Google Play"><img src="/assets/img/google-play-badge.png" alt="Get it on Google Play" width="207" height="80"></a></div></div>
   </aside>
   <nav class="pn" aria-label="More updates"><a class="arrow" href="/updates/report-from-the-chair/">1.4: Report From the Chair</a><a class="arrow" href="/updates/">All updates</a></nav>
 </div>
@@ -88,12 +96,12 @@ document.addEventListener('click',function(e){var a=e.target.closest&&e.target.c
   <div class="wrap">
     <div class="fgrid">
       <div class="about"><a class="brandmark" href="/"><img src="/apple-touch-icon.png" alt="" width="34" height="34">PeakWait</a><p>Live lift waits from the skiers on the hill. Ski the mountain, skip the wait.</p>
-        <a class="badge as" href="https://apps.apple.com/us/app/id6793253589" aria-label="Download PeakWait on the App Store"><img src="/assets/img/appstore-badge.svg" alt="Download on the App Store" width="135" height="45" style="height:45px"></a></div>
+        <div class="stores sm"><a class="badge as" href="https://apps.apple.com/us/app/id6793253589" aria-label="Download PeakWait on the App Store"><img src="/assets/img/appstore-badge.svg" alt="Download on the App Store" width="135" height="45" style="height:45px"></a><a class="badge gp" href="https://play.google.com/store/apps/details?id=com.peakwait.app" aria-label="Get PeakWait on Google Play"><img src="/assets/img/google-play-badge.png" alt="Get it on Google Play" width="173" height="67"></a></div></div>
       <div><h5>Product</h5><ul><li><a href="/#how">How it works</a></li><li><a href="/#features">Features</a></li><li><a href="/#plus">PeakWait Plus</a></li><li><a href="/#pricing">Pricing</a></li></ul></div>
       <div><h5>Read</h5><ul><li><a href="/guides/">Guides</a></li><li><a href="/updates/">What's new</a></li><li><a href="/#mountains">Mountains</a></li></ul></div>
       <div><h5>Company</h5><ul><li><a href="/privacy/">Privacy</a></li><li><a href="/terms/">Terms</a></li><li><a href="mailto:contact@peakwait.net">contact@peakwait.net</a></li></ul></div>
     </div>
-    <div class="legal"><span>Safety: PeakWait gives advisory information only. Posted signs, ski patrol, closures and resort operations always come first.</span><span>PeakWait is independent and not affiliated with any resort or pass. © 2026 PeakWait LLC</span></div>
+    <div class="legal"><span>Safety: PeakWait gives advisory information only. Posted signs, ski patrol, closures and resort operations always come first.</span><span>PeakWait is independent and not affiliated with any resort or pass. © 2026 PeakWait LLC</span><span>Google Play and the Google Play logo are trademarks of Google LLC.</span></div>
   </div>
 </footer>
 <script>document.querySelectorAll('.menu nav a').forEach(a=>a.addEventListener('click',()=>a.closest('details').open=false));</script>
