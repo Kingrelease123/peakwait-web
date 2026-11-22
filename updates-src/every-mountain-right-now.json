@@ -1,0 +1,35 @@
+{
+ "slug": "every-mountain-right-now",
+ "version": "1.8",
+ "date": "2026-11-21",
+ "title": "Every Mountain, Right Now",
+ "summary": "See how many lifts are spinning at every mountain, when first chair went and what changed today. Sort Resorts by Most open, Nearest or New snow.",
+ "intro": "<p class=\"dek\">One look tells you what a mountain is doing before you leave the house. Here is what PeakWait 1.8 brings.</p>",
+ "sections": [
+  {
+   "h2": "Lifts spinning, at a glance",
+   "html": "<p>Open a mountain and a <strong>Right Now</strong> card tells you how many lifts are spinning, like 8 of 34. Under it sits the fact that matters most: when first chair went, or the latest change.</p>\n  <p>Each open lift says when it opened. A <strong>changes today</strong> button lists what opened, went on hold or closed.</p>"
+  },
+  {
+   "h2": "Early mornings read clearly",
+   "html": "<p>Before first chair the card reads <strong>Not spinning yet</strong> and shows how many lifts ran yesterday. Lifts read <strong>Not open yet</strong> until they turn, and <strong>Closed today</strong> after last chair. Every time shown is the mountain's own, wherever your phone is.</p>"
+  },
+  {
+   "h2": "Sort Resorts your way",
+   "html": "<p>Three buttons sit above the list: <strong>Most open</strong>, <strong>Nearest</strong> and <strong>New snow</strong>. Every card is two lines: the mountain and how far, then its lift count and pass. A blue snowflake marks new snow.</p>"
+  },
+  {
+   "h2": "Drive time on the card",
+   "html": "<p>On iPhone, a mountain within 300 miles shows the drive time by car from where you are, marked with a small car. The time comes from Apple Maps and refreshes while you plan.</p>"
+  },
+  {
+   "h2": "A faster mountain page",
+   "html": "<p>A mountain's page now draws its lifts first. The weather fills in right after, so the answer you came for is on screen sooner.</p>"
+  },
+  {
+   "h2": "Notifications, your call",
+   "html": "<p>Settings has one switch for each kind of notification, plus <strong>Pause all</strong>. Two new notices join them: your day recap when a ski day ends, and opening day for a mountain you starred.</p>"
+  }
+ ],
+ "css": ""
+}

@@ -1002,7 +1002,7 @@ ${nav()}
 </div></div></header>
 <div class="wrap">
   ${body}
-  ${endCta(`Get PeakWait ${u.version}.`, "Live lift waits, where to ski today and the best next chair. Free on the App Store.")}
+  ${endCta(`Get PeakWait ${u.version}.`, `Live lift waits, where to ski today and the best next chair. ${parseFloat(u.version) >= 1.7 ? "Free on the App Store and Google Play." : "Free on the App Store."}`)}
   <nav class="pn" aria-label="More updates">${older ? `<a class="arrow" href="/updates/${older.slug}/">${esc(older.version)}: ${esc(older.title)}</a>` : "<span></span>"}<a class="arrow" href="/updates/">All updates</a></nav>
 </div>
 </main>
